@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/pages/discover/discover_child_page.dart';
+import 'package:weichatdemo/sync_Test/test_dart_sync.dart';
 
 // version 1.0 改进一版
 // DiscoverCell 改为可改变状态的Widget  StatefulWidget
@@ -29,15 +30,24 @@ class _DiscoverCellState extends State<DiscoverCell> {// 改为StateFul 后 此�
         setState(() {
           _currentColor = Colors.white;
         });
-        //注意格式
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext content) => DiscoverChildPage('${widget.title}')));
+
+        if (widget.title == '测试Dart异步编程') {
+          //注意格式
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext content) => TestDartSync()));
+
+        } else {
+          //注意格式
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext content) => DiscoverChildPage('${widget.title}')));
+
+        }
+        },
+      onTapCancel: () {
+        setState(() {
+          _currentColor = Colors.white;
+        });
       },
-//      onTapCancel: () {
-//        setState(() {
-//          _currentColor = Colors.white;
-//        });
-//      },
       onTapDown: (TapDownDetails details) {
         setState(() {
           _currentColor = Colors.grey;

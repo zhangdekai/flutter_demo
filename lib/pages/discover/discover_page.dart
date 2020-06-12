@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/const.dart';
+import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/pages/discover/discover_cell.dart';
 
 class DiscoverPage extends StatefulWidget {
@@ -93,6 +93,13 @@ class _DiscoverPageState extends State<DiscoverPage> {
             DiscoverCell(
               imageName: 'images/小程序.png',
               title: '小程序',
+            ),
+            SizedBox(
+              height: 0.5,
+            ),
+            DiscoverCell(
+              imageName: 'images/小程序.png',
+              title: '测试Dart异步编程',
             ),
 
           ],

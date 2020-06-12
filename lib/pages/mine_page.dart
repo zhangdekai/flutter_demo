@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/const.dart';
+import 'package:weichatdemo/common/const.dart';
 
 import 'discover/discover_cell.dart';
 

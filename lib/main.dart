@@ -1,8 +1,17 @@
+import 'dart:isolate';
+
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/root_page.dart';
+import 'package:weichatdemo/pages/root_page.dart';
 import 'package:weichatdemo/test_state_manager/state_mag_demo.dart';
 
-void main() => runApp(MyApp());
+
+
+
+void main() {
+
+  return runApp(MyApp());
+}
+
 
 
 class MyApp extends StatelessWidget {

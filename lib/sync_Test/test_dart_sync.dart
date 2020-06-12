@@ -1,0 +1,208 @@
+import 'dart:async';
+import 'dart:io';
+import 'dart:isolate';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+
+void func01(SendPort port) {//有点问题????
+  print('第一个来了!!');
+  port.send(10000);
+}
+
+int a = 10;
+//Isolate 看起来更加像进程.因为有独立的内存空间!
+//它的好处是:不用担心多线程的资源抢夺问题!不需要锁!
+//Isolat 非常底层.
+void test0001() async {
+
+  ReceivePort port = ReceivePort();
+
+  Isolate iso = await Isolate.spawn(func1, port.sendPort);
+
+  port.listen((message) {
+    a = message;
+    print(a);
+
+    // 需要关闭 close  和  kill
+    port.close();
+    iso.kill();
+  });
+
+  print('回来之后的A是$a');
+  print('外部代码2');
+
+}
+
+
+class TestDartSync extends StatelessWidget {
+  String _data = '0';
+
+
+  @override
+  Widget build(BuildContext context) {
+
+
+    computeTest();
+//    test0001();
+//    textFuture3();
+//    textFuture2();
+//    textFuture1();
+//    textFuture();
+//    getData();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('测试Dart 异步编程'),
+        backgroundColor: Colors.greenAccent,
+      ),
+      body: Center(
+        child: Text('测试Dart 异步编程'),
+      ),
+    );
+  }
+
+
+
+
+
+
+  void textFuture() {
+    Future((){
+      sleep(Duration(seconds: 1));
+      return '任务1';
+    })
+        .then((value){
+      print('${value}结束');
+      throw Exception('异常');
+    })
+        .then((value) {
+      print('$value结束');
+      return '任务3';
+    })
+        .then((value) => print('$value结束'))
+        .catchError((e) => print(e));
+
+    print('任务添加完毕');
+  }
+
+  void getData() async {
+
+    print('开始data=$_data');
+
+    //1.后面的操作必须是异步才能用await
+    //2.当前函数必须是异步函数
+    Future future = await Future(() {
+      //耗时操作
+      for (int i = 0; i < 1000000000; i++) {}
+//    throw Exception('网络异常');
+    });
+
+
+    //处理错误
+    future.then((value) {
+      print('then  来了!!');
+      print(value);
+    }).catchError((e) {
+      print('捕获到了:' + e.toString());
+    }).whenComplete(() {
+      print('完成了!');
+    });
+
+    //使用then来接收数据
+//  future.then((value) {
+//    print('then  来了!!');
+//    print(value);
+//  }, onError: (e) {
+//    print(e.toString());
+//  });
+
+    print('干点其他的事情!');
+  }
+
+  //任务组，数组， 任务1 任务2都完成以后 then 操作
+  void textFuture1() {
+
+    Future future = Future.wait([
+      Future((){
+        return '任务1';
+      }),
+      Future((){
+        return '任务2';
+      })
+    ]).then((value){
+      print(value[0] + value[1]);
+    });
+
+  }
+
+  void textFuture2() {
+
+    print('外部代码1');
+
+    Future(() => print('A')).then((value) => print('A结束'));
+    Future(() => print('B')).then((value) => print('B结束'));
+
+    //微任务 优先级更高些，加入队列的 任务事件 和 微任务 ，优先处理微任务
+    scheduleMicrotask((){
+      print('微任务A');
+    });
+
+    sleep(Duration(seconds: 1));
+
+    print('外部代码2');
+
+  }
+
+  void textFuture3() {
+
+    Future x1 = Future(() => null);
+
+    x1.then((value) {
+      print('6');
+      scheduleMicrotask(() => print('7'));
+    }).then((value) => print('8'));
+
+    Future x = Future(()=> print('1'));
+    x.then((value)  {
+      print('4');
+      Future(() => print('9'));
+    }).then((value) => print('10'));
+
+    Future(() => print('2'));
+
+    scheduleMicrotask(() => print('3'));
+
+    print('5');
+
+    // 5 3 6 8 7 1 4 10 2 9
+
+  }
+
+}
+
+void computeTest() {
+
+  print('外部代码1');
+
+  compute(func2, 1000).then((value) => print(value));
+
+  print('外部代码2');
+
+//  flutter: 外部代码1
+//  flutter: 外部代码2
+//  Reloaded 6 of 576 libraries in 303ms.
+//  flutter: 2345
+
+}
+
+int func2(int message) {
+  sleep(Duration(seconds: 1));
+  return 2345;
+}
+
+void func1(SendPort message) {
+  print('第一个来了!!');
+
+  message.send(228738);
+}

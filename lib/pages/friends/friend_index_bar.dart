@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../const.dart';
+import '../../common/const.dart';
 
 class FriendIndexBar extends StatefulWidget {
 

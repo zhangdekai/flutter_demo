@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/const.dart';
+import 'package:weichatdemo/common/const.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 

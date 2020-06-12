@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/const.dart';
+import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/pages/discover/discover_child_page.dart';
 import 'package:weichatdemo/pages/friends/friend_index_bar.dart';
 
