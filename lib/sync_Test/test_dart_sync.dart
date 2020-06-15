@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:isolate';
+import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -42,8 +43,10 @@ class TestDartSync extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-
-    computeTest();
+    dioDemo();
+//    futureDemo();
+//    isolateDemo();
+//    computeTest();
 //    test0001();
 //    textFuture3();
 //    textFuture2();
@@ -61,11 +64,6 @@ class TestDartSync extends StatelessWidget {
       ),
     );
   }
-
-
-
-
-
 
   void textFuture() {
     Future((){
@@ -205,4 +203,80 @@ void func1(SendPort message) {
   print('第一个来了!!');
 
   message.send(228738);
+}
+
+void isolateDemo(){
+
+//  // 打印顺序不一
+//  Future(()=> compute(func3,123)).then((value) => print('1结束'));
+//  Future(()=> compute(func3,123)).then((value) => print('2结束'));
+//  Future(()=> compute(func3,123)).then((value) => print('3结束'));
+//  Future(()=> compute(func3,123)).then((value) => print('4结束'));
+//  Future(()=> compute(func3,123)).then((value) => print('5结束'));
+
+
+    loadData().then((value) => print('1结束'));
+    loadData().then((value) => print('2结束'));
+    loadData().then((value) => print('3结束'));
+    loadData().then((value) => print('4结束'));
+    loadData().then((value) => print('5结束'));
+    //非顺序打印
+}
+
+Future loadData(){
+
+//  return Future((){
+//     compute(func3,234);// 此种方式 顺序打印
+//  });
+
+  return Future((){
+    print(Isolate.current.debugName);
+    //如果你返回的是compute的Future,那么这个任务在子Isolate的事件队列中!
+    return compute(func3,234);// 此种方式 不顺序打印  return
+  });
+}
+
+int func3(int message) {
+  return 333;
+}
+
+void futureDemo() {
+
+  Future x = Future((){
+    print('A异步任务1');
+    scheduleMicrotask(() => print('B微任务1'));
+  });
+  // 关于then 他在Future任务执行完毕后，立刻执行，可以看做一个任务执行！
+  x.then((value) => print('C异步1结束'));
+  print('D主任务');
+
+  // D A C B
+}
+
+void dioDemo(){
+
+  final dio = Dio();
+
+  var downloadUrl = 'http://pub.idqqimg.com/pc/misc/groupgift/fudao/CourseTeacher_1.3.16.80_DailyBuild.dmg';;
+
+  String savepath = '/Users/zhangdekai/Desktop/123/腾讯课堂.dmg';
+
+  String savePath2 = Directory.systemTemp.path + '/腾讯课堂.dmg';
+  
+  print(savePath2);
+  
+  download1(dio, downloadUrl, savePath2);
+
+}
+
+void download1(Dio dio, String downloadUrl, String savepath) {
+  dio.download(downloadUrl, savepath,onReceiveProgress: showDownloadProgress)
+      .then((value) => print(value))
+      .whenComplete(() => print('下载结束'));
+}
+
+void showDownloadProgress(int count, int total) {
+  if(total != -1){
+    print((count / total * 100).toStringAsFixed(0) + '%');
+  }
 }

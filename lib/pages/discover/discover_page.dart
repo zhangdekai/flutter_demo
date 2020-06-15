@@ -7,12 +7,23 @@ class DiscoverPage extends StatefulWidget {
   _DiscoverPageState createState() => _DiscoverPageState();
 }
 
-class _DiscoverPageState extends State<DiscoverPage> {
+class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClientMixin {
 
   Color _themeColor = WeChatThemeColor;
 
   @override
+  void initState() {
+    super.initState();
+
+    print('DiscoverPage init来了');
+
+  }
+
+  @override
   Widget build(BuildContext context) {
+
+    super.build(context);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: WeChatThemeColor,// Colors.greenAccent
@@ -107,4 +118,8 @@ class _DiscoverPageState extends State<DiscoverPage> {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }

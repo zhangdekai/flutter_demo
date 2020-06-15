@@ -1,7 +1,14 @@
+import 'dart:async';
+import 'dart:isolate';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
-import 'package:http/http.dart' as http;
+
+//import 'package:http/http.dart' as http;//as 解决方法名冲突的
 import 'dart:convert';
+
+import 'package:weichatdemo/tools/http_manager.dart' as http;
 
 
 class ChatPage extends StatefulWidget {
@@ -9,7 +16,7 @@ class ChatPage extends StatefulWidget {
   _ChatPageState createState() => _ChatPageState();
 }
 
-class _ChatPageState extends State<ChatPage> {
+class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
 
   Widget _buildPopupMenuItem(String imageAsset, String title) {
 
@@ -21,14 +28,23 @@ class _ChatPageState extends State<ChatPage> {
       ],
     );
   }
+  
+  Timer _timer;
 
   bool _cancleConnect = false;
 
   List<Chat> _datas = [];
 
+  CancelToken _cancelToken = CancelToken();
+  
+
   @override
   void initState() {
     super.initState();
+
+    print('chat_page init来了');
+
+//    testTimer();
 
 //    testJsonConvertMap();
     getData().then((List<Chat> datas) {
@@ -49,12 +65,18 @@ class _ChatPageState extends State<ChatPage> {
     }).timeout(Duration(seconds: 6))
         .catchError((timeout){
           _cancleConnect = true;
+          _cancelToken.cancel('因为网络超时');//取消网络请求
           print('超时输出${timeout}');
     });
   }
 
-  Widget _cellForRow(BuildContext context,int index){
+  Widget _cellForRow(BuildContext context,int index) {
 
+    if(index == 0) {
+      return
+    }
+
+    index--;
     return ListTile(
       title: Text(_datas[index].name),
       subtitle: Container(
@@ -85,10 +107,9 @@ class _ChatPageState extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) {
-    
-    
-    
-    
+
+    super.build(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('微信'),
@@ -120,7 +141,7 @@ class _ChatPageState extends State<ChatPage> {
         child: _datas.length == 0 
             ? Center(child: Text('Loading...'),)
             : ListView.builder(
-                itemCount: _datas.length,
+                itemCount: _datas.length + 1,
                 itemBuilder: _cellForRow),
       ),
     );
@@ -130,22 +151,22 @@ class _ChatPageState extends State<ChatPage> {
 
     _cancleConnect = false;
 
+
     final respone = await http.get('http://rap2.taobao.org:38080/app/mock/257543/api/chatlist');
 
     if (respone.statusCode == 200) {
       //json 转 Map
-      final responseBody = json.decode(respone.body);
+//      final responseBody = json.decode(respone.body);//http 库 需要转Map
 
 //      print(responseBody);
 
       //转模型数组 map中遍历的结果需要返回出去
-      List<Chat> chatList = responseBody['chat_list'].map<Chat>((item){
+      List<Chat> chatList = respone.data['chat_list'].map<Chat>((item){
 
         return Chat.fromJSon(item);
       }).toList();
 
       return chatList;
-
     } else {
 
       throw Exception('statusCode: ${respone.statusCode}');
@@ -169,6 +190,34 @@ class _ChatPageState extends State<ChatPage> {
     print(newMap);
     print(chat is Map);// is 类型判断 Map
   }
+
+  void testTimer() {
+    int _count = 0;
+    _timer = Timer.periodic(Duration(seconds: 1), (timer){
+
+      print(Isolate.current.debugName);
+
+      print('${_count++}' + 's');
+
+      if(_count == 99){timer.cancel();}
+
+    });
+  }
+
+  @override
+  void dispose() {
+    //取消我们的timer
+    if(_timer != null && _timer.isActive){
+      _timer.cancel();
+    }
+
+    super.dispose();
+  }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
+
 }
 
 class Chat {

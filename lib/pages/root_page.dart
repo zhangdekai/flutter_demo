@@ -14,16 +14,27 @@ class _RootPageState extends State<RootPage> {
   int _currentIndex = 0;
 
   List<Widget> _pages = [ChatPage(),FriendPage(), DiscoverPage(),MinePage()];
+  final PageController _pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_currentIndex],
+      body: PageView(
+        controller: _pageController,
+        children: _pages,
+        physics: NeverScrollableScrollPhysics(),//禁止左右滑动
+//        onPageChanged: (int index){//页面滚动变化时调用
+//          setState(() {
+//            _currentIndex = index;
+//          });
+//        },
+      ),
       bottomNavigationBar: BottomNavigationBar(
           onTap: (index){
             setState(() {
               _currentIndex = index;
             });
+            _pageController.jumpToPage(index);
           },
           selectedFontSize: 12.0,
           currentIndex: _currentIndex,

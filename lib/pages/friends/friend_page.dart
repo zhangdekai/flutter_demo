@@ -12,7 +12,7 @@ class FriendPage extends StatefulWidget {
   _FriendPageState createState() => _FriendPageState();
 }
 
-class _FriendPageState extends State<FriendPage> {
+class _FriendPageState extends State<FriendPage> with AutomaticKeepAliveClientMixin {
 
   //字典里面放item和高度的对应数据
   final Map _groupOffsetMap = {
@@ -36,6 +36,9 @@ class _FriendPageState extends State<FriendPage> {
   @override
   void initState() {//init
     super.initState();
+
+    print('friendpage init来了');
+
 
 //    datas.addAll(friend_datas);
 //    datas.addAll(friend_datas);
@@ -86,6 +89,8 @@ class _FriendPageState extends State<FriendPage> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: WeChatThemeColor,//Colors.greenAccent
@@ -129,6 +134,9 @@ class _FriendPageState extends State<FriendPage> {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class _FriendCell extends StatelessWidget {
