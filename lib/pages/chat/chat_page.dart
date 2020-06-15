@@ -4,6 +4,7 @@ import 'dart:isolate';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
+import 'package:weichatdemo/pages/chat/search_bar.dart';
 
 //import 'package:http/http.dart' as http;//as 解决方法名冲突的
 import 'dart:convert';
@@ -73,7 +74,7 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
   Widget _cellForRow(BuildContext context,int index) {
 
     if(index == 0) {
-      return
+      return SearchCell(datas: _datas,);
     }
 
     index--;
@@ -138,11 +139,12 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
         ],
       ),
       body: Container(
-        child: _datas.length == 0 
+        child: _datas.length == 0
             ? Center(child: Text('Loading...'),)
             : ListView.builder(
                 itemCount: _datas.length + 1,
                 itemBuilder: _cellForRow),
+
       ),
     );
   }
