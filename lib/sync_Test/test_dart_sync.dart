@@ -264,8 +264,9 @@ void dioDemo(){
   String savePath2 = Directory.systemTemp.path + '/腾讯课堂.dmg';
   
   print(savePath2);
-  
-  download1(dio, downloadUrl, savePath2);
+
+//  下载
+//  download1(dio, downloadUrl, savePath2);
 
 }
 

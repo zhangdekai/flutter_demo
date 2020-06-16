@@ -112,6 +112,10 @@ class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClie
               imageName: 'images/小程序.png',
               title: '测试Dart异步编程',
             ),
+            DiscoverCell(
+              imageName: 'images/小程序.png',
+              title: '数据共享',
+            ),
 
           ],
         ),

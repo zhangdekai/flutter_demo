@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/pages/discover/discover_child_page.dart';
+import 'package:weichatdemo/share_data/inherited_demo.dart';
 import 'package:weichatdemo/sync_Test/test_dart_sync.dart';
 
 // version 1.0 改进一版
@@ -35,6 +36,10 @@ class _DiscoverCellState extends State<DiscoverCell> {// 改为StateFul 后 此�
           //注意格式
           Navigator.of(context).push(MaterialPageRoute(
               builder: (BuildContext content) => TestDartSync()));
+
+        } else if(widget.title == '数据共享') {
+        Navigator.of(context).push(MaterialPageRoute(
+        builder: (BuildContext content) => InheritedDemo()));
 
         } else {
           //注意格式

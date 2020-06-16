@@ -2,6 +2,7 @@ import 'dart:isolate';
 
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/pages/root_page.dart';
+//import 'package:weichatdemo/share_data/inherited_demo.dart';
 import 'package:weichatdemo/test_state_manager/state_mag_demo.dart';
 
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: RootPage(),//   RootPage StateManagerDemo MyHomePage(title: 'Flutter Demo Home Page')
+      home: RootPage(),// InheritedDemo   RootPage StateManagerDemo MyHomePage(title: 'Flutter Demo Home Page')
     );
   }
 }
