@@ -27,6 +27,7 @@
     UIImagePickerController *pickerVC =  [[UIImagePickerController alloc]init];
     pickerVC.delegate = self;
     
+    //获取flutter 发来的消息
     [self.methodChannl setMethodCallHandler:^(FlutterMethodCall * _Nonnull call, FlutterResult  _Nonnull result) {
         
         if ([call.method isEqualToString:@"picture"]) {
@@ -48,7 +49,7 @@
     [picker dismissViewControllerAnimated:YES completion:^{
         
         NSString *imagePath = [NSString stringWithFormat:@"%@",info[@"UIImagePickerControllerImageURL"]];
-        
+        //给flutter 发消息 传参数
         [self.methodChannl invokeMethod:@"imagePath" arguments:imagePath];
     }];
 }

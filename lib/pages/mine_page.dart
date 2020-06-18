@@ -13,7 +13,9 @@ class MinePage extends StatefulWidget {
 
 class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin {
 
+  //iOS与flutter通信  使用MethodChannel
   MethodChannel _methodChannel = MethodChannel('mine_page');
+  //展示头像，使用FileImage(_avataFile);
   File _avataFile = null;
 
   Widget headerWidget(){
@@ -27,6 +29,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
           children: <Widget>[
             GestureDetector(
               onTap: (){
+                // 给iOS 发送消息
                 _methodChannel.invokeMapMethod("picture","我是第二个参数");
               },
               child: Container(
@@ -86,7 +89,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
 
       if(call.method == "imagePath") {
         String imagePath = call.arguments.toString().substring(7);
-        setState(() {
+        setState(() {//更换头像
           _avataFile = File(imagePath);
         });
       }
