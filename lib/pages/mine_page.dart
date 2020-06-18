@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:weichatdemo/common/const.dart';
 
 import 'discover/discover_cell.dart';
@@ -10,6 +13,9 @@ class MinePage extends StatefulWidget {
 
 class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin {
 
+  MethodChannel _methodChannel = MethodChannel('mine_page');
+  File _avataFile = null;
+
   Widget headerWidget(){
 
     return Container(
@@ -19,15 +25,21 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
         margin: EdgeInsets.only(top: 100,bottom: 20,left: 30),
         child: Row(
           children: <Widget>[
-            Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(//box 装饰
-                borderRadius: BorderRadius.circular(10.0),
-                image: DecorationImage(image: AssetImage('images/Hank.png'),
-                  fit: BoxFit.cover,),
-              ),
+            GestureDetector(
+              onTap: (){
+                _methodChannel.invokeMapMethod("picture","我是第二个参数");
+              },
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(//box 装饰
+                  borderRadius: BorderRadius.circular(10.0),
+                  image: DecorationImage(image: _avataFile == null ?
+                  AssetImage('images/Hank.png'): FileImage(_avataFile),
+                    fit: BoxFit.cover,),
+                ),
 
+              ),
             ),//头像
             Container(
               width: ScreenWidth(context) - 110,
@@ -63,6 +75,24 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
 
       ),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    //从iOS 到 flutter的回调方法
+    _methodChannel.setMethodCallHandler((call){
+
+      if(call.method == "imagePath") {
+        String imagePath = call.arguments.toString().substring(7);
+        setState(() {
+          _avataFile = File(imagePath);
+        });
+      }
+
+      return null;
+    });
   }
 
   @override
