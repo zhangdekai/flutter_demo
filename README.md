@@ -1,6 +1,6 @@
 # weichatdemo
 
-A new Flutter application.
+仿制微信主页面的flutter Demo
 
 ## Getting Started
 
