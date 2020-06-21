@@ -33,6 +33,7 @@ dependencies:
   cupertino_icons: ^0.1.3
   http: 0.12.1
   dio: ^3.0.9 #大版本不变得区间写法  相当于 '>=3.0.9 < 4.0.0'
+  image_picker: 0.6.7+2
 
 # dio: 3.0.9  指定版本
 # dio: any 任意版本

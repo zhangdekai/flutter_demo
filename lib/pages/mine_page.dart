@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:weichatdemo/common/const.dart';
 
 import 'discover/discover_cell.dart';
@@ -28,10 +29,12 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
         child: Row(
           children: <Widget>[
             GestureDetector(
-              onTap: (){
-                // 给iOS 发送消息
-                _methodChannel.invokeMapMethod("picture","我是第二个参数");
-              },
+              onTap: _pickImage,// 使用 三方库 ImagePicker 添加图片
+//              onTap: (){
+//                // 原生方法
+//                // 给iOS 发送消息   调起picture 方法
+//                _methodChannel.invokeMapMethod("picture","我是第二个参数");
+//              },
               child: Container(
                 width: 50,
                 height: 50,
@@ -159,4 +162,13 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
   @override
   // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
+
+  void _pickImage() async{
+
+    PickedFile file = await ImagePicker().getImage(source: ImageSource.gallery);
+    setState(() {
+      _avataFile = File(file.path);
+    });
+
+  }
 }

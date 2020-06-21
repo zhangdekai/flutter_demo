@@ -18,6 +18,12 @@
   // Override point for customization after application launch.
     
     
+
+    
+  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
+- (void)useFlutterNativeMethodToChangePhotoes {
     //获取APP VC
     FlutterViewController *vc = (FlutterViewController *)self.window.rootViewController;
     
@@ -40,8 +46,6 @@
     
     NSLog(@"%@:",self.window.rootViewController);
 
-    
-  return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
