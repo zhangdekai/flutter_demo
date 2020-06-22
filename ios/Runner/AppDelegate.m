@@ -22,7 +22,10 @@
     
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
-
+//********************************
+#pragma mark - 使用flutter 三方库 image_picker 来换头像
+// 2: 使用flutter 三方库 image_picker 来换头像。
+// 1: 使用原生flutter 和 原生iOS 通信的方式 相册打开的方法，换头像
 - (void)useFlutterNativeMethodToChangePhotoes {
     //获取APP VC
     FlutterViewController *vc = (FlutterViewController *)self.window.rootViewController;
