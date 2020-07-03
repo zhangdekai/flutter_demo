@@ -83,7 +83,7 @@ class _FriendIndexBarState extends State<FriendIndexBar> {
               ),
               //VerticalDragUpdate
               onVerticalDragUpdate: (DragUpdateDetails details){
-                
+
 //                print('坐标 ${details.localPosition}');
 
                // 此处也可以使用获取控件的localPosition details.localPosition

@@ -110,6 +110,12 @@
       "languageVersion": "2.5"
     },
     {
+      "name": "logic_index_bar",
+      "rootUri": "file:///Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/logic_index_bar-0.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/matcher-0.12.6",
       "packageUri": "lib/",
@@ -218,7 +224,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-06-21T06:50:30.775332Z",
+  "generated": "2020-07-03T02:54:26.212292Z",
   "generator": "pub",
   "generatorVersion": "2.8.2"
 }

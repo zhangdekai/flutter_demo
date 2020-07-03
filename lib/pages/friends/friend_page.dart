@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/pages/discover/discover_child_page.dart';
-import 'package:weichatdemo/pages/friends/friend_index_bar.dart';
+//import 'package:weichatdemo/pages/friends/friend_index_bar.dart';
+import 'package:logic_index_bar/logic_index_bar.dart';// 使用自定义的Flutter package
 
 import 'friends_datas.dart';
 
@@ -120,7 +121,9 @@ class _FriendPageState extends State<FriendPage> with AutomaticKeepAliveClientMi
             itemBuilder: _itemForRow,
             itemCount: _datas.length + _headerData.length,
           ),),
-          FriendIndexBar(
+
+          //FriendIndexBar  IndexBar
+          IndexBar(
             indexBarCallBack: (String str) {
               if(_groupOffsetMap[str] != null) {
 //                _scrollController.animateTo(offset, duration: null, curve: null)

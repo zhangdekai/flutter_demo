@@ -34,6 +34,7 @@ dependencies:
   http: 0.12.1
   dio: ^3.0.9 #大版本不变得区间写法  相当于 '>=3.0.9 < 4.0.0'
   image_picker: 0.6.7+2
+  logic_index_bar: 0.0.2
 
 # dio: 3.0.9  指定版本
 # dio: any 任意版本
@@ -57,8 +58,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - packages/logic_index_bar/images/气泡.png
     - images/
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
