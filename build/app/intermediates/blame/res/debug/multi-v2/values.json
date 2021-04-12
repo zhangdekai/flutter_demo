@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/zhangdekai/FultterProjects/weichat_demo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/zhangdekai/Documents/GitHub/flutter_demo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/zhangdekai/.gradle/caches/transforms-2/files-2.1/03736cf4bc3669a69d502627b70a527e/core-1.1.0/res/values/values.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/zhangdekai/FultterProjects/weichat_demo/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/zhangdekai/Documents/GitHub/flutter_demo/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
+import 'package:weichatdemo/common/navigator_tool.dart';
 import 'package:weichatdemo/pages/discover/discover_cell.dart';
+import 'package:weichatdemo/provider_test/provider_test_case.dart';
+import 'package:weichatdemo/share_data/inherited_demo.dart';
+import 'package:weichatdemo/sqlite/sqlite_page_test.dart';
+import 'package:weichatdemo/sync_Test/test_dart_sync.dart';
+import 'package:weichatdemo/widgets_test/widget_api_test.dart';
 
 class DiscoverPage extends StatefulWidget {
   @override
   _DiscoverPageState createState() => _DiscoverPageState();
 }
 
-class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClientMixin {
-
+class _DiscoverPageState extends State<DiscoverPage>
+    with AutomaticKeepAliveClientMixin {
   Color _themeColor = WeChatThemeColor;
 
   @override
@@ -16,21 +22,19 @@ class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClie
     super.initState();
 
     print('DiscoverPage init来了');
-
   }
 
   @override
   Widget build(BuildContext context) {
-
     super.build(context);
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: WeChatThemeColor,// Colors.greenAccent
+        backgroundColor: WeChatThemeColor, // Colors.greenAccent
         //一下三个是专门为了安卓使用的属性
         centerTitle: true,
         title: Text('发现'),
-        elevation: 0.0,//底部边栏
+        elevation: 0.0, //底部边栏
       ),
       body: Container(
         color: _themeColor,
@@ -49,7 +53,8 @@ class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClie
             Row(
               children: <Widget>[
                 Container(width: 50, height: 0.5, color: Colors.white),
-                Container(height: 0.5, color: Colors.red)              ],
+                Container(height: 0.5, color: Colors.red)
+              ],
             ),
             DiscoverCell(
               imageName: 'images/摇一摇.png',
@@ -84,9 +89,12 @@ class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClie
             ),
             DiscoverCell(
               imageName: 'images/购物.png',
-              title: '购物',
+              title: '测试 SQLite',
               subTitle: '618限时特价',
               subImageName: 'images/badge.png',
+              callBack: (){
+                NavigatorTool.pushFrom(context, SQLiteTestPage());
+              },
             ),
             Row(
               children: <Widget>[
@@ -96,14 +104,20 @@ class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClie
             ),
             DiscoverCell(
               imageName: 'images/游戏.png',
-              title: '游戏',
+              title: '测试Provider',
+              callBack: () {
+                NavigatorTool.pushFrom(context, ProviderTestCase());
+              },
             ),
             SizedBox(
               height: 10,
             ),
             DiscoverCell(
               imageName: 'images/小程序.png',
-              title: '小程序',
+              title: 'Widget api test',
+              callBack: (){
+                NavigatorTool.pushFrom(context, WidgetsApiTest());
+              },
             ),
             SizedBox(
               height: 0.5,
@@ -111,12 +125,17 @@ class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClie
             DiscoverCell(
               imageName: 'images/小程序.png',
               title: '测试Dart异步编程',
+              callBack: (){
+                NavigatorTool.pushFrom(context, TestDartSync());
+              },
             ),
             DiscoverCell(
               imageName: 'images/小程序.png',
               title: '数据共享',
+              callBack: (){
+                NavigatorTool.pushFrom(context, InheritedDemo());
+              },
             ),
-
           ],
         ),
       ),

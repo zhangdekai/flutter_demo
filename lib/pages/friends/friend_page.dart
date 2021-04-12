@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/pages/discover/discover_child_page.dart';
 //import 'package:weichatdemo/pages/friends/friend_index_bar.dart';
-import 'package:logic_index_bar/logic_index_bar.dart';// 使用自定义的Flutter package
+// import 'package:logic_index_bar/logic_index_bar.dart';// 使用自定义的Flutter package
 
 import 'friends_datas.dart';
 
@@ -17,8 +17,8 @@ class _FriendPageState extends State<FriendPage> with AutomaticKeepAliveClientMi
 
   //字典里面放item和高度的对应数据
   final Map _groupOffsetMap = {
-    INDEX_WORDS[0]:0.0,
-    INDEX_WORDS[1]:0.0,
+    "INDEX_WORDS[0]":0.0,
+    "INDEX_WORDS[1]":0.0,
   };
 
   ScrollController _scrollController;
@@ -64,8 +64,6 @@ class _FriendPageState extends State<FriendPage> with AutomaticKeepAliveClientMi
     _scrollController = ScrollController();
 
   }
-
-
 
   Widget _itemForRow(BuildContext context, int index ) {
     //系统图标的Cell
@@ -123,15 +121,15 @@ class _FriendPageState extends State<FriendPage> with AutomaticKeepAliveClientMi
           ),),
 
           //FriendIndexBar  IndexBar
-          IndexBar(
-            indexBarCallBack: (String str) {
-              if(_groupOffsetMap[str] != null) {
-//                _scrollController.animateTo(offset, duration: null, curve: null)
-                _scrollController.animateTo(_groupOffsetMap[str], duration: Duration(microseconds: 1), curve: Curves.easeIn);
-              }
-
-            },
-          )
+//           IndexBar(
+//             indexBarCallBack: (String str) {
+//               if(_groupOffsetMap[str] != null) {
+// //                _scrollController.animateTo(offset, duration: null, curve: null)
+//                 _scrollController.animateTo(_groupOffsetMap[str], duration: Duration(microseconds: 1), curve: Curves.easeIn);
+//               }
+//
+//             },
+//           )
 
         ],
       ),

@@ -1,53 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:weichatdemo/common/navigator_tool.dart';
 import 'package:weichatdemo/pages/discover/discover_child_page.dart';
 import 'package:weichatdemo/share_data/inherited_demo.dart';
 import 'package:weichatdemo/sync_Test/test_dart_sync.dart';
 
 // version 1.0 改进一版
 // DiscoverCell 改为可改变状态的Widget  StatefulWidget
-class DiscoverCell extends StatefulWidget {// 改为StateFul 后 此部分主要用来描述widget 信息
+class DiscoverCell extends StatefulWidget {
+  // 改为StateFul 后 此部分主要用来描述widget 信息
   final String title;
   final String subTitle;
   final String imageName;
   final String subImageName;
+  final VoidCallback callBack;
 
-  const DiscoverCell({Key key, this.title, this.subTitle, this.imageName, this.subImageName}) : super(key: key);
+  const DiscoverCell(
+      {Key key,
+      this.title,
+      this.subTitle,
+      this.imageName,
+      this.subImageName,
+      this.callBack})
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
     return _DiscoverCellState();
   }
-
 }
 
-class _DiscoverCellState extends State<DiscoverCell> {// 改为StateFul 后 此部分主要用来 刷新数据，渲染
+class _DiscoverCellState extends State<DiscoverCell> {
+  // 改为StateFul 后 此部分主要用来 刷新数据，渲染
   //传的数据，需要用 widget.title 如此方式在下面代码使用
   Color _currentColor = Colors.white;
   @override
-  Widget build(BuildContext context)  {
+  Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-
         setState(() {
           _currentColor = Colors.white;
         });
-
-        if (widget.title == '测试Dart异步编程') {
-          //注意格式
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext content) => TestDartSync()));
-
-        } else if(widget.title == '数据共享') {
-        Navigator.of(context).push(MaterialPageRoute(
-        builder: (BuildContext content) => InheritedDemo()));
-
-        } else {
-          //注意格式
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext content) => DiscoverChildPage('${widget.title}')));
-
-        }
-        },
+        widget.callBack();
+      },
       onTapCancel: () {
         setState(() {
           _currentColor = Colors.white;
@@ -69,8 +63,13 @@ class _DiscoverCellState extends State<DiscoverCell> {// 改为StateFul 后 此�
               padding: EdgeInsets.all(10),
               child: Row(
                 children: <Widget>[
-                  Image(image: AssetImage(widget.imageName),width: 20,),
-                  SizedBox(width: 15,),
+                  Image(
+                    image: AssetImage(widget.imageName),
+                    width: 20,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
                   Text(widget.title)
                 ],
               ),
@@ -79,9 +78,17 @@ class _DiscoverCellState extends State<DiscoverCell> {// 改为StateFul 后 此�
               padding: EdgeInsets.all(10),
               child: Row(
                 children: <Widget>[
-                  widget.subTitle != null ? Text(widget.subTitle):Text(''),
-                  widget.subImageName != null ? Image(image: AssetImage(widget.subImageName),width: 15,):Container(),
-                  Image(image: AssetImage('images/icon_right.png'),width: 15,),
+                  widget.subTitle != null ? Text(widget.subTitle) : Text(''),
+                  widget.subImageName != null
+                      ? Image(
+                          image: AssetImage(widget.subImageName),
+                          width: 15,
+                        )
+                      : Container(),
+                  Image(
+                    image: AssetImage('images/icon_right.png'),
+                    width: 15,
+                  ),
                 ],
               ),
             )
@@ -91,7 +98,6 @@ class _DiscoverCellState extends State<DiscoverCell> {// 改为StateFul 后 此�
     );
   }
 }
-
 
 /*
 version 0.0 : 最早期

@@ -1,4 +1,4 @@
-#Wed Jun 03 20:02:53 CST 2020
-base.0=/Users/zhangdekai/FultterProjects/weichat_demo/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Sun Mar 21 19:01:07 CST 2021
+base.0=/Users/zhangdekai/Documents/GitHub/flutter_demo/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

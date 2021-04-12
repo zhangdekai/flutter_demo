@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:image_picker/image_picker.dart';
+// import 'package:image_picker/image_picker.dart';
 import 'package:weichatdemo/common/const.dart';
 
 import 'discover/discover_cell.dart';
@@ -16,6 +16,8 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
 
   //iOS与flutter通信  使用MethodChannel
   MethodChannel _methodChannel = MethodChannel('mine_page');
+
+
   //展示头像，使用FileImage(_avataFile);
   File _avataFile = null;
 
@@ -165,10 +167,10 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
 
   void _pickImage() async{
 
-    PickedFile file = await ImagePicker().getImage(source: ImageSource.gallery);
-    setState(() {
-      _avataFile = File(file.path);
-    });
+    // PickedFile file = await ImagePicker().getImage(source: ImageSource.gallery);
+    // setState(() {
+    //   _avataFile = File(file.path);
+    // });
 
   }
 }

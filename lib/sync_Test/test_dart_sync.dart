@@ -12,9 +12,12 @@ void func01(SendPort port) {//有点问题????
 }
 
 int a = 10;
+
 //Isolate 看起来更加像进程.因为有独立的内存空间!
 //它的好处是:不用担心多线程的资源抢夺问题!不需要锁!
-//Isolat 非常底层.
+//Isolate 非常底层.
+
+
 void test0001() async {
 
   ReceivePort port = ReceivePort();
@@ -66,6 +69,7 @@ class TestDartSync extends StatelessWidget {
   }
 
   void textFuture() {
+
     Future((){
       sleep(Duration(seconds: 1));
       return '任务1';
@@ -132,6 +136,8 @@ class TestDartSync extends StatelessWidget {
       print(value[0] + value[1]);
     });
 
+    Future.value();
+
   }
 
   void textFuture2() {
@@ -150,8 +156,13 @@ class TestDartSync extends StatelessWidget {
 
     print('外部代码2');
 
+    scheduleMicrotask((){
+
+    });
+
   }
 
+  // 任务、微任务 优先级
   void textFuture3() {
 
     Future x1 = Future(() => null);
@@ -162,6 +173,7 @@ class TestDartSync extends StatelessWidget {
     }).then((value) => print('8'));
 
     Future x = Future(()=> print('1'));
+
     x.then((value)  {
       print('4');
       Future(() => print('9'));
@@ -182,6 +194,7 @@ class TestDartSync extends StatelessWidget {
 void computeTest() {
 
   print('外部代码1');
+
 
   compute(func2, 1000).then((value) => print(value));
 
@@ -249,8 +262,22 @@ void futureDemo() {
   // 关于then 他在Future任务执行完毕后，立刻执行，可以看做一个任务执行！
   x.then((value) => print('C异步1结束'));
   print('D主任务');
-
   // D A C B
+
+
+  Future y = Future((){
+    print('F异步任务1');
+  });
+
+  // 等待 x,y 执行完毕才执行
+  Future.wait([x,y]).then((value) {
+    print(value);
+  });
+
+//  Future.delayed(Duration(seconds: 2));
+
+//  Future.doWhile(() => null)
+
 }
 
 void dioDemo(){

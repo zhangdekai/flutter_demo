@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:weichatdemo/pages/chat/chat_page.dart';
 import 'package:weichatdemo/pages/discover/discover_page.dart';
 import 'package:weichatdemo/pages/friends/friend_page.dart';
@@ -15,6 +16,7 @@ class _RootPageState extends State<RootPage> {
 
   List<Widget> _pages = [ChatPage(),FriendPage(), DiscoverPage(),MinePage()];
   final PageController _pageController = PageController(initialPage: 0);
+
 
   @override
   Widget build(BuildContext context) {

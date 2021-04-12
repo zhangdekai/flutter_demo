@@ -22,6 +22,7 @@
     
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
+
 //********************************
 #pragma mark - 使用flutter 三方库 image_picker 来换头像
 // 2: 使用flutter 三方库 image_picker 来换头像。

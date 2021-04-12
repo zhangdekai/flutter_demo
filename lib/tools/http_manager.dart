@@ -31,7 +31,8 @@ class HttpManager {
 
 }
 
-Future<Response> get(url, {Map<String, String> headers, Map<String,dynamic> queryParameters, int timeout}) {
+Future<Response> get(url, {Map<String, String> headers,
+  Map<String,dynamic> queryParameters, int timeout}) {
 
   return HttpManager.request(url,
       queryParameters: queryParameters,

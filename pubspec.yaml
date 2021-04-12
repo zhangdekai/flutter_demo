@@ -35,6 +35,12 @@ dependencies:
   dio: ^3.0.9 #大版本不变得区间写法  相当于 '>=3.0.9 < 4.0.0'
   image_picker: 0.6.7+2
   logic_index_bar: 0.0.2
+  provider: ^4.0.0
+  json_serializable: ^3.2.3
+  build_runner: ^1.7.1
+  fish_redux: ^0.3.7
+  sqflite: ^2.0.0+3
+
 
 # dio: 3.0.9  指定版本
 # dio: any 任意版本

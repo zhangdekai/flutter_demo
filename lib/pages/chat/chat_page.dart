@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:isolate';
 
-import 'package:dio/dio.dart';
+// import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/pages/chat/search_bar.dart';
@@ -36,7 +36,7 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
 
   List<Chat> _datas = [];
 
-  CancelToken _cancelToken = CancelToken();
+  // CancelToken _cancelToken = CancelToken();
   
 
   @override
@@ -66,7 +66,7 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
     }).timeout(Duration(seconds: 6))
         .catchError((timeout){
           _cancleConnect = true;
-          _cancelToken.cancel('因为网络超时');//取消网络请求
+          // _cancelToken.cancel('因为网络超时');//取消网络请求
           print('超时输出${timeout}');
     });
   }
@@ -113,7 +113,7 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('微信'),
+        title: Text('微信1232424'),
         backgroundColor: WeChatThemeColor,
         actions: <Widget>[
           Container(
