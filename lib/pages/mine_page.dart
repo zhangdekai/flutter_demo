@@ -7,6 +7,16 @@ import 'package:weichatdemo/common/const.dart';
 
 import 'discover/discover_cell.dart';
 
+class ATestWidget extends StatelessWidget {
+  const ATestWidget({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
 class MinePage extends StatefulWidget {
   @override
   _MinePageState createState() => _MinePageState();

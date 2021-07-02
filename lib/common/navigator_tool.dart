@@ -8,4 +8,8 @@ class NavigatorTool {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (BuildContext content) => target));
   }
+
+  static void pushNamed(BuildContext context,String routeName,{dynamic argument}){
+    Navigator.of(context).pushNamed(routeName, arguments: argument);
+  }
 }

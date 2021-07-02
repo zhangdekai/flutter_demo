@@ -13,9 +13,12 @@ class MyData extends InheritedWidget {
 
   //提供一个方法让子Widget访问的共享数据
   static MyData of(BuildContext context) {
+    // context.getElementForInheritedWidgetOfExactType();
     return context.dependOnInheritedWidgetOfExactType<MyData>();
 //    return context.inheritFromWidgetOfExactType(MyData) as MyData;
   }
+
+
 
   @override
   bool updateShouldNotify(MyData old) {
@@ -32,6 +35,7 @@ class _InheritedDemoState extends State<InheritedDemo> {
   int count = 1;
   @override
   Widget build(BuildContext context) {
+    
     return MyData(count,
         child: Container(
           color: Colors.white,
@@ -39,7 +43,7 @@ class _InheritedDemoState extends State<InheritedDemo> {
           child: Column(
             children: <Widget>[
               Test1(),
-              RaisedButton(
+              TextButton(
                 child: Text('我是按钮'),
                 onPressed: (){
                   setState(() {

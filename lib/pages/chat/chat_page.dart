@@ -48,7 +48,7 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
 //    testTimer();
 
 //    testJsonConvertMap();
-    getData().then((List<Chat> datas) {
+    _getData().then((List<Chat> datas) {
 
       print('数据来了');
 
@@ -149,11 +149,14 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
     );
   }
 
-  Future<List<Chat>> getData() async {//异步的方法 添加 async
+  Future<List<Chat>> _getData() async {//异步的方法 添加 async
 
     _cancleConnect = false;
 
+    return [];
 
+
+    /*
     final respone = await http.get('http://rap2.taobao.org:38080/app/mock/257543/api/chatlist');
 
     if (respone.statusCode == 200) {
@@ -173,6 +176,8 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
 
       throw Exception('statusCode: ${respone.statusCode}');
     }
+
+     */
 
 
   }

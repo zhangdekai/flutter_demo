@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/common/navigator_tool.dart';
+import 'package:weichatdemo/fish_redux_test/page.dart';
+import 'package:weichatdemo/generated/l10n.dart';
+import 'package:weichatdemo/image_crop_test/image_crop.dart';
 import 'package:weichatdemo/pages/discover/discover_cell.dart';
 import 'package:weichatdemo/provider_test/provider_test_case.dart';
 import 'package:weichatdemo/share_data/inherited_demo.dart';
@@ -33,7 +36,7 @@ class _DiscoverPageState extends State<DiscoverPage>
         backgroundColor: WeChatThemeColor, // Colors.greenAccent
         //一下三个是专门为了安卓使用的属性
         centerTitle: true,
-        title: Text('发现'),
+        title: Text(S.of(context).title),//Text('发现')
         elevation: 0.0, //底部边栏
       ),
       body: Container(
@@ -75,14 +78,22 @@ class _DiscoverPageState extends State<DiscoverPage>
             ),
             DiscoverCell(
               imageName: 'images/搜一搜 2.png',
-              title: '搜一搜',
+              title: '图片裁剪',
+              callBack: (){
+
+                NavigatorTool.pushFrom(context, ImageClipperTest());
+
+              },
             ),
             SizedBox(
               height: 10,
             ),
             DiscoverCell(
               imageName: 'images/附近的人icon.png',
-              title: '附近的人',
+              title: '测试 Fish_Redux',
+              callBack: (){
+                NavigatorTool.pushNamed(context, 'fish_test',argument: {'name': 'i am from discover page'});
+              },
             ),
             SizedBox(
               height: 10,
