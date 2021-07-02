@@ -1,5 +1,19 @@
+import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+/*
+以下包含：
+1：Stream StreamBuild
+2：FutureBuilder
+3：LayoutBuilder
+4：Flexible
+5：GridView
+
+
+ */
 
 class WidgetsApiTest extends StatefulWidget {
   @override
@@ -7,37 +21,357 @@ class WidgetsApiTest extends StatefulWidget {
 }
 
 class _WidgetsApiTestState extends State<WidgetsApiTest> {
+  Stream _stream = Stream.periodic(Duration(seconds: 1), (_) => 56);
+
+  /// 只能被一个监听, 会缓存 sink add 过的事件
+  // StreamController _controller = StreamController();
+
+  /// 可被多方监听   不会缓存
+  StreamController _controller = StreamController.broadcast();
+
+  Stream<int> getNumber() async* {
+    await Future.delayed(Duration(seconds: 2));
+    yield 1; // 返回 1
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    // _stream.listen((event) {// 使用StreamBuilder 的话，就不可以 listen了
+    //   print('stream event = $event');
+    // });
+
+    // _controller.sink.add(123);
+    // _controller.stream.listen((event) {
+    //   print('event = $event');
+    // }, onError: ()=> print('on Error'),
+    //     onDone: ()=> print('on Done')
+    // );
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    // 不加这行，_controller 报警告。
+    _controller.close();
+  }
+
   @override
   Widget build(BuildContext context) {
-
-    return _flexWidgetTest();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Widget api test'),
+        backgroundColor: Colors.cyan,
+      ),
+      body: Container(
+        color: Colors.green[200],
+        // height: 800,
+        child:
+            _gridViewTest(), //_gridViewTest, _streamBuilderTest, _flexibleTest(),  _layoutBuilderTest, _futureBuilderTest
+      ),
+    );
   }
 
-
-  Widget _flexWidgetTest() {
-
-
-    return Container(
-      height: 500,
-      child: Column(children: [
-
-      Flexible(flex: 1, fit: FlexFit.tight,
-          child: GestureDetector(child: Container(height: 50, color: Colors.red,),onTap: (){
-
-
-
-            AppUtils.showDialogs(context, BaseDialog(title: '撒大声地',content: '是非法的',));
-          },)),
-      Flexible(flex: 2,
-          child: Container(color: Colors.green,)),
-      Flexible(flex: 3,
-          child: Container(color: Colors.yellow,)),
-
-    ],),);
-
+  /// 键盘输入 Stream 检测
+  Widget _gridViewTest() {
+    return Stack(
+      children: [
+        PuzzleView(
+          inputStream: _controller.stream,
+        ),
+        Center(
+          child: DefaultTextStyle(
+            style: TextStyle(fontSize: 30, color: Colors.yellow),
+            child: StreamBuilder<Object>(
+                stream: _controller.stream,
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return Text('Your enter is ${snapshot.data}');
+                  }
+                  return Text('waiting...');
+                }),
+          ),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            color: Colors.red[300],
+            child: GridView.count(
+              shrinkWrap: true,
+              padding: EdgeInsets.all(0),
+              crossAxisCount: 3,
+              childAspectRatio: 2 / 1,
+              children: List.generate(9, (index) {
+                return TextButton(
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                            BeveledRectangleBorder()), //BeveledRectangleBorder, CircleBorder
+                        backgroundColor: MaterialStateProperty.all(
+                            Colors.primaries[index][200])),
+                    onPressed: () {
+                      // _controller.sink.add(index + 1);
+                      _controller.add(index + 1);
+                    },
+                    child: Text(
+                      '${index + 1}',
+                      style: TextStyle(fontSize: 25, color: Colors.black),
+                    ));
+              }),
+            ),
+          ),
+        )
+      ],
+    );
   }
 
+  Widget _streamBuilderTest() {
+    return Center(
+      child: DefaultTextStyle(
+        style: TextStyle(fontSize: 25, color: Colors.yellow),
+        child: Column(children: [
+          TextButton(
+              onPressed: () {
+                _controller.sink.add(10);
+              },
+              child: Text('10')),
+          TextButton(
+              onPressed: () {
+                _controller.sink.add(20);
+              },
+              child: Text('20')),
+          TextButton(
+              onPressed: () {
+                _controller.sink.addError('oops');
+              },
+              child: Text('oops')),
+          MaterialButton(
+            onPressed: () {
+              _controller.sink.add('MaterialButton');
+            },
+            child: Text('MaterialButton'),
+          ),
+          StreamBuilder(
+              // initialData: 100,
+              stream: _controller.stream
+                  .map((event) => event * 2)
+                  .where((event) => event > 10)
+                  .distinct(), //_stream   .map((event) => event * 2)
+              //distinct 去重
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                print('building....');
+                switch (snapshot.connectionState) {
+                  case ConnectionState.none:
+                    return Text('ConnectionState.none');
+                  case ConnectionState.waiting:
+                    // TODO: Handle this case.
+                    return Text('ConnectionState.waiting');
+                  case ConnectionState.active:
+                    // TODO: Handle this case.
 
+                    if (snapshot.hasError) {
+                      return Icon(
+                        Icons.error,
+                        size: 50,
+                      );
+                    }
+                    if (snapshot.hasData) {
+                      return Text(
+                          'ConnectionState.active date = ${snapshot.data}');
+                    }
+                    return Text('ConnectionState.active');
+                  case ConnectionState.done:
+                    // TODO: Handle this case.
+                    break;
+                }
+                return Container();
+              }),
+        ]),
+      ),
+    );
+  }
+
+  Widget _futureBuilderTest() {
+    return Center(
+      child: DefaultTextStyle(
+        style: TextStyle(fontSize: 20, color: Colors.red),
+        child: FutureBuilder(
+            // initialData: 32,
+            future: Future.delayed(
+                Duration(seconds: 2), () => 200), //100  throw('error 1')
+            builder: (con, snp) {
+              if (snp.hasError) {
+                return Icon(Icons.error, size: 50);
+              }
+
+              if (snp.connectionState == ConnectionState.done) {
+                print('ConnectionState.done');
+              }
+
+              if (snp.hasData) {
+                return Text(
+                  'data = ${snp.data}',
+                  style: TextStyle(fontSize: 30),
+                );
+              }
+              return CircularProgressIndicator();
+            }),
+      ),
+    );
+  }
+
+  Widget _layoutBuilderTest() {
+    Widget widget = Container(
+      color: Colors.cyan[200],
+      child: FractionallySizedBox(
+        widthFactor: 0.2,
+        heightFactor: 0.2,
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            print('LayoutBuilder constraints = $constraints');
+
+            return FlutterLogo(size: 50);
+          },
+        ),
+      ),
+    );
+
+    widget = Container(
+      color: Colors.green[100],
+      child: Padding(
+        padding: EdgeInsets.all(20),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+              minWidth: 100, minHeight: 100, maxWidth: 150, maxHeight: 148),
+          child: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              print('LayoutBuilder constraints = $constraints');
+              return FlutterLogo(size: 50);
+            },
+          ),
+        ),
+      ),
+    );
+
+    return Center(
+      child: widget,
+    );
+  }
+
+  Widget _flexibleTest() {
+    return Column(
+      children: [
+        Flexible(
+            flex: 1,
+            fit: FlexFit.tight,
+            child: GestureDetector(
+              child: Container(
+                height: 50,
+                color: Colors.red,
+              ),
+              onTap: () {
+                AppUtils.showDialogs(
+                    context,
+                    BaseDialog(
+                      title: '撒大声地',
+                      content: '是非法的',
+                    ));
+              },
+            )),
+        Flexible(
+            flex: 2,
+            child: Container(
+              color: Colors.green,
+            )),
+        Flexible(
+            flex: 3,
+            child: Container(
+              color: Colors.yellow,
+            )),
+      ],
+    );
+  }
+}
+
+class PuzzleView extends StatefulWidget {
+  final inputStream;
+
+  const PuzzleView({Key key, this.inputStream}) : super(key: key);
+
+  @override
+  _PuzzleViewState createState() => _PuzzleViewState();
+}
+
+class _PuzzleViewState extends State<PuzzleView>
+    with SingleTickerProviderStateMixin {
+  int a = 0;
+  int b = 0;
+  double x = 0;
+  AnimationController _controller;
+
+  void reset() {
+    a = Random().nextInt(5) + 1;
+    b = Random().nextInt(5);
+    x = Random().nextInt(350).toDouble();
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 5))
+          ..forward();
+
+    reset();
+
+    _controller.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        reset();
+        _controller.forward(from: 0.0);
+      }
+    });
+
+    widget.inputStream.listen((event) {
+      if (event == a + b) {
+        reset();
+        _controller.forward(from: 0.0);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (BuildContext context, Widget child) {
+        return Positioned(
+            left: x,
+            top: 400 * _controller.value - 100,
+            child: Container(
+              child: TextButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.pink[300])),
+                  onPressed: () {},
+                  child: Text(
+                    '$a + $b',
+                    style: TextStyle(fontSize: 20),
+                  )),
+            ));
+      },
+    );
+  }
 }
 
 class BaseDialog extends StatefulWidget {
@@ -50,11 +384,11 @@ class BaseDialog extends StatefulWidget {
 
   BaseDialog(
       {this.title = "",
-        this.content = "",
-        this.cancelAble = true,
-        this.confirmCallback,
-        this.cancelCallback,
-        this.dismissCallback});
+      this.content = "",
+      this.cancelAble = true,
+      this.confirmCallback,
+      this.cancelCallback,
+      this.dismissCallback});
 
   @override
   _BaseDialogState createState() => _BaseDialogState();
@@ -64,11 +398,13 @@ class AppUtils {
   /// 展示dialog
   static void showDialogs(BuildContext context, Widget dialog) {
 // 导航到新路由 背景颜色为透明色
-/*Navigator.of(context).push(PageRouteBuilder(
+/*
+  Navigator.of(context).push(PageRouteBuilder(
       opaque: false,
       pageBuilder: (context, animation, secondaryAnimation) {
         return dialog;
-      }));*/
+      }));
+*/
     showDialog(context: context, builder: (_) => dialog);
   }
 }
@@ -198,4 +534,3 @@ class _BaseDialogState extends State<BaseDialog> {
     _dismissDialog();
   }
 }
-
