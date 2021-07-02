@@ -1,13 +1,18 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:weichatdemo/fish_redux_test/model/list_cell_model.dart';
 
-class list_cellState implements Cloneable<list_cellState> {
+class ListCellState implements Cloneable<ListCellState> {
+
+  ListCellModel model;
+  ListCellState({this.model});
 
   @override
-  list_cellState clone() {
-    return list_cellState();
+  ListCellState clone() {
+    return ListCellState()
+      ..model = model;
   }
 }
 
-list_cellState initState(Map<String, dynamic> args) {
-  return list_cellState();
+ListCellState initState(Map<String, dynamic> args) {
+  return ListCellState();
 }

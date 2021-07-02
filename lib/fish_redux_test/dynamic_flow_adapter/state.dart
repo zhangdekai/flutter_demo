@@ -1,9 +1,9 @@
 import 'package:fish_redux/fish_redux.dart';
 
-class listview_adapterState extends ImmutableSource implements Cloneable<listview_adapterState> {
+class DynamicSourceFlowState extends MutableSource implements Cloneable<DynamicSourceFlowState> {
   @override
-  listview_adapterState clone() {
-    return listview_adapterState();
+  DynamicSourceFlowState clone() {
+    return DynamicSourceFlowState();
   }
 
   @override
@@ -23,12 +23,11 @@ class listview_adapterState extends ImmutableSource implements Cloneable<listvie
   int get itemCount => throw UnimplementedError();
 
   @override
-  ImmutableSource setItemData(int index, Object data) {
+  void setItemData(int index, Object data) {
     // TODO: implement setItemData
-    throw UnimplementedError();
   }
 }
 
-listview_adapterState initState(Map<String, dynamic> args) {
-  return listview_adapterState();
+DynamicSourceFlowState initState(Map<String, dynamic> args) {
+  return DynamicSourceFlowState();
 }

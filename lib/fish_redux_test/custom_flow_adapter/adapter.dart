@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'reducer.dart';
 import 'state.dart';
 
-class CustomerAdapterAdapter extends Adapter<CustomerAdapterState> {
-  CustomerAdapterAdapter()
+class CSCustomFlowAdapter extends Adapter<CSCustomFlowState> {
+  CSCustomFlowAdapter()
       : super(
           adapter: buildAdapter,
           reducer: buildReducer(),
@@ -13,7 +13,7 @@ class CustomerAdapterAdapter extends Adapter<CustomerAdapterState> {
 }
 
 ListAdapter buildAdapter(
-    CustomerAdapterState state, Dispatch dispatch, ViewService service) {
+    CSCustomFlowState state, Dispatch dispatch, ViewService service) {
   final List<IndexedWidgetBuilder> builders =
       Collections.compact(<IndexedWidgetBuilder>[]);
   return ListAdapter(
