@@ -1,34 +1,13 @@
-import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
-abstract class CSFlutterSQLite {
-
-  /// open or create a table
-  Future<void> openTable(String table,String createTableSql);
-
-  /// insert a data map into table
-  Future<bool> insertData(Map<String, dynamic> values);
-
-  /// get data from table by where
-  Future<Map<String, dynamic>> getData({String where, List<Object> whereArgs, List<String> columns});
-
-  /// update data by where
-  Future<bool> updateDate(Map<String, dynamic> values, String where, List<dynamic> whereArgs);
-
-  /// delete data by where
-  Future<bool> deleteData({String where, List<dynamic> whereArgs});
-
-}
-
-class CSSQLiteHelper extends CSFlutterSQLite {
-
+class CSSQLiteHelper {
   Database database;
   int version = 1;
   String tableName;
 
   /// dbName: database name, like CarSome.db
   Future<String> databasePath({String dbName = 'CarSome.db'}) async {
-
     final path = await getDatabasesPath();
 
     return join(path, dbName);
@@ -37,17 +16,17 @@ class CSSQLiteHelper extends CSFlutterSQLite {
   /// table: need a table name
   /// createTableSql: create a table sql.
   /// like this 'CREATE TABLE $table (id INTEGER PRIMARY KEY, name TEXT, value INTEGER, num REAL)'
-  @override
   Future<void> openTable(String table, String createTableSql) async {
-
     tableName = table;
 
     final path = await databasePath();
 
+    print('path = $path');
+
     database = await openDatabase(path, version: version,
         onCreate: (Database db, int version) async {
-          //'CREATE TABLE $table (id INTEGER PRIMARY KEY, name TEXT, value INTEGER, num REAL)'
-          // create table
+      //'CREATE TABLE $table (id INTEGER PRIMARY KEY, name TEXT, value INTEGER, num REAL)'
+      // create table
       await db.execute(createTableSql);
 
       print('create table success');
@@ -56,12 +35,13 @@ class CSSQLiteHelper extends CSFlutterSQLite {
 
   /// insert table single data, which is Map<String, dynamic>
   /// return: insert whether success.
-  @override
   Future<bool> insertData(Map<String, dynamic> values) async {
+
+    /// 需要去重哦
 
     var id = await database.insert(tableName, values);
 
-    print('insert database data ${id>0}');
+    print('insert database data ${id > 0}');
 
     return id > 0;
   }
@@ -69,41 +49,45 @@ class CSSQLiteHelper extends CSFlutterSQLite {
   /// limit: every page data number,
   /// page: page
   /// return: List<Map<String, dynamic>>
-  Future<List<Map<String, dynamic>>> getList({int limit = 20, int page}) async {
-
+  Future<List<Map<String, dynamic>>> getList(
+      {int limit = 20, int page = 0, String orderBy}) async {
     var offset = 0;
-    if(page > 1) {
+    if (page > 1) {
       offset = (page - 1) * limit;
     }
-    return await database.query(tableName,limit: limit, offset: offset);
+    return await database.query(tableName,
+        limit: limit, offset: offset, orderBy: orderBy);
   }
 
   /// where: 'id = ?'
   /// whereArgs: [2]
   /// columns: ['id'], ['id'] will return id = 2. pass null, will return id = 2's total single row
   /// return: a Map<String, dynamic>
-  @override
-  Future<Map<String, dynamic>> getData({String where, List<Object> whereArgs, List<String> columns}) async {
+  Future<List<Map<String, dynamic>>> getData(
+      {String where, List<Object> whereArgs, List<String> columns}) async {
 
     List<Map> maps = await database.query(tableName,
-        columns: columns,
-        where: where,
-        whereArgs: whereArgs);
+        columns: columns, where: where, whereArgs: whereArgs);
 
-    if (maps.isNotEmpty) {
-      return maps.first;
-    }
-    return null;
+    return maps;
+  }
+
+  /// key: id
+  /// whereInStr: values of id like 1,2,3  or '1','2','3'
+  Future<List<Map<String, dynamic>>> getDataByWhereIn(String key, String whereInStr) async {
+
+    var maps = await database.rawQuery('SELECT * FROM $tableName WHERE $key IN ($whereInStr)');
+    return maps;
   }
 
   /// values: needed updated data
   /// where: 'id = ?'
   /// whereArgs: [2], select id=2 rows.
   /// return: update whether success.
-  @override
-  Future<bool> updateDate(Map<String, dynamic> values, String where, List<dynamic> whereArgs) async {
-
-    var count = await database.update(tableName, values, where: where, whereArgs: whereArgs);
+  Future<bool> updateDate(Map<String, dynamic> values, String where,
+      List<dynamic> whereArgs) async {
+    var count = await database.update(tableName, values,
+        where: where, whereArgs: whereArgs);
 
     print('database updated $count data');
 
@@ -113,9 +97,9 @@ class CSSQLiteHelper extends CSFlutterSQLite {
   /// where: 'id = ?'
   /// whereArgs: [2], select id=2 rows.
   /// return: delete whether success.
-  @override
   Future<bool> deleteData({String where, List<dynamic> whereArgs}) async {
-    var count = await database.delete(tableName, where: where, whereArgs: whereArgs);
+    var count =
+        await database.delete(tableName, where: where, whereArgs: whereArgs);
     print('database delete $count data');
     return count > 0;
   }
@@ -124,13 +108,7 @@ class CSSQLiteHelper extends CSFlutterSQLite {
   Future close() async => database.close();
 }
 
-
-
-
-
 class SqfliteHelper {
-
-
   void query() async {
     /// 通过getDatabasesPath()方法获取数据库位置
     var databasePath = await getDatabasesPath();
@@ -140,8 +118,8 @@ class SqfliteHelper {
     await deleteDatabase(path);
 
     /// 打开数据库
-    Database database = await openDatabase(
-        path, version: 1, onCreate: (Database db, int version) async {
+    Database database = await openDatabase(path, version: 1,
+        onCreate: (Database db, int version) async {
       /// 创建数据库
       await db.execute(
           "CREATE TABLE Test(id INTEGER PRIMARY KEY,name TEXT,value INTEGER,num REAL)");
@@ -175,21 +153,21 @@ class SqfliteHelper {
     // assert(const DeepCollectionEquality().equals(list, expectedList));
 
     /// 统计记录数
-    int count2 = Sqflite.firstIntValue(await database.rawQuery('SELECT COUNT(*) FROM Test'));
+    int count2 = Sqflite.firstIntValue(
+        await database.rawQuery('SELECT COUNT(*) FROM Test'));
     assert(count2 == 2);
 
     /// 删除一条记录
-    int count3 = await database.rawDelete('DELETE FROM Test WHERE name = ?',['another name']);
+    int count3 = await database
+        .rawDelete('DELETE FROM Test WHERE name = ?', ['another name']);
     assert(count3 == 1);
 
     /// 关闭数据库
     await database.close();
   }
-
 }
 
 void querySQLHelper() async {
-
   TodoProvider todoProvider = TodoProvider.instance;
 
   /// 通过getDatabasesPath()方法获取数据库位置
@@ -250,11 +228,9 @@ final String columnDone = 'done';
 
 /// 操作todo表的工具类
 class TodoProvider {
-
   TodoProvider._();
 
   static final TodoProvider instance = TodoProvider._();
-
 
   Database db;
 
@@ -262,13 +238,13 @@ class TodoProvider {
   Future open(String path) async {
     db = await openDatabase(path, version: 1,
         onCreate: (Database db, int version) async {
-          await db.execute('''
+      await db.execute('''
 create table $tableTodo ( 
   $columnId integer primary key autoincrement, 
   $columnTitle text not null,
   $columnDone integer not null)
 ''');
-        });
+    });
   }
 
   Future<Todo> insert(Todo todo) async {
@@ -325,4 +301,3 @@ class Todo {
     done = map[columnDone] == 1;
   }
 }
-

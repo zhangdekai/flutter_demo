@@ -41,15 +41,21 @@ class _SQLiteTestPageState extends State<SQLiteTestPage> {
     // sqlHelp.insertData({'id': 5, 'name': '熊大3', 'value': 220});
     // sqlHelp.insertData({'id': 6, 'name': '熊大3', 'value': 220});
     // sqlHelp.insertData({'id': 7, 'name': '熊大3', 'value': 220});
-    // sqlHelp.insertData({'id': 8, 'name': '熊大3', 'value': 220});
+    // sqlHelp.insertData({'id': 11, 'name': '熊大5', 'value': 221});
+    // sqlHelp.insertData({'id': 12, 'name': '熊大6', 'value': 221});
+    // sqlHelp.insertData({'id': 13, 'name': '熊大6', 'value': 222});
 
-    List list = await sqlHelp.getList(limit: 3, page: 2);
+    List list = await sqlHelp.getList(limit: 3, page: 2, orderBy: 'id DESC');
 
     print('list = $list');
 
-    final data = await sqlHelp.getData(where: 'id = ?', whereArgs: [2]);
+    final data = await sqlHelp.getData(where: 'id = ?', whereArgs: [12]);
 
     print('data = $data');
+
+    final datas = await sqlHelp.getDataByWhereIn('id', '1,3,5,7,9');
+
+    print('datas = $datas');
 
     final success = await sqlHelp.updateDate(
         {
