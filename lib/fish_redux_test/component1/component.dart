@@ -4,14 +4,14 @@ import 'reducer.dart';
 import 'state.dart';
 import 'view.dart';
 
-class ListCellComponent extends Component<ListCellState> {
-  ListCellComponent()
+class ListBottomViewComponent extends Component<ListBottomViewState> {
+  ListBottomViewComponent()
       : super(
             reducer: buildReducer(),
             view: buildView,
-            dependencies: Dependencies<ListCellState>(
+            dependencies: Dependencies<ListBottomViewState>(
                 adapter: null,
-                slots: <String, Dependent<ListCellState>>{
+                slots: <String, Dependent<ListBottomViewState>>{
                 }),);
 
 }

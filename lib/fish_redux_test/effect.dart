@@ -1,6 +1,9 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart' show Navigator;
+import 'package:weichatdemo/fish_redux_test/component/state.dart';
+import 'package:weichatdemo/fish_redux_test/model/list_cell_model.dart';
 import 'action.dart';
+import 'component1/state.dart';
 import 'state.dart';
 
 
@@ -19,11 +22,23 @@ void _initState(Action action, Context<FishReduxTestState> ctx) {
   // 网络请求，数据处理
   // 监听处理
 
-  ctx.context;
+  /// 初始化 data
+  var list = <ListCellState>[];
+  for(int i = 0; i< 10; i++){
+    ListCellModel model = ListCellModel(title: 'list_item_$i', content: 'list_content_$i');
+    list.add(ListCellState(model: model));
+  }
 
-  ctx.state; //获取数据
+  ctx.dispatch(FishReduxTestActionCreator.initDataList(list));
 
-  ctx.dispatch(action);// 分发事件，一般传到reduce 更新数据，刷新View
+  ListCellBottomModel model = ListCellBottomModel(title: 'Bottom');
+  ctx.dispatch(FishReduxTestActionCreator.initBottomData(ListBottomViewState(model: model)));
+
+  // ctx.context;
+  //
+  // ctx.state; //获取数据
+  //
+  // ctx.dispatch(action);// 分发事件，一般传到reduce 更新数据，刷新View
 }
 
 // 自定义事件处理
