@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:weichatdemo/Animation/animation_test.dart';
 import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/common/navigator_tool.dart';
-import 'package:weichatdemo/fish_redux_test/page.dart';
 import 'package:weichatdemo/generated/l10n.dart';
 import 'package:weichatdemo/image_crop_test/image_crop.dart';
+import 'package:weichatdemo/key_test/various_key_test.dart';
 import 'package:weichatdemo/pages/discover/discover_cell.dart';
 import 'package:weichatdemo/provider_test/provider_test_case.dart';
 import 'package:weichatdemo/share_data/inherited_demo.dart';
@@ -36,7 +37,7 @@ class _DiscoverPageState extends State<DiscoverPage>
         backgroundColor: WeChatThemeColor, // Colors.greenAccent
         //一下三个是专门为了安卓使用的属性
         centerTitle: true,
-        title: Text(S.of(context).title),//Text('发现')
+        title: Text(S.of(context).title), //Text('发现')
         elevation: 0.0, //底部边栏
       ),
       body: Container(
@@ -61,14 +62,20 @@ class _DiscoverPageState extends State<DiscoverPage>
             ),
             DiscoverCell(
               imageName: 'images/摇一摇.png',
-              title: '摇一摇',
+              title: '动画-测试',
+              callBack: () {
+                NavigatorTool.pushFrom(context, AnimationTest());
+              },
             ),
             SizedBox(
               height: 10,
             ),
             DiscoverCell(
               imageName: 'images/看一看icon.png',
-              title: '看一看',
+              title: '各种各样的Keys',
+              callBack: () {
+                NavigatorTool.pushFrom(context, VariousKeyTest());
+              },
             ),
             Row(
               children: <Widget>[
@@ -79,10 +86,8 @@ class _DiscoverPageState extends State<DiscoverPage>
             DiscoverCell(
               imageName: 'images/搜一搜 2.png',
               title: '图片裁剪',
-              callBack: (){
-
+              callBack: () {
                 NavigatorTool.pushFrom(context, ImageClipperTest());
-
               },
             ),
             SizedBox(
@@ -91,8 +96,9 @@ class _DiscoverPageState extends State<DiscoverPage>
             DiscoverCell(
               imageName: 'images/附近的人icon.png',
               title: '测试 Fish_Redux',
-              callBack: (){
-                NavigatorTool.pushNamed(context, 'fish_test',argument: {'name': 'i am from discover page'});
+              callBack: () {
+                NavigatorTool.pushNamed(context, 'fish_test',
+                    argument: {'name': 'i am from discover page'});
               },
             ),
             SizedBox(
@@ -103,7 +109,7 @@ class _DiscoverPageState extends State<DiscoverPage>
               title: '测试 SQLite',
               subTitle: '618限时特价',
               subImageName: 'images/badge.png',
-              callBack: (){
+              callBack: () {
                 NavigatorTool.pushFrom(context, SQLiteTestPage());
               },
             ),
@@ -126,7 +132,7 @@ class _DiscoverPageState extends State<DiscoverPage>
             DiscoverCell(
               imageName: 'images/小程序.png',
               title: 'Widget api test',
-              callBack: (){
+              callBack: () {
                 NavigatorTool.pushFrom(context, WidgetsApiTest());
               },
             ),
@@ -136,14 +142,14 @@ class _DiscoverPageState extends State<DiscoverPage>
             DiscoverCell(
               imageName: 'images/小程序.png',
               title: '测试Dart异步编程',
-              callBack: (){
+              callBack: () {
                 NavigatorTool.pushFrom(context, TestDartSync());
               },
             ),
             DiscoverCell(
               imageName: 'images/小程序.png',
               title: '数据共享',
-              callBack: (){
+              callBack: () {
                 NavigatorTool.pushFrom(context, InheritedDemo());
               },
             ),

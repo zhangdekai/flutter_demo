@@ -66,7 +66,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
         backgroundColor: Colors.cyan,
       ),
       body: Container(
-        color: Colors.green[200],
+        color: Colors.green[200].withOpacity(0.8),
         // height: 800,
         child:
             _gridViewTest(), //_gridViewTest, _streamBuilderTest, _flexibleTest(),  _layoutBuilderTest, _futureBuilderTest
