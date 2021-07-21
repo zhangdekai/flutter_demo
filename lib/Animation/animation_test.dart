@@ -23,7 +23,8 @@ class _AnimationTestState extends State<AnimationTest> {
       appBar: AppBar(
         title: Text('AnimationTest'),
       ),
-      body: _animatedSwitcher(), //  _animatedSwitcher, animatedContainerTest()
+      body:
+          _fanGunWidgetTest(), // _fanGunWidgetTest,  _animatedSwitcher, animatedContainerTest()
       floatingActionButton: TextButton(
           onPressed: () {
             setState(() {
@@ -36,6 +37,46 @@ class _AnimationTestState extends State<AnimationTest> {
             style: TextStyle(color: Colors.black, fontSize: 30),
           )),
     );
+  }
+
+  Widget _fanGunWidgetTest() {
+    return Center(
+        child: Container(
+      height: 120,
+      width: 300,
+      color: Colors.blue,
+      child: TweenAnimationBuilder(
+        tween: Tween(begin: 6.0, end: 8.0),
+        duration: Duration(seconds: 1, milliseconds: 100),
+        builder: (BuildContext context, double value, Widget child) {
+          final whole = value ~/ 1;
+          final decimal = value - whole;
+          print('$whole + $decimal');
+          return Stack(
+            children: [
+              Positioned(
+                  top: -100 * decimal, // 0 --> 100
+                  child: Opacity(
+                    opacity: 1 - decimal,
+                    child: Text(
+                      '$whole',
+                      style: TextStyle(fontSize: 100),
+                    ),
+                  )),
+              Positioned(
+                  top: 100 - decimal * 100, // 100 --> 0
+                  child: Opacity(
+                    opacity: decimal,
+                    child: Text(
+                      '${whole + 1}',
+                      style: TextStyle(fontSize: 100),
+                    ),
+                  )),
+            ],
+          );
+        },
+      ),
+    ));
   }
 
   Widget _animatedContainerTest() {
