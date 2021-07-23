@@ -17,6 +17,7 @@ class AnimationTest extends StatefulWidget {
 class _AnimationTestState extends State<AnimationTest> {
   bool selected = false;
   String tempString = 'hello';
+  int number = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,42 +42,38 @@ class _AnimationTestState extends State<AnimationTest> {
 
   Widget _fanGunWidgetTest() {
     return Center(
-        child: Container(
-      height: 120,
-      width: 300,
-      color: Colors.blue,
-      child: TweenAnimationBuilder(
-        tween: Tween(begin: 6.0, end: 8.0),
-        duration: Duration(seconds: 1, milliseconds: 100),
-        builder: (BuildContext context, double value, Widget child) {
-          final whole = value ~/ 1;
-          final decimal = value - whole;
-          print('$whole + $decimal');
-          return Stack(
-            children: [
-              Positioned(
-                  top: -100 * decimal, // 0 --> 100
-                  child: Opacity(
-                    opacity: 1 - decimal,
-                    child: Text(
-                      '$whole',
-                      style: TextStyle(fontSize: 100),
-                    ),
-                  )),
-              Positioned(
-                  top: 100 - decimal * 100, // 100 --> 0
-                  child: Opacity(
-                    opacity: decimal,
-                    child: Text(
-                      '${whole + 1}',
-                      style: TextStyle(fontSize: 100),
-                    ),
-                  )),
-            ],
-          );
-        },
+      child: Container(
+        height: 120,
+        // width: 300,
+        color: Colors.blue[300],
+        child: Row(
+          children: [
+            AnimatedCounter(
+              value: 1,
+              duration: Duration(milliseconds: 500),
+            ),
+            AnimatedCounter(
+              value: 8,
+              duration: Duration(milliseconds: 500),
+            ),
+            AnimatedCounter(
+              value: number,
+              duration: Duration(milliseconds: 500),
+            ),
+            IconButton(
+                icon: Icon(
+                  Icons.add,
+                  size: 40,
+                ),
+                onPressed: () {
+                  setState(() {
+                    number++;
+                  });
+                })
+          ],
+        ),
       ),
-    ));
+    );
   }
 
   Widget _animatedContainerTest() {
@@ -128,6 +125,52 @@ class _AnimationTestState extends State<AnimationTest> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class AnimatedCounter extends StatelessWidget {
+  final int value;
+  final Duration duration;
+
+  const AnimatedCounter(
+      {Key key, @required this.value, @required this.duration})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder(
+      tween: Tween(end: value.toDouble()),
+      duration: duration,
+      builder: (BuildContext context, double value, Widget child) {
+        final whole = value ~/ 1;
+        final decimal = value - whole;
+        print('$whole + $decimal');
+        return Expanded(
+          child: Stack(
+            children: [
+              Positioned(
+                  top: -100 * decimal, // 0 --> 100
+                  child: Opacity(
+                    opacity: 1 - decimal,
+                    child: Text(
+                      '$whole',
+                      style: TextStyle(fontSize: 100),
+                    ),
+                  )),
+              Positioned(
+                  top: 100 - decimal * 100, // 100 --> 0
+                  child: Opacity(
+                    opacity: decimal,
+                    child: Text(
+                      '${whole + 1}',
+                      style: TextStyle(fontSize: 100),
+                    ),
+                  )),
+            ],
+          ),
+        );
+      },
     );
   }
 }
