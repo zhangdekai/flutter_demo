@@ -318,7 +318,6 @@ class _PuzzleViewState extends State<PuzzleView>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _controller =
@@ -344,7 +343,7 @@ class _PuzzleViewState extends State<PuzzleView>
 
   @override
   void dispose() {
-    // TODO: implement dispose
+    _controller.dispose();
     super.dispose();
   }
 
