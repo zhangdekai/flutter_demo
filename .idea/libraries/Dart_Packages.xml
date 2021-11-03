@@ -450,6 +450,13 @@
             </list>
           </value>
         </entry>
+        <entry key="sign_in_with_apple">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="signature">
           <value>
             <list>
@@ -654,6 +661,7 @@
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/pubspec_parse-0.1.8/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/shelf-0.7.9/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/shelf_web_socket-0.2.4+1/lib" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/signature-4.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/source_gen-0.9.10+3/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/source_span-1.8.0/lib" />

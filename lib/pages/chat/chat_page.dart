@@ -1,35 +1,22 @@
 import 'dart:async';
+//import 'package:http/http.dart' as http;//as 解决方法名冲突的
+import 'dart:convert';
 import 'dart:isolate';
 
 // import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weichatdemo/common/const.dart';
+import 'package:weichatdemo/common/navigator_tool.dart';
 import 'package:weichatdemo/pages/chat/search_bar.dart';
-
-//import 'package:http/http.dart' as http;//as 解决方法名冲突的
-import 'dart:convert';
-
-import 'package:weichatdemo/tools/http_manager.dart' as http;
-
+import 'package:weichatdemo/pages/chat/third_party_login_page.dart';
 
 class ChatPage extends StatefulWidget {
   @override
   _ChatPageState createState() => _ChatPageState();
 }
 
-class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
-
-  Widget _buildPopupMenuItem(String imageAsset, String title) {
-
-    return Row(
-      children: <Widget>[
-        Image(image: AssetImage(imageAsset), width: 20,),
-        SizedBox(width: 20,),
-        Text(title, style: TextStyle(color: Colors.white),)
-      ],
-    );
-  }
-  
+class _ChatPageState extends State<ChatPage>
+    with AutomaticKeepAliveClientMixin {
   Timer _timer;
 
   bool _cancleConnect = false;
@@ -37,7 +24,24 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
   List<Chat> _datas = [];
 
   // CancelToken _cancelToken = CancelToken();
-  
+
+  Widget _buildPopupMenuItem(String imageAsset, String title) {
+    return Row(
+      children: <Widget>[
+        Image(
+          image: AssetImage(imageAsset),
+          width: 20,
+        ),
+        SizedBox(
+          width: 20,
+        ),
+        Text(
+          title,
+          style: TextStyle(color: Colors.white),
+        )
+      ],
+    );
+  }
 
   @override
   void initState() {
@@ -45,116 +49,111 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
 
     print('chat_page init来了');
 
+    _initData();
+
 //    testTimer();
 
 //    testJsonConvertMap();
-    _getData().then((List<Chat> datas) {
-
-      print('数据来了');
-
-      if(!_cancleConnect) {
-        print('更新数据');
-        setState(() {
-          _datas = datas;
-        });
-      }
-
-    }).catchError((e){
-      print('错误 ${e}');
-    }).whenComplete((){
-      print('完毕');
-    }).timeout(Duration(seconds: 6))
-        .catchError((timeout){
-          _cancleConnect = true;
-          // _cancelToken.cancel('因为网络超时');//取消网络请求
-          print('超时输出${timeout}');
-    });
   }
 
-  Widget _cellForRow(BuildContext context,int index) {
-
-    if(index == 0) {
-      return SearchCell(datas: _datas,);
+  void _initData() {
+    final titles = ['三方登录', 'test'];
+    for (int i = 0; i < titles.length; i++) {
+      Chat temp = Chat(i, name: titles[i], message: 'message$i', imageUrl: '');
+      _datas.add(temp);
     }
-
-    index--;
-    return ListTile(
-      title: Text(_datas[index].name),
-      subtitle: Container(
-        margin: EdgeInsets.only(right: 10,top: 5),
-        height: 25,
-        child: Text(_datas[index].message,overflow: TextOverflow.ellipsis,),
-      ),
-      leading: Container(
-        width: 44,height: 44,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(6.0),
-          image: DecorationImage(image: NetworkImage(_datas[index].imageUrl))
-        ),
-      ),
-    );
-
-//    return ListTile(
-//      title: Text(_datas[index].name),
-//      subtitle: Container(
-//        height: 25,
-//        child: Text(_datas[index].message,overflow: TextOverflow.ellipsis,),
-//      ),
-//      leading: CircleAvatar(
-//        backgroundImage: NetworkImage(_datas[index].imageUrl),
-//      ),
-//    );
   }
 
   @override
   Widget build(BuildContext context) {
-
     super.build(context);
 
     return Scaffold(
       appBar: AppBar(
         title: Text('微信1232424'),
         backgroundColor: WeChatThemeColor,
-        actions: <Widget>[
-          Container(
-            margin: EdgeInsets.only(right: 10),
-            child: PopupMenuButton(
-              offset: Offset(0, 60),
-                itemBuilder: (BuildContext content){
-              return [PopupMenuItem(
-                    child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
-                  PopupMenuItem(
-                  child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
-                  PopupMenuItem(
-                  child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
-                  PopupMenuItem(
-                  child: _buildPopupMenuItem('images/收付款.png', '收付款')),
-                  ];},
-              child: Image(image: AssetImage('images/圆加.png'),width: 25,),
-              onSelected:(value){
-                print('选择了${value}');
-              } ,
-            ),
-          ),
-        ],
+        actions: _rightItem(),
       ),
       body: Container(
         child: _datas.length == 0
-            ? Center(child: Text('Loading...'),)
+            ? Center(
+                child: Text('Loading...'),
+              )
             : ListView.builder(
-                itemCount: _datas.length + 1,
-                itemBuilder: _cellForRow),
-
+                itemCount: _datas.length + 1, itemBuilder: _cellForRow),
       ),
     );
   }
 
-  Future<List<Chat>> _getData() async {//异步的方法 添加 async
+  List<Widget> _rightItem() {
+    return <Widget>[
+      Container(
+        margin: EdgeInsets.only(right: 10),
+        child: PopupMenuButton(
+          offset: Offset(0, 60),
+          itemBuilder: (BuildContext content) {
+            return [
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/收付款.png', '收付款')),
+            ];
+          },
+          child: Image(
+            image: AssetImage('images/圆加.png'),
+            width: 25,
+          ),
+          onSelected: (value) {
+            print('选择了${value}');
+          },
+        ),
+      ),
+    ];
+  }
+
+  Widget _cellForRow(BuildContext context, int index) {
+    if (index == 0) {
+      return SearchCell(
+        datas: _datas,
+      );
+    }
+
+    index--;
+    return ListTile(
+      title: Text(_datas[index].name),
+      subtitle: Container(
+        margin: EdgeInsets.only(right: 10, top: 5),
+        height: 25,
+        child: Text(
+          _datas[index].message,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      onTap: () {
+        _onTap(index);
+      },
+    );
+  }
+
+  void _onTap(int index) {
+    switch (index) {
+      case 0:
+        NavigatorTool.pushFrom(context, ThirdPartyLoginPage());
+
+        break;
+    }
+  }
+
+  Future<List<Chat>> _getData() async {
+    //异步的方法 添加 async
 
     _cancleConnect = false;
 
     return [];
-
 
     /*
     final respone = await http.get('http://rap2.taobao.org:38080/app/mock/257543/api/chatlist');
@@ -178,15 +177,10 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
     }
 
      */
-
-
   }
-  
+
   void testJsonConvertMap() {
-    final chat = {
-      'name':'张三',
-      'message':'你吃了吗？'
-    };
+    final chat = {'name': '张三', 'message': '你吃了吗？'};
 
     //Map 字典转 json  ==> encode
     var chatJson = json.encode(chat);
@@ -195,26 +189,26 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
     //Map 字典转 json   ==> decode
     var newMap = json.decode(chatJson);
     print(newMap);
-    print(chat is Map);// is 类型判断 Map
+    print(chat is Map); // is 类型判断 Map
   }
 
   void testTimer() {
     int _count = 0;
-    _timer = Timer.periodic(Duration(seconds: 1), (timer){
-
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       print(Isolate.current.debugName);
 
       print('${_count++}' + 's');
 
-      if(_count == 99){timer.cancel();}
-
+      if (_count == 99) {
+        timer.cancel();
+      }
     });
   }
 
   @override
   void dispose() {
     //取消我们的timer
-    if(_timer != null && _timer.isActive){
+    if (_timer != null && _timer.isActive) {
       _timer.cancel();
     }
 
@@ -224,23 +218,22 @@ class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin{
   @override
   // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
-
 }
 
 class Chat {
+  final int uniqueKey;
   final String name;
   final String message;
   final String imageUrl;
 
-  Chat({this.name, this.message, this.imageUrl});
+  Chat(this.uniqueKey, {this.name, this.message, this.imageUrl});
 
   factory Chat.fromJSon(Map json) {
-
     return Chat(
+      json['uniqueKey'],
       name: json['name'],
       message: json['message'],
       imageUrl: json['imageUrl'],
     );
   }
-
 }
