@@ -5,6 +5,8 @@
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.11" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.7+2" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in-5.1.0" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_web-0.10.0+3" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

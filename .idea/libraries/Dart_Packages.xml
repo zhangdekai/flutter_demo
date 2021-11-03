@@ -240,10 +240,38 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_web_plugins">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../development/flutter/packages/flutter_web_plugins/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="glob">
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/glob-2.0.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in-5.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_platform_interface">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_platform_interface-2.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_web">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_web-0.10.0+3/lib" />
             </list>
           </value>
         </entry>
@@ -433,6 +461,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/pubspec_parse-0.1.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="quiver">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/quiver-3.0.1+1/lib" />
             </list>
           </value>
         </entry>
@@ -632,6 +667,9 @@
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/fixnum-1.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.11/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/glob-2.0.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in-5.1.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_platform_interface-2.1.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_web-0.10.0+3/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/graphs-0.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/http-0.12.1/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/http_multi_server-2.2.0/lib" />
@@ -659,6 +697,7 @@
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/provider-4.3.3/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/pub_semver-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/pubspec_parse-0.1.8/lib" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/quiver-3.0.1+1/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/shelf-0.7.9/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/shelf_web_socket-0.2.4+1/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0/lib" />
@@ -685,6 +724,7 @@
       <root url="file://$PROJECT_DIR$/../../development/flutter/packages/flutter/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/packages/flutter_localizations/lib" />
       <root url="file://$PROJECT_DIR$/../../development/flutter/packages/flutter_test/lib" />
+      <root url="file://$PROJECT_DIR$/../../development/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

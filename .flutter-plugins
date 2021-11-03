@@ -1,5 +1,7 @@
 # This is a generated file; do not edit or check into version control.
 flutter_plugin_android_lifecycle=/Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.11/
+google_sign_in=/Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in-5.1.0/
+google_sign_in_web=/Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_web-0.10.0+3/
 image_picker=/Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.7+2/
 sign_in_with_apple=/Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0/
 sqflite=/Users/zhangdekai/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sqflite-2.0.0+4/
