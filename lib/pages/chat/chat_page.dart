@@ -103,10 +103,7 @@ class _ChatPageState extends State<ChatPage>
                   child: _buildPopupMenuItem('images/收付款.png', '收付款')),
             ];
           },
-          child: Image(
-            image: AssetImage('images/圆加.png'),
-            width: 25,
-          ),
+          child: Icon(Icons.add),
           onSelected: (value) {
             print('选择了${value}');
           },
