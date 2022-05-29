@@ -9,6 +9,8 @@ import 'package:weichatdemo/common/const.dart';
 import 'package:weichatdemo/common/navigator_tool.dart';
 import 'package:weichatdemo/pages/chat/search_bar.dart';
 import 'package:weichatdemo/pages/chat/third_party_login_page.dart';
+import 'package:weichatdemo/sliver/sliver_animated_list_test.dart';
+import 'package:weichatdemo/sliver/sliver_test.dart';
 
 class ChatPage extends StatefulWidget {
   @override
@@ -57,7 +59,7 @@ class _ChatPageState extends State<ChatPage>
   }
 
   void _initData() {
-    final titles = ['三方登录', 'test'];
+    final titles = ['三方登录', 'Sliver test', 'SliverAnimatedList case'];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, name: titles[i], message: 'message$i', imageUrl: '');
       _datas.add(temp);
@@ -140,7 +142,13 @@ class _ChatPageState extends State<ChatPage>
     switch (index) {
       case 0:
         NavigatorTool.pushFrom(context, ThirdPartyLoginPage());
+        break;
+      case 1:
+        NavigatorTool.pushFrom(context, SliverTestPage());
+        break;
 
+      case 2:
+        NavigatorTool.pushFrom(context, SliverAnimatedListSample());
         break;
     }
   }

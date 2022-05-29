@@ -48,19 +48,19 @@ class _RootPageState extends State<RootPage> {
                 width: 20,
               ),
               activeIcon: Icon(Icons.accessible),
-              title: Text('微信'),
+              label: '微信',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.bookmark),
-              title: Text('通讯录'),
+              label: '通讯录',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.history),
-              title: Text('发现'),
+              label: '发现',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
-              title: Text('我'),
+              label: '我',
             ),
           ]),
     );
