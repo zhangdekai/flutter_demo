@@ -1,6 +1,4 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:weichatdemo/fish_redux_test/component1/state.dart';
-
 import 'action.dart';
 import 'state.dart';
 

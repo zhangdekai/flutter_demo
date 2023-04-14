@@ -1,7 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'component/state.dart';
 import 'component1/state.dart';
 import 'model/list_cell_model.dart';

@@ -1,12 +1,14 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sqflite-2.0.0+4" />
-      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in-5.1.0" />
-      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.11" />
-      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_web-0.10.0+3" />
-      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.7+2" />
-      <root url="file://$PROJECT_DIR$/../../development/flutter/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.7+2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.11" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_android-6.1.9" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_web-0.10.2+1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in-5.4.4" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_ios-5.6.1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sqflite-2.2.6" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

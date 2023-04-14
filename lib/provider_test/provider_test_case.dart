@@ -50,16 +50,13 @@ class _ProviderTestCaseState extends State<ProviderTestCase> {
                 SizedBox(
                   height: 25,
                 ),
-                RaisedButton(
-                  onPressed: () {
-                    // Provider.of<TestModel>(context).add();
-                    model.add();
-                  },
-                  child: Text(
-                    '点我',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                )
+                TextButton(onPressed: (){
+                  model.add();
+
+                }, child: Text(
+                  '点我',
+                  style: TextStyle(fontSize: 20),
+                ))
               ],
             );
           },

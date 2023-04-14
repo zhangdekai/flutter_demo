@@ -1,9 +1,6 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 import '../dynamic_flow_adapter/action.dart' as list_adapter;
-import '';
-
-import 'action.dart';
 import 'state.dart';
 
 Widget buildView(ListCellState state, Dispatch dispatch, ViewService viewService) {

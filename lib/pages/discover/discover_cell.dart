@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/common/navigator_tool.dart';
-import 'package:weichatdemo/pages/discover/discover_child_page.dart';
-import 'package:weichatdemo/share_data/inherited_demo.dart';
-import 'package:weichatdemo/sync_Test/test_dart_sync.dart';
 
 // version 1.0 改进一版
 // DiscoverCell 改为可改变状态的Widget  StatefulWidget

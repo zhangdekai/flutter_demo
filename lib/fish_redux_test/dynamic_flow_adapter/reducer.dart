@@ -1,9 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:weichatdemo/fish_redux_test/component/state.dart';
-
 import '../state.dart';
 import 'action.dart';
-import 'state.dart';
 
 Reducer<FishReduxTestState> buildReducer() {
   return asReducer(

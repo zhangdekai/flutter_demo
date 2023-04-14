@@ -1,8 +1,5 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/fish_redux_test/component/component.dart';
-
-import 'action.dart';
 import 'state.dart';
 
 /// 绘制UI 配置widget

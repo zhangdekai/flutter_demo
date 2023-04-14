@@ -1,10 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 /*
 1: AnimatedContainer   widget属性有动画
 2: AnimatedSwitcher  两个widget 之间切换
-
-
  */
 
 class AnimationTest extends StatefulWidget {
