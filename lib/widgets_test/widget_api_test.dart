@@ -66,7 +66,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
         backgroundColor: Colors.cyan,
       ),
       body: Container(
-        color: Colors.green[200].withOpacity(0.8),
+        color: Colors.green[200]?.withOpacity(0.8),
         // height: 800,
         child:
             _gridViewTest(), //_gridViewTest, _streamBuilderTest, _flexibleTest(),  _layoutBuilderTest, _futureBuilderTest
@@ -84,7 +84,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
         Center(
           child: DefaultTextStyle(
             style: TextStyle(fontSize: 30, color: Colors.yellow),
-            child: StreamBuilder<Object>(
+            child: StreamBuilder<dynamic>(
                 stream: _controller.stream,
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
@@ -297,7 +297,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
 class PuzzleView extends StatefulWidget {
   final inputStream;
 
-  const PuzzleView({Key key, this.inputStream}) : super(key: key);
+  const PuzzleView({Key? key, this.inputStream}) : super(key: key);
 
   @override
   _PuzzleViewState createState() => _PuzzleViewState();
@@ -308,7 +308,7 @@ class _PuzzleViewState extends State<PuzzleView>
   int a = 0;
   int b = 0;
   double x = 0;
-  AnimationController _controller;
+  late AnimationController _controller;
 
   void reset() {
     a = Random().nextInt(5) + 1;
@@ -351,7 +351,7 @@ class _PuzzleViewState extends State<PuzzleView>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _controller,
-      builder: (BuildContext context, Widget child) {
+      builder: (BuildContext context, Widget? child) {
         return Positioned(
             left: x,
             top: 400 * _controller.value - 100,
@@ -377,9 +377,9 @@ class BaseDialog extends StatefulWidget {
   final String title;
   final String content;
   final bool cancelAble;
-  final Function confirmCallback; // 点击确定按钮回调
-  final Function cancelCallback; // 点击取消按钮
-  final Function dismissCallback; // 弹窗关闭回调
+  final Function? confirmCallback; // 点击确定按钮回调
+  final Function? cancelCallback; // 点击取消按钮
+  final Function? dismissCallback; // 弹窗关闭回调
 
   BaseDialog(
       {this.title = "",
@@ -511,25 +511,19 @@ class _BaseDialogState extends State<BaseDialog> {
 
   /// 点击隐藏dialog
   _dismissDialog() {
-    if (widget.dismissCallback != null) {
-      widget.dismissCallback();
-    }
+    widget.dismissCallback?.call();
     Navigator.of(context).pop();
   }
 
   /// 点击取消
   void _clickCancel() {
-    if (widget.confirmCallback != null) {
-      widget.confirmCallback();
-    }
+    widget.confirmCallback?.call();
     _dismissDialog();
   }
 
   /// 点击确定
   void _clickConfirm() {
-    if (widget.confirmCallback != null) {
-      widget.confirmCallback();
-    }
+    widget.confirmCallback?.call();
     _dismissDialog();
   }
 }

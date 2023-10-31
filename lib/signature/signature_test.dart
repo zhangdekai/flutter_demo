@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:signature/signature.dart';
-import 'package:weichatdemo/signature/signature_draw.dart';
+import 'package:weiChatDemo/signature/signature_draw.dart';
 
 class TestSignatureDraw extends StatefulWidget {
-  const TestSignatureDraw({Key key}) : super(key: key);
+  const TestSignatureDraw({Key? key}) : super(key: key);
 
   @override
   _TestSignatureDrawState createState() => _TestSignatureDrawState();

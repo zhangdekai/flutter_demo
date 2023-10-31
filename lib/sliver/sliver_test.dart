@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SliverTestPage extends StatefulWidget {
-  const SliverTestPage({Key key}) : super(key: key);
+  const SliverTestPage({Key? key}) : super(key: key);
 
   @override
   _SliverTestPageState createState() => _SliverTestPageState();

@@ -4,19 +4,18 @@ import 'package:flutter/material.dart';
 // DiscoverCell 改为可改变状态的Widget  StatefulWidget
 class DiscoverCell extends StatefulWidget {
   // 改为StateFul 后 此部分主要用来描述widget 信息
-  final String title;
-  final String subTitle;
-  final String imageName;
-  final String subImageName;
-  final VoidCallback callBack;
+  final String? title;
+  final String? subTitle;
+  final String? imageName;
+  final String? subImageName;
+  final VoidCallback? callBack;
 
   const DiscoverCell(
-      {Key key,
-      this.title,
-      this.subTitle,
-      this.imageName,
-      this.subImageName,
-      this.callBack})
+      {Key? key,
+       this.title, this.subTitle,
+        this.imageName,
+        this.subImageName,
+        this.callBack})
       : super(key: key);
 
   @override
@@ -36,7 +35,7 @@ class _DiscoverCellState extends State<DiscoverCell> {
         setState(() {
           _currentColor = Colors.white;
         });
-        widget.callBack();
+        widget.callBack?.call();
       },
       onTapCancel: () {
         setState(() {
@@ -60,13 +59,13 @@ class _DiscoverCellState extends State<DiscoverCell> {
               child: Row(
                 children: <Widget>[
                   Image(
-                    image: AssetImage(widget.imageName),
+                    image: AssetImage(widget.imageName ?? ''),
                     width: 20,
                   ),
                   SizedBox(
                     width: 15,
                   ),
-                  Text(widget.title)
+                  Text(widget.title ?? '')
                 ],
               ),
             ),
@@ -74,10 +73,10 @@ class _DiscoverCellState extends State<DiscoverCell> {
               padding: EdgeInsets.all(10),
               child: Row(
                 children: <Widget>[
-                  widget.subTitle != null ? Text(widget.subTitle) : Text(''),
+                  widget.subTitle != null ? Text(widget.subTitle ?? '') : Text(''),
                   widget.subImageName != null
                       ? Image(
-                          image: AssetImage(widget.subImageName),
+                          image: AssetImage(widget.subImageName ?? ''),
                           width: 15,
                         )
                       : Container(),

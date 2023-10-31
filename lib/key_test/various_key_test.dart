@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class VariousKeyTest extends StatefulWidget {
-  const VariousKeyTest({Key key}) : super(key: key);
+  const VariousKeyTest({Key? key}) : super(key: key);
 
   @override
   _VariousKeyTestState createState() => _VariousKeyTestState();
@@ -148,8 +148,8 @@ class _VariousKeyTestState extends State<VariousKeyTest> {
 }
 
 class BoxColor extends StatelessWidget {
-  final Color color;
-  const BoxColor({Key key, this.color}) : super(key: key);
+  final Color? color;
+  const BoxColor({Key? key, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -176,9 +176,9 @@ class BoxColor extends StatelessWidget {
 }
 
 class TestGlobalWidget extends StatefulWidget {
-  final int data;
+  final int? data;
 
-  const TestGlobalWidget({Key key, this.data}) : super(key: key);
+  const TestGlobalWidget({Key? key, this.data}) : super(key: key);
 
   @override
   _TestGlobalWidgetState createState() => _TestGlobalWidgetState();

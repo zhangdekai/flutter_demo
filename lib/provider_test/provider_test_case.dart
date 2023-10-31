@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:weichatdemo/provider_test/provider_widget.dart';
+import 'package:weiChatDemo/provider_test/provider_widget.dart';
 
 class TestModel with ChangeNotifier {
-
   int clickNum = 0;
 
   void add() {
@@ -11,7 +10,6 @@ class TestModel with ChangeNotifier {
     notifyListeners();
   }
 }
-
 
 class ProviderTestCase extends StatefulWidget {
   @override
@@ -35,11 +33,8 @@ class _ProviderTestCaseState extends State<ProviderTestCase> {
       ),
       body: Center(
         child: ProviderWidget<TestModel>(
-          model: TestModel(),
-          onReady: (model) {
-            model.toString();
-          },
-          builder: (context, model, child) {
+          TestModel(),
+          (context, model, child) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -50,15 +45,19 @@ class _ProviderTestCaseState extends State<ProviderTestCase> {
                 SizedBox(
                   height: 25,
                 ),
-                TextButton(onPressed: (){
-                  model.add();
-
-                }, child: Text(
-                  '点我',
-                  style: TextStyle(fontSize: 20),
-                ))
+                TextButton(
+                    onPressed: () {
+                      model.add();
+                    },
+                    child: Text(
+                      '点我',
+                      style: TextStyle(fontSize: 20),
+                    ))
               ],
             );
+          },
+          (model) {
+            model.toString();
           },
         ),
       ),

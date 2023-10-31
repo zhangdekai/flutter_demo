@@ -94,7 +94,7 @@ class TestDartSync extends StatelessWidget {
 
     //1.后面的操作必须是异步才能用await
     //2.当前函数必须是异步函数
-    Future future = await Future(() {
+    Future future = Future(() {
       //耗时操作
       for (int i = 0; i < 1000000000; i++) {}
 //    throw Exception('网络异常');

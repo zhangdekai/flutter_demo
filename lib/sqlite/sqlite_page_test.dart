@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/sqlite/sqflite_test.dart';
+import 'package:weiChatDemo/sqlite/sqflite_test.dart';
 
 class SQLiteTestPage extends StatefulWidget {
   @override

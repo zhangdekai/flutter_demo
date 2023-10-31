@@ -6,15 +6,15 @@ class MyData extends InheritedWidget {
   final int data;//需要在子Widget中共享的数据
 
   const MyData(this.data, {
-    Key key,
-    @required Widget child,
+    Key? key,
+    required Widget child,
   })  : assert(child != null),
         super(key: key, child: child);
 
   //提供一个方法让子Widget访问的共享数据
   static MyData of(BuildContext context) {
     // context.getElementForInheritedWidgetOfExactType();
-    return context.dependOnInheritedWidgetOfExactType<MyData>();
+    return context.dependOnInheritedWidgetOfExactType<MyData>()!;
 //    return context.inheritFromWidgetOfExactType(MyData) as MyData;
   }
 

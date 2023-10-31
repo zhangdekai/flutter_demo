@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // void main() => runApp(const SliverAnimatedListSample());
 
 class SliverAnimatedListSample extends StatefulWidget {
-  const SliverAnimatedListSample({Key key}) : super(key: key);
+  const SliverAnimatedListSample({Key? key}) : super(key: key);
 
   @override
   State<SliverAnimatedListSample> createState() =>
@@ -18,7 +18,7 @@ class _SliverAnimatedListSampleState extends State<SliverAnimatedListSample> {
   final GlobalKey<ScaffoldMessengerState> _scaffoldMessengerKey =
       GlobalKey<ScaffoldMessengerState>();
 
-  ListModel<int> _list;
+  late ListModel<int> _list;
 
   int _selectedItem = 0;
   int _nextItem =
@@ -112,7 +112,7 @@ class _SliverAnimatedListSampleState extends State<SliverAnimatedListSample> {
       selected: _selectedItem == _list[index],
       onTap: () {
         setState(() {
-          _selectedItem = _selectedItem == _list[index] ? null : _list[index];
+          _selectedItem = _selectedItem == _list[index] ? 0 : _list[index];
         });
       },
     );
@@ -144,7 +144,7 @@ class _SliverAnimatedListSampleState extends State<SliverAnimatedListSample> {
     if (_selectedItem != null) {
       _list.removeAt(_list.indexOf(_selectedItem));
       setState(() {
-        _selectedItem = null;
+        _selectedItem = 0;
       });
     } else {
       _scaffoldMessengerKey.currentState?.showSnackBar(const SnackBar(
@@ -175,22 +175,22 @@ class ListModel<E> {
   final List<E> _items;
 
   ListModel({
-    @required this.listKey,
-    @required this.removedItemBuilder,
-    Iterable<E> initialItems,
+    required this.listKey,
+    required this.removedItemBuilder,
+    Iterable<E>? initialItems,
   }) : _items = List<E>.from(initialItems ?? <E>[]);
 
-  SliverAnimatedListState get _animatedList => listKey.currentState;
+  SliverAnimatedListState? get _animatedList => listKey.currentState;
 
   void insert(int index, E item) {
     _items.insert(index, item);
-    _animatedList.insertItem(index);
+    _animatedList?.insertItem(index);
   }
 
   E removeAt(int index) {
     final E removedItem = _items.removeAt(index);
     if (removedItem != null) {
-      _animatedList.removeItem(
+      _animatedList?.removeItem(
         index,
         (BuildContext context, Animation<double> animation) =>
             removedItemBuilder(index, context, animation),
@@ -214,16 +214,16 @@ class ListModel<E> {
 // transitions from 0.0 to 1.0.
 class CardItem extends StatelessWidget {
   final Animation<double> animation;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final int item;
   final bool selected;
 
   const CardItem({
-    Key key,
+    Key? key,
     this.onTap,
     this.selected = false,
-    @required this.animation,
-    @required this.item,
+    required this.animation,
+    required this.item,
   })  : assert(item >= 0),
         super(key: key);
 

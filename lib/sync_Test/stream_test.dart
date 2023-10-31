@@ -20,9 +20,9 @@ class _StreamTestState extends State<StreamTest> {
         }, onResume: () {
   });
 
-  Stream _stream;
-  Stream _eventBus;
-  StreamSink _sink;
+  late Stream _stream;
+  late Stream _eventBus;
+  late StreamSink _sink;
 
   int _count = 0;
 

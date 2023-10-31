@@ -3,10 +3,10 @@ import 'package:provider/provider.dart';
 
 class ProviderWidget<T extends ChangeNotifier> extends StatefulWidget {
   final T model;
-  final Widget Function(BuildContext context, T value, Widget child) builder;
+  final Widget Function(BuildContext context, T value, Widget? child) builder;
   final Function(T) onReady;
 
-  ProviderWidget({this.model, this.builder, this.onReady});
+  ProviderWidget(this.model, this.builder, this.onReady);
 
   @override
   _ProviderWidgetState<T> createState() => _ProviderWidgetState<T>();
@@ -17,9 +17,7 @@ class _ProviderWidgetState<T extends ChangeNotifier>
   @override
   void initState() {
     super.initState();
-    if (widget.onReady != null) {
-      widget.onReady(widget.model);
-    }
+    widget.onReady?.call(widget.model!);
   }
 
   @override

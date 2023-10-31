@@ -2,9 +2,9 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
 class CSSQLiteHelper {
-  Database database;
+  late Database database;
   int version = 1;
-  String tableName;
+  String tableName = '';
 
   /// dbName: database name, like CarSome.db
   Future<String> databasePath({String dbName = 'CarSome.db'}) async {
@@ -36,7 +36,6 @@ class CSSQLiteHelper {
   /// insert table single data, which is Map<String, dynamic>
   /// return: insert whether success.
   Future<bool> insertData(Map<String, dynamic> values) async {
-
     /// 需要去重哦
 
     var id = await database.insert(tableName, values);
@@ -50,7 +49,7 @@ class CSSQLiteHelper {
   /// page: page
   /// return: List<Map<String, dynamic>>
   Future<List<Map<String, dynamic>>> getList(
-      {int limit = 20, int page = 0, String orderBy}) async {
+      {int limit = 20, int page = 0, String? orderBy}) async {
     var offset = 0;
     if (page > 1) {
       offset = (page - 1) * limit;
@@ -64,9 +63,8 @@ class CSSQLiteHelper {
   /// columns: ['id'], ['id'] will return id = 2. pass null, will return id = 2's total single row
   /// return: a Map<String, dynamic>
   Future<List<Map<String, dynamic>>> getData(
-      {String where, List<Object> whereArgs, List<String> columns}) async {
-
-    List<Map> maps = await database.query(tableName,
+      {String? where, List<Object>? whereArgs, List<String>? columns}) async {
+    List<Map<String, dynamic>> maps = await database.query(tableName,
         columns: columns, where: where, whereArgs: whereArgs);
 
     return maps;
@@ -74,9 +72,10 @@ class CSSQLiteHelper {
 
   /// key: id
   /// whereInStr: values of id like 1,2,3  or '1','2','3'
-  Future<List<Map<String, dynamic>>> getDataByWhereIn(String key, String whereInStr) async {
-
-    var maps = await database.rawQuery('SELECT * FROM $tableName WHERE $key IN ($whereInStr)');
+  Future<List<Map<String, dynamic>>> getDataByWhereIn(
+      String key, String whereInStr) async {
+    var maps = await database
+        .rawQuery('SELECT * FROM $tableName WHERE $key IN ($whereInStr)');
     return maps;
   }
 
@@ -97,7 +96,7 @@ class CSSQLiteHelper {
   /// where: 'id = ?'
   /// whereArgs: [2], select id=2 rows.
   /// return: delete whether success.
-  Future<bool> deleteData({String where, List<dynamic> whereArgs}) async {
+  Future<bool> deleteData({String? where, List<dynamic>? whereArgs}) async {
     var count =
         await database.delete(tableName, where: where, whereArgs: whereArgs);
     print('database delete $count data');
@@ -154,7 +153,8 @@ class SqfliteHelper {
 
     /// 统计记录数
     int count2 = Sqflite.firstIntValue(
-        await database.rawQuery('SELECT COUNT(*) FROM Test'));
+            await database.rawQuery('SELECT COUNT(*) FROM Test')) ??
+        0;
     assert(count2 == 2);
 
     /// 删除一条记录
@@ -232,7 +232,7 @@ class TodoProvider {
 
   static final TodoProvider instance = TodoProvider._();
 
-  Database db;
+  late Database db;
 
   /// 打开数据库，并创建todo表
   Future open(String path) async {
@@ -253,7 +253,7 @@ create table $tableTodo (
   }
 
   Future<Todo> getTodo(int id) async {
-    List<Map> maps = await db.query(tableTodo,
+    List<Map<String, dynamic>> maps = await db.query(tableTodo,
         columns: [columnId, columnDone, columnTitle],
         where: '$columnId = ?',
         whereArgs: [id],
@@ -261,7 +261,7 @@ create table $tableTodo (
     if (maps.length > 0) {
       return Todo.fromMap(maps.first);
     }
-    return null;
+    return Todo();
   }
 
   Future<int> delete(int id) async {
@@ -278,9 +278,9 @@ create table $tableTodo (
 
 /// todo对应的实体类
 class Todo {
-  int id;
-  String title;
-  bool done;
+  int? id;
+  String? title;
+  bool? done;
 
   Map<String, dynamic> toMap() {
     var map = <String, dynamic>{
@@ -293,7 +293,7 @@ class Todo {
     return map;
   }
 
-  Todo();
+  Todo({this.id,this.title,this.done});
 
   Todo.fromMap(Map<String, dynamic> map) {
     id = map[columnId];

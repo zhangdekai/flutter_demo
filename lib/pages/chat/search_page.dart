@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/pages/chat/search_bar.dart';
 import 'chat_page.dart';
 
 class SearchPage extends StatefulWidget {
-  final List<Chat> datas;
-  const SearchPage({this.datas});
+  final List<Chat> data;
+  const SearchPage(this.data);
   @override
   _SearchPageState createState() => _SearchPageState();
 }
@@ -46,10 +45,10 @@ class _SearchPageState extends State<SearchPage> {
     _models.clear();
     _searchStr = text;
     if(text.length > 0) {//由内容就搜索
-      for(int i = 0; i < widget.datas.length; i++) {
-        String name = widget.datas[i].name;
+      for(int i = 0; i < widget.data.length; i++) {
+        String name = widget.data[i].name ?? '';
         if(name.contains(text)) {
-          _models.add(widget.datas[i]);
+          _models.add(widget.data[i]);
         }
       }
     }
@@ -58,7 +57,7 @@ class _SearchPageState extends State<SearchPage> {
 
   Widget _buildCellForRow(BuildContext context, int index) {
     return ListTile(
-        title: _title(_models[index].name),
+        title: _title(_models[index].name ?? ''),
         subtitle: Container(
           alignment: Alignment.bottomCenter,
           padding: EdgeInsets.only(right: 10),

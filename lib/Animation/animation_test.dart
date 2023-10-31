@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
  */
 
 class AnimationTest extends StatefulWidget {
-  const AnimationTest({Key key}) : super(key: key);
+  const AnimationTest({Key? key}) : super(key: key);
 
   @override
   _AnimationTestState createState() => _AnimationTestState();
@@ -131,7 +131,7 @@ class AnimatedCounter extends StatelessWidget {
   final Duration duration;
 
   const AnimatedCounter(
-      {Key key, @required this.value, @required this.duration})
+      {Key? key, required this.value, required this.duration})
       : super(key: key);
 
   @override
@@ -139,7 +139,7 @@ class AnimatedCounter extends StatelessWidget {
     return TweenAnimationBuilder(
       tween: Tween(end: value.toDouble()),
       duration: duration,
-      builder: (BuildContext context, double value, Widget child) {
+      builder: (BuildContext context, double value, Widget? child) {
         final whole = value ~/ 1;
         final decimal = value - whole;
         print('$whole + $decimal');

@@ -10,15 +10,15 @@ class DrawView extends StatefulWidget {
   final resetCallback; // 还原大小回调
   final double width;
   final double height;
-  final bool landScape; // 是否横屏
+  final bool? landScape; // 是否横屏
   DrawView(
-      {Key key,
+      {Key? key,
         this.signatureController,
         this.biggerCallback,
         this.resetCallback,
-        @required this.width,
-        @required this.height,
-        this.landScape})
+        required this.width,
+        required this.height,
+        this.landScape = false})
       : super(key: key);
 
   @override
@@ -26,7 +26,7 @@ class DrawView extends StatefulWidget {
 }
 
 class _DrawViewState extends State<DrawView> {
-  bool isEmpty;
+  bool isEmpty = true;
 
   @override
   void initState() {
@@ -59,7 +59,7 @@ class _DrawViewState extends State<DrawView> {
   @override
   Widget build(BuildContext context) {
     return RotatedBox(
-      quarterTurns: widget.landScape ? 1 : 0,
+      quarterTurns: widget.landScape! ? 1 : 0,
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -83,7 +83,7 @@ class _DrawViewState extends State<DrawView> {
           // 放大按钮
           Positioned(
             top: 10,
-            right: widget.landScape ? 0 : 10,
+            right: widget.landScape! ? 0 : 10,
             child: IconButton(
               icon: Icon(Icons.baby_changing_station),
               onPressed: () {
@@ -94,7 +94,7 @@ class _DrawViewState extends State<DrawView> {
           // 橡皮 & 完成 按钮
           Positioned(
             bottom: 10,
-            right: widget.landScape ? 0 : 10,
+            right: widget.landScape! ? 0 : 10,
             child: Row(
               children: [
                 // 橡皮
@@ -108,7 +108,7 @@ class _DrawViewState extends State<DrawView> {
                 ),
                 // 完成
                 Offstage(
-                  offstage: widget.landScape ? false : true,
+                  offstage: widget.landScape! ? false : true,
                   child: Container(
                     width: 80,
                     height: 50,

@@ -1,14 +1,23 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.2.0" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.6.7+2" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_plugin_android_lifecycle-1.0.11" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_android-6.1.9" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker_for_web-3.0.1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple-3.3.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_ios-5.6.3" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sqflite-2.3.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_web-0.10.2+1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker-1.0.4" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker_ios-0.8.8+2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker_android-0.8.8+1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/file_selector_macos-0.9.3+3" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in-5.4.4" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_ios-5.6.1" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sqflite-2.2.6" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker_macos-0.2.1+1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/sign_in_with_apple_web-1.0.1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/google_sign_in_android-6.1.20" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/file_selector_linux-0.9.2+1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker_windows-0.2.1+1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/image_picker_linux-0.2.1+1" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/file_selector_windows-0.9.3+1" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

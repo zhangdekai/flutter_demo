@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/pages/chat/chat_page.dart';
-import 'package:weichatdemo/pages/discover/discover_page.dart';
-import 'package:weichatdemo/pages/friends/friend_page.dart';
-import 'package:weichatdemo/pages/mine_page.dart';
+import 'package:weiChatDemo/pages/chat/chat_page.dart';
+import 'package:weiChatDemo/pages/discover/discover_page.dart';
+import 'package:weiChatDemo/pages/friends/friend_page.dart';
+import 'package:weiChatDemo/pages/mine_page.dart';
 
 class RootPage extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class _RootPageState extends State<RootPage> {
   int _currentIndex = 0;
 
   List<Widget> _pages = [ChatPage(), FriendPage(), DiscoverPage(), MinePage()];
-  final PageController _pageController = PageController(initialPage: 0);
+  final PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {

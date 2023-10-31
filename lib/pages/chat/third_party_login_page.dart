@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class ThirdPartyLoginPage extends StatelessWidget {
-  const ThirdPartyLoginPage({Key key}) : super(key: key);
+  const ThirdPartyLoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

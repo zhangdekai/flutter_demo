@@ -2,13 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:image_picker/image_picker.dart';
-import 'package:weichatdemo/common/const.dart';
-
+import 'package:weiChatDemo/common/const.dart';
 import 'discover/discover_cell.dart';
 
 class ATestWidget extends StatelessWidget {
-  const ATestWidget({Key key}) : super(key: key);
+  const ATestWidget({required Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +27,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
 
 
   //展示头像，使用FileImage(_avataFile);
-  File _avataFile = null;
+  File? _avataFile;
 
   Widget headerWidget(){
 
@@ -52,15 +50,14 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
                 height: 50,
                 decoration: BoxDecoration(//box 装饰
                   borderRadius: BorderRadius.circular(10.0),
-                  image: DecorationImage(image: _avataFile == null ?
-                  AssetImage('images/Hank.png'): FileImage(_avataFile),
-                    fit: BoxFit.cover,),
+                  image: _avataFile != null ? DecorationImage(image: FileImage(_avataFile!),
+                    fit: BoxFit.cover,): DecorationImage(image: AssetImage('images/Hank.png')),
                 ),
 
               ),
             ),//头像
             Container(
-              width: ScreenWidth(context) - 110,
+              width: screenWidth(context) - 110,
               margin: EdgeInsets.only(left: 15,),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -100,7 +97,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
     super.initState();
 
     //从iOS 到 flutter的回调方法
-    _methodChannel.setMethodCallHandler((call){
+    _methodChannel.setMethodCallHandler((call) async {
 
       if(call.method == "imagePath") {
         String imagePath = call.arguments.toString().substring(7);
@@ -108,8 +105,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
           _avataFile = File(imagePath);
         });
       }
-
-      return null;
+      return 0;
     });
   }
 
@@ -126,7 +122,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
       body: Stack(
         children: <Widget>[
           Container(
-            color: WeChatThemeColor,
+            color: weChatThemeColor,
             child: MediaQuery.removePadding(
               removeTop: true,
               context: context,
@@ -158,7 +154,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin 
           Container(
             height: 25,
             margin: EdgeInsets.only(top: 40,right: 15),
-            color: WeChatLucency,
+            color: weChatLucency,
             child:Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[

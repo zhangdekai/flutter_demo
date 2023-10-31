@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/Animation/animation_test.dart';
-import 'package:weichatdemo/common/const.dart';
-import 'package:weichatdemo/common/navigator_tool.dart';
-import 'package:weichatdemo/generated/l10n.dart';
-import 'package:weichatdemo/image_crop_test/image_crop.dart';
-import 'package:weichatdemo/key_test/various_key_test.dart';
-import 'package:weichatdemo/pages/discover/discover_cell.dart';
-import 'package:weichatdemo/provider_test/provider_test_case.dart';
-import 'package:weichatdemo/share_data/inherited_demo.dart';
-import 'package:weichatdemo/sqlite/sqlite_page_test.dart';
-import 'package:weichatdemo/sync_Test/test_dart_sync.dart';
-import 'package:weichatdemo/widgets_test/widget_api_test.dart';
+import 'package:weiChatDemo/Animation/animation_test.dart';
+import 'package:weiChatDemo/common/const.dart';
+import 'package:weiChatDemo/common/navigator_tool.dart';
+import 'package:weiChatDemo/generated/l10n.dart';
+import 'package:weiChatDemo/image_crop_test/image_crop.dart';
+import 'package:weiChatDemo/key_test/various_key_test.dart';
+import 'package:weiChatDemo/pages/discover/discover_cell.dart';
+import 'package:weiChatDemo/provider_test/provider_test_case.dart';
+import 'package:weiChatDemo/share_data/inherited_demo.dart';
+import 'package:weiChatDemo/sqlite/sqlite_page_test.dart';
+import 'package:weiChatDemo/sync_Test/test_dart_sync.dart';
+import 'package:weiChatDemo/widgets_test/widget_api_test.dart';
 
 class DiscoverPage extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class DiscoverPage extends StatefulWidget {
 
 class _DiscoverPageState extends State<DiscoverPage>
     with AutomaticKeepAliveClientMixin {
-  Color _themeColor = WeChatThemeColor;
+  Color _themeColor = weChatThemeColor;
 
   @override
   void initState() {
@@ -34,7 +34,7 @@ class _DiscoverPageState extends State<DiscoverPage>
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: WeChatThemeColor, // Colors.greenAccent
+        backgroundColor: weChatThemeColor, // Colors.greenAccent
         //一下三个是专门为了安卓使用的属性
         centerTitle: true,
         title: Text(S.of(context).title), //Text('发现')

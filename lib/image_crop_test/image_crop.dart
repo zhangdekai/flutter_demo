@@ -8,18 +8,23 @@ import 'dart:ui' as ui;
 /// 图片裁剪
 class ImageClipper extends CustomPainter {
   final ui.Image image;
-  final double left;
-  final double top;
-  final double right;
-  final double bottom;
-  ui.PictureRecorder recorder;
-  Size _size;
+  final double? left;
+  final double? top;
+  final double? right;
+  final double? bottom;
 
-  ImageClipper(this.image,{this.left = 0.3,this.top = 0.3,this.right = 0.6,this.bottom = 0.6});
+  ImageClipper(this.image,
+      {Key? key,
+      this.left = 0.3,
+      this.top = 0.3,
+      this.right = 0.6,
+      this.bottom = 0.6});
+
+  late ui.PictureRecorder recorder;
+  Size _size = Size.zero;
+
   @override
   void paint(Canvas canvas, Size size) {
-    // TODO: implement paint
-
     _size = Size(size.width, size.height);
 
     recorder = ui.PictureRecorder();
@@ -30,8 +35,8 @@ class ImageClipper extends CustomPainter {
 
     canvas.drawImageRect(
         image,
-        Rect.fromLTRB(image.width * left, image.height * top,
-            image.width * right, image.height * bottom),
+        Rect.fromLTRB(image.width * left!, image.height * top!,
+            image.width * right!, image.height * bottom!),
         Rect.fromLTWH(0, 0, size.width, size.height),
         paint);
   }
@@ -42,8 +47,7 @@ class ImageClipper extends CustomPainter {
     return false;
   }
 
-  void reloadImage(){
-
+  void reloadImage() {
     recorder = ui.PictureRecorder();
     final ui.Canvas canvas = Canvas(recorder);
 
@@ -51,30 +55,26 @@ class ImageClipper extends CustomPainter {
 
     canvas.drawImageRect(
         image,
-        Rect.fromLTRB(image.width * left, image.height * top,
-            image.width * right, image.height * bottom),
+        Rect.fromLTRB(image.width * left!, image.height * top!,
+            image.width * right!, image.height * bottom!),
         Rect.fromLTWH(0, 0, _size.width, _size.height),
         paint);
-
   }
 
   Future<MemoryImage> toImage() async {
-
-    Completer completer = Completer<MemoryImage>();
+    Completer<MemoryImage> completer = Completer<MemoryImage>();
 
     Picture picture = recorder.endRecording();
-    
-    picture.toImage(200, 200).then((value) => value.toByteData().then((value){
 
-      Uint8List temp = value.buffer.asUint8List();
-
-      completer.complete(MemoryImage(temp));
-
-    }));
+    picture.toImage(200, 200).then((value) => value.toByteData().then((value) {
+          if (value != null) {
+            Uint8List temp = value!.buffer.asUint8List();
+            completer.complete(MemoryImage(temp));
+          }
+        }));
 
     return completer.future;
   }
-
 }
 
 const String pic =
@@ -89,9 +89,10 @@ class ImageClipperTest extends StatefulWidget {
 }
 
 class _ImageClipperTestState extends State {
-  ImageClipper clipper;
 
-  MemoryImage _image;
+  late ImageClipper clipper;
+
+  late MemoryImage? _image;
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +104,12 @@ class _ImageClipperTestState extends State {
         child: Column(
           children: [
             SizedBox(
-              child: Container(color: Colors.grey, child: Image.network(pic,fit: BoxFit.fill,)),
+              child: Container(
+                  color: Colors.grey,
+                  child: Image.network(
+                    pic,
+                    fit: BoxFit.fill,
+                  )),
               width: 200,
               height: 150,
             ),
@@ -117,10 +123,17 @@ class _ImageClipperTestState extends State {
                   size: Size(100, 100),
                 )),
             TextButton(child: Text('Clip'), onPressed: () => clip()),
-
-            _image != null ? Container(
-              width: 200, height: 200,
-              child: Image(image: _image),):Container(width: 100, height: 50, color: Colors.yellow,),
+            _image != null
+                ? Container(
+                    width: 200,
+                    height: 200,
+                    child: Image(image: _image!),
+                  )
+                : Container(
+                    width: 100,
+                    height: 50,
+                    color: Colors.yellow,
+                  ),
           ],
         ),
       ),
@@ -140,12 +153,13 @@ class _ImageClipperTestState extends State {
     return completer.future;
   }
 
-  clip() async {
-    ui.Image uiImage;
-    _loadImge().then((image){uiImage = image;}).whenComplete(() {
+  void clip() async {
+    late ui.Image uiImage;
+    _loadImge().then((image) {
+      uiImage = image;
+    }).whenComplete(() {
       clipper = ImageClipper(uiImage);
       setState(() {});
-
 
       // Future.delayed(Duration(seconds: 1),(){
       //
@@ -157,10 +171,6 @@ class _ImageClipperTestState extends State {
       //     setState(() {});
       //   });
       // });
-
     });
-
-
-
   }
 }

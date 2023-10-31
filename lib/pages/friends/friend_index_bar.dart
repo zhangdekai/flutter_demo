@@ -4,9 +4,9 @@ import '../../common/const.dart';
 
 class FriendIndexBar extends StatefulWidget {
 
-  final void Function(String str) indexBarCallBack;
+  final void Function(String)? indexBarCallBack;
 
-  const FriendIndexBar({Key key, this.indexBarCallBack}) : super(key: key);
+  const FriendIndexBar({Key? key, this.indexBarCallBack}) : super(key: key);
 
   @override
   _FriendIndexBarState createState() => _FriendIndexBarState();
@@ -15,12 +15,12 @@ class FriendIndexBar extends StatefulWidget {
 int getIndex(BuildContext context, Offset globalPosition) {
 
 //  //拿到box
-  RenderBox box = context.findRenderObject();
+  RenderBox box = context.findRenderObject() as RenderBox;
 //  //拿到y值  获取空间的坐标 y值
-  double y = box.globalToLocal(globalPosition).dy;
+  double y =  box.globalToLocal(globalPosition).dy;
 
   //算出字符高度
-  var itemHeight = ScreenHeight(context) / 2 / INDEX_WORDS.length;
+  var itemHeight = screenHeight(context) / 2 / INDEX_WORDS.length;
   //算出第几个item,并且给一个取值范围
   int index = (y ~/ itemHeight).clamp(0, INDEX_WORDS.length - 1);
 
@@ -54,8 +54,8 @@ class _FriendIndexBarState extends State<FriendIndexBar> {
     return Positioned(
         right: 0,
         width: 120,
-        height: ScreenHeight(context) / 2,
-        top: ScreenHeight(context) / 8,
+        height: screenHeight(context) / 2,
+        top: screenHeight(context) / 8,
         child: Row(
           children: <Widget>[
             Container(
@@ -98,7 +98,7 @@ class _FriendIndexBarState extends State<FriendIndexBar> {
                   _indocatorHidden = false;
                 });
 
-                widget.indexBarCallBack(INDEX_WORDS[index]);
+                widget.indexBarCallBack?.call(INDEX_WORDS[index]);
 
               },
               onVerticalDragDown: (DragDownDetails details){
@@ -106,7 +106,7 @@ class _FriendIndexBarState extends State<FriendIndexBar> {
                 _indicatorText = INDEX_WORDS[index];
                 _indicatorY = 2.2 / 28 * index - 1.1;
                 _indocatorHidden = false;
-                widget.indexBarCallBack(INDEX_WORDS[index]);
+                widget.indexBarCallBack?.call(INDEX_WORDS[index]);
 
                 setState(() {
                   _bkColor = Color.fromRGBO(1, 1, 1, 0.5);

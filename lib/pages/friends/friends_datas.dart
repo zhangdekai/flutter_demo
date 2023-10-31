@@ -1,7 +1,7 @@
 class Friends {
-  final String imageUrl;
-  final String name;
-  final String indexLetter;
+  final String? imageUrl;
+  final String? name;
+  final String? indexLetter;
 
   Friends({this.imageUrl, this.name, this.indexLetter});
 

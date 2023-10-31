@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/common/const.dart';
-import 'package:weichatdemo/pages/chat/search_page.dart';
-
+import 'package:weiChatDemo/common/const.dart';
+import 'package:weiChatDemo/pages/chat/search_page.dart';
 import 'chat_page.dart';
 
 class SearchCell extends StatelessWidget {
-  final List<Chat> datas;
+  final List<Chat> data;
 
-  const SearchCell({this.datas});
+  const SearchCell(this.data);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTapDown: (d) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return SearchPage(
-            datas: datas,
-          );
+          return SearchPage(data);
         }));
       },
       child: Container(
         height: 44,
-        color: WeChatThemeColor,
+        color: weChatThemeColor,
         padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
         child: Stack(
           alignment: Alignment.center,
@@ -45,7 +42,7 @@ class SearchCell extends StatelessWidget {
 
 class SearchBar extends StatefulWidget {
   final ValueChanged<String> onChanged;
-  const SearchBar({this.onChanged});
+  const SearchBar(this.onChanged);
 
   _SearchBarState createState() => _SearchBarState();
 }
@@ -70,7 +67,7 @@ class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: WeChatThemeColor,
+      color: weChatThemeColor,
       height: 84,
       child: Column(children: <Widget>[
         SizedBox(
@@ -81,7 +78,7 @@ class _SearchBarState extends State<SearchBar> {
           child: Row(children: <Widget>[
             Container(
               height: 34,
-              width: ScreenWidth(context) - 40,
+              width: screenWidth(context) - 40,
               margin: EdgeInsets.only(left: 5),
               padding: EdgeInsets.only(left: 5, right: 5),
               decoration: BoxDecoration(

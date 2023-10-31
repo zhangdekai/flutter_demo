@@ -5,12 +5,12 @@ import 'dart:isolate';
 
 // import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:weichatdemo/common/const.dart';
-import 'package:weichatdemo/common/navigator_tool.dart';
-import 'package:weichatdemo/pages/chat/search_bar.dart';
-import 'package:weichatdemo/pages/chat/third_party_login_page.dart';
-import 'package:weichatdemo/sliver/sliver_animated_list_test.dart';
-import 'package:weichatdemo/sliver/sliver_test.dart';
+import 'package:weiChatDemo/common/const.dart';
+import 'package:weiChatDemo/common/navigator_tool.dart';
+import 'package:weiChatDemo/pages/chat/search_bar.dart';
+import 'package:weiChatDemo/pages/chat/third_party_login_page.dart';
+import 'package:weiChatDemo/sliver/sliver_animated_list_test.dart';
+import 'package:weiChatDemo/sliver/sliver_test.dart';
 
 class ChatPage extends StatefulWidget {
   @override
@@ -19,11 +19,12 @@ class ChatPage extends StatefulWidget {
 
 class _ChatPageState extends State<ChatPage>
     with AutomaticKeepAliveClientMixin {
-  Timer _timer;
+  late Timer _timer;
 
-  bool _cancleConnect = false;
 
-  List<Chat> _datas = [];
+  List<Chat> _data = [];
+
+  bool _cancelConnect = false;
 
   // CancelToken _cancelToken = CancelToken();
 
@@ -61,8 +62,8 @@ class _ChatPageState extends State<ChatPage>
   void _initData() {
     final titles = ['三方登录', 'Sliver test', 'SliverAnimatedList case'];
     for (int i = 0; i < titles.length; i++) {
-      Chat temp = Chat(i, name: titles[i], message: 'message$i', imageUrl: '');
-      _datas.add(temp);
+      Chat temp = Chat(i, titles[i],  'message$i', '');
+      _data.add(temp);
     }
   }
 
@@ -73,16 +74,16 @@ class _ChatPageState extends State<ChatPage>
     return Scaffold(
       appBar: AppBar(
         title: Text('微信1232424'),
-        backgroundColor: WeChatThemeColor,
+        backgroundColor: weChatThemeColor,
         actions: _rightItem(),
       ),
       body: Container(
-        child: _datas.length == 0
+        child: _data.length == 0
             ? Center(
                 child: Text('Loading...'),
               )
             : ListView.builder(
-                itemCount: _datas.length + 1, itemBuilder: _cellForRow),
+                itemCount: _data.length + 1, itemBuilder: _cellForRow),
       ),
     );
   }
@@ -116,19 +117,17 @@ class _ChatPageState extends State<ChatPage>
 
   Widget _cellForRow(BuildContext context, int index) {
     if (index == 0) {
-      return SearchCell(
-        datas: _datas,
-      );
+      return SearchCell(_data);
     }
 
     index--;
     return ListTile(
-      title: Text(_datas[index].name),
+      title: Text(_data[index].name ?? ''),
       subtitle: Container(
         margin: EdgeInsets.only(right: 10, top: 5),
         height: 25,
         child: Text(
-          _datas[index].message,
+          _data[index].message ?? '',
           overflow: TextOverflow.ellipsis,
         ),
       ),
@@ -156,7 +155,7 @@ class _ChatPageState extends State<ChatPage>
   Future<List<Chat>> _getData() async {
     //异步的方法 添加 async
 
-    _cancleConnect = false;
+    _cancelConnect = false;
 
     return [];
 
@@ -221,7 +220,6 @@ class _ChatPageState extends State<ChatPage>
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }
 
@@ -231,14 +229,14 @@ class Chat {
   final String message;
   final String imageUrl;
 
-  Chat(this.uniqueKey, {this.name, this.message, this.imageUrl});
+  Chat(this.uniqueKey, this.name, this.message, this.imageUrl);
 
   factory Chat.fromJSon(Map json) {
     return Chat(
       json['uniqueKey'],
-      name: json['name'],
-      message: json['message'],
-      imageUrl: json['imageUrl'],
+      json['name'],
+       json['message'],
+      json['imageUrl'],
     );
   }
 }
