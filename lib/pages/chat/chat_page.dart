@@ -50,8 +50,6 @@ class _ChatPageState extends State<ChatPage>
   void initState() {
     super.initState();
 
-    print('chat_page init来了');
-
     _initData();
 
 //    testTimer();

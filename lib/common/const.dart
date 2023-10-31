@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-final Color weChatThemeColor = Color.fromRGBO(220, 220, 220, 1);
-final Color weChatLucency = Color.fromRGBO(0, 0, 0, 0);
+final Color weChatThemeColor = Colors.greenAccent;
+final Color weChatLucency = Colors.black;
 
 // 屏幕宽高
 double screenWidth(BuildContext content) => MediaQuery.of(content).size.width;

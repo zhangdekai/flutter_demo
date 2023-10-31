@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 
   ThemeData get _buildThemeData {
     return ThemeData(
-        primaryColor: Colors.greenAccent,
-        scaffoldBackgroundColor: Colors.yellow);
+        primaryColor: Colors.white,
+        scaffoldBackgroundColor: Colors.white);
   }
 }
