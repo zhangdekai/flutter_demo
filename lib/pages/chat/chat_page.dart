@@ -4,13 +4,17 @@ import 'dart:convert';
 import 'dart:isolate';
 
 // import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:weiChatDemo/common/const.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
 import 'package:weiChatDemo/pages/chat/search_bar.dart';
 import 'package:weiChatDemo/pages/chat/third_party_login_page.dart';
 import 'package:weiChatDemo/sliver/sliver_animated_list_test.dart';
 import 'package:weiChatDemo/sliver/sliver_test.dart';
+
+import '../../page_route(路由机制)/page_route_test.dart';
 
 class ChatPage extends StatefulWidget {
   @override
@@ -20,7 +24,6 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage>
     with AutomaticKeepAliveClientMixin {
   late Timer _timer;
-
 
   List<Chat> _data = [];
 
@@ -40,7 +43,7 @@ class _ChatPageState extends State<ChatPage>
         ),
         Text(
           title,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
         )
       ],
     );
@@ -58,9 +61,9 @@ class _ChatPageState extends State<ChatPage>
   }
 
   void _initData() {
-    final titles = ['三方登录', 'Sliver test', 'SliverAnimatedList case'];
+    final titles = ['三方登录', 'Sliver test', 'SliverAnimatedList case', '路由管理'];
     for (int i = 0; i < titles.length; i++) {
-      Chat temp = Chat(i, titles[i],  'message$i', '');
+      Chat temp = Chat(i, titles[i], 'message$i', '');
       _data.add(temp);
     }
   }
@@ -91,6 +94,7 @@ class _ChatPageState extends State<ChatPage>
       Container(
         margin: EdgeInsets.only(right: 10),
         child: PopupMenuButton(
+          color: Colors.grey[100],
           offset: Offset(0, 60),
           itemBuilder: (BuildContext content) {
             return [
@@ -143,9 +147,12 @@ class _ChatPageState extends State<ChatPage>
       case 1:
         NavigatorTool.pushFrom(context, SliverTestPage());
         break;
-
       case 2:
         NavigatorTool.pushFrom(context, SliverAnimatedListSample());
+        break;
+      case 3:
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => PageRouteTest()));
         break;
     }
   }
@@ -233,7 +240,7 @@ class Chat {
     return Chat(
       json['uniqueKey'],
       json['name'],
-       json['message'],
+      json['message'],
       json['imageUrl'],
     );
   }

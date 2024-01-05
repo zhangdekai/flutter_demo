@@ -57,9 +57,7 @@ class _VariousKeyTestState extends State<VariousKeyTest> {
           print('event.position.dx = ${event.position.dx}');
           print('event.position.dy = ${event.position.dy}');
         },
-        child: Column(
-          children: boxs,
-        ),
+        child: Column(children: boxs),
       ),
     );
   }
@@ -87,10 +85,7 @@ class _VariousKeyTestState extends State<VariousKeyTest> {
           // SizedBox(
           //   height: 100,
           // ),
-          Divider(
-            thickness: 30,
-            color: Colors.green,
-          ),
+          Divider(thickness: 30, color: Colors.green),
           IconButton(
               icon: Icon(Icons.refresh),
               onPressed: () {

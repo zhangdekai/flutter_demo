@@ -60,7 +60,7 @@ class _RootPageState extends State<RootPage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
-              label: '我',
+              label: '我'
             ),
           ]),
     );
