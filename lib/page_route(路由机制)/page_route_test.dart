@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weiChatDemo/const_value/route_name.dart';
 
 /// Flutter 路由机制
 /*
@@ -115,12 +116,20 @@ class _PageRouteTestState extends State<PageRouteTest> {
                 },
                 child: Text('push 下一页')),
             SizedBox(height: 10),
-            Text('4：override PageRoute for Navigator.push'),
+            Text('5：override PageRoute for Navigator.push'),
             TextButton(
                 onPressed: () {
                   Navigator.of(context).push(_CustomerRoute((c) {
                     return _Page1(useModalWay: false);
                   }));
+                },
+                child: Text('push 下一页')),
+            SizedBox(height: 10),
+            Text('6：Navigator.pushNamed 传值arguments '),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteName.pageRouteTest3,
+                      arguments: '1 传值成功');
                 },
                 child: Text('push 下一页')),
           ],
@@ -201,6 +210,28 @@ class _Page2 extends StatelessWidget {
             Text('获取 上一页值 为 $value'),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class PageRouteTest3 extends StatelessWidget {
+  const PageRouteTest3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // 通过命名路由的传值
+    final value = ModalRoute.of(context)?.settings.arguments ??
+        '未获得 ModalRoute settings.arguments';
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('第二页'),
+      ),
+      body: Column(
+        children: [
+          Text('获取 上一页值 为 $value'),
+        ],
       ),
     );
   }

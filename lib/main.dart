@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
       localizationsDelegates: [S.delegate],
       getPages: [
         GetPage(name: RouteName.homepage, page: () => RootPage()),
+        GetPage(name: RouteName.pageRouteTest3, page: () => PageRouteTest3()),
       ],
       navigatorObservers: [
         _MyNavigatorObserver(),
