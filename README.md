@@ -1,11 +1,43 @@
-# weichatdemo
+# Object
 
-仿制微信主页面的flutter Demo
+仿制微信主页面的Flutter Demo.
 
-## Getting Started
+This project is a Demo for learning Flutter.
 
-This project is a starting point for a Flutter application.
+内容主要包含 相关Flutter 技术的学习和演示.
 
-Mainly for learning Flutter's skills
+# flutter --version
+
+Current Version：
+
+Flutter 3.13.6 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision ead455963c (3 months ago) • 2023-09-26 18:28:17 -0700
+Engine • revision a794cf2681
+Tools • Dart 3.1.3 • DevTools 2.25.0
+
+`大约2023-8月，当前Demo 升级到 Flutter 3.x`
+
+# Flutter Skill list
+This part is based on the `lib` file
+* Animation
+* Common setting
+* Const value setting
+* Event_bus
+* Generated for 国际化，包括 `l10n` file 
+* Image crop  裁剪
+* Inherited Widget 
+* Json Model 生成
+* Key Test
+* Page Route 路由机制
+* Pages -> 主页root_page 和 各项首页
+* Lib Provider use
+* Signature  画签名
+* Sliver Widget use
+* Sqlite use
+* Stream test
+* Async and Sync test
+* Widgets test `1：Stream StreamBuild  2：FutureBuilder 3：LayoutBuilder 4：Flexible 5：GridView`
+* 面试题
+* main 
 
 
