@@ -9,13 +9,13 @@ This project is a Demo for learning Flutter.
 # flutter --version
 
 Current Version：
-
+```
 Flutter 3.13.6 • channel stable • https://github.com/flutter/flutter.git
 Framework • revision ead455963c (3 months ago) • 2023-09-26 18:28:17 -0700
 Engine • revision a794cf2681
 Tools • Dart 3.1.3 • DevTools 2.25.0
-
-`大约2023-8月，当前Demo 升级到 Flutter 3.x`
+```
+`ps: 大约2023-8月，当前Demo 从2.x 升级到 Flutter 3.x`
 
 # Flutter Skill list
 This part is based on the `lib` file
