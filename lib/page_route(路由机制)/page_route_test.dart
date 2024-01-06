@@ -52,6 +52,10 @@ Navigator.pushNamed(context, '/second');
 
  */
 
+/// 下边的代码 演示了 Navigator的 push pop，传值，反向传值，以及返回事件监听，
+/// 自定义Router，以及命名路由 pushNamed
+///
+
 class PageRouteTest extends StatefulWidget {
   const PageRouteTest({super.key});
 
