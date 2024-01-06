@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 
 /// Flutter 路由机制
+/// 整个APP使用 路由的时候，建议采用命名路由的方式 统一管理路由，可以添加先关权限设置，比如 登录。
 /*
 Flutter 的路由机制主要涉及两个核心类：Navigator 和 Route。
 这两个类共同协作，实现了应用程序中不同页面之间的导航和切换。
