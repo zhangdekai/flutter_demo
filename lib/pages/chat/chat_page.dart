@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weiChatDemo/common/const.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
+import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/pages/chat/search_bar.dart';
 import 'package:weiChatDemo/pages/chat/third_party_login_page.dart';
 import 'package:weiChatDemo/sliver/sliver_animated_list_test.dart';
@@ -61,7 +62,7 @@ class _ChatPageState extends State<ChatPage>
   }
 
   void _initData() {
-    final titles = ['三方登录', 'Sliver test', 'SliverAnimatedList case', '路由管理'];
+    final titles = ['三方登录', 'Sliver test', 'SliverAnimatedList case', '路由管理','Event Handle'];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
       _data.add(temp);
@@ -153,6 +154,9 @@ class _ChatPageState extends State<ChatPage>
       case 3:
         Navigator.of(context)
             .push(CupertinoPageRoute(builder: (c) => PageRouteTest()));
+        break;
+      case 4:
+        Get.toNamed(RouteName.pageEventTest);
         break;
     }
   }

@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:weiChatDemo/base/base_view.dart';
 
 /*
 以下包含：
@@ -14,6 +15,22 @@ import 'package:flutter/rendering.dart';
 
 
  */
+
+class WidgetsTest extends BaseView{
+
+  @override
+  String get title => 'super.title';
+
+
+  @override
+  Widget buildPage(BuildContext context) {
+    // TODO: implement buildPage
+    throw UnimplementedError();
+  }
+
+
+}
+
 
 class WidgetsApiTest extends StatefulWidget {
   @override
@@ -52,7 +69,6 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     // 不加这行，_controller 报警告。
     _controller.close();
@@ -78,9 +94,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
   Widget _gridViewTest() {
     return Stack(
       children: [
-        PuzzleView(
-          inputStream: _controller.stream,
-        ),
+        PuzzleView(inputStream: _controller.stream),
         Center(
           child: DefaultTextStyle(
             style: TextStyle(fontSize: 30, color: Colors.yellow),
@@ -255,7 +269,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
     );
 
     return Center(
-      child: widget,
+      child: widget
     );
   }
 
@@ -282,7 +296,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
         Flexible(
             flex: 2,
             child: Container(
-              color: Colors.green,
+              color: Colors.green
             )),
         Flexible(
             flex: 3,
