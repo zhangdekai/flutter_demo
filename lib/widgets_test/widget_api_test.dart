@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:weiChatDemo/base/base_view.dart';
 
 /*
 以下包含：
@@ -16,29 +16,16 @@ import 'package:weiChatDemo/base/base_view.dart';
 
  */
 
-class WidgetsTest extends BaseView{
-
-  @override
-  String get title => 'super.title';
-
-
-  @override
-  Widget buildPage(BuildContext context) {
-    // TODO: implement buildPage
-    throw UnimplementedError();
-  }
-
-
-}
-
-
 class WidgetsApiTest extends StatefulWidget {
+  final int testType;
+
+  const WidgetsApiTest({super.key, required this.testType});
+
   @override
   _WidgetsApiTestState createState() => _WidgetsApiTestState();
 }
 
-class _WidgetsApiTestState extends State<WidgetsApiTest> {
-  Stream _stream = Stream.periodic(Duration(seconds: 1), (_) => 56);
+class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin{
 
   /// 只能被一个监听, 会缓存 sink add 过的事件
   // StreamController _controller = StreamController();
@@ -54,18 +41,21 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
   @override
   void initState() {
     super.initState();
-
-    // _stream.listen((event) {// 使用StreamBuilder 的话，就不可以 listen了
-    //   print('stream event = $event');
-    // });
-
-    // _controller.sink.add(123);
-    // _controller.stream.listen((event) {
-    //   print('event = $event');
-    // }, onError: ()=> print('on Error'),
-    //     onDone: ()=> print('on Done')
-    // );
+    _nextFrameAction();
   }
+
+  void _nextFrameAction() {
+     WidgetsBinding.instance.endOfFrame.then((value) {
+      if(mounted){
+
+      }
+    });
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+
+    });
+  }
+
 
   @override
   void dispose() {
@@ -83,11 +73,27 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
       ),
       body: Container(
         color: Colors.green[200]?.withOpacity(0.8),
-        // height: 800,
-        child:
-            _gridViewTest(), //_gridViewTest, _streamBuilderTest, _flexibleTest(),  _layoutBuilderTest, _futureBuilderTest
+        child: contentWidget(),
       ),
     );
+  }
+
+  Widget contentWidget() {
+    switch (widget.testType) {
+      case 0:
+        return _gridViewTest();
+      case 1:
+        return _streamBuilderTest();
+      case 2:
+        return _flexibleTest();
+      case 3:
+        return _layoutBuilderTest();
+      case 4:
+        return _futureBuilderTest();
+      case 5:
+        return _futureBuilderTest();
+    }
+    return _gridViewTest();
   }
 
   /// 键盘输入 Stream 检测
@@ -239,13 +245,17 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
     Widget widget = Container(
       color: Colors.cyan[200],
       child: FractionallySizedBox(
-        widthFactor: 0.2,
-        heightFactor: 0.2,
+        // widthFactor: 0.2,
+        // heightFactor: 0.2,
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
             print('LayoutBuilder constraints = $constraints');
 
-            return FlutterLogo(size: 50);
+            if(constraints.minWidth >= 100.0){
+              return FlutterLogo(size: 200);
+            }
+
+            return FlutterLogo(size: 20);
           },
         ),
       ),
@@ -261,16 +271,17 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
           child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
               print('LayoutBuilder constraints = $constraints');
-              return FlutterLogo(size: 50);
-            },
+              if(constraints.minWidth >= 100.0){
+                return FlutterLogo(size: 200,textColor: Colors.red,);
+              }
+
+              return FlutterLogo(size: 50);            },
           ),
         ),
       ),
     );
 
-    return Center(
-      child: widget
-    );
+    return Center(child: widget);
   }
 
   Widget _flexibleTest() {
@@ -293,11 +304,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
                     ));
               },
             )),
-        Flexible(
-            flex: 2,
-            child: Container(
-              color: Colors.green
-            )),
+        Flexible(flex: 2, child: Container(color: Colors.green)),
         Flexible(
             flex: 3,
             child: Container(
@@ -305,6 +312,11 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> {
             )),
       ],
     );
+  }
+
+  @override
+  FutureOr<void> afterFirstLayout(BuildContext context) {
+    print('afterFirstLayout');
   }
 }
 

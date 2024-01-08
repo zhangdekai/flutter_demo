@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/generated/l10n.dart';
 import 'package:weiChatDemo/pages/root_page.dart';
+import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
 
 import 'event/event_handle_test/view.dart';
 import 'page_route(路由机制)/page_route_test.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
         GetPage(name: RouteName.homepage, page: () => RootPage()),
         GetPage(name: RouteName.pageRouteTest3, page: () => PageRouteTest3()),
         GetPage(name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
+        GetPage(name: RouteName.pageWidgetsTest, page: () => WidgetsTestPage()),
       ],
       navigatorObservers: [
         _MyNavigatorObserver(),

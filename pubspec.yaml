@@ -39,6 +39,7 @@ dependencies:
 
   intl: ^0.18.1
 #  intl_translation: ^0.17.2
+  after_layout: ^1.2.0
 
 
 # dio: 3.0.9  指定版本

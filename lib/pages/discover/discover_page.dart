@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:weiChatDemo/Animation/animation_test.dart';
 import 'package:weiChatDemo/common/const.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
+import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/generated/l10n.dart';
 import 'package:weiChatDemo/image_crop_test/image_crop.dart';
 import 'package:weiChatDemo/inherited_widget/inherited_demo.dart';
@@ -10,7 +12,6 @@ import 'package:weiChatDemo/pages/discover/discover_cell.dart';
 import 'package:weiChatDemo/provider_test/provider_test_case.dart';
 import 'package:weiChatDemo/sqlite/sqlite_page_test.dart';
 import 'package:weiChatDemo/sync_Test/test_dart_sync.dart';
-import 'package:weiChatDemo/widgets_test/widget_api_test.dart';
 
 class DiscoverPage extends StatefulWidget {
   @override
@@ -133,7 +134,10 @@ class _DiscoverPageState extends State<DiscoverPage>
               imageName: 'images/小程序.png',
               title: 'Widget api test',
               callBack: () {
-                NavigatorTool.pushFrom(context, WidgetsApiTest());
+
+                Get.toNamed(RouteName.pageWidgetsTest);
+
+                // NavigatorTool.pushFrom(context, WidgetsApiTest(testType: 0,));
               },
             ),
             SizedBox(
