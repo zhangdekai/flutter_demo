@@ -25,8 +25,7 @@ class WidgetsApiTest extends StatefulWidget {
   _WidgetsApiTestState createState() => _WidgetsApiTestState();
 }
 
-class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin{
-
+class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
   /// 只能被一个监听, 会缓存 sink add 过的事件
   // StreamController _controller = StreamController();
 
@@ -45,17 +44,22 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin{
   }
 
   void _nextFrameAction() {
-     WidgetsBinding.instance.endOfFrame.then((value) {
-      if(mounted){
-
+    WidgetsBinding.instance.endOfFrame.then((value) {
+      if (mounted) {
+        print('WidgetsBinding.instance.endOfFrame');
+      }else {
+        print('no mounted');
       }
     });
 
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-
+      if (mounted) {
+        print('WidgetsBinding.instance.addPostFrameCallback');
+      }else {
+        print('no mounted');
+      }
     });
   }
-
 
   @override
   void dispose() {
@@ -251,7 +255,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin{
           builder: (BuildContext context, BoxConstraints constraints) {
             print('LayoutBuilder constraints = $constraints');
 
-            if(constraints.minWidth >= 100.0){
+            if (constraints.minWidth >= 100.0) {
               return FlutterLogo(size: 200);
             }
 
@@ -271,11 +275,15 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin{
           child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
               print('LayoutBuilder constraints = $constraints');
-              if(constraints.minWidth >= 100.0){
-                return FlutterLogo(size: 200,textColor: Colors.red,);
+              if (constraints.minWidth >= 100.0) {
+                return FlutterLogo(
+                  size: 200,
+                  textColor: Colors.red,
+                );
               }
 
-              return FlutterLogo(size: 50);            },
+              return FlutterLogo(size: 50);
+            },
           ),
         ),
       ),

@@ -1,28 +1,25 @@
-
 import 'package:flutter/material.dart';
 
-class MyData extends InheritedWidget {
+class MyInheritedWidget extends InheritedWidget {
+  final int data; //需要在子Widget中共享的数据
 
-  final int data;//需要在子Widget中共享的数据
-
-  const MyData(this.data, {
+  const MyInheritedWidget(
+    this.data, {
     Key? key,
     required Widget child,
   })  : assert(child != null),
         super(key: key, child: child);
 
   //提供一个方法让子Widget访问的共享数据
-  static MyData of(BuildContext context) {
+  static MyInheritedWidget of(BuildContext context) {
     // context.getElementForInheritedWidgetOfExactType();
-    return context.dependOnInheritedWidgetOfExactType<MyData>()!;
+    return context.dependOnInheritedWidgetOfExactType<MyInheritedWidget>()!;
 //    return context.inheritFromWidgetOfExactType(MyData) as MyData;
   }
 
-
-
   @override
-  bool updateShouldNotify(MyData old) {
-    return old.data != data ;
+  bool updateShouldNotify(MyInheritedWidget old) {
+    return old.data != data;
   }
 }
 
@@ -35,8 +32,7 @@ class _InheritedDemoState extends State<InheritedDemo> {
   int count = 1;
   @override
   Widget build(BuildContext context) {
-    
-    return MyData(count,
+    return MyInheritedWidget(count,
         child: Container(
           color: Colors.white,
           padding: EdgeInsets.only(top: 100),
@@ -45,7 +41,7 @@ class _InheritedDemoState extends State<InheritedDemo> {
               Test1(),
               TextButton(
                 child: Text('我是按钮'),
-                onPressed: (){
+                onPressed: () {
                   setState(() {
                     count++;
                   });
@@ -53,10 +49,10 @@ class _InheritedDemoState extends State<InheritedDemo> {
               )
             ],
           ),
-        )
-    );
+        ));
   }
 }
+
 class Test1 extends StatelessWidget {
 //  final count;
 //  Test1(this.count);
@@ -85,7 +81,7 @@ class Test3 extends StatefulWidget {
 class _Test3State extends State<Test3> {
   @override
   Widget build(BuildContext context) {
-    return Text(MyData.of(context).data.toString());
+    return Text(MyInheritedWidget.of(context).data.toString());
 //    return Text(MyData.of(context).data.toString());
   }
 
