@@ -8,6 +8,7 @@ import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
 
 import 'event/event_handle_test/view.dart';
 import 'page_route(路由机制)/page_route_test.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,7 +37,6 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
       debugShowCheckedModeBanner: false,
     );
   }
-
   GetMaterialApp _buildGetMaterialApp() {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,

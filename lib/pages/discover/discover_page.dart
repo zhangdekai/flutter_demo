@@ -9,6 +9,7 @@ import 'package:weiChatDemo/image_crop_test/image_crop.dart';
 import 'package:weiChatDemo/inherited_widget/inherited_demo.dart';
 import 'package:weiChatDemo/key_test/various_key_test.dart';
 import 'package:weiChatDemo/pages/discover/discover_cell.dart';
+import 'package:weiChatDemo/provider_test/provider_demo/view.dart';
 import 'package:weiChatDemo/provider_test/provider_test_case.dart';
 import 'package:weiChatDemo/sqlite/sqlite_page_test.dart';
 import 'package:weiChatDemo/sync_Test/test_dart_sync.dart';
@@ -124,7 +125,7 @@ class _DiscoverPageState extends State<DiscoverPage>
               imageName: 'images/游戏.png',
               title: '测试Provider',
               callBack: () {
-                NavigatorTool.pushFrom(context, ProviderTestCase());
+                NavigatorTool.pushFrom(context, ProviderDemoPage());
               },
             ),
             SizedBox(
@@ -154,7 +155,7 @@ class _DiscoverPageState extends State<DiscoverPage>
               imageName: 'images/小程序.png',
               title: '数据共享',
               callBack: () {
-                NavigatorTool.pushFrom(context, InheritedDemo());
+                NavigatorTool.pushFrom(context, InheritedWidgetDemo());
               },
             ),
           ],

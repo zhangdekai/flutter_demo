@@ -453,7 +453,7 @@
         <entry key="provider">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/provider-6.0.5/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/provider-6.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -695,7 +695,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/petitparser-5.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-2.1.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/pointycastle-3.7.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/provider-6.0.5/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/provider-6.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/pub_semver-2.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/pubspec_parse-1.2.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/quiver-3.2.1/lib" />

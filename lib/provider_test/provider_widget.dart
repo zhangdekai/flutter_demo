@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+/// ProviderWidget 简单封装
 class ProviderWidget<T extends ChangeNotifier> extends StatefulWidget {
   final T model;
   final Widget Function(BuildContext context, T value, Widget? child) builder;
@@ -17,7 +18,7 @@ class _ProviderWidgetState<T extends ChangeNotifier>
   @override
   void initState() {
     super.initState();
-    widget.onReady?.call(widget.model!);
+    widget.onReady.call(widget.model);
   }
 
   @override
