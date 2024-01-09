@@ -8,8 +8,11 @@ class NumberCounterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     print('NumberCounterPage build');
 
-    return ChangeNotifierProvider(
-      create: (BuildContext context) => NumberCounterProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => NumberCounterProvider()),
+        ChangeNotifierProvider(create: (_) => NumberCounter1Provider()),
+      ],
       builder: (context, child) => _buildPage(context),
     );
   }
@@ -24,6 +27,7 @@ class NumberCounterPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 25),
 
@@ -52,7 +56,6 @@ class NumberCounterPage extends StatelessWidget {
                     );
                   },
                 ),
-                SizedBox(width: 50),
                 IconButton(
                     onPressed: provider.addSCount, icon: Icon(Icons.add)),
               ],
@@ -60,16 +63,38 @@ class NumberCounterPage extends StatelessWidget {
 
             SizedBox(height: 20),
 
-            Consumer<NumberCounterProvider>(
-              builder: (context, provider, child) {
-                print('Consumer  child == $child');
-                return Text(
-                  'Consumer - ${context.watch<NumberCounterProvider>().count}',
-                  key: const Key('counterState'),
-                  style: Theme.of(context).textTheme.headlineMedium,
-                );
-              },
-            )
+            Row(
+              children: [
+                Consumer<NumberCounter1Provider>(
+                  builder: (context, provider, child) {
+                    print('Consumer  child == $child');
+                    return Text(
+                      'Consumer - ${context.watch<NumberCounter1Provider>().count1}',
+                      key: const Key('counterState'),
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    );
+                  },
+                ),
+                IconButton(
+                    onPressed: () {
+                      context.read<NumberCounter1Provider>().add();
+                    },
+                    icon: Icon(Icons.add)),
+              ],
+            ),
+
+            SizedBox(height: 20),
+
+            Selector2<NumberCounterProvider, NumberCounter1Provider, int>(
+                builder: (context, value, child) {
+              return Text(
+                'Selector2 - value == $value ',
+                // key: const Key('counterState'),
+                style: Theme.of(context).textTheme.headlineMedium,
+              );
+            }, selector: (c, A, B) {
+              return A.selectorCount + B.count1;
+            }),
           ],
         ),
       ),

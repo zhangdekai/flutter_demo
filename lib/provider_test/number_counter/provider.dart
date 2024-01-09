@@ -19,3 +19,14 @@ class NumberCounterProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+class NumberCounter1Provider extends ChangeNotifier {
+  final state = NumberCounterState();
+
+  int count1 = 10;
+
+  void add() {
+    count1++;
+    notifyListeners();
+  }
+}
