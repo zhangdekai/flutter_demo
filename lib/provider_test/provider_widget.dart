@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+/// Provider 源码略解： https://juejin.cn/post/6968272002515894303#heading-6
+/// 观察者模式，借用树机制，给子widget 传递数据。
+
 /// ProviderWidget 简单封装
 class ProviderWidget<T extends ChangeNotifier> extends StatefulWidget {
   final T model;
