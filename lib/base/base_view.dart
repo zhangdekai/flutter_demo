@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weiChatDemo/common/const.dart';
 
+@immutable
 abstract class BaseView extends StatelessWidget {
   String title = '';
   bool willPop = true;

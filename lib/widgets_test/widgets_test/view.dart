@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weiChatDemo/base/base_view.dart';
 import 'package:weiChatDemo/widgets_test/widget_api_test.dart';
+import 'package:weiChatDemo/widgets_test/widget_dialog.dart';
+import 'package:weiChatDemo/widgets_test/widget_valueListenBuilder.dart';
 
 import 'controller.dart';
 
@@ -15,7 +17,6 @@ class WidgetsTestPage extends BaseView {
 
   @override
   Widget buildPage(BuildContext context) {
-
     return Column(
       children: [
         TextButton(
@@ -57,7 +58,6 @@ class WidgetsTestPage extends BaseView {
               }));
             },
             child: Text('FutureBuilderTest')),
-
         SizedBox(height: 10),
         TextButton(
             onPressed: () {
@@ -66,6 +66,29 @@ class WidgetsTestPage extends BaseView {
               }));
             },
             child: Text('AfterLayoutTest')),
+
+        SizedBox(height: 10),
+        TextButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (c) {
+                return ValueListenBuildTest();
+              }));
+            },
+            child: Text('ValueListenBuildTest')),
+
+        SizedBox(height: 10),
+        TextButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (c) {
+                return DialogWidgetTest();
+              }));
+            },
+            child: Text('DialogWidgetTest')),
+
+
+
+
+
       ],
     );
   }

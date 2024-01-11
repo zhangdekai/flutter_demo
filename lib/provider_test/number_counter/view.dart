@@ -4,8 +4,6 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class NumberCounterPage extends StatelessWidget {
-  var _tempValueNotifier = ValueNotifier(0);
-
   @override
   Widget build(BuildContext context) {
     print('NumberCounterPage build');
@@ -23,7 +21,7 @@ class NumberCounterPage extends StatelessWidget {
         ),
         FutureProvider<String>(
           create: (c) {
-            return Future.delayed(Duration(seconds: 1),(){
+            return Future.delayed(Duration(seconds: 1), () {
               return 'value == 9527';
             });
           },
@@ -37,8 +35,6 @@ class NumberCounterPage extends StatelessWidget {
   Widget _buildPage(BuildContext context) {
     final provider = context.read<NumberCounterProvider>();
     print('_buildPage provider.  == ${provider.count} ');
-
-    ;
 
     return Scaffold(
       appBar: AppBar(
@@ -83,6 +79,7 @@ class NumberCounterPage extends StatelessWidget {
                 return Text('FutureProvider v == $provider');
               },
             ),
+            
           ],
         ),
       ),
@@ -91,10 +88,7 @@ class NumberCounterPage extends StatelessWidget {
 
         /// Calls `context.read` instead of `context.watch` so that it does not rebuild
         /// when [Counter] changes.
-        onPressed: () {
-          provider.add();
-          _tempValueNotifier.value = 10;
-        },
+        onPressed: provider.add,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
@@ -104,6 +98,7 @@ class NumberCounterPage extends StatelessWidget {
   Selector2<NumberCounterProvider, NumberCounter1Provider, int> _selector2() {
     return Selector2<NumberCounterProvider, NumberCounter1Provider, int>(
         builder: (context, value, child) {
+
       return Text(
         'Selector2 - value == $value ',
         // key: const Key('counterState'),
@@ -167,36 +162,6 @@ class Count extends StatelessWidget {
       '${context.watch<NumberCounterProvider>().count}',
       key: const Key('counterState'),
       style: Theme.of(context).textTheme.headlineMedium,
-    );
-  }
-}
-
-class _StreamProviderTest extends StatelessWidget {
-  const _StreamProviderTest({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return StreamProvider<String>(
-      create: (c) {
-        return Stream<String>.periodic(Duration(seconds: 1), (v) {
-          print('v == $v');
-          v++;
-          return v.toString();
-        }).take(5);
-      },
-      initialData: '0',
-      child: Scaffold(
-        body: Column(
-          children: [
-            Text('StreamProvider'),
-            Consumer<String>(
-              builder: (context, provider, child) {
-                return Text('value = $provider');
-              },
-            )
-          ],
-        ),
-      ),
     );
   }
 }
