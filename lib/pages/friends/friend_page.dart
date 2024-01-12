@@ -20,7 +20,7 @@ class _FriendPageState extends State<FriendPage>
 
   late ScrollController _scrollController;
 
-  final List<Friends> _datas = [];
+  final List<Friends> _dataList = [];
 
   final List<Friends> _headerData = [
     Friends(imageUrl: 'images/新的朋友.png', name: '新的朋友'),
@@ -31,61 +31,15 @@ class _FriendPageState extends State<FriendPage>
 
   @override
   void initState() {
-    //init
     super.initState();
-
-    print('friendpage init来了');
-
-//    datas.addAll(friend_datas);
-//    datas.addAll(friend_datas);
-    _datas
-      ..addAll(friend_datas)
-      ..addAll(friend_datas); //链式编程
-
-    //排序：numbers.sort((a, b) => a.length.compareTo(b.length));
-    _datas.sort(
-        (Friends a, Friends b) => a.indexLetter!.compareTo(b.indexLetter!));
-
-    var _groupOffset = _cellHeight * 4;
-    for (int i = 0; i < _datas.length; i++) {
-      if (i < 1) {
-        _groupOffsetMap.addAll({_datas[i].indexLetter: _groupOffset});
-      } else if (_datas[i].indexLetter == _datas[i - 1].indexLetter) {
-        _groupOffset += _cellHeight;
-      } else {
-        _groupOffsetMap.addAll({_datas[i].indexLetter: _groupOffset});
-        _groupOffset += (_cellHeight + 30);
-      }
-    }
-
-    _scrollController = ScrollController();
-  }
-
-  Widget _itemForRow(BuildContext context, int index) {
-    //系统图标的Cell
-    if (index < _headerData.length) {
-      return _FriendCell(
-        imageAsserts: _headerData[index].imageUrl,
-        name: _headerData[index].name,
-      );
-    } else {
-      //显示剩下的Cell
-      //如果当前和上一个Cell的IndexLetter一样,就不显示!
-      bool _hideIndexLetter = (index > 4) &&
-          _datas[index - 4].indexLetter == _datas[index - 5].indexLetter;
-
-      return _FriendCell(
-        imageUrl: _datas[index - 4].imageUrl,
-        name: _datas[index - 4].name,
-        groupTitles: _hideIndexLetter ? null : _datas[index - 4].indexLetter,
-      );
-    }
+    _init();
   }
 
   @override
   Widget build(BuildContext context) {
     super.build(context);
-
+    print('Friend build');
+    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: weChatThemeColor, //Colors.greenAccent
@@ -114,7 +68,7 @@ class _FriendPageState extends State<FriendPage>
             child: ListView.builder(
               controller: _scrollController,
               itemBuilder: _itemForRow,
-              itemCount: _datas.length + _headerData.length,
+              itemCount: _dataList.length + _headerData.length,
             ),
           ),
 
@@ -131,6 +85,54 @@ class _FriendPageState extends State<FriendPage>
         ],
       ),
     );
+  }
+
+  void _init() {
+    _dataList
+      ..addAll(friend_datas)
+      ..addAll(friend_datas); //链式编程
+
+    //排序：numbers.sort((a, b) => a.length.compareTo(b.length));
+    _dataList.sort(
+            (Friends a, Friends b) => a.indexLetter!.compareTo(b.indexLetter!));
+
+    var _groupOffset = _cellHeight * 4;
+    for (int i = 0; i < _dataList.length; i++) {
+      if (i < 1) {
+        _groupOffsetMap.addAll({_dataList[i].indexLetter: _groupOffset});
+      } else if (_dataList[i].indexLetter == _dataList[i - 1].indexLetter) {
+        _groupOffset += _cellHeight;
+      } else {
+        _groupOffsetMap.addAll({_dataList[i].indexLetter: _groupOffset});
+        _groupOffset += (_cellHeight + 30);
+      }
+    }
+
+    _scrollController = ScrollController();
+  }
+
+
+  Widget _itemForRow(BuildContext context, int index) {
+    Widget _widget;
+    //系统图标的Cell
+    if (index < _headerData.length) {
+      _widget = _FriendCell(
+        imageAsserts: _headerData[index].imageUrl,
+        name: _headerData[index].name,
+      );
+    } else {
+      //显示剩下的Cell
+      //如果当前和上一个Cell的IndexLetter一样,就不显示!
+      bool _hideIndexLetter = (index > 4) &&
+          _dataList[index - 4].indexLetter == _dataList[index - 5].indexLetter;
+
+      _widget = _FriendCell(
+        imageUrl: _dataList[index - 4].imageUrl,
+        name: _dataList[index - 4].name,
+        groupTitles: _hideIndexLetter ? null : _dataList[index - 4].indexLetter,
+      );
+    }
+    return _widget;
   }
 
   @override

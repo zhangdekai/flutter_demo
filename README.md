@@ -22,7 +22,7 @@ This part is based on the `lib` file
 * Animation
 * Common setting
 * Const value setting
-* Event_bus
+* Event 事件处理
 * Generated for 国际化，包括 `l10n` file 
 * Image crop  裁剪
 * Inherited Widget 

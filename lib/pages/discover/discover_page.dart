@@ -10,7 +10,6 @@ import 'package:weiChatDemo/inherited_widget/inherited_demo.dart';
 import 'package:weiChatDemo/key_test/various_key_test.dart';
 import 'package:weiChatDemo/pages/discover/discover_cell.dart';
 import 'package:weiChatDemo/provider_test/provider_demo/view.dart';
-import 'package:weiChatDemo/provider_test/provider_test_case.dart';
 import 'package:weiChatDemo/sqlite/sqlite_page_test.dart';
 import 'package:weiChatDemo/sync_Test/test_dart_sync.dart';
 
@@ -24,22 +23,16 @@ class _DiscoverPageState extends State<DiscoverPage>
   Color _themeColor = weChatThemeColor;
 
   @override
-  void initState() {
-    super.initState();
-
-    print('DiscoverPage init来了');
-  }
-
-  @override
   Widget build(BuildContext context) {
     super.build(context);
+    print('DiscoverPage build');
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: weChatThemeColor, // Colors.greenAccent
         //一下三个是专门为了安卓使用的属性
         centerTitle: true,
-        title: Text(S.of(context).title), //Text('发现')
+        title: Text('发现'), //
         elevation: 0.0, //底部边栏
       ),
       body: Container(

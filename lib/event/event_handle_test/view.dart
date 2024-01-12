@@ -5,6 +5,19 @@ import 'package:weiChatDemo/base/base_view.dart';
 
 import 'controller.dart';
 
+/*
+Flutter 事件处理流程主要分两步，为了聚焦核心流程，我们以用户触摸事件为例来说明：
+
+1. 命中测试：当手指按下时，触发 PointerDownEvent 事件，按照深度优先遍历当前渲染（render object）树，对每一个渲染对象进行“命中测试”（hit test），如果命中测试通过，则该渲染对象会被添加到一个 HitTestResult 列表当中。
+2. 事件分发：命中测试完毕后，会遍历 HitTestResult 列表，调用每一个渲染对象的事件处理方法（handleEvent）来处理 PointerDownEvent 事件，该过程称为“事件分发”（event dispatch）。随后当手指移动时，便会分发 PointerMoveEvent 事件。
+3. 事件清理：当手指抬（ PointerUpEvent ）起或事件取消时（PointerCancelEvent），会先对相应的事件进行分发，分发完毕后会清空 HitTestResult 列表。
+
+HitTest 整体逻辑就是：
+1. 先判断事件的触发位置是否位于组件范围内，如果不是则不会通过命中测试，此时 hitTest 返回 false，如果是则到第二步。
+2. 会先调用 hitTestChildren() 判断是否有子节点通过命中测试，如果是，则将当前节点添加到 HitTestResult 列表，此时 hitTest 返回 true。即只要有子节点通过了命中测试，那么它的父节点（当前节点）也会通过命中测试。
+3. 如果没有子节点通过命中测试，则会取 hitTestSelf 方法的返回值，如果返回值为 true，则当前节点通过命中测试，反之则否。
+ */
+
 class EventHandleTestPage extends BaseView {
   EventHandleTestPage({Key? key}) : super(key: key);
 
@@ -20,6 +33,8 @@ class EventHandleTestPage extends BaseView {
         _buildListener(),
         _buildGestureDetector(),
         MyRawGestureDetector(),
+        SizedBox(height: 20),
+        Text('NotificationListener 监听 ListView'),
         _buildNotificationListener()
       ],
     );
@@ -134,7 +149,7 @@ class MyRawGestureDetector extends StatelessWidget {
         color: Colors.blue,
         child: Center(
           child: Text(
-            'RawGestureDetector - Tap Me!',
+            'RawGestureDetector - 原始事件类，可自定义Gesture',
             style: TextStyle(color: Colors.white),
           ),
         ),

@@ -30,26 +30,6 @@ class _ChatPageState extends State<ChatPage>
 
   bool _cancelConnect = false;
 
-  // CancelToken _cancelToken = CancelToken();
-
-  Widget _buildPopupMenuItem(String imageAsset, String title) {
-    return Row(
-      children: <Widget>[
-        Image(
-          image: AssetImage(imageAsset),
-          width: 20,
-        ),
-        SizedBox(
-          width: 20,
-        ),
-        Text(
-          title,
-          style: TextStyle(color: Colors.black),
-        )
-      ],
-    );
-  }
-
   @override
   void initState() {
     super.initState();
@@ -61,17 +41,11 @@ class _ChatPageState extends State<ChatPage>
 //    testJsonConvertMap();
   }
 
-  void _initData() {
-    final titles = ['三方登录', 'Sliver test', 'SliverAnimatedList case', '路由管理','Event Handle'];
-    for (int i = 0; i < titles.length; i++) {
-      Chat temp = Chat(i, titles[i], 'message$i', '');
-      _data.add(temp);
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     super.build(context);
+
+    print('ChatPage build');
 
     return Scaffold(
       appBar: AppBar(
@@ -80,14 +54,43 @@ class _ChatPageState extends State<ChatPage>
         actions: _rightItem(),
       ),
       body: Container(
-        child: _data.length == 0
-            ? Center(
-                child: Text('Loading...'),
-              )
-            : ListView.builder(
-                itemCount: _data.length + 1, itemBuilder: _cellForRow),
+        child: ListView.builder(
+          itemCount: _data.length + 1,
+          itemBuilder: _cellForRow,
+          // itemExtent: 60,
+          // prototypeItem: _cellForRow(context, 1),
+        ),
       ),
     );
+  }
+
+  // CancelToken _cancelToken = CancelToken();
+
+  Widget _buildPopupMenuItem(String imageAsset, String title) {
+    return Row(
+      children: <Widget>[
+        Image(image: AssetImage(imageAsset), width: 20),
+        SizedBox(width: 20),
+        Text(
+          title,
+          style: TextStyle(color: Colors.black),
+        )
+      ],
+    );
+  }
+
+  void _initData() {
+    final titles = [
+      '三方登录',
+      'Sliver test',
+      'SliverAnimatedList case',
+      '路由管理',
+      'Event Handle'
+    ];
+    for (int i = 0; i < titles.length; i++) {
+      Chat temp = Chat(i, titles[i], 'message$i', '');
+      _data.add(temp);
+    }
   }
 
   List<Widget> _rightItem() {
@@ -127,8 +130,11 @@ class _ChatPageState extends State<ChatPage>
     return ListTile(
       title: Text(_data[index].name ?? ''),
       subtitle: Container(
-        margin: EdgeInsets.only(right: 10, top: 5),
-        height: 25,
+        // decoration: BoxDecoration(
+        //     border: Border(
+        //         bottom:
+        //             BorderSide(color: CupertinoColors.lightBackgroundGray))),
+        padding: EdgeInsets.only(right: 10, top: 8, bottom: 8),
         child: Text(
           _data[index].message ?? '',
           overflow: TextOverflow.ellipsis,
