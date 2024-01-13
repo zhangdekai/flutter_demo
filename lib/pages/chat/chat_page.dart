@@ -83,7 +83,6 @@ class _ChatPageState extends State<ChatPage>
     final titles = [
       '三方登录',
       'Sliver test',
-      'SliverAnimatedList case',
       '路由管理',
       'Event Handle'
     ];
@@ -152,16 +151,13 @@ class _ChatPageState extends State<ChatPage>
         NavigatorTool.pushFrom(context, ThirdPartyLoginPage());
         break;
       case 1:
-        NavigatorTool.pushFrom(context, SliverTestPage());
+        NavigatorTool.pushFrom(context, SliverWidgetTestPage());
         break;
       case 2:
-        NavigatorTool.pushFrom(context, SliverAnimatedListSample());
-        break;
-      case 3:
         Navigator.of(context)
             .push(CupertinoPageRoute(builder: (c) => PageRouteTest()));
         break;
-      case 4:
+      case 3:
         Get.toNamed(RouteName.pageEventTest);
         break;
     }

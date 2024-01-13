@@ -32,7 +32,7 @@ This part is based on the `lib` file
 * Pages -> 主页root_page 和 各项首页
 * Lib Provider use
 * Signature  画签名
-* Sliver Widget use
+* Sliver Widget -> ListView, AnimatedListView,
 * Sqlite use
 * Stream test
 * Async and Sync test
