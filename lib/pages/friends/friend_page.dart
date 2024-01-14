@@ -10,8 +10,8 @@ class FriendPage extends StatefulWidget {
   _FriendPageState createState() => _FriendPageState();
 }
 
-class _FriendPageState extends State<FriendPage>
-    with AutomaticKeepAliveClientMixin {
+class _FriendPageState extends State<FriendPage> {
+
   //字典里面放item和高度的对应数据
   final Map _groupOffsetMap = {
     "INDEX_WORDS[0]": 0.0,
@@ -37,7 +37,6 @@ class _FriendPageState extends State<FriendPage>
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
     print('Friend build');
     
     return Scaffold(
@@ -134,9 +133,6 @@ class _FriendPageState extends State<FriendPage>
     }
     return _widget;
   }
-
-  @override
-  bool get wantKeepAlive => true;
 }
 
 class _FriendCell extends StatelessWidget {

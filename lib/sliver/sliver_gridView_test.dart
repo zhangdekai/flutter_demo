@@ -7,6 +7,7 @@ class GridViewPageTest extends BaseView {
 
   @override
   Widget buildPage(BuildContext context) {
+
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3, //横轴三个子widget

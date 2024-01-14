@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:weiChatDemo/base/base_view/controller.dart';
+import 'package:weiChatDemo/base/base_getX_view/controller.dart';
 
 class ListViewController extends BaseViewController {
   ScrollController scrollController = ScrollController();

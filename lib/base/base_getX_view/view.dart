@@ -4,6 +4,7 @@ import 'package:weiChatDemo/common/const.dart';
 
 import 'controller.dart';
 
+// ignore: must_be_immutable
 abstract class BaseViewPage<T extends BaseViewController> extends StatelessWidget {
   BaseViewPage({Key? key}) : super(key: key);
 
@@ -29,6 +30,7 @@ abstract class BaseViewPage<T extends BaseViewController> extends StatelessWidge
               appBar: buildAppBar(),
               body: buildPage(context),
               floatingActionButton: floatingActionButton,
+              bottomNavigationBar: bottomNavigationBar,
             ),
           );
         });
@@ -37,6 +39,8 @@ abstract class BaseViewPage<T extends BaseViewController> extends StatelessWidge
   Widget buildPage(BuildContext context);
 
   PreferredSizeWidget? buildAppBar() => _buildDefaultAppBar;
+
+  Widget? get bottomNavigationBar => null;
 
   Widget? get floatingActionButton => null;
 

@@ -9,8 +9,7 @@ class MinePage extends StatefulWidget {
   _MinePageState createState() => _MinePageState();
 }
 
-class _MinePageState extends State<MinePage>
-    with AutomaticKeepAliveClientMixin {
+class _MinePageState extends State<MinePage> {
   //iOS与flutter通信  使用MethodChannel
   MethodChannel _methodChannel = MethodChannel('mine_page');
 
@@ -25,7 +24,6 @@ class _MinePageState extends State<MinePage>
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
 
     print('Mine build');
 
@@ -161,10 +159,6 @@ class _MinePageState extends State<MinePage>
       return 0;
     });
   }
-
-  @override
-  // TODO: implement wantKeepAlive
-  bool get wantKeepAlive => true;
 
   void _pickImage() async {
     // PickedFile file = await ImagePicker().getImage(source: ImageSource.gallery);

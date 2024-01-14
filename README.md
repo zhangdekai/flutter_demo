@@ -6,6 +6,10 @@ This project is a Demo for learning Flutter.
 
 内容主要包含 相关Flutter 技术的学习和演示.
 
+Demo 中为了演练，穿插使用了2种状态管理lib, Provider and GetX， 也有单纯使用 StatefulWidget + Flutter原有Navigator,
+正式项目建议选择其中一种，统一管理应用。
+
+
 # flutter --version
 
 Current Version：
@@ -17,9 +21,11 @@ Tools • Dart 3.1.3 • DevTools 2.25.0
 ```
 `ps: 大约2023-8月，当前Demo 从2.x 升级到 Flutter 3.x`
 
+
 # Flutter Skill list
 This part is based on the `lib` file
 * Animation
+* Base  base_view and base on getX's base_view 
 * Common setting
 * Const value setting
 * Event 事件处理
@@ -32,7 +38,7 @@ This part is based on the `lib` file
 * Pages -> 主页root_page 和 各项首页
 * Lib Provider use
 * Signature  画签名
-* Sliver Widget -> ListView, AnimatedListView,
+* Sliver Widget -> ListView, AnimatedListView,PageView,ScrollController
 * Sqlite use
 * Stream test
 * Async and Sync test

@@ -1,7 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-// void main() => runApp(const SliverAnimatedListSample());
+/*
+A [SliverList] that animates items when they are inserted or removed.
+
+是一个StatefulWidget, 其 state 额外提供了 insert and remove 的动画操作。
+
+ */
 
 class SliverAnimatedListSample extends StatefulWidget {
   const SliverAnimatedListSample({Key? key}) : super(key: key);

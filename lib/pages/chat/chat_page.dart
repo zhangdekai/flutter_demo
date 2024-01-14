@@ -22,8 +22,7 @@ class ChatPage extends StatefulWidget {
   _ChatPageState createState() => _ChatPageState();
 }
 
-class _ChatPageState extends State<ChatPage>
-    with AutomaticKeepAliveClientMixin {
+class _ChatPageState extends State<ChatPage> {
   late Timer _timer;
 
   List<Chat> _data = [];
@@ -43,8 +42,6 @@ class _ChatPageState extends State<ChatPage>
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
-
     print('ChatPage build');
 
     return Scaffold(
@@ -80,12 +77,7 @@ class _ChatPageState extends State<ChatPage>
   }
 
   void _initData() {
-    final titles = [
-      '三方登录',
-      'Sliver test',
-      '路由管理',
-      'Event Handle'
-    ];
+    final titles = ['三方登录', 'Sliver test', '路由管理', 'Event Handle'];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
       _data.add(temp);
@@ -229,9 +221,6 @@ class _ChatPageState extends State<ChatPage>
 
     super.dispose();
   }
-
-  @override
-  bool get wantKeepAlive => true;
 }
 
 class Chat {
