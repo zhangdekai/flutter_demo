@@ -29,6 +29,7 @@ ScrollController的positions属性中，这一步称为“注册位置”，只�
  */
 
 class ListViewTestPage extends BaseViewPage<ListViewController> {
+
   @override
   String get title => 'ListView Test';
 

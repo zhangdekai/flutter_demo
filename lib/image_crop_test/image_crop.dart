@@ -68,7 +68,7 @@ class ImageClipper extends CustomPainter {
 
     picture.toImage(200, 200).then((value) => value.toByteData().then((value) {
           if (value != null) {
-            Uint8List temp = value!.buffer.asUint8List();
+            Uint8List temp = value.buffer.asUint8List();
             completer.complete(MemoryImage(temp));
           }
         }));

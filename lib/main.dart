@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' hide Page, Action;
 import 'package:get/get.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
@@ -8,7 +7,6 @@ import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
 
 import 'event/event_handle_test/view.dart';
 import 'page_route(路由机制)/page_route_test.dart';
-import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 

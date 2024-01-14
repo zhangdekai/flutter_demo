@@ -63,7 +63,7 @@ class EventHandleTestPage extends BaseView {
 
           /// ScrollNotification, LayoutChangedNotification, KeepAliveNotification
           return false;// continue the notification bubbling
-          return true;// cancel the notification bubbling
+          // return true;// cancel the notification bubbling
         },
         child: Expanded(
           child: ListView.builder(

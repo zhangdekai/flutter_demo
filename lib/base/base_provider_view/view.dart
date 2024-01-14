@@ -5,8 +5,8 @@ import 'package:weiChatDemo/common/const.dart';
 
 abstract class BaseProviderViewPage<T extends BaseProviderViewProvider>
     extends StatelessWidget {
-  String title = '';
-  bool willPop = true;
+  final String title = '';
+  final bool willPop = true;
 
   BaseProviderViewPage({super.key});
 

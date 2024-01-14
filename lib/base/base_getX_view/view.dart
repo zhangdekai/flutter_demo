@@ -4,12 +4,14 @@ import 'package:weiChatDemo/common/const.dart';
 
 import 'controller.dart';
 
-// ignore: must_be_immutable
+// ignore: must_be
+// _immutable
+
 abstract class BaseViewPage<T extends BaseViewController> extends StatelessWidget {
   BaseViewPage({Key? key}) : super(key: key);
 
-  String title = '';
-  bool willPop = true;
+ final  String title = '';
+ final  bool willPop = true;
 
   T get controller => Get.put(initController());
   // final state = Get.find<BaseViewController>().state;

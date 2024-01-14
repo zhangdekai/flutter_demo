@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weiChatDemo/base/base_view.dart';
 import 'package:weiChatDemo/sliver/list_view_test.dart';

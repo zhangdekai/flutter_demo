@@ -3,7 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:weiChatDemo/base/base_provider_view/view.dart';
 import 'provider.dart';
 
-// ignore: must_be_immutable
+
+
 class SliverPageViewPage extends BaseProviderViewPage<SliverPageViewProvider> {
   @override
   String get title => 'PageView';

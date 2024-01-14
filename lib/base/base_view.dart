@@ -3,8 +3,8 @@ import 'package:weiChatDemo/common/const.dart';
 
 @immutable
 abstract class BaseView extends StatelessWidget {
-  String title = '';
-  bool willPop = true;
+  final String title = '';
+  final bool willPop = true;
 
   BaseView({super.key});
 
