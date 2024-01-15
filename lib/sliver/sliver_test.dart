@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weiChatDemo/base/base_view.dart';
 import 'package:weiChatDemo/sliver/list_view_test.dart';
 import 'package:weiChatDemo/sliver/sliver_animated_list_test.dart';
-import 'package:weiChatDemo/sliver/sliver_customerScrollView.dart';
+import 'package:weiChatDemo/sliver/sliver_customScrollView.dart';
 import 'package:weiChatDemo/sliver/sliver_gridView_test.dart';
 import 'package:weiChatDemo/sliver/sliver_tab_view/view.dart';
 
@@ -63,7 +63,7 @@ class SliverWidgetTestPage extends BaseView {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (c) => CustomerScrollViewTestPage()));
+                      builder: (c) => CustomScrollViewTestPage()));
             },
             child: Text('CustomScrollView')),
         TextButton(
