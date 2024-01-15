@@ -4,6 +4,9 @@ import 'package:weiChatDemo/sliver/list_view_test.dart';
 import 'package:weiChatDemo/sliver/sliver_animated_list_test.dart';
 import 'package:weiChatDemo/sliver/sliver_customerScrollView.dart';
 import 'package:weiChatDemo/sliver/sliver_gridView_test.dart';
+import 'package:weiChatDemo/sliver/sliver_tab_view/view.dart';
+
+import 'sliver_page_view/view.dart';
 
 /*
 GridView, CustomerScrollView,
@@ -37,22 +40,25 @@ class SliverWidgetTestPage extends BaseView {
   @override
   String get title => 'Sliver Widget';
 
+  final _gap = 16.0;
+
   @override
   Widget buildPage(BuildContext context) {
-
     return Column(
       children: [
         TextButton(
-            style: ButtonStyle(padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10))),
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: _gap))),
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (c) => ListViewTestPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (c) => ListViewTestPage()));
             },
             child: Text('ListViewTestPage')),
         TextButton(
-            style: ButtonStyle(padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10))),
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: _gap))),
             onPressed: () {
               Navigator.push(
                   context,
@@ -61,7 +67,9 @@ class SliverWidgetTestPage extends BaseView {
             },
             child: Text('CustomScrollView')),
         TextButton(
-            style: ButtonStyle(padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10))),
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: _gap))),
             onPressed: () {
               Navigator.push(
                   context,
@@ -70,19 +78,32 @@ class SliverWidgetTestPage extends BaseView {
             },
             child: Text('SliverAnimatedList')),
         TextButton(
-            style: ButtonStyle(padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10))),
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: _gap))),
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (c) => GridViewPageTest()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (c) => GridViewPageTest()));
             },
             child: Text('GridView - Test')),
-
-
-
-
-
+        TextButton(
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: _gap))),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (c) => SliverPageViewPage()));
+            },
+            child: Text('PageView - Test')),
+        TextButton(
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: _gap))),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (c) => SliverTabViewPage()));
+            },
+            child: Text('TabBarView - Test')),
       ],
     );
   }

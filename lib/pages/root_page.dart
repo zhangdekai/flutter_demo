@@ -4,6 +4,7 @@ import 'package:weiChatDemo/pages/chat/chat_page.dart';
 import 'package:weiChatDemo/pages/discover/discover_page.dart';
 import 'package:weiChatDemo/pages/friends/friend_page.dart';
 import 'package:weiChatDemo/pages/mine_page.dart';
+import 'package:weiChatDemo/widgets/keep_live_widget.dart';
 import 'root_page_controller.dart';
 
 // ignore: must_be_immutable
@@ -15,7 +16,7 @@ class RootPage extends BaseViewPage<RootPageController> {
     print('RootPage  - buildPage');
     return PageView(
       controller: controller.pageController,
-      children: _pages.map((e) => _KeepLiveWidget(e)).toList(),
+      children: _pages.map((e) => KeepLiveWidget(e)).toList(),
       physics: NeverScrollableScrollPhysics(), //禁止左右滑动
       onPageChanged: (int index) {
         //页面滚动变化时调用
@@ -61,25 +62,4 @@ class RootPage extends BaseViewPage<RootPageController> {
           BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: '我'),
         ]);
   }
-}
-
-/// 为 PageView children Keep live 需要  AutomaticKeepAliveClientMixin
-class _KeepLiveWidget extends StatefulWidget {
-  final Widget child;
-  const _KeepLiveWidget(this.child);
-
-  @override
-  State<_KeepLiveWidget> createState() => _KeepLiveWidgetState();
-}
-
-class _KeepLiveWidgetState extends State<_KeepLiveWidget>
-    with AutomaticKeepAliveClientMixin {
-  @override
-  Widget build(BuildContext context) {
-    super.build(context);
-    return widget.child;
-  }
-
-  @override
-  bool get wantKeepAlive => true;
 }

@@ -12,9 +12,7 @@ import 'package:weiChatDemo/common/navigator_tool.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/pages/chat/search_bar.dart';
 import 'package:weiChatDemo/pages/chat/third_party_login_page.dart';
-import 'package:weiChatDemo/sliver/sliver_animated_list_test.dart';
 import 'package:weiChatDemo/sliver/sliver_test.dart';
-
 import '../../page_route(路由机制)/page_route_test.dart';
 
 class ChatPage extends StatefulWidget {
