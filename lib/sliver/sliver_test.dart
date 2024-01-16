@@ -4,6 +4,7 @@ import 'package:weiChatDemo/sliver/list_view_test.dart';
 import 'package:weiChatDemo/sliver/sliver_animated_list_test.dart';
 import 'package:weiChatDemo/sliver/sliver_customScrollView.dart';
 import 'package:weiChatDemo/sliver/sliver_gridView_test.dart';
+import 'package:weiChatDemo/sliver/sliver_nestedScrollView.dart';
 import 'package:weiChatDemo/sliver/sliver_tab_view/view.dart';
 
 import 'sliver_page_view/view.dart';
@@ -31,9 +32,6 @@ class Scrollable extends StatefulWidget
 class Viewport extends MultiChildRenderObjectWidget extends RenderObjectWidget extends Widget
 Slivers --> List<Widget>
 
-
-
-
  */
 
 class SliverWidgetTestPage extends BaseView {
@@ -44,67 +42,78 @@ class SliverWidgetTestPage extends BaseView {
 
   @override
   Widget buildPage(BuildContext context) {
-    return Column(
-      children: [
-        TextButton(
-            style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: _gap))),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (c) => ListViewTestPage()));
-            },
-            child: Text('ListViewTestPage')),
-        TextButton(
-            style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: _gap))),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (c) => CustomScrollViewTestPage()));
-            },
-            child: Text('CustomScrollView')),
-        TextButton(
-            style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: _gap))),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (c) => SliverAnimatedListSample()));
-            },
-            child: Text('SliverAnimatedList')),
-        TextButton(
-            style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: _gap))),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (c) => GridViewPageTest()));
-            },
-            child: Text('GridView - Test')),
-        TextButton(
-            style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: _gap))),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (c) => SliverPageViewPage()));
-            },
-            child: Text('PageView - Test')),
-        TextButton(
-            style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: _gap))),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (c) => SliverTabViewPage()));
-            },
-            child: Text('TabBarView - Test')),
-      ],
+    return Center(
+      child: Column(
+        children: [
+          TextButton(
+              style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: _gap))),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (c) => ListViewTestPage()));
+              },
+              child: Text('ListViewTestPage')),
+          TextButton(
+              style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: _gap))),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (c) => CustomScrollViewTestPage()));
+              },
+              child: Text('CustomScrollView')),
+          TextButton(
+              style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: _gap))),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (c) => SliverAnimatedListSample()));
+              },
+              child: Text('SliverAnimatedList')),
+          TextButton(
+              style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: _gap))),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (c) => GridViewPageTest()));
+              },
+              child: Text('GridView - Test')),
+          TextButton(
+              style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: _gap))),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (c) => SliverPageViewPage()));
+              },
+              child: Text('PageView - Test')),
+          TextButton(
+              style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: _gap))),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (c) => SliverTabViewPage()));
+              },
+              child: Text('TabBarView - Test')),
+          TextButton(
+              style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: _gap))),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (c) => NestedScrollViewPage()));
+              },
+              child: Text('NestedScrollView - Test')),
+        ],
+      ),
     );
   }
 }

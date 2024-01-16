@@ -66,6 +66,8 @@ flutter:
   assets:
 #    - packages/logic_index_bar/images/气泡.png
     - images/
+    - asset/
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

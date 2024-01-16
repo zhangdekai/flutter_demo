@@ -20,13 +20,19 @@ abstract class BaseView extends StatelessWidget {
         return willPop;
       },
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-          backgroundColor: weChatThemeColor,
-          elevation: 1,
-        ),
+        appBar: buildAppBar(),
         body: buildPage(context),
       ),
     );
   }
+  PreferredSizeWidget? buildAppBar() => _buildDefaultAppBar;
+
+  AppBar get _buildDefaultAppBar {
+    return AppBar(
+      title: Text(title),
+      backgroundColor: weChatThemeColor,
+      elevation: 1,
+    );
+  }
+
 }
