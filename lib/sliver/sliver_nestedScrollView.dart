@@ -24,7 +24,34 @@ header 和body 都是CustomScrollView 的子 sliver。
 
  */
 
+SliverList _buildSliverList(int count) {
+  return SliverList(
+      delegate: SliverChildBuilderDelegate((c, i) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Text(
+        '$i - ${c.runtimeType}',
+        textScaleFactor: 1.5,
+      ),
+    );
+  }, childCount: count));
+}
+
 class NestedScrollViewPage extends BaseView {
+  @override
+  String get title => 'NestedScrollView';
+
+  @override
+  PreferredSizeWidget? buildAppBar() => null;
+
+  @override
+  Widget buildPage(BuildContext context) {
+    /// 在手机上OK，web 不太OK（横向滑动时）
+    return _NestedTabBarView(sliver: _buildSliverList(30));
+  }
+}
+
+class NestedScrollViewPage1 extends BaseView {
   @override
   String get title => 'NestedScrollView';
 
@@ -37,14 +64,7 @@ class NestedScrollViewPage extends BaseView {
 
   @override
   Widget buildPage(BuildContext context) {
-    /// 在手机上OK，web 不太OK（横向滑动时）
-    return _NestedTabBarView(sliver: buildSliverList(30));
-
-    // return _buildDefaultTabController();
-
-    // return _buildNestedScrollView1();
-    //
-    // return _buildNestedScrollView();
+    return _buildDefaultTabController();
   }
 
   DefaultTabController _buildDefaultTabController() {
@@ -82,7 +102,7 @@ class NestedScrollViewPage extends BaseView {
                     ),
                     SliverPadding(
                       padding: const EdgeInsets.all(8.0),
-                      sliver: buildSliverList(30),
+                      sliver: _buildSliverList(30),
                     ),
                   ],
                 );
@@ -92,6 +112,19 @@ class NestedScrollViewPage extends BaseView {
         ),
       ),
     );
+  }
+}
+
+class NestedScrollViewPage2 extends BaseView {
+  @override
+  String get title => 'NestedScrollView';
+
+  @override
+  PreferredSizeWidget? buildAppBar() => null;
+
+  @override
+  Widget buildPage(BuildContext context) {
+    return _buildNestedScrollView1();
   }
 
   NestedScrollView _buildNestedScrollView1() {
@@ -122,11 +155,24 @@ class NestedScrollViewPage extends BaseView {
             SliverOverlapInjector(
                 handle:
                     NestedScrollView.sliverOverlapAbsorberHandleFor(context)),
-            buildSliverList(30)
+            _buildSliverList(30)
           ],
         );
       }),
     );
+  }
+}
+
+class NestedScrollViewPage3 extends BaseView {
+  @override
+  String get title => 'NestedScrollView';
+
+  @override
+  PreferredSizeWidget? buildAppBar() => null;
+
+  @override
+  Widget buildPage(BuildContext context) {
+    return _buildNestedScrollView();
   }
 
   NestedScrollView _buildNestedScrollView() {
@@ -139,7 +185,7 @@ class NestedScrollViewPage extends BaseView {
               pinned: true, // 固定在顶部
               forceElevated: innerBoxIsScrolled,
             ),
-            buildSliverList(5), //构建一个 sliverList
+            _buildSliverList(5), //构建一个 sliverList
           ];
         },
         body: ListView.builder(
@@ -153,19 +199,6 @@ class NestedScrollViewPage extends BaseView {
             );
           },
         ));
-  }
-
-  SliverList buildSliverList(int count) {
-    return SliverList(
-        delegate: SliverChildBuilderDelegate((c, i) {
-      return Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Text(
-          '$i - ${c.runtimeType}',
-          textScaleFactor: 1.5,
-        ),
-      );
-    }, childCount: count));
   }
 }
 

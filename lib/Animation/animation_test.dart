@@ -1,8 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:weiChatDemo/Animation/scale_animation_test.dart';
+import 'package:weiChatDemo/base/base_view.dart';
+
+import '../common/common_button.dart';
 /*
+
+Flutter中也对动画进行了抽象，主要涉及 Animation、Curve、Controller、Tween这四个角色，
+它们一起配合来完成一个完整动画.
+
+Animation<T> extends Listenable :
+addListener() 侦监听, addStatusListener(...)，动画状态监听。
+
+Curve:
+动画过程可以是匀速的、匀加速的或者先加速后减速等。
+Flutter中通过Curve（曲线）来描述动画过程，我们把匀速动画称为线性的(Curves.linear)，而非匀速动画称为非线性的.
+
 1: AnimatedContainer   widget属性有动画
 2: AnimatedSwitcher  两个widget 之间切换
  */
+
+class AnimationPageTest extends BaseView{
+  @override
+  String get title => 'Animation Test';
+
+  @override
+  Widget buildPage(BuildContext context) {
+    return Center(child: Column(
+      children: [
+
+      PushButton.button1(context, ScaleAnimationRoute(), 'Scale Animation'),
+
+
+
+    ],),);
+  }
+
+}
 
 class AnimationTest extends StatefulWidget {
   const AnimationTest({Key? key}) : super(key: key);
@@ -11,10 +44,27 @@ class AnimationTest extends StatefulWidget {
   _AnimationTestState createState() => _AnimationTestState();
 }
 
-class _AnimationTestState extends State<AnimationTest> {
+class _AnimationTestState extends State<AnimationTest> with SingleTickerProviderStateMixin{
   bool selected = false;
   String tempString = 'hello';
   int number = 0;
+
+  late AnimationController animationController;
+
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    animationController =  AnimationController(vsync: this,duration: Duration(seconds: 1));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -6,7 +6,7 @@ import 'package:weiChatDemo/sliver/sliver_customScrollView.dart';
 import 'package:weiChatDemo/sliver/sliver_gridView_test.dart';
 import 'package:weiChatDemo/sliver/sliver_nestedScrollView.dart';
 import 'package:weiChatDemo/sliver/sliver_tab_view/view.dart';
-
+import '../common/common_button.dart';
 import 'sliver_page_view/view.dart';
 
 /*
@@ -45,15 +45,7 @@ class SliverWidgetTestPage extends BaseView {
     return Center(
       child: Column(
         children: [
-          TextButton(
-              style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
-                      EdgeInsets.symmetric(vertical: _gap))),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (c) => ListViewTestPage()));
-              },
-              child: Text('ListViewTestPage')),
+          PushButton.button1(context, ListViewTestPage(), 'ListViewTestPage'),
           TextButton(
               style: ButtonStyle(
                   padding: MaterialStateProperty.all(
@@ -111,7 +103,13 @@ class SliverWidgetTestPage extends BaseView {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (c) => NestedScrollViewPage()));
               },
-              child: Text('NestedScrollView - Test')),
+              child: Text('NestedScrollView - _NestedTabBarView')),
+          PushButton.button1(context, NestedScrollViewPage1(),
+              'DefaultTabController Wrap TabBarView'),
+          PushButton.button1(context, NestedScrollViewPage2(),
+              'NestedScrollview Wrap CustomScrollview'),
+          PushButton.button1(context, NestedScrollViewPage3(),
+              'NestedScrollView Wrap ListView'),
         ],
       ),
     );

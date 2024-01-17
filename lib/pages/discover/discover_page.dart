@@ -57,7 +57,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               imageName: 'images/摇一摇.png',
               title: '动画-测试',
               callBack: () {
-                NavigatorTool.pushFrom(context, AnimationTest());
+                NavigatorTool.pushFrom(context, AnimationPageTest());
               },
             ),
             SizedBox(
