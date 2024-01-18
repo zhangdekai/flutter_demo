@@ -1,4 +1,4 @@
-package com.grjys.weichatdemo;
+package com.carsome.weichatdemo;
 
 import io.flutter.embedding.android.FlutterActivity;
 
