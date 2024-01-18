@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:weiChatDemo/common/const.dart';
-import 'package:weiChatDemo/common/common_button.dart';
 
 
 @immutable
