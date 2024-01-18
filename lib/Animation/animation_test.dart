@@ -1,11 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weiChatDemo/Animation/scale_animation_test.dart';
 import 'package:weiChatDemo/base/base_view.dart';
 
 import '../common/common_button.dart';
-import 'animation_hero.dart';
-import 'animation_stagger.dart';
 /*
 
 Flutter中也对动画进行了抽象，主要涉及 Animation、Curve、Controller、Tween这四个角色，
@@ -22,41 +19,22 @@ Flutter中通过Curve（曲线）来描述动画过程，我们把匀速动画�
 2: AnimatedSwitcher  两个widget 之间切换
  */
 
-class AnimationPageTest extends BaseView {
+class AnimationPageTest extends BaseView{
   @override
   String get title => 'Animation Test';
 
   @override
   Widget buildPage(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [
-          PushButton.button1(context, ScaleAnimationRoute(), 'Scale Animation'),
-          TextButton(
-              style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
-                      EdgeInsets.symmetric(vertical: 16))),
-              onPressed: () {
-                Navigator.push(context, PageRouteBuilder(
-                    pageBuilder: (context, animation, secondAnimation) {
-                  /// 可自定义带animation 的widget。
-                  return FadeTransition(
-                      opacity: animation, child: ScaleAnimationRoute());
-                }));
-              },
-              child: Text(
-                'PageRouteBuilder - FadeTransition',
-                textScaleFactor: 1.5,
-              )),
-          PushButton.button1(context, HeroAnimationRouteA(), 'Hero Animation'),
+    return Center(child: Column(
+      children: [
 
-          PushButton.button1(context, StaggerAnimationTest(), 'Stagger Animation'),
+      PushButton.button1(context, ScaleAnimationRoute(), 'Scale Animation'),
 
 
-        ],
-      ),
-    );
+
+    ],),);
   }
+
 }
 
 class AnimationTest extends StatefulWidget {
@@ -66,27 +44,25 @@ class AnimationTest extends StatefulWidget {
   _AnimationTestState createState() => _AnimationTestState();
 }
 
-class _AnimationTestState extends State<AnimationTest>
-    with SingleTickerProviderStateMixin {
+class _AnimationTestState extends State<AnimationTest> with SingleTickerProviderStateMixin{
   bool selected = false;
   String tempString = 'hello';
   int number = 0;
 
   late AnimationController animationController;
 
+
   @override
   void dispose() {
     super.dispose();
     animationController.dispose();
   }
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 1));
+    animationController =  AnimationController(vsync: this,duration: Duration(seconds: 1));
   }
 
   @override
@@ -204,7 +180,8 @@ class AnimatedCounter extends StatelessWidget {
   final int value;
   final Duration duration;
 
-  const AnimatedCounter({Key? key, required this.value, required this.duration})
+  const AnimatedCounter(
+      {Key? key, required this.value, required this.duration})
       : super(key: key);
 
   @override
