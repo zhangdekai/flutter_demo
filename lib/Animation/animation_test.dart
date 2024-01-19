@@ -1,25 +1,37 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weiChatDemo/Animation/scale_animation_test.dart';
+import 'package:weiChatDemo/Animation/animation_scale_test.dart';
 import 'package:weiChatDemo/base/base_view.dart';
 
 import '../common/common_button.dart';
+import 'animation_custom_decorateBox.dart';
 import 'animation_hero.dart';
 import 'animation_stagger.dart';
+import 'animation_switcher.dart';
+import 'animation_widget_test.dart';
+import 'animation_widget_test1.dart';
 /*
 
 Flutter中也对动画进行了抽象，主要涉及 Animation、Curve、Controller、Tween这四个角色，
 它们一起配合来完成一个完整动画.
 
-Animation<T> extends Listenable :
+Animation<T>:  Animation<T> extends Listenable
+是一个抽象类，它本身和UI渲染没有任何关系，而它主要的功能是保存动画的插值和状态；
+其中一个比较常用的Animation类是Animation<double>.
+
 addListener() 侦监听, addStatusListener(...)，动画状态监听。
 
 Curve:
 动画过程可以是匀速的、匀加速的或者先加速后减速等。
 Flutter中通过Curve（曲线）来描述动画过程，我们把匀速动画称为线性的(Curves.linear)，而非匀速动画称为非线性的.
 
-1: AnimatedContainer   widget属性有动画
-2: AnimatedSwitcher  两个widget 之间切换
+AnimationController:   class AnimationController extends Animation<double>
+用于控制动画，它包含动画的启动forward()、停止stop() 、反向播放 reverse()等方法。
+AnimationController会在动画的每一帧，就会生成一个新的值,默认[0,1].
+
+Tween: class Tween<T extends Object?> extends Animatable<T>
+开始和结束之间的插值，可为 int,color,double 等.
+
  */
 
 class AnimationPageTest extends BaseView {
@@ -49,198 +61,18 @@ class AnimationPageTest extends BaseView {
                 textScaleFactor: 1.5,
               )),
           PushButton.button1(context, HeroAnimationRouteA(), 'Hero Animation'),
-
-          PushButton.button1(context, StaggerAnimationTest(), 'Stagger Animation'),
-
-
+          PushButton.button1(
+              context, StaggerAnimationTest(), 'Stagger Animation'),
+          PushButton.button1(
+              context, AnimationSwitcherTest(), 'AnimatedSwitcher'),
+          PushButton.button1(
+              context, AnimationCustomExample(), 'Custom Animation Decorate'),
+          PushButton.button1(
+              context, AnimationWidgetTest(), 'AnimationWidgetTest'),
+          PushButton.button1(
+              context, AnimatedWidgetsTest1(), 'AnimationWidgetTest1'),
         ],
       ),
-    );
-  }
-}
-
-class AnimationTest extends StatefulWidget {
-  const AnimationTest({Key? key}) : super(key: key);
-
-  @override
-  _AnimationTestState createState() => _AnimationTestState();
-}
-
-class _AnimationTestState extends State<AnimationTest>
-    with SingleTickerProviderStateMixin {
-  bool selected = false;
-  String tempString = 'hello';
-  int number = 0;
-
-  late AnimationController animationController;
-
-  @override
-  void dispose() {
-    super.dispose();
-    animationController.dispose();
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-
-    animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 1));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('AnimationTest'),
-      ),
-      body:
-          _fanGunWidgetTest(), // _fanGunWidgetTest,  _animatedSwitcher, animatedContainerTest()
-      floatingActionButton: TextButton(
-          onPressed: () {
-            setState(() {
-              selected = !selected;
-              tempString = tempString + '1';
-            });
-          },
-          child: Text(
-            'Set',
-            style: TextStyle(color: Colors.black, fontSize: 30),
-          )),
-    );
-  }
-
-  Widget _fanGunWidgetTest() {
-    return Center(
-      child: Container(
-        height: 120,
-        // width: 300,
-        color: Colors.blue[300],
-        child: Row(
-          children: [
-            AnimatedCounter(
-              value: 1,
-              duration: Duration(milliseconds: 500),
-            ),
-            AnimatedCounter(
-              value: 8,
-              duration: Duration(milliseconds: 500),
-            ),
-            AnimatedCounter(
-              value: number,
-              duration: Duration(milliseconds: 500),
-            ),
-            IconButton(
-                icon: Icon(
-                  Icons.add,
-                  size: 40,
-                ),
-                onPressed: () {
-                  setState(() {
-                    number++;
-                  });
-                })
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _animatedContainerTest() {
-    return Center(
-      child: AnimatedContainer(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: [Colors.blue, Colors.yellow],
-              stops: [0.2, 0.5]),
-          borderRadius: BorderRadius.circular(75),
-          boxShadow: [BoxShadow(spreadRadius: 2, blurRadius: 15)], //
-          // color: selected ? Colors.red : Colors.blue,
-        ),
-        width: selected ? 250.0 : 150.0,
-        height: selected ? 250.0 : 150.0,
-        alignment: selected ? Alignment.center : AlignmentDirectional.topCenter,
-        duration: Duration(seconds: 2),
-        curve: Curves.fastOutSlowIn,
-        child: FlutterLogo(size: 75),
-      ),
-    );
-  }
-
-  ///AnimatedSwitcher
-  Widget _animatedSwitcher() {
-    return Center(
-      child: AnimatedContainer(
-        duration: Duration(seconds: 1),
-        color: Colors.blue,
-        width: selected ? 250.0 : 150.0,
-        height: selected ? 250.0 : 150.0,
-        child: AnimatedSwitcher(
-          duration: Duration(seconds: 1),
-          transitionBuilder: (child, animation) {
-            return ScaleTransition(
-              scale: animation,
-              child: FadeTransition(
-                opacity: animation,
-                child: child,
-              ),
-            );
-          },
-          child: Text(
-            tempString,
-            key: UniqueKey(),
-            style: TextStyle(fontSize: 30),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class AnimatedCounter extends StatelessWidget {
-  final int value;
-  final Duration duration;
-
-  const AnimatedCounter({Key? key, required this.value, required this.duration})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return TweenAnimationBuilder(
-      tween: Tween(end: value.toDouble()),
-      duration: duration,
-      builder: (BuildContext context, double value, Widget? child) {
-        final whole = value ~/ 1;
-        final decimal = value - whole;
-        print('$whole + $decimal');
-        return Expanded(
-          child: Stack(
-            children: [
-              Positioned(
-                  top: -100 * decimal, // 0 --> 100
-                  child: Opacity(
-                    opacity: 1 - decimal,
-                    child: Text(
-                      '$whole',
-                      style: TextStyle(fontSize: 100),
-                    ),
-                  )),
-              Positioned(
-                  top: 100 - decimal * 100, // 100 --> 0
-                  child: Opacity(
-                    opacity: decimal,
-                    child: Text(
-                      '${whole + 1}',
-                      style: TextStyle(fontSize: 100),
-                    ),
-                  )),
-            ],
-          ),
-        );
-      },
     );
   }
 }

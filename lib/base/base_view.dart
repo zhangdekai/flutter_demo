@@ -26,14 +26,13 @@ abstract class BaseView extends StatelessWidget {
       ),
     );
   }
-  PreferredSizeWidget? buildAppBar() => _buildDefaultAppBar;
+  PreferredSizeWidget? buildAppBar() => defaultAppBar(title: title);
 
-  AppBar get _buildDefaultAppBar {
+  static AppBar defaultAppBar({String? title = ''}) {
     return AppBar(
-      title: Text(title),
+      title: Text(title!),
       backgroundColor: weChatThemeColor,
       elevation: 1,
     );
   }
-
 }
