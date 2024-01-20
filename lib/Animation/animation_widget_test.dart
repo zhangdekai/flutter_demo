@@ -23,7 +23,7 @@ class _AnimationWidgetTestState extends State<AnimationWidgetTest>
   }
 
   @override
-  void initState() {
+  Future<void> initState() async {
     super.initState();
     animationController =
         AnimationController(vsync: this, duration: Duration(seconds: 1));

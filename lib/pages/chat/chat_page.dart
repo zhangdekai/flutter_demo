@@ -10,6 +10,7 @@ import 'package:get/get.dart';
 import 'package:weiChatDemo/common/const.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
+import 'package:weiChatDemo/custom_widget/custom_widet_test.dart';
 import 'package:weiChatDemo/pages/chat/search_bar.dart';
 import 'package:weiChatDemo/pages/chat/third_party_login_page.dart';
 import 'package:weiChatDemo/sliver/sliver_test.dart';
@@ -75,7 +76,7 @@ class _ChatPageState extends State<ChatPage> {
   }
 
   void _initData() {
-    final titles = ['三方登录', 'Sliver test', '路由管理', 'Event Handle'];
+    final titles = ['三方登录', 'Sliver test', '路由管理', 'Event Handle','自定义组件'];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
       _data.add(temp);
@@ -117,7 +118,7 @@ class _ChatPageState extends State<ChatPage> {
 
     index--;
     return ListTile(
-      title: Text(_data[index].name ?? ''),
+      title: Text(_data[index].name),
       subtitle: Container(
         // decoration: BoxDecoration(
         //     border: Border(
@@ -125,7 +126,7 @@ class _ChatPageState extends State<ChatPage> {
         //             BorderSide(color: CupertinoColors.lightBackgroundGray))),
         padding: EdgeInsets.only(right: 10, top: 8, bottom: 8),
         child: Text(
-          _data[index].message ?? '',
+          _data[index].message,
           overflow: TextOverflow.ellipsis,
         ),
       ),
@@ -150,6 +151,11 @@ class _ChatPageState extends State<ChatPage> {
       case 3:
         Get.toNamed(RouteName.pageEventTest);
         break;
+      case 4:
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => CustomWidgetTest()));
+        break;
+
     }
   }
 
@@ -213,7 +219,7 @@ class _ChatPageState extends State<ChatPage> {
   @override
   void dispose() {
     //取消我们的timer
-    if (_timer != null && _timer.isActive) {
+    if (_timer.isActive) {
       _timer.cancel();
     }
 
