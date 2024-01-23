@@ -49,24 +49,34 @@ void dump({int? a, int? b}) {
   // dump(b: 5); // {c} 5  10
 }
 
-///
-///  sync* and yield  搭配使用
+///  同步生成器  Synchronous generator： Returns an Iterable object.
+///  sync* and yield  搭配使用,
 Iterable<int> getList(int n) sync* {
   for (int i = 0; i < n; i++) {
     yield i;
   }
 }
 
+/// 异步生成器  Asynchronous generator: Returns a Stream object
 Stream<int> getList2(int n) async* {
   yield* getList1(n); // return 相应的 generator 生成器
 }
-
 Stream<int> getList1(int n) async* {
   for (int i = 0; i < n; i++) {
     await Future.delayed(Duration(seconds: 1));
     yield i; // 返回具体的值
   }
 }
+
+/// If your generator is recursive,
+/// you can improve its performance by using yield*:
+Iterable<int> naturalsDownFrom(int n) sync* {
+  if (n > 0) {
+    yield n;
+    yield* naturalsDownFrom(n - 1); // 递归生成
+  }
+}
+
 
 ///
 /// 3: 代码优化

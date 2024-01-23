@@ -25,6 +25,7 @@ Tools • Dart 3.1.3 • DevTools 2.25.0
 # Flutter Skill list
 This part is based on the `lib` file
 * Animation
+* Async Test
 * Base  base_view and base on getX's base_view 
 * Common setting
 * Const value setting
@@ -40,7 +41,6 @@ This part is based on the `lib` file
 * Signature  画签名
 * Sliver Widget -> ListView, AnimatedListView,PageView,ScrollController
 * Sqlite use
-* Stream test
 * Async and Sync test
 * Widgets  -> common widget
 * Widgets test `1：Stream StreamBuild  2：FutureBuilder 3：LayoutBuilder 4：Flexible 5：GridView`

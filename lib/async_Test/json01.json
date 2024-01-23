@@ -1,0 +1,138 @@
+{
+    "errno": "0",
+    "errmsg": "",
+    "timestamp": "1705905102",
+    "logid": "4271265010",
+    "format": "jsonp",
+    "ret": {
+        "thread_id": "1083000062919000",
+        "thread_title": "\u6807\u9898\uff1a\u75db\u5fc3\uff01\u8001\u7238\u8fd4\u4e61\u884c\uff0c\u517b\u8001\u9662\u60ca\u73b0\u53d1\u70e7\u60c5\uff0c\u6211\u8be5\u5982\u4f55\u5e94\u5bf9\uff1f",
+        "is_show": "0",
+        "reply_id": "0",
+        "comment_count": "0",
+        "count_level1": 0,
+        "is_over": true,
+        "logid": "3026317334",
+        "list": [],
+        "hot_list": null,
+        "new_style": 0,
+        "request_id": "33323533313939333939393934363837353938",
+        "is_closed": "0",
+        "is_source_owner": "0",
+        "comment_conf": {
+            "img": {
+                "switch": "2",
+                "text": ""
+            },
+            "gif": {
+                "switch": "2",
+                "text": ""
+            },
+            "cooperation": {
+                "switch": "0",
+                "text": "",
+                "img": "coop"
+            },
+            "forward_switch": 0,
+            "reply_limit": "30",
+            "imagine": {
+                "switch": "1",
+                "text_count": "10",
+                "time_duration": "1",
+                "pic_count": "10"
+            },
+            "expose_strategy": {
+                "switch": "1",
+                "inactive_days": "1",
+                "reply_limit": "0",
+                "eject_limit": "1",
+                "display_limit": "0"
+            },
+            "comment_icon_experiment": "0",
+            "inputbox_top": {
+                "hot_word_list": []
+            },
+            "emoji_effect_switch": "0",
+            "hotword_show_threshold": 10,
+            "hotword_show_less_position": 1,
+            "hotword_show_greater_position": 2,
+            "pic_easter_egg": {
+                "tip": "\u4e0e0\u4eba\u4e00\u8d77\u53d1\u9001\u5f69\u86cb!",
+                "avatar_list": ["https:\/\/himg.bdimg.com\/sys\/portrait\/item\/wise.1.33253d01.SghLWr-dw7KuHQWuOHD9LQ.jpg?time=181&tieba_portrait_time=181", "https:\/\/himg.bdimg.com\/sys\/portrait\/item\/wise.1.bb2888ab.k7-xiWWdp6qlvKEFS5rooQ.jpg?time=7640&tieba_portrait_time=7640", "https:\/\/himg.bdimg.com\/sys\/portrait\/item\/wise.1.55f63df.hgBWTwIuojz5o6AB2k8_hA.jpg?time=9370&tieba_portrait_time=9370"]
+            },
+            "pk": {
+                "switch": 0
+            },
+            "generate_dt": {
+                "switch": 0
+            }
+        },
+        "bomb_conf": {
+            "switch": "1",
+            "bubble": "\u70b8\u8bc4\u8bba\u529f\u80fd\u5168\u65b0\u4e0a\u7ebf",
+            "limit_toast": "\u62b1\u6b49\uff0c\u6bcf\u6761\u5185\u5bb9\u4e0b\u53ea\u80fd\u70b8\u638910\u6761\u8bc4\u8bba\u54e6",
+            "success_toast": "\u5df2\u70b8\u6389\uff0c\u8be5\u8bc4\u8bba\u4e0d\u518d\u5bf9\u4f60\u5c55\u73b0",
+            "bomb_num": "0"
+        },
+        "down_conf": {
+            "switch": "1"
+        },
+        "bottom_bar": {
+            "emoji": {
+                "switch": 2,
+                "text": ""
+            },
+            "img": {
+                "switch": "2",
+                "text": ""
+            },
+            "gif": {
+                "switch": 2,
+                "text": ""
+            }
+        },
+        "user_conf": {
+            "god_status": 0,
+            "avatar": "https:\/\/himg.bdimg.com\/sys\/portrait\/item\/wise.1.25fd74d4.1hT4h-lMWlQ4-B6LpN1qGg.jpg?time=4044&tieba_portrait_time=4044",
+            "commentor": [],
+            "vtype": "0"
+        },
+        "color_bar": [],
+        "active": null,
+        "tips": {
+            "emptymsg": "\u8fd8\u6ca1\u6709\u4eba\u8bc4\u8bba\uff0c\u70b9\u51fb\u62a2\u6c99\u53d1\uff5e",
+            "showComment": 1,
+            "toolbar_placeholder_list": "\u5199\u8bc4\u8bba",
+            "commentBox_placeholder_list": "\u53cb\u5584\u53d1\u8a00\uff0c\u7406\u6027\u4ea4\u6d41",
+            "toolbar_placeholder_detail": "\u53d1\u8868\u56de\u590d",
+            "commentBox_placeholder_detail": "",
+            "commentBox_danmu_guide": "\u6765\u53d1\u5f39\u5e55\u5427",
+            "commentBox_danmu_placeholder_list": "\u53d1\u8868\u5f39\u5e55",
+            "commentBox_cmttop_placeholder_list": "\u53cb\u5584\u8bc4\u8bba\uff0c\u6587\u660e\u53d1\u8a00"
+        },
+        "sv_tips": {
+            "emptymsg": "\u8fd8\u6ca1\u6709\u4eba\u8bc4\u8bba\uff0c\u70b9\u51fb\u62a2\u6c99\u53d1\uff5e",
+            "showComment": 1,
+            "toolbar_placeholder_list": "\u5199\u8bc4\u8bba",
+            "commentBox_placeholder_list": "\u53cb\u5584\u53d1\u8a00\uff0c\u7406\u6027\u4ea4\u6d41",
+            "toolbar_placeholder_detail": "\u53d1\u8868\u56de\u590d",
+            "commentBox_placeholder_detail": "",
+            "commentBox_danmu_guide": "\u6765\u53d1\u5f39\u5e55\u5427",
+            "commentBox_danmu_placeholder_list": "\u53d1\u8868\u5f39\u5e55",
+            "commentBox_cmttop_placeholder_list": "\u53cb\u5584\u8bc4\u8bba\uff0c\u6587\u660e\u53d1\u8a00"
+        },
+        "is_login": 1,
+        "userinfo": {
+            "displayname": "\u8ffd\u9010\u7684DK",
+            "avatar": "https:\/\/himg.bdimg.com\/sys\/portrait\/item\/wise.1.25fd74d4.1hT4h-lMWlQ4-B6LpN1qGg.jpg?time=4044&tieba_portrait_time=4044",
+            "uk": "JYIT9FCWs0mb1V0dJ-Mz2A"
+        },
+        "source": "baidumedia",
+        "url": "https:\/\/ext.baidu.com\/api\/comment\/v1\/page\/list?thread_id=1083000062919000&appid=22862035",
+        "title_conf": {
+            "title": "",
+            "comment_count_switch": "0"
+        },
+        "view_template": "0"
+    }
+}
