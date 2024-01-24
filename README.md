@@ -29,12 +29,16 @@ This part is based on the `lib` file
 * Base  base_view and base on getX's base_view 
 * Common setting
 * Const value setting
+* CustomWidget
 * Event 事件处理
+* File and Network -> File IO, HttpClient, Dio and WebSocket
 * Generated for 国际化，包括 `l10n` file 
 * Image crop  裁剪
 * Inherited Widget 
+* Interview test
 * Json Model 生成
 * Key Test
+* Models  -> 使用过JsonModel 由json file 自动生成的models
 * Page Route 路由机制
 * Pages -> 主页root_page 和 各项首页
 * Lib Provider use
@@ -44,7 +48,6 @@ This part is based on the `lib` file
 * Async and Sync test
 * Widgets  -> common widget
 * Widgets test `1：Stream StreamBuild  2：FutureBuilder 3：LayoutBuilder 4：Flexible 5：GridView`
-* 面试题
 * main 
 
 

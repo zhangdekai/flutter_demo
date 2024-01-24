@@ -2,11 +2,10 @@ import 'package:flutter/material.dart' hide Page, Action;
 import 'package:get/get.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/generated/l10n.dart';
+import 'package:weiChatDemo/page_route/page_route_test.dart';
 import 'package:weiChatDemo/pages/root_page.dart';
 import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
-
 import 'event/event_handle_test/view.dart';
-import 'page_route(路由机制)/page_route_test.dart';
 
 void main() => runApp(MyApp());
 

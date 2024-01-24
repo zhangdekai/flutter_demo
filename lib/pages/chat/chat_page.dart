@@ -14,7 +14,8 @@ import 'package:weiChatDemo/custom_widget/custom_widet_test.dart';
 import 'package:weiChatDemo/pages/chat/search_bar.dart';
 import 'package:weiChatDemo/pages/chat/third_party_login_page.dart';
 import 'package:weiChatDemo/sliver/sliver_test.dart';
-import '../../page_route(路由机制)/page_route_test.dart';
+import '../../file_and_network_operate/file_netork_test.dart';
+import '../../page_route/page_route_test.dart';
 
 class ChatPage extends StatefulWidget {
   @override
@@ -76,7 +77,7 @@ class _ChatPageState extends State<ChatPage> {
   }
 
   void _initData() {
-    final titles = ['三方登录', 'Sliver test', '路由管理', 'Event Handle','自定义组件'];
+    final titles = ['三方登录', 'Sliver test', '路由管理', 'Event Handle','自定义组件','File和网络'];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
       _data.add(temp);
@@ -155,6 +156,11 @@ class _ChatPageState extends State<ChatPage> {
         Navigator.of(context)
             .push(CupertinoPageRoute(builder: (c) => CustomWidgetTest()));
         break;
+      case 5:
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => FileAndNetworkTest()));
+        break;
+
 
     }
   }
