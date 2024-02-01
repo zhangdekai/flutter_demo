@@ -26,6 +26,7 @@ class CustomWidgetTest extends BaseView {
 
   @override
   Widget buildPage(BuildContext context) {
+
     print('CustomWidgetTest build');
     return Center(
       child: Column(
@@ -40,9 +41,7 @@ class CustomWidgetTest extends BaseView {
           PushButton.button1(
               context,
               Scaffold(
-                appBar: AppBar(
-                  title: Text('WaterMark')
-                ),
+                appBar: AppBar(title: Text('WaterMark')),
                 body: WatermarkRoute(),
               ),
               'WatermarkRoute'),

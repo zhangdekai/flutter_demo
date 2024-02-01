@@ -1,6 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:weiChatDemo/base/base_view.dart';
+
+import 'custom_widet_test.dart';
 /*
 性能优化：
 
@@ -17,9 +22,17 @@ import 'package:weiChatDemo/base/base_view.dart';
 并设置其shouldRepaint回调值为false，然后将棋盘组件作为背景。然后将棋子的绘制放到另一个组件中，
 这样每次落子时只需要绘制棋子。
 
+2: 通过 Layer 实现绘制缓存 ?? -> 在Paint中
+创建一个 Layer 专门绘制棋盘，然后缓存。
+当重绘触发时，如果绘制区域发生了变化，则重新绘制棋盘并缓存；如果绘制区域未变，则直接使用之前的Layer
+final layerHandle = LayerHandle<PictureLayer>(); 建议使用 layerHandle.layer
+
+    //将缓存棋盘的layer添加到context中  PaintingContext 的。
+    context.addLayer(layerHandle.layer!);
  */
 
-/// 绘制一个 带2个棋子的棋盘
+/// 1: 绘制一个 带2个棋子的棋盘
+///
 
 class CustomPaintExample extends BaseView {
   @override
@@ -27,6 +40,7 @@ class CustomPaintExample extends BaseView {
 
   @override
   Widget buildPage(BuildContext context) {
+
     return Center(
       child: Column(
         children: [
@@ -68,12 +82,34 @@ class CustomPaintExample extends BaseView {
       ),
     );
   }
+
+  void drawChessBoardByUnderlineAPI() {
+    //1.创建绘制记录器和Canvas
+    PictureRecorder recorder = PictureRecorder();
+    Canvas canvas = Canvas(recorder);
+    //2.在指定位置区域绘制。
+    var rect = Rect.fromLTWH(30, 200, 300, 300);
+    // drawChessboard(canvas,rect); //画棋盘
+    // drawPieces(canvas,rect);//画棋子
+    //3.创建layer，将绘制的产物保存在layer中
+    var pictureLayer = PictureLayer(rect);
+    //recorder.endRecording()获取绘制产物。
+    pictureLayer.picture = recorder.endRecording();
+    var rootLayer = OffsetLayer();
+    rootLayer.append(pictureLayer);
+    //4.上屏，将绘制的内容显示在屏幕上。
+    final SceneBuilder builder = SceneBuilder();
+    final Scene scene = rootLayer.buildScene(builder);
+
+    // View.of(context).render(scene);
+  }
 }
 
 class ChessBoardPaint extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     print('paint');
+
     var paint = Paint()
       ..isAntiAlias = true // 抗锯齿
       ..color = Color(0xFFDCC48C)
@@ -82,6 +118,8 @@ class ChessBoardPaint extends CustomPainter {
     // var rect = Offset.zero & size;
 
     // paint 棋盘背景  size 大小
+    // _rect = Rect.fromLTRB(0, 0, size.width, size.height);
+
     canvas.drawRect(Rect.fromLTRB(0, 0, size.width, size.height), paint);
 
     // paint 棋盘的线, 横线 竖线
@@ -117,7 +155,7 @@ class ChessBoardCellPaint extends CustomPainter {
     var paint = Paint()
       ..style = PaintingStyle.fill
       ..color = Colors.black;
-    
+
     // canvas.drawParagraph(paragraph, offset)
 
     // 黑子

@@ -141,7 +141,7 @@ class NestedScrollViewPage2 extends BaseView {
               forceElevated: innerBoxIsScrolled,
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.asset(
-                  "asset/sea_image.png",
+                  "assets/sea_image.png",
                   fit: BoxFit.cover,
                 ),
               ),

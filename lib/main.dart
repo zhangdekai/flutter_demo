@@ -1,4 +1,8 @@
+import 'dart:async';
+import 'dart:html';
+
 import 'package:flutter/material.dart' hide Page, Action;
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/generated/l10n.dart';
@@ -7,14 +11,36 @@ import 'package:weiChatDemo/pages/root_page.dart';
 import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
 import 'event/event_handle_test/view.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  _debugModel();
+
+  runZonedGuarded(() => runApp(MyApp()), (error, stack) {
+    /// can add error report here, such as report to firebase crash
+    debugPrint('error == $error');
+  });
+}
+
+void _catchError() {
+  FlutterError.onError = (FlutterErrorDetails details) {
+    // reportError();
+  };
+}
+
+void _debugModel() {
+  /// 开启Debug 可视化模式，Debug UI
+  // debugPaintLayerBordersEnabled = true;
+  // debugPaintSizeEnabled = true;
+
+  // 性能Debug
+  debugPrintMarkNeedsLayoutStacks = false;
+  debugPrintMarkNeedsPaintStacks = false;
+}
 
 /// This widget is the root of your application.
 ///
 class MyApp extends StatelessWidget with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
-
     // return _buildMaterialApp();
 
     return _buildGetMaterialApp();
@@ -34,21 +60,28 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
       debugShowCheckedModeBanner: false,
     );
   }
+
   GetMaterialApp _buildGetMaterialApp() {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: _buildThemeData,
       initialRoute: RouteName.homepage,
-      localizationsDelegates: [S.delegate],
       getPages: [
         GetPage(name: RouteName.homepage, page: () => RootPage()),
         GetPage(name: RouteName.pageRouteTest3, page: () => PageRouteTest3()),
-        GetPage(name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
+        GetPage(
+            name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
         GetPage(name: RouteName.pageWidgetsTest, page: () => WidgetsTestPage()),
       ],
       navigatorObservers: [
         _MyNavigatorObserver(),
       ],
+      localizationsDelegates: [S.delegate],
+      supportedLocales: [
+        const Locale('en', 'US'), // 美国英语
+        const Locale('zh', 'CN'), // 中文简体
+      ],
+      locale: Locale('en', 'US'),
     );
   }
 

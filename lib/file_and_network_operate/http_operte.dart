@@ -18,7 +18,7 @@ dart:io 提供的 HTTP 相关配置可以参考 ： https://book.flutterchina.cl
 
 2: Dio: https://github.com/cfug/dio/blob/main/dio/README-ZH.md
 dio是一个强大的Dart Http请求库，支持Restful API、FormData、拦截器、请求取消、Cookie管理、
-文件上传/下载、超时等。dio的使用方式随着其版本升级可能会发生变化，如果本节所述内容和最新dio功能有差异，请以最新的dio文档为准。
+文件上传/下载、超时等。
 
  Dio 是对HTTPClient 的封装，request 是采用dart 库 自有的HTTPClient。
  */

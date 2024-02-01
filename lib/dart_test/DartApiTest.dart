@@ -1,3 +1,4 @@
+
 /// 模式  Dart 3.0 新特性
 /// https://juejin.cn/post/7240838046789648442
 /// 解构能力
@@ -46,7 +47,115 @@ void useEnumTest() {
   print('vehicle. sum == ${carVehicle.sum}');
 }
 
+class BuildTestCase {
+  final List<int> _list = [];
+
+  void _registerAA() {
+    print('_registerAA');
+  }
+}
+
+void visitClassPrivate() {
+  BuildTestCase case1 = BuildTestCase();
+
+  case1._registerAA();
+
+  print('${case1._list}');
+}
+
+void forTest(){
+  for (int i = 0; i < 5; i += 1) {
+    print('i === $i');
+  }
+}
+
+void keyModifierTest(){
+  Object a = 'qq';
+  a  = 2;
+  a  = [1,2,3];
+  print('a ==  $a');
+
+  a = Future(() => print('a became Future'));
+
+  print('a ==  ${a.toString()}');
+  print('a ==  ${a.runtimeType}');
+
+
+  dynamic b = '22';
+  b = 12;
+  b = '33';
+  print('b ==  $b');
+  print('b.runtimeType ==  ${b.runtimeType}');
+
+  // b = Future(() => print('b became Future'));
+
+
+}
+
 void main() {
   // recordAndPatternTest();
-  useEnumTest();
+  // useEnumTest();
+  // visitClassPrivate();
+  keyModifierTest();
+
 }
+
+// 定义一个接口
+abstract class Shape {
+  int count = 0;
+  double getArea(); // 抽象方法，具体类需要实现
+
+  String getName();
+}
+
+// 实现接口的具体类, implements 必须实现所有的 方法和 属性。
+class Circle implements Shape {
+  double radius;
+
+  Circle(this.radius);
+
+  @override
+  double getArea() {
+    return 3.14 * radius * radius;
+  }
+
+  @override
+  int count = 3;
+
+  @override
+  String getName() {
+    throw UnimplementedError();
+  }
+}
+
+class Rectangle implements Shape {
+  double width;
+  double height;
+
+  Rectangle(this.width, this.height);
+
+  @override
+  double getArea() {
+    return width * height;
+  }
+
+  @override
+  int count = 2;
+
+  @override
+  String getName() {
+    // TODO: implement getName
+    throw UnimplementedError();
+  }
+}
+
+void testObject() {
+  // 创建 Circle 对象并调用 getArea 方法
+  Circle circle = Circle(5.0);
+  print('Circle Area: ${circle.getArea()}');
+
+  // 创建 Rectangle 对象并调用 getArea 方法
+  Rectangle rectangle = Rectangle(4.0, 6.0);
+  print('Rectangle Area: ${rectangle.getArea()}');
+}
+

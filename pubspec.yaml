@@ -1,3 +1,8 @@
+#  各种开发生态或编程语言官方通常都会提供一些包管理工具，比如在 Android 提供了 Gradle 来管理依赖，
+#  iOS 用 Cocoapods 或 Carthage 来管理依赖，Node 中通过 npm 等
+#  YAML 是一种直观、可读性高并且容易被人类阅读的文件格式，和 xml 或 Json 相比它语法简单并非常容易解析，
+#  所以 YAML 常用于配置文件，Flutter 也是用 yaml 文件作为其配置文件。Flutter 项目默认的配置文件是pubspec.yaml，
+
 # 项目名称
 name: weiChatDemo
 #项目描述
@@ -73,8 +78,8 @@ flutter:
   assets:
 #    - packages/logic_index_bar/images/气泡.png
     - images/
-    - asset/
-    - asset/json/
+    - assets/
+    - assets/json/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

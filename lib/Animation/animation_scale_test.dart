@@ -71,7 +71,7 @@ class _ScaleAnimationRouteState extends State<ScaleAnimationRoute>
         children: [
           AnimatedBuilder(
               animation: animation,
-              child: Image.asset("asset/stone.png", fit: BoxFit.fill),
+              child: Image.asset("assets/stone.png", fit: BoxFit.fill),
               builder: (c, child) {
                 // print('AnimatedBuilder builder...');
                 return SizedBox(

@@ -9,6 +9,8 @@ import 'webSocket_operte.dart';
 class FileAndNetworkTest extends BaseView{
   @override
   Widget buildPage(BuildContext context) {
+
+    debugPrint('');
     return Center(
       child: Column(
         children: [
@@ -16,6 +18,14 @@ class FileAndNetworkTest extends BaseView{
           PushButton.button1(context, FileOperateTest(), 'File 读写'),
           PushButton.button1(context, HttpOperateTest(), 'Http -> dio get'),
           PushButton.button1(context, WebSocketOperateTest(), 'WebSocketOperate'),
+
+          PushButton.button2(context, 'debugDumpApp', () {
+            debugDumpApp();
+          }),
+
+          PushButton.button2(context, 'debugDumpRenderTree', () {
+            debugDumpRenderTree();
+          })
 
 
         ]
