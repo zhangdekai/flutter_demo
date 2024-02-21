@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/state_manager.dart';
 import 'package:weiChatDemo/base/base_getX_view/view.dart';
 import 'package:weiChatDemo/sliver/list_view_controller.dart';
 
@@ -29,12 +30,12 @@ ScrollController的positions属性中，这一步称为“注册位置”，只�
  */
 
 class ListViewTestPage extends BaseViewPage<ListViewController> {
-
   @override
   String get title => 'ListView Test';
 
   @override
   Widget buildPage(BuildContext context) {
+
     return NotificationListener<ScrollNotification>(
       onNotification: (ScrollNotification notification) {
         if (notification is ScrollStartNotification) {
@@ -53,6 +54,10 @@ class ListViewTestPage extends BaseViewPage<ListViewController> {
         children: [
           SizedBox(height: 16),
           Text('ListView.separated'),
+          Obx(() => GestureDetector(
+                onTap: controller.increaseCount,
+                child: Text(controller.count.value.toString()),
+              )),
           Expanded(
             child: ListView.separated(
                 controller: controller.scrollController,

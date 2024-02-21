@@ -231,11 +231,11 @@ class PageRouteTest3 extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('第二页'),
+        title: Text('第二页')
       ),
       body: Column(
         children: [
-          Text('获取 上一页值 为 $value'),
+          Text('获取 上一页值 为 $value')
         ],
       ),
     );

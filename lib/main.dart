@@ -4,6 +4,7 @@ import 'dart:html';
 import 'package:flutter/material.dart' hide Page, Action;
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/router_report.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/generated/l10n.dart';
 import 'package:weiChatDemo/page_route/page_route_test.dart';
@@ -71,10 +72,11 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
         GetPage(name: RouteName.pageRouteTest3, page: () => PageRouteTest3()),
         GetPage(
             name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
-        GetPage(name: RouteName.pageWidgetsTest, page: () => WidgetsTestPage()),
+        GetPage(name: RouteName.pageWidgetsTest, page: () => WidgetsTestPage(),),
       ],
       navigatorObservers: [
         _MyNavigatorObserver(),
+        GetXRouterObserver(),
       ],
       localizationsDelegates: [S.delegate],
       supportedLocales: [
@@ -123,4 +125,17 @@ class _MyNavigatorObserver extends NavigatorObserver {
 
   @override
   void didReplace({Route? newRoute, Route? oldRoute}) {}
+}
+
+///自定义这个关键类！！！！！！
+class GetXRouterObserver extends NavigatorObserver {
+  @override
+  void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
+    RouterReportManager.reportCurrentRoute(route);
+  }
+
+  @override
+  void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) async {
+    RouterReportManager.reportRouteDispose(route);
+  }
 }

@@ -20,7 +20,7 @@ abstract class BaseViewPage<T extends BaseViewController> extends StatelessWidge
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
+    return GetBuilder<T>(
         init: controller,
         builder: (controller) {
           return WillPopScope(

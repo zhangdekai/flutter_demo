@@ -51,6 +51,7 @@ class CustomWidgetTest extends BaseView {
   }
 
   StatefulBuilder _buildFirstCustomWidget() {
+
     return StatefulBuilder(
       builder: (c, s) {
         print('StatefulBuilder build');

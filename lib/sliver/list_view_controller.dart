@@ -1,10 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 import 'package:weiChatDemo/base/base_getX_view/controller.dart';
 
 class ListViewController extends BaseViewController {
   ScrollController scrollController = ScrollController();
 
   bool showTopBar = false;
+
+  RxInt count = 0.obs;
 
   @override
   void onInit() {
@@ -19,6 +22,10 @@ class ListViewController extends BaseViewController {
         showTopBar = false;
       }
     });
+  }
+
+  void increaseCount() {
+    count.value += 10;
   }
 
   void goUp() {

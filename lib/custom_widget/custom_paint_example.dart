@@ -174,3 +174,76 @@ class ChessBoardCellPaint extends CustomPainter {
     return false;
   }
 }
+
+class ChessWidget extends LeafRenderObjectWidget {
+  @override
+  RenderObject createRenderObject(BuildContext context) {
+    return ChessRender();
+  }
+}
+
+class ChessRender extends RenderBox {
+  @override
+  bool get isRepaintBoundary => true; // is绘制边界
+
+  @override
+  void performLayout() {
+    size = constraints
+        .constrain(constraints.isTight ? Size.infinite : Size(300, 300));
+  }
+
+  Rect _rect = Rect.zero;
+  LayerHandle _layerHandle = LayerHandle<PictureLayer>();
+
+  @override
+  void paint(PaintingContext context, Offset offset) {
+    Rect rect = offset & size;
+    _checkIfExistChessBoardLayer(rect);
+  }
+
+  void _checkIfExistChessBoardLayer(Rect rect) {
+    if (_rect == rect) return;
+    _rect = rect;
+
+    PictureRecorder pictureRecorder = PictureRecorder();
+    Canvas canvas = Canvas(pictureRecorder);
+    drawBoard(canvas, rect);
+    _layerHandle.layer = PictureLayer(Rect.zero)
+      ..picture = pictureRecorder.endRecording();
+  }
+
+  void drawBoard(Canvas canvas, Rect rect) {
+    print('drawBoard');
+
+    final size = rect.size;
+
+    var paint = Paint()
+      ..isAntiAlias = true // 抗锯齿
+      ..color = Color(0xFFDCC48C)
+      ..style = PaintingStyle.fill;
+
+    // var rect = Offset.zero & size;
+
+    // paint 棋盘背景  size 大小
+
+    canvas.drawRect(rect, paint);
+
+    // paint 棋盘的线, 横线 竖线
+    paint
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.0
+      ..color = Colors.black;
+
+    // 横线
+    for (int i = 0; i <= 15; i++) {
+      var p1dy = i * (size.height / 15);
+      canvas.drawLine(Offset(0, p1dy), Offset(size.width, p1dy), paint);
+    }
+
+    // 竖线
+    for (int i = 0; i <= 15; i++) {
+      var p1dx = i * (size.width / 15);
+      canvas.drawLine(Offset(p1dx, 0), Offset(p1dx, size.height), paint);
+    }
+  }
+}

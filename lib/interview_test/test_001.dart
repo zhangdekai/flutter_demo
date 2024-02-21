@@ -39,7 +39,7 @@ void dump({int? a, int? b}) {
   c ??= (test..a = b).b ?? b ?? 5;
   print('{c} ${c} ' + test.add().toString());
 
-// c  ?=  value  // c为 空 value赋值给 c;
+// c  ??=  value  // c为 空 value赋值给 c;
 // 若 c 有值，则 value 不赋值给c,  value 为(test..a = b).b ?? b 的话也不执行 value;
 
   // _dump(a: 0);// {c} 02
