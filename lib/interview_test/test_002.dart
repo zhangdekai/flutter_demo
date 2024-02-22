@@ -60,8 +60,7 @@ void _testNum(){
 
 List<int> findDuplicates(List<int> nums) {
   List<int> result = [];
-  List<int> tempA = [];
-  // Set<int> setA = {};
+  Set<int> tempA = {};
   for (int m in nums) {
     if(tempA.contains(m)){
       tempA.add(m);
