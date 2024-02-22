@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 ///1: 一个长度为n 的数组A，找出其中2个元素和为目标值的下标，使用dart 语言.
 ///  [11, 7, 15, 2, 8]  10  ==> 3, 4
 List<int> twoSum(List<int> nums, int target) {
@@ -28,5 +30,36 @@ void _testTwoSum() {
 }
 
 void main() {
-  _testTwoSum();
+  // _testTwoSum();
+  _testNum();
+}
+
+
+///2: 给你一个数组 nums，其中nums 的整数都在[1,n]之间，
+///且每个整数出现1次或2次，请找出所有出现2次的整数，并以数组的形式返回。
+///设计一个时间复杂度为 O(n),切仅使用常量额外空间的算法解决此问题。
+// 实例：nums = [4,3,2,7,8,2,3,1]   => [2,3]
+///
+///
+
+void _testNum(){
+  List<int> nums = [99,4, 3, 2, 7, 8, 2, 3, 1,1,8];
+  List<int> result = findDuplicates(nums);
+  print(result);
+}
+
+List<int> findDuplicates(List<int> nums) {
+  List<int> result = [];
+  List<int> tempA = [];
+  // Set<int> setA = {};
+  for (int m in nums) {
+    if(tempA.contains(m)){
+      tempA.add(m);
+      result.add(m);
+    } else {
+      tempA.add(m);
+    }
+  }
+
+  return result;
 }

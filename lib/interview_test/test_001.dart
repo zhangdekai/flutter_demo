@@ -9,8 +9,6 @@ main() {
   //   print(element);
   // });
 
-  testNum();
-
 }
 
 void test001() {
@@ -160,7 +158,8 @@ class MyObject {
   // 你的对象的定义
 }
 
-// Zone 的概念
+/// Zone 的概念
+/// 区域表示在异步调用中保持稳定的环境。
 void testZone() {
   // 创建一个自定义Zone
   Zone myZone = Zone.current.fork(
@@ -183,34 +182,4 @@ void testZone() {
   });
 
   print('Main function completed');
-}
-
-///给你一个数组 nums，其中nums 的整数都在[1,n]之间，
-///且每个整数出现1次或2次，请找出所有出现2次的整数，并以数组的形式返回。
-///设计一个时间复杂度为 O(n),切仅使用常量额外空间的算法解决此问题。
-// 实例：nums = [4,3,2,7,8,2,3,1]   => [2,3]
-///
-///
-
-void testNum(){
-  List<int> nums = [99,4, 3, 2, 7, 8, 2, 3, 1,1,8];
-  List<int> result = findDuplicates(nums);
-  print(result);
-}
-
-List<int> findDuplicates(List<int> nums) {
-  List<int> result = [];
-
-  for (int i = 0; i < nums.length; i++) {
-    int index = (nums[i].abs() % nums.length) - 1;
-    print(' i == $i ,index == $index');
-
-    if (nums[index] < 0) {
-      result.add(index + 1);
-    } else {
-      nums[index] = -nums[index];
-    }
-  }
-
-  return result;
 }
