@@ -1,4 +1,14 @@
-import 'package:get/get.dart';
+
+/*
+
+ 总结：
+
+  找出 数组重复的数字，或字母，可以在空间复杂度上，借用Temp array，Map 存储找到值或Index，
+
+  利用 contains() 找出重复的 num Or letter
+
+ */
+
 
 ///1: 一个长度为n 的数组A，找出其中2个元素和为目标值的下标，使用dart 语言.
 ///  [11, 7, 15, 2, 8]  10  ==> 3, 4
