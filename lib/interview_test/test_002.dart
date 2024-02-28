@@ -1,10 +1,7 @@
-
 /*
 
  总结：
-
   找出 数组重复的数字，或字母，可以在空间复杂度上，借用Temp array，Map 存储找到值或Index，
-
   利用 contains() 找出重复的 num Or letter
 
  */

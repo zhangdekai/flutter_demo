@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:weiChatDemo/base/base_getX_view/view.dart';
 import 'package:weiChatDemo/sliver/list_view_controller.dart';
