@@ -108,10 +108,11 @@ class EventHandleTestPage extends BaseView {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IgnorePointer(
+            ignoring: true,
             child: Container(
               padding: EdgeInsets.all(16),
               color: Colors.red[100],
-              child: Text('IgnorePointer - invisible in hit test'),
+              child: Text('IgnorePointer - invisible in hit test \n ignoring == true'),
             ),
           ),
           AbsorbPointer(

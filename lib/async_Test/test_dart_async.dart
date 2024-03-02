@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:weiChatDemo/common/common_button.dart';
 
 import '../common/common_func.dart';
-import 'stream_test.dart';
+import 'streamBuilder_test.dart';
 
 void func01(SendPort port) {
   //有点问题????

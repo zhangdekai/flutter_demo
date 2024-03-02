@@ -1,4 +1,3 @@
-
 /*
 
 The Problem:
@@ -11,24 +10,30 @@ Output: [1,3,12,0,0]
 
  */
 
+List<int> moveZero(List<int> list) {
+  List<int> zeroList = [];
+  List<int> noZeroList = [];
 
-List<int> moveZero(List<int> list){
-  int len = list.length;
-  Map<int,int> temp = {};
-
-  for(int i = 0; i< list.length; i++){
-    if(list[i] == 0){
-      temp[i] = list[i];
+  for (int i = 0; i < list.length; i++) {
+    if (list[i] == 0) {
+      zeroList.add(0);
+    } else {
+      noZeroList.add(list[i]);
     }
   }
 
-
-
-
-
-  return [];
+  for (int i = 0; i < list.length; i++) {
+    if (i < noZeroList.length) {
+      list[i] = noZeroList[i];
+    } else {
+      list[i] = zeroList[i - noZeroList.length];
+    }
+  }
+  return list;
 }
 
-void main(){
-
+void main() {
+  final nums = [0, 1, 0, 3, 12];
+  var list = moveZero(nums);
+  print('list == $list');
 }

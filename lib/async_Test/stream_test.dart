@@ -1,135 +1,57 @@
 import 'dart:async';
-import 'dart:convert';
-import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-class StreamTest extends StatefulWidget {
-  @override
-  _StreamTestState createState() => _StreamTestState();
-}
+class DataBloc {
+  ///定义一个Controller
+  StreamController<List<String>> _dataController =
+      StreamController<List<String>>();
 
-class _StreamTestState extends State<StreamTest> {
-  StreamController<int> _streamController = StreamController(
-      onListen: () {}, onPause: () {}, onCancel: () {}, onResume: () {});
+  ///获取 StreamSink 做 add 入口
+  StreamSink<List<String>> get _dataSink => _dataController.sink;
 
-  late Stream _stream;
-  late Stream _eventBus;
-  late StreamSink _sink;
-  int _count = 0;
+  ///获取 Stream 用于监听
+  Stream<List<String>> get _dataStream => _dataController.stream;
 
-  @override
-  void initState() {
-    super.initState();
+  ///事件订阅对象
+  late StreamSubscription _dataSubscription;
 
-    ///流事件
-    _stream = _streamController.stream;
+  /// 广播
+  StreamController<int> _broadcast = StreamController.broadcast();
+  StreamSink<int> get _dataSink1 => _broadcast.sink;
+  Stream<int> get _dataStream1 => _broadcast.stream;
 
-    ///事件入口
-    _sink = _streamController.sink;
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _streamController.close();
-    _sink.close();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Stream")),
-      body: Center(
-        child: Column(
-          children: [
-            Text('You have pushed the button this many times:'),
-            StreamBuilder(
-              stream: _stream,
-              initialData: _count,
-              builder: (context, AsyncSnapshot snapshot) {
-                ///snapshot携带事件入口处闯进来的数据，用snapshot.data获取数据进行处理
-                if (snapshot.connectionState == ConnectionState.done) {
-                  return Text(
-                    'Done - snapshot.connectionState == ConnectionState.done 了',
-                    style: TextStyle(fontSize: 14, color: Colors.blue),
-                  );
-                }
-                int number = snapshot.data;
-                return Text(
-                  "StreamBuilder - $number",
-                  style: TextStyle(fontSize: 14, color: Colors.blue),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FloatingActionButton(
-            child: Icon(Icons.add),
-            tooltip: "Increment",
-            onPressed: () => _incrementCounter(),
-          ),
-          SizedBox(width: 20),
-        ],
-      ),
-    );
-  }
-
-  /// 它使用 Stream 的 listen() 方法来订阅文件列表，传入一个搜索文件或目录的函数
-  Future<void> fetchFile() async {
-    String searchPath = '';
-    FileSystemEntity.isDirectory('path').then((value) {
-      if (value) {
-        final startingDir = Directory(searchPath);
-        startingDir.list().listen((entity) {
-          // if (entity is File) {
-          //   searchFile(entity, searchTerms);
-          // }
-        });
-      }
+  void init() {
+    ///监听事件
+    _dataSubscription = _dataStream.listen((value) {
+      ///do change
+      print('value == $value');
     });
 
-    // same to upper
-    if (await FileSystemEntity.isDirectory(searchPath)) {
-      final startingDir = Directory(searchPath);
-
-      /// api:
-      Future future1 = startingDir.list().first;
-      Future future2 = startingDir.list().last;
-      Future single = startingDir.list().single;
-
-      Future firstWhere = startingDir.list().firstWhere(
-            (element) => element.isAbsolute,
-            // orElse: () => null
-          );
-
-      startingDir
-          .list()
-          .transform(
-              utf8.decoder as StreamTransformer<FileSystemEntity, dynamic>)
-          .transform(LineSplitter());
-
-      await for (final e in startingDir.list()) {
-        if (e.path == './//x') {
-          // searchFile(entity, searchTerms);
-        }
-      }
-    } else {
-      // searchFile(File(searchPath), searchTerms);
-    }
+    ///改变事件
+    _dataSink.add(["first", "second", "three", "more"]);
   }
 
-  void _incrementCounter() {
-    if (_count > 3) {
-      _sink.close();
-      return;
-    }
-    _count++;
-    _sink.add(_count);
+  void handleDataStream() {
+    _dataStream
+        .where((event) => event.length > 3)
+        .map((event) => event.isNotEmpty)
+        .listen((event) {
+      print('object == $event');
+    });
   }
 
+  void _add() {
+    // _dataSink.addStream(stream);
+    _dataSink.add(['1']);
+    // _dataSink.addStream(Stream.fromIterable(['1,2,3']);
+  }
+
+  void _boardCast() {}
+
+  void close() {
+    ///关闭
+    _dataSubscription.cancel();
+    _dataController.close();
+  }
 }
