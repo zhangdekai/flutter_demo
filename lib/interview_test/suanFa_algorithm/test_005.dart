@@ -53,36 +53,38 @@ int partition(List<int> array, int low, int high) {
   ///  0, 1, 2, 3, 4, 5, 6
   /// [8, 7, 2, 1, 0, 9, 6]
   for (int j = low; j < high; j++) {
+    print('j == $j; i == $i; a[j] == ${array[j]}');
     if (array[j] <= pivot) {
       i++;
       swap(array, i, j);
     }
-    // print('pivot == $pivot, i == $i, j==$j  ar == $array');
+    print('ar == $array');
   }
-
+  print('arr = $array');
   swap(array, i + 1, high);
+  print('arr 1 = $array');
   return (i + 1);
 }
 
 void quickSort1(List<int> array, int low, int high) {
   if (low < high) {
-    // int pi = partition(array, low, high);
+    int pi = partition(array, low, high);
 
-    int pivot = array[high];
-    int i = (low - 1);
-    ///  0, 1, 2, 3, 4, 5, 6
-    /// [8, 7, 2, 1, 0, 9, 6]
-    for (int j = low; j < high; j++) {
-      if (array[j] <= pivot) {
-        i++;
-        swap(array, i, j);
-      }
-      // print('pivot == $pivot, i == $i, j==$j  ar == $array');
-    }
-
-    swap(array, i + 1, high);
-
-    int pi = i+1;
+    // int pivot = array[high];
+    // int i = (low - 1);
+    // ///  0, 1, 2, 3, 4, 5, 6
+    // /// [8, 7, 2, 1, 0, 9, 6]
+    // for (int j = low; j < high; j++) {
+    //   if (array[j] <= pivot) {
+    //     i++;
+    //     swap(array, i, j);
+    //   }
+    //   // print('pivot == $pivot, i == $i, j==$j  ar == $array');
+    // }
+    //
+    // swap(array, i + 1, high);
+    //
+    // int pi = i+1;
 
     quickSort1(array, low, pi - 1);
     quickSort1(array, pi + 1, high);
