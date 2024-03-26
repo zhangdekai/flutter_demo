@@ -18,11 +18,10 @@ abstract class BaseProviderViewPage<T extends BaseProviderViewProvider>
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      onPopInvoked: (didPop) async {
         onWillPop(context);
-        return willPop;
-      },
+        },
       child: ChangeNotifierProvider(
         create: (BuildContext context) => initProvider(),
         builder: (context, child) => Scaffold(
