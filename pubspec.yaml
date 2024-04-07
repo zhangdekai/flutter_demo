@@ -124,7 +124,7 @@ flutter_launcher_icons: # create new AppIcon =>  $ dart run flutter_launcher_ico
   remove_alpha_ios: true
   min_sdk_android: 24  #current android min sdk default 24
 
-flutter_native_splash:
+flutter_native_splash:  # dart run flutter_native_splash:create
   color: "#000000"
   image: assets/splash/splash.png
   color_dark: "#000000"
