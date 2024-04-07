@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:html';
-
 import 'package:flutter/material.dart' hide Page, Action;
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';

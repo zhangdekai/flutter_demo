@@ -36,7 +36,7 @@ dependencies:
 
 #  fish_redux: ^0.3.7
   sqflite: ^2.0.0+3
-  signature: ^4.1.1
+  signature: ^5.4.1
   sign_in_with_apple: ^3.2.0
 #  firebase_auth: ^3.0.1
   google_sign_in: ^5.0.0
@@ -50,6 +50,10 @@ dependencies:
   path_provider: ^2.1.2
   web_socket_channel: ^2.4.0
   json_annotation: ^4.8.1
+
+  easy_debounce: ^2.0.3 # 防抖和节流处理
+  flutter_launcher_icons: ^0.13.1  # AppIcon 图标
+
 
 
 # dio: 3.0.9  指定版本
@@ -79,7 +83,7 @@ flutter:
 #    - packages/logic_index_bar/images/气泡.png
     - images/
     - assets/
-    - assets/json/
+    - assets/app_icon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -109,3 +113,11 @@ flutter:
 
 #flutter_intl:
 #  enabled: true
+
+flutter_launcher_icons: # create new AppIcon =>  $ dart run flutter_launcher_icons
+  image_path: "assets/app_icon/appIcon.png"
+  android: true
+  ios: true
+  ipads: true
+  remove_alpha_ios: true
+  min_sdk_android: 24  #current android min sdk default 24
