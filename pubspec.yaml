@@ -54,6 +54,7 @@ dependencies:
   easy_debounce: ^2.0.3 # 防抖和节流处理
   flutter_launcher_icons: ^0.13.1  # AppIcon 图标
   flutter_native_splash: ^2.3.10   # splash 展示
+  scrollable_positioned_list: ^0.3.8
 
 
 

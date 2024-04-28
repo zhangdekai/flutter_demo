@@ -54,6 +54,6 @@ This part is based on the `lib` file
 * [flutter_native_splash](https://pub-web.flutter-io.cn/packages/flutter_native_splash) 
 * [flutter_launcher_icons](https://pub-web.flutter-io.cn/packages/flutter_launcher_icons)
 * [easy_debounce](https://pub-web.flutter-io.cn/packages/easy_debounce) 防抖 and 节流
-* 
+* [scrollable_positioned_list](https://pub-web.flutter-io.cn/packages/scrollable_positioned_list)
 
 
