@@ -12,6 +12,7 @@ import 'package:weiChatDemo/common/const.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/custom_widget/custom_widet_test.dart';
+import 'package:weiChatDemo/good_libs/flutter_bloc/flutter_bloc_page.dart';
 import 'package:weiChatDemo/good_libs/scrollable_positioned_list/scrollable_positioned_list_page.dart';
 import 'package:weiChatDemo/good_libs/slider_up_panel_page/slider_up_panel_page.dart';
 import 'package:weiChatDemo/pages/chat/search_bar.dart';
@@ -89,6 +90,7 @@ class _ChatPageState extends State<ChatPage> {
       'File和网络',
       'ScrollablePositionedListPage',
       'Slider Up Panel',
+      'Flutter Bloc',
     ];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
@@ -176,6 +178,10 @@ class _ChatPageState extends State<ChatPage> {
       case 7:
         Navigator.of(context)
             .push(CupertinoPageRoute(builder: (c) => SliderUpPanelPage()));
+        break;
+      case 8:
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => FlutterBlocTestPage()));
         break;
     }
   }

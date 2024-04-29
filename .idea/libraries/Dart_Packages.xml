@@ -51,6 +51,13 @@
             </list>
           </value>
         </entry>
+        <entry key="bloc">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/bloc-8.1.4/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="boolean_selector">
           <value>
             <list>
@@ -286,6 +293,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../fvm/versions/3.19.4/packages/flutter/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_bloc">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/flutter_bloc-8.1.5/lib" />
             </list>
           </value>
         </entry>
@@ -978,6 +992,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/archive-3.4.10/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/args-2.4.2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/async-2.11.0/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/bloc-8.1.4/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/build-2.4.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/build_config-1.1.1/lib" />
@@ -1011,6 +1026,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/fixnum-1.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/flukit-3.0.1/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/flutter_bloc-8.1.5/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.17/lib" />
