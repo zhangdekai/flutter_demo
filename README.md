@@ -60,5 +60,7 @@ This part is based on the `lib` file
 * [easy_debounce](https://pub-web.flutter-io.cn/packages/easy_debounce) 防抖 and 节流
 * [scrollable_positioned_list](https://pub-web.flutter-io.cn/packages/scrollable_positioned_list)
 * [sliding_up_panel](https://pub-web.flutter-io.cn/packages/sliding_up_panel)
+* [flutter_bloc](https://pub-web.flutter-io.cn/packages/flutter_bloc)
+* [flutter_bloc使用解析](https://juejin.cn/post/6856268776510504968#heading-16)
 
 
