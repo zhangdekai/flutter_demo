@@ -16,7 +16,6 @@ class _PullToRefreshPageState extends State<PullToRefreshPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _data = List.generate(20, (index) => index);

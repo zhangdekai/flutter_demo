@@ -12,6 +12,7 @@ import 'package:weiChatDemo/common/const.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/custom_widget/custom_widet_test.dart';
+import 'package:weiChatDemo/good_libs/card_swiper/card_swiper_page.dart';
 import 'package:weiChatDemo/good_libs/flutter_bloc/flutter_bloc_page.dart';
 import 'package:weiChatDemo/good_libs/pull_to_refresh/pull_to_refesh_page.dart';
 import 'package:weiChatDemo/good_libs/scrollable_positioned_list/scrollable_positioned_list_page.dart';
@@ -90,7 +91,8 @@ class _ChatPageState extends State<ChatPage> {
       'ScrollablePositionedListPage',
       'Slider Up Panel',
       'Flutter Bloc',
-      'Pull to Refresh'
+      'Pull to Refresh',
+      'Card Swiper',
     ];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
@@ -137,6 +139,10 @@ class _ChatPageState extends State<ChatPage> {
       case 9:
         Navigator.of(context)
             .push(CupertinoPageRoute(builder: (c) => PullToRefreshPage()));
+        break;
+      case 10:
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => CardSwiperPage()));
         break;
     }
   }
