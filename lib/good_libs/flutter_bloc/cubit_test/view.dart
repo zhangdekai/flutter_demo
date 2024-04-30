@@ -6,6 +6,9 @@ import 'state.dart';
 
 /*
 https://juejin.cn/post/6856268776510504968#heading-26
+
+Bloc Widget 官网
+https://bloclibrary.dev/#/flutterbloccoreconcepts?id=bloc-widgets
  */
 
 class CubitTestPage extends StatelessWidget {

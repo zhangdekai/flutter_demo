@@ -57,6 +57,7 @@ dependencies:
   scrollable_positioned_list: ^0.3.8
   sliding_up_panel: ^2.0.0+1
   flutter_bloc: ^8.1.5
+  pull_to_refresh: ^2.0.0
 
 
 

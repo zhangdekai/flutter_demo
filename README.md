@@ -62,5 +62,6 @@ This part is based on the `lib` file
 * [sliding_up_panel](https://pub-web.flutter-io.cn/packages/sliding_up_panel)
 * [flutter_bloc](https://pub-web.flutter-io.cn/packages/flutter_bloc)
 * [flutter_bloc使用解析](https://juejin.cn/post/6856268776510504968#heading-16)
+* [pull_to_refresh](https://github.com/peng8350/flutter_pulltorefresh/blob/master/README_CN.md)
 
 
