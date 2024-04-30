@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart' hide Page, Action;
 import 'package:flutter/rendering.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/generated/l10n.dart';
@@ -8,6 +9,7 @@ import 'package:weiChatDemo/page_route/page_route_test.dart';
 import 'package:weiChatDemo/pages/root_page.dart';
 import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
 import 'event/event_handle_test/view.dart';
+import 'good_libs/flutter_bloc/cubit_test/cubit.dart';
 
 void main() {
   _debugModel();
@@ -39,13 +41,13 @@ void _debugModel() {
 class MyApp extends StatelessWidget with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
-    // return _buildMaterialApp();
+    return _buildMaterialApp();
 
     return _buildGetMaterialApp();
   }
 
-  MaterialApp _buildMaterialApp() {
-    return MaterialApp(
+  Widget _buildMaterialApp() {
+    final app = MaterialApp(
       theme: _buildThemeData,
       initialRoute: RouteName.homepage,
       routes: {
@@ -57,6 +59,16 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
       ],
       debugShowCheckedModeBanner: false,
     );
+
+    return _buildMultiBlocProvider(app);
+  }
+
+  Widget _buildMultiBlocProvider(Widget child) {
+    return MultiBlocProvider(providers: [
+      ///此处通过BlocProvider创建的Bloc或者Cubit是全局的
+      BlocProvider(create: (context) => GlobalBloc()),
+      BlocProvider(create: (context) => GlobalBlocA()),
+    ], child: child);
   }
 
   GetMaterialApp _buildGetMaterialApp() {

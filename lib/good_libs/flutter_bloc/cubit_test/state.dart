@@ -1,11 +1,16 @@
+import 'package:flutter/material.dart';
+
 class CubitTestState {
   int count = 0;
   CubitTestModel? testModel;
+  Color? backColor;
+  bool colorChanged = false;
 
   CubitTestState init() {
     return CubitTestState()
       ..count = 0
-      ..testModel = CubitTestModel(1, '张三');
+      ..testModel = CubitTestModel(1, '张三')
+      ..backColor = Colors.transparent;
   }
 
   CubitTestState clone() {

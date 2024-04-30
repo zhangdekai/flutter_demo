@@ -34,25 +34,55 @@ class CubitTestPage extends StatelessWidget {
             ),
             BlocBuilder<CubitTestCubit, CubitTestState>(builder: (con, s) {
               print('builder count ${s.count}');
-              return Text('Current count1 == ${s.count}');
+
+              return ColoredBox(
+                  color: s.backColor ?? Colors.transparent,
+                  child: Text('Current count1 == ${s.count}'));
             }),
+            BlocListener<CubitTestCubit, CubitTestState>(
+              listener: (context, state) {
+                print('BlocListener listener state.count == ${state.count}');
+                if (state.count >= 20 && !state.colorChanged) {
+                  cubit.changeColor();
+                }
+              },
+              child: Text('BlocListener count >= 20 change up widget Color'),
+            ),
+            SizedBox(
+              height: 15,
+            ),
             SizedBox(
               height: 15,
             ),
             Text('Current count == ${cubit.state.count} - 未被 BlocBuilder Wrap'),
             Spacer(),
-            BlocBuilder<CubitTestCubit, CubitTestState>(builder: (con, s) {
-              print('builder name ${s.testModel?.name}');
-              return Text('Current name == ${s.testModel?.name}');
+            BlocBuilder<GlobalBlocA, GlobalBlocAState>(
+              builder: (context, state) {
+                return Text(
+                    'Show GlobalBlocA state name == ${state.name} - count == ${state.count}');
+              },
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            BlocBuilder<CubitTestCubit, CubitTestState>(
+                buildWhen: (previous, current) {
+              print(
+                  'buildWhen previous.count == ${previous.count} current.count == ${current.count}');
+              return current.count >= 50;
+            }, builder: (con, s) {
+              return Text(
+                  'Current name == ${s.testModel?.name} \n buildWhen  count >= 50');
             }),
             SizedBox(
               height: 15,
             ),
             TextButton(
-                onPressed: () {
-                  cubit.changeName();
-                },
-                child: Text('Change name')),
+              onPressed: () {
+                if (cubit.state.count >= 50) cubit.changeName();
+              },
+              child: Text('Change name'),
+            ),
             SizedBox(
               height: 50,
             ),

@@ -54,13 +54,11 @@ class _ChatPageState extends State<ChatPage> {
         backgroundColor: weChatThemeColor,
         actions: _rightItem(),
       ),
-      body: Container(
-        child: ListView.builder(
-          itemCount: _data.length + 1,
-          itemBuilder: _cellForRow,
-          // itemExtent: 60,
-          // prototypeItem: _cellForRow(context, 1),
-        ),
+      body: ListView.builder(
+        itemCount: _data.length + 1,
+        itemBuilder: _cellForRow,
+        // itemExtent: 60,
+        // prototypeItem: _cellForRow(context, 1),
       ),
     );
   }
@@ -96,55 +94,6 @@ class _ChatPageState extends State<ChatPage> {
       Chat temp = Chat(i, titles[i], 'message$i', '');
       _data.add(temp);
     }
-  }
-
-  List<Widget> _rightItem() {
-    return <Widget>[
-      Container(
-        margin: EdgeInsets.only(right: 10),
-        child: PopupMenuButton(
-          color: Colors.grey[100],
-          offset: Offset(0, 60),
-          itemBuilder: (BuildContext content) {
-            return [
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/收付款.png', '收付款')),
-            ];
-          },
-          child: Icon(Icons.add),
-          onSelected: (value) {
-            print('选择了${value}');
-          },
-        ),
-      ),
-    ];
-  }
-
-  Widget _cellForRow(BuildContext context, int index) {
-    if (index == 0) {
-      return SearchCell(_data);
-    }
-
-    index--;
-    return ListTile(
-      title: Text(_data[index].name),
-      subtitle: Container(
-        padding: EdgeInsets.only(right: 10, top: 8, bottom: 8),
-        child: Text(
-          _data[index].message,
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
-      onTap: () {
-        _onTap(index);
-      },
-    );
   }
 
   void _onTap(int index) {
@@ -184,6 +133,55 @@ class _ChatPageState extends State<ChatPage> {
             .push(CupertinoPageRoute(builder: (c) => FlutterBlocTestPage()));
         break;
     }
+  }
+
+  List<Widget> _rightItem() {
+    return <Widget>[
+      Container(
+        margin: EdgeInsets.only(right: 10),
+        child: PopupMenuButton(
+          color: Colors.grey[100],
+          offset: Offset(0, 60),
+          itemBuilder: (BuildContext content) {
+            return [
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/收付款.png', '收付款')),
+            ];
+          },
+          child: Icon(Icons.add),
+          onSelected: (value) {
+            print('选择了${value}');
+          },
+        ),
+      ),
+    ];
+  }
+
+  Widget _cellForRow(BuildContext context, int index) {
+    if (index == 0) {
+      return SearchCell(_data);
+    }
+
+    index--;
+    return ListTile(
+      title: Text(_data[index].name),
+      // subtitle: Container(
+      //   padding: EdgeInsets.only(right: 10, top: 8, bottom: 8),
+      //   child: Text(
+      //     _data[index].message,
+      //     overflow: TextOverflow.ellipsis,
+      //   ),
+      // ),
+      onTap: () {
+        _onTap(index);
+      },
+    );
   }
 
   Future<List<Chat>> _getData() async {

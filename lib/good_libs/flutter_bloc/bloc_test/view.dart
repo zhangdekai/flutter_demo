@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weiChatDemo/good_libs/flutter_bloc/cubit_test/cubit.dart';
+import 'package:weiChatDemo/good_libs/flutter_bloc/cubit_test/state.dart';
 
 import 'bloc.dart';
 import 'event.dart';
