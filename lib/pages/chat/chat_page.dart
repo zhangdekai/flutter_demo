@@ -52,7 +52,7 @@ class _ChatPageState extends State<ChatPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('微信1232424'),
+        title: Text('微信'),
         backgroundColor: weChatThemeColor,
         actions: _rightItem(),
       ),

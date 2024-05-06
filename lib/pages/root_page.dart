@@ -6,6 +6,7 @@ import 'package:weiChatDemo/pages/friends/friend_page.dart';
 import 'package:weiChatDemo/pages/mine_page.dart';
 import 'package:weiChatDemo/widgets/keep_live_widget.dart';
 import 'root_page_controller.dart';
+import 'package:badges/badges.dart' as badges;
 
 // ignore: must_be_immutable
 class RootPage extends BaseViewPage<RootPageController> {
@@ -52,11 +53,32 @@ class RootPage extends BaseViewPage<RootPageController> {
             label: '微信',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
+            icon: Badge(
+              label: Text('22'),
+              backgroundColor: Colors.purple,
+              offset: Offset(10, -8),
+              child: Icon(Icons.bookmark),
+            ),
+            //Icon(Icons.bookmark)
             label: '通讯录',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.history),
+            icon: badges.Badge(
+              position: badges.BadgePosition.topEnd(top: -20, end: -20),
+              showBadge: true,
+              ignorePointer: false,
+              badgeContent: Text('12'),
+              badgeStyle: badges.BadgeStyle(
+                shape: badges.BadgeShape.instagram,
+                badgeColor: Colors.blue,
+                padding: EdgeInsets.all(5),
+                borderRadius: BorderRadius.circular(4),
+                borderSide: BorderSide(color: Colors.white, width: 2),
+                elevation: 0,
+              ),
+              child: Icon(Icons.history),
+              onTap: () {},
+            ), // ,
             label: '发现',
           ),
           BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: '我'),
