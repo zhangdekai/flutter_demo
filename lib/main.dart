@@ -113,8 +113,10 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
 
   ThemeData get _buildThemeData {
     return ThemeData(
-        primaryColor: Colors.yellowAccent,
-        scaffoldBackgroundColor: Colors.white);
+      primaryColor: Colors.yellowAccent,
+      scaffoldBackgroundColor: Colors.white,
+      splashFactory: NoSplash.splashFactory, // 禁止波纹效果
+    );
   }
 }
 
