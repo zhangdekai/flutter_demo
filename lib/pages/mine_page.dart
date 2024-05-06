@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weiChatDemo/common/const.dart';
@@ -24,7 +25,6 @@ class _MinePageState extends State<MinePage> {
 
   @override
   Widget build(BuildContext context) {
-
     print('Mine build');
 
     return Scaffold(
@@ -59,17 +59,20 @@ class _MinePageState extends State<MinePage> {
             ),
           ),
           //相机icon
-          Container(
-            height: 25,
-            margin: EdgeInsets.only(top: 40, right: 15),
-            color: weChatLucency,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Image(
-                  image: AssetImage('images/相机.png'),
-                )
-              ],
+          Positioned(
+            right: 15,
+            top: 40,
+            child: Container(
+              height: 25,
+              width: 25,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Image(
+                    image: AssetImage('images/相机.png'),
+                  )
+                ],
+              ),
             ),
           ),
         ],
