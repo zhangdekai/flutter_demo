@@ -64,19 +64,22 @@ class RootPage extends BaseViewPage<RootPageController> {
           ),
           BottomNavigationBarItem(
             icon: badges.Badge(
-              position: badges.BadgePosition.topEnd(top: -20, end: -20),
+              position: badges.BadgePosition.topEnd(top: -10, end: -35),
               showBadge: true,
               ignorePointer: false,
               badgeContent: Text('12'),
               badgeStyle: badges.BadgeStyle(
                 shape: badges.BadgeShape.instagram,
                 badgeColor: Colors.blue,
-                padding: EdgeInsets.all(5),
-                borderRadius: BorderRadius.circular(4),
-                borderSide: BorderSide(color: Colors.white, width: 2),
-                elevation: 0,
               ),
-              child: Icon(Icons.history),
+              child: SizedBox(
+                height: 25,
+                width: 25,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 9),
+                  child: Icon(Icons.history),
+                ),
+              ),
               onTap: () {},
             ), // ,
             label: '发现',
