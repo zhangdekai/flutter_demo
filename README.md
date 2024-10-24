@@ -15,10 +15,13 @@ Flutter原有Navigator,
 Current Version：
 
 ```
-Flutter 3.13.6 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision ead455963c (3 months ago) • 2023-09-26 18:28:17 -0700
-Engine • revision a794cf2681
-Tools • Dart 3.1.3 • DevTools 2.25.0
+Flutter 3.22.3 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision b0850beeb2 (3 months ago) • 2024-07-16 21:43:41 -0700
+Engine • revision 235db911ba
+Tools • Dart 3.4.4 • DevTools 2.34.3
+
+`ps: 2024-10-24 update to Flutter 3.22.3  `
+
 ```
 
 `ps: 本Demo大约2023-8月，当前Demo 从2.x 升级到 Flutter 3.x`
@@ -64,5 +67,9 @@ This part is based on the `lib` file
 * [flutter_bloc使用解析](https://juejin.cn/post/6856268776510504968#heading-16)
 * [pull_to_refresh](https://github.com/peng8350/flutter_pulltorefresh/blob/master/README_CN.md)
 * [card_swiper](https://pub-web.flutter-io.cn/packages/card_swiper)
+
+PS: Android 运行，因为flutter 版本一直在升级，依赖的lib 有不兼容的了，导致无法正常运行。 但内部代码
+大部分均可用，iOS可运行。
+
 
 
