@@ -1,4 +1,4 @@
-import 'package:flukit/example/routes/watermark.dart';
+// import 'package:flukit/example/routes/watermark.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -26,23 +26,19 @@ class CustomWidgetTest extends BaseView {
 
   @override
   Widget buildPage(BuildContext context) {
-
     print('CustomWidgetTest build');
     return Center(
       child: Column(
         children: [
           _buildFirstCustomWidget(),
-          PushButton.button1(
-              context, CustomPaintExample(), 'CustomPaintExample'),
-          PushButton.button1(context, GradientCircularProgressRoute(),
-              'GradientCircularProgress'),
-          PushButton.button1(
-              context, CustomCheckboxTest(), 'CustomCheckboxTest'),
+          PushButton.button1(context, CustomPaintExample(), 'CustomPaintExample'),
+          PushButton.button1(context, GradientCircularProgressRoute(), 'GradientCircularProgress'),
+          PushButton.button1(context, CustomCheckboxTest(), 'CustomCheckboxTest'),
           PushButton.button1(
               context,
               Scaffold(
-                appBar: AppBar(title: Text('WaterMark')),
-                body: WatermarkRoute(),
+                appBar: AppBar(title: Text('CustomCheckboxTest')),
+                body: CustomCheckboxTest(),
               ),
               'WatermarkRoute'),
         ],
@@ -72,6 +68,7 @@ class _CustomButton extends StatefulWidget {
   final String? text;
   final Color? background;
   final VoidCallback? onTap;
+
   const _CustomButton({super.key, this.text = '', this.background, this.onTap});
 
   @override

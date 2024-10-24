@@ -8,6 +8,7 @@ import 'dart:isolate';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:weiChatDemo/Error/flutter_error_page.dart';
 import 'package:weiChatDemo/common/const.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
@@ -93,6 +94,7 @@ class _ChatPageState extends State<ChatPage> {
       'Flutter Bloc',
       'Pull to Refresh',
       'Card Swiper',
+      'Flutter Error',
     ];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
@@ -109,40 +111,35 @@ class _ChatPageState extends State<ChatPage> {
         NavigatorTool.pushFrom(context, SliverWidgetTestPage());
         break;
       case 2:
-        Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (c) => PageRouteTest()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => PageRouteTest()));
         break;
       case 3:
         Get.toNamed(RouteName.pageEventTest);
         break;
       case 4:
-        Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (c) => CustomWidgetTest()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => CustomWidgetTest()));
         break;
       case 5:
-        Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (c) => FileAndNetworkTest()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FileAndNetworkTest()));
         break;
 
       case 6:
-        Navigator.of(context).push(
-            CupertinoPageRoute(builder: (c) => ScrollablePositionedListPage()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => ScrollablePositionedListPage()));
         break;
       case 7:
-        Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (c) => SliderUpPanelPage()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => SliderUpPanelPage()));
         break;
       case 8:
-        Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (c) => FlutterBlocTestPage()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterBlocTestPage()));
         break;
       case 9:
-        Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (c) => PullToRefreshPage()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => PullToRefreshPage()));
         break;
       case 10:
-        Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (c) => CardSwiperPage()));
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => CardSwiperPage()));
+        break;
+      case 11:
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterErrorPage()));
         break;
     }
   }
@@ -156,14 +153,10 @@ class _ChatPageState extends State<ChatPage> {
           offset: Offset(0, 60),
           itemBuilder: (BuildContext content) {
             return [
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
-              PopupMenuItem(
-                  child: _buildPopupMenuItem('images/收付款.png', '收付款')),
+              PopupMenuItem(child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
+              PopupMenuItem(child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
+              PopupMenuItem(child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
+              PopupMenuItem(child: _buildPopupMenuItem('images/收付款.png', '收付款')),
             ];
           },
           child: Icon(Icons.add),
