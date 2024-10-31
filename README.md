@@ -68,8 +68,4 @@ This part is based on the `lib` file
 * [pull_to_refresh](https://github.com/peng8350/flutter_pulltorefresh/blob/master/README_CN.md)
 * [card_swiper](https://pub-web.flutter-io.cn/packages/card_swiper)
 
-PS: Android 运行，因为flutter 版本一直在升级，依赖的lib 有不兼容的了，导致无法正常运行。 但内部代码
-大部分均可用，iOS可运行。
-
-
 
