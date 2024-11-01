@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 
@@ -15,37 +17,52 @@ class _CardSwiperPageState extends State<FlutterErrorPage> {
       appBar: AppBar(
         title: Text('ERROR TEST'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TextButton(
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blue)),
-              onPressed: () {
-                _testFuture().catchError((_) {});
-              },
-              child: Text('error 1')),
-          TextButton(
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blue)),
-              onPressed: () {
-                _testFuture2();
-              },
-              child: Text('error 2')),
-          TextButton(
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blue)),
-              onPressed: () {
-                _testFuture3();
-              },
-              child: Text('error 3')),
-          TextButton(
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blue)),
-              onPressed: () async {
-                await _testFutureDynamic().catchError((_) {
-                  print('error 4');
-                  // return 1233;
-                });
-              },
-              child: Text('error 4')),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextButton(
+                style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
+                onPressed: () {
+                  _testFuture().catchError((_) {});
+                },
+                child: Text('error 1')),
+            TextButton(
+                style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
+                onPressed: () {
+                  _testFuture2();
+                },
+                child: Text('error 2')),
+            TextButton(
+                style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
+                onPressed: () {
+                  _testFuture3();
+                },
+                child: Text('error 3')),
+            TextButton(
+                style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
+                onPressed: () async {
+                  await _testFutureDynamic().catchError((_) {
+                    print('error 4');
+                    // return 1233;
+                  });
+                },
+                child: Text('error 4')),
+            TextButton(
+                style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
+                onPressed: () async {
+                  String jsonString = '.{"name": "Alice", "age": 30}';
+                  try {
+                    Map<String, dynamic> parsedJson = jsonDecode(jsonString);
+                    print('JSON is valid: $parsedJson');
+                  } catch (e) {
+                    print('JSON is invalid: $e');
+                  }
+                },
+                child: Text('jsonDecode error')),
+          ],
+        ),
       ),
     );
   }
