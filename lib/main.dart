@@ -8,6 +8,7 @@ import 'package:weiChatDemo/generated/l10n.dart';
 import 'package:weiChatDemo/page_route/page_route_test.dart';
 import 'package:weiChatDemo/pages/root_page.dart';
 import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
+import 'common/const.dart';
 import 'event/event_handle_test/view.dart';
 import 'good_libs/flutter_bloc/cubit_test/cubit.dart';
 
@@ -79,8 +80,7 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
       getPages: [
         GetPage(name: RouteName.homepage, page: () => RootPage()),
         GetPage(name: RouteName.pageRouteTest3, page: () => PageRouteTest3()),
-        GetPage(
-            name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
+        GetPage(name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
         GetPage(name: RouteName.pageWidgetsTest, page: () => WidgetsTestPage()),
       ],
       navigatorObservers: [
@@ -113,7 +113,7 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
 
   ThemeData get _buildThemeData {
     return ThemeData(
-      primaryColor: Colors.yellowAccent,
+      primaryColor: weChatThemeColor,
       scaffoldBackgroundColor: Colors.white,
       splashFactory: NoSplash.splashFactory, // 禁止波纹效果
     );

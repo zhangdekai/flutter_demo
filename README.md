@@ -83,5 +83,6 @@ This part is based on the `lib` file
 * [flutter_bloc使用解析](https://juejin.cn/post/6856268776510504968#heading-16)
 * [pull_to_refresh](https://github.com/peng8350/flutter_pulltorefresh/blob/master/README_CN.md)
 * [card_swiper](https://pub-web.flutter-io.cn/packages/card_swiper)
+* [flutter_staggered_grid_view 瀑布流布局](https://pub-web.flutter-io.cn/packages/flutter_staggered_grid_view)
 
 

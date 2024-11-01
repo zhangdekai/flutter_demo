@@ -15,6 +15,7 @@ import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/custom_widget/custom_widet_test.dart';
 import 'package:weiChatDemo/good_libs/card_swiper/card_swiper_page.dart';
 import 'package:weiChatDemo/good_libs/flutter_bloc/flutter_bloc_page.dart';
+import 'package:weiChatDemo/good_libs/flutter_staggered_grid_view/flutter_staggered_grid_view_page.dart';
 import 'package:weiChatDemo/good_libs/pull_to_refresh/pull_to_refesh_page.dart';
 import 'package:weiChatDemo/good_libs/scrollable_positioned_list/scrollable_positioned_list_page.dart';
 import 'package:weiChatDemo/good_libs/slider_up_panel_page/slider_up_panel_page.dart';
@@ -95,6 +96,7 @@ class _ChatPageState extends State<ChatPage> {
       'Pull to Refresh',
       'Card Swiper',
       'Flutter Error',
+      'Flutter StaggeredGridView',
     ];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
@@ -140,6 +142,9 @@ class _ChatPageState extends State<ChatPage> {
         break;
       case 11:
         Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterErrorPage()));
+        break;
+      case 12:
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterStaggeredGridViewPage()));
         break;
     }
   }
