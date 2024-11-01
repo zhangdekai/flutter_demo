@@ -66,18 +66,29 @@ class _CardSwiperPageState extends State<FlutterErrorPage> {
                 style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
                 onPressed: () async {
                   try {
-                    // final aa = NumberFormat.decimalPattern('ars_SA').format(123);
-                    final aa = NumberFormat.decimalPattern('ar_SA').format(123.2344); // good
+                    final aa = NumberFormat.decimalPattern('ars_SA').format(123);
+                    // final aa = NumberFormat.decimalPattern('ar_SA').format(123.34343); // good
                     print('aa === $aa');
                   } catch (e) {
                     print('NumberFormat.decimalPattern e === ${e.toString()}');
                   }
+                  print(decimalPattern(345));
                 },
                 child: Text('NumberFormat.decimalPattern error')),
           ],
         ),
       ),
     );
+  }
+
+  String decimalPattern(int num) {
+    String text = '$num';
+    try {
+      text = NumberFormat.decimalPattern().format(num);
+    } catch (e) {
+      print('decimalPattern e = ${e.toString()}');
+    }
+    return text;
   }
 
   Future<int> _testFuture() async {
