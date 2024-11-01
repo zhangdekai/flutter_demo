@@ -58,9 +58,21 @@ This part is based on the `lib` file
 
 ## main page
 
-![home_page.png](assets%2Fhome_page.png)
-![home_friends.png](assets%2Fhome_friends.png)
-![home_discovery.png](assets%2Fhome_discovery.png)
+<table>
+<tr>
+<td> <img src="assets/home_page.png" width="200"></td>
+<td> <img src="assets/home_friends.png" width="200"></td>
+<td> <img src="assets/home_discovery.png" width="200"></td>
+
+</tr>
+
+</table>
+
+[//]: # (![home_page.png]&#40;assets%2Fhome_page.png&#41;)
+
+[//]: # (![home_friends.png]&#40;assets%2Fhome_friends.png&#41;)
+
+[//]: # (![home_discovery.png]&#40;assets%2Fhome_discovery.png&#41;)
 
 ## Good Libs
 
