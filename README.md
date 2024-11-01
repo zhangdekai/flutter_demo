@@ -56,6 +56,12 @@ This part is based on the `lib` file
 * Widgets test `1：Stream StreamBuild  2：FutureBuilder 3：LayoutBuilder 4：Flexible 5：GridView`
 * main
 
+## main page
+
+![home_page.png](assets%2Fhome_page.png)
+![home_friends.png](assets%2Fhome_friends.png)
+![home_discovery.png](assets%2Fhome_discovery.png)
+
 ## Good Libs
 
 * [flutter_native_splash](https://pub-web.flutter-io.cn/packages/flutter_native_splash)
