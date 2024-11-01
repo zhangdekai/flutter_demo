@@ -60,6 +60,8 @@ This part is based on the `lib` file
 
 ## Main page
 
+* Pages -> 主页root_page 和 各项首页
+
 <table>
 <tr>
 <td> <img src="assets/home_page.png" width="200"></td>
