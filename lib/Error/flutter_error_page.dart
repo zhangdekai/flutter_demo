@@ -28,28 +28,28 @@ class _CardSwiperPageState extends State<FlutterErrorPage> {
                 onPressed: () {
                   _testFuture().catchError((_) {});
                 },
-                child: Text('error 1')),
+                child: Text('catchError - not return value')),
             TextButton(
                 style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
                 onPressed: () {
                   _testFuture2();
                 },
-                child: Text('error 2')),
+                child: Text('try - catch Future<dynamic>')),
             TextButton(
                 style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
                 onPressed: () {
                   _testFuture3();
                 },
-                child: Text('error 3')),
+                child: Text('then(return value) -> catchError  ')),
             TextButton(
                 style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
                 onPressed: () async {
-                  await _testFutureDynamic().catchError((_) {
-                    print('error 4');
+                  await _testFutureDynamic().catchError((e) {
+                    print('Future<dynamic>  catchError e == $e');
                     // return 1233;
                   });
                 },
-                child: Text('error 4')),
+                child: Text('Future<dynamic>  catchError')),
             TextButton(
                 style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
                 onPressed: () async {
@@ -66,13 +66,13 @@ class _CardSwiperPageState extends State<FlutterErrorPage> {
                 style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
                 onPressed: () async {
                   try {
-                    final aa = NumberFormat.decimalPattern('ars_SA').format(123);
+                    final aa = NumberFormat.decimalPattern('ars_SA').format(123232234);
                     // final aa = NumberFormat.decimalPattern('ar_SA').format(123.34343); // good
                     print('aa === $aa');
                   } catch (e) {
                     print('NumberFormat.decimalPattern e === ${e.toString()}');
                   }
-                  print(decimalPattern(345));
+                  print(decimalPattern(123232234));
                 },
                 child: Text('NumberFormat.decimalPattern error')),
           ],
