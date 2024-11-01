@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class FlutterErrorPage extends StatefulWidget {
   const FlutterErrorPage({super.key});
@@ -61,6 +62,18 @@ class _CardSwiperPageState extends State<FlutterErrorPage> {
                   }
                 },
                 child: Text('jsonDecode error')),
+            TextButton(
+                style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue[100])),
+                onPressed: () async {
+                  try {
+                    // final aa = NumberFormat.decimalPattern('ars_SA').format(123);
+                    final aa = NumberFormat.decimalPattern('ar_SA').format(123.2344); // good
+                    print('aa === $aa');
+                  } catch (e) {
+                    print('NumberFormat.decimalPattern e === ${e.toString()}');
+                  }
+                },
+                child: Text('NumberFormat.decimalPattern error')),
           ],
         ),
       ),
