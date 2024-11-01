@@ -10,7 +10,7 @@ Demo 中为了演练，穿插使用了2种状态管理lib, Provider and GetX， 
 Flutter原有Navigator,
 正式项目建议选择其中一种，统一管理应用。
 
-# flutter --version
+## flutter --version
 
 Current Version：
 
@@ -26,7 +26,7 @@ Tools • Dart 3.4.4 • DevTools 2.34.3
 
 `ps: 本Demo大约2023-8月，当前Demo 从2.x 升级到 Flutter 3.x`
 
-# Flutter Skill list
+## Flutter Skill list
 
 This part is based on the `lib` file
 
@@ -36,6 +36,8 @@ This part is based on the `lib` file
 * Common setting
 * Const value setting
 * CustomWidget widget组合，Custom， Use CustomPaint Canvas，RenderObject
+* Dart test
+* Error test
 * Event 事件处理
 * File and Network -> File IO, HttpClient, Dio and WebSocket
 * Generated for 国际化，包括 `l10n` file
@@ -56,7 +58,7 @@ This part is based on the `lib` file
 * Widgets test `1：Stream StreamBuild  2：FutureBuilder 3：LayoutBuilder 4：Flexible 5：GridView`
 * main
 
-## main page
+## Main page
 
 <table>
 <tr>
@@ -67,12 +69,6 @@ This part is based on the `lib` file
 </tr>
 
 </table>
-
-[//]: # (![home_page.png]&#40;assets%2Fhome_page.png&#41;)
-
-[//]: # (![home_friends.png]&#40;assets%2Fhome_friends.png&#41;)
-
-[//]: # (![home_discovery.png]&#40;assets%2Fhome_discovery.png&#41;)
 
 ## Good Libs
 
