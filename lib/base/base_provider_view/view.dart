@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:weiChatDemo/base/base_provider_view/provider.dart';
 import 'package:weiChatDemo/common/const.dart';
 
-abstract class BaseProviderViewPage<T extends BaseProviderViewProvider>
-    extends StatelessWidget {
+//ignore: must_be_immutable
+abstract class BaseProviderViewPage<T extends BaseProviderViewProvider> extends StatelessWidget {
   final String title = '';
   final bool willPop = true;
 
@@ -21,7 +21,7 @@ abstract class BaseProviderViewPage<T extends BaseProviderViewProvider>
     return PopScope(
       onPopInvoked: (didPop) async {
         onWillPop(context);
-        },
+      },
       child: ChangeNotifierProvider(
         create: (BuildContext context) => initProvider(),
         builder: (context, child) => Scaffold(
