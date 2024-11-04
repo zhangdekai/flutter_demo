@@ -24,6 +24,7 @@ import 'package:weiChatDemo/pages/chat/third_party_login_page.dart';
 import 'package:weiChatDemo/sliver/sliver_test.dart';
 import '../../file_and_network_operate/file_netork_test.dart';
 import '../../page_route/page_route_test.dart';
+import 'good_lib_test_page.dart';
 
 class ChatPage extends StatefulWidget {
   @override
@@ -90,13 +91,8 @@ class _ChatPageState extends State<ChatPage> {
       'Event Handle',
       '自定义组件',
       'File和网络',
-      'ScrollablePositionedListPage',
-      'Slider Up Panel',
-      'Flutter Bloc',
-      'Pull to Refresh',
-      'Card Swiper',
       'Flutter Error',
-      'Flutter StaggeredGridView',
+      'Good Libs Test',
     ];
     for (int i = 0; i < titles.length; i++) {
       Chat temp = Chat(i, titles[i], 'message$i', '');
@@ -124,27 +120,11 @@ class _ChatPageState extends State<ChatPage> {
       case 5:
         Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FileAndNetworkTest()));
         break;
-
       case 6:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => ScrollablePositionedListPage()));
-        break;
-      case 7:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => SliderUpPanelPage()));
-        break;
-      case 8:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterBlocTestPage()));
-        break;
-      case 9:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => PullToRefreshPage()));
-        break;
-      case 10:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => CardSwiperPage()));
-        break;
-      case 11:
         Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterErrorPage()));
         break;
-      case 12:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterStaggeredGridViewPage()));
+      case 7:
+        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => GoodLibTestPage()));
         break;
     }
   }
