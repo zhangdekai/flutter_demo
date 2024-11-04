@@ -103,10 +103,10 @@ class _ChatPageState extends State<ChatPage> {
   void _onTap(int index) {
     switch (index) {
       case 0:
-        NavigatorTool.pushFrom(context, ThirdPartyLoginPage());
+        NavigatorTool.push(context, ThirdPartyLoginPage());
         break;
       case 1:
-        NavigatorTool.pushFrom(context, SliverWidgetTestPage());
+        NavigatorTool.push(context, SliverWidgetTestPage());
         break;
       case 2:
         Navigator.of(context).push(CupertinoPageRoute(builder: (c) => PageRouteTest()));

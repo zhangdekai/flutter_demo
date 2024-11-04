@@ -47,28 +47,28 @@ class _DiscoverPageState extends State<DiscoverPage> {
               imageName: 'images/小程序.png',
               title: '测试Dart异步编程',
               callBack: () {
-                NavigatorTool.pushFrom(context, TestDartSync());
+                NavigatorTool.push(context, TestDartSync());
               },
             ),
             DiscoverCell(
               imageName: 'images/摇一摇.png',
               title: '动画-测试',
               callBack: () {
-                NavigatorTool.pushFrom(context, AnimationPageTest());
+                NavigatorTool.push(context, AnimationPageTest());
               },
             ),
             DiscoverCell(
               imageName: 'images/游戏.png',
               title: '测试Provider',
               callBack: () {
-                NavigatorTool.pushFrom(context, ProviderDemoPage());
+                NavigatorTool.push(context, ProviderDemoPage());
               },
             ),
             DiscoverCell(
               imageName: 'images/看一看icon.png',
               title: '各种各样的Keys',
               callBack: () {
-                NavigatorTool.pushFrom(context, VariousKeyTest());
+                NavigatorTool.push(context, VariousKeyTest());
               },
             ),
             DiscoverCell(
@@ -102,7 +102,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               imageName: 'images/搜一搜 2.png',
               title: '图片裁剪',
               callBack: () {
-                NavigatorTool.pushFrom(context, ImageClipperTest());
+                NavigatorTool.push(context, ImageClipperTest());
               },
             ),
             SizedBox(height: 10),
@@ -110,8 +110,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               imageName: 'images/附近的人icon.png',
               title: '测试 Fish_Redux',
               callBack: () {
-                NavigatorTool.pushNamed(context, 'fish_test',
-                    argument: {'name': 'i am from discover page'});
+                NavigatorTool.pushNamed(context, 'fish_test', argument: {'name': 'i am from discover page'});
               },
             ),
             SizedBox(height: 10),
@@ -121,7 +120,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               subTitle: '618限时特价',
               subImageName: 'images/badge.png',
               callBack: () {
-                NavigatorTool.pushFrom(context, SQLiteTestPage());
+                NavigatorTool.push(context, SQLiteTestPage());
               },
             ),
             Row(
@@ -135,7 +134,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               imageName: 'images/小程序.png',
               title: '数据共享',
               callBack: () {
-                NavigatorTool.pushFrom(context, InheritedWidgetDemo());
+                NavigatorTool.push(context, InheritedWidgetDemo());
               },
             ),
           ],
