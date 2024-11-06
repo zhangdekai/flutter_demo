@@ -3,6 +3,8 @@ import 'package:flutter/material.dart' hide Page, Action;
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import 'package:weiChatDemo/common/common_func.dart';
 import 'package:weiChatDemo/const_value/route_name.dart';
 import 'package:weiChatDemo/generated/l10n.dart';
 import 'package:weiChatDemo/page_route/page_route_test.dart';
@@ -15,15 +17,16 @@ import 'good_libs/flutter_bloc/cubit_test/cubit.dart';
 void main() {
   _debugModel();
 
+  _catchError();
   runZonedGuarded(() => runApp(MyApp()), (error, stack) {
     /// can add error report here, such as report to firebase crash
-    debugPrint('error == $error');
+    debugPrint('main- get runZonedGuarded error == ${error.toString()}');
   });
 }
 
 void _catchError() {
   FlutterError.onError = (FlutterErrorDetails details) {
-    // reportError();
+    print('FlutterErrorDetails == ${details.toString()}');
   };
 }
 
@@ -135,4 +138,119 @@ class _MyNavigatorObserver extends NavigatorObserver {
 
   @override
   void didReplace({Route? newRoute, Route? oldRoute}) {}
+}
+
+final router = GoRouter(
+  routes: [
+    GoRoute(
+      name: 'A',
+      path: '/',
+      builder: (_, __) => const PageA(),
+    ),
+    GoRoute(
+      name: 'B',
+      path: '/B',
+      builder: (_, __) => const PageB(),
+    ),
+    GoRoute(
+      name: 'C',
+      path: '/C',
+      builder: (_, __) => const PageC(),
+    ),
+  ],
+);
+
+class TestApp extends StatelessWidget {
+  const TestApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      routerConfig: router,
+    );
+  }
+}
+
+class PageA extends StatelessWidget {
+  const PageA({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: createCommonAppBar(context, title: 'A Page'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: TextButton(
+              onPressed: () async {
+                context.pushNamed("B").then((v) {
+                  // if (context.mounted) {
+                  //   context.pushNamed("C");
+                  // }
+                });
+                // await _caseOne();
+              },
+              child: const Text('Go to page B'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _caseOne() async {
+    final ctx = router.routerDelegate.navigatorKey.currentContext!;
+    unawaited(ctx.pushNamed('A'));
+    await Future.delayed(const Duration(milliseconds: 100));
+    ctx.pop(true);
+    ctx.goNamed('B');
+  }
+}
+
+class PageB extends StatelessWidget {
+  const PageB({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // context.pop(true);
+    return Scaffold(
+      appBar: createCommonAppBar(context, title: 'PageB'),
+      // backgroundColor: Colors.brown,
+      body: Column(
+        children: [
+          TextButton(
+              onPressed: () async {
+                // await Future.delayed(Duration(milliseconds: 1001));
+                context.pop(true);
+                context.pushNamed("C");
+              },
+              child: Text('Pop'))
+        ],
+      ),
+    );
+  }
+}
+
+class PageC extends StatefulWidget {
+  const PageC({super.key});
+
+  @override
+  State<PageC> createState() => _PageCState();
+}
+
+class _PageCState extends State<PageC> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: createCommonAppBar(context, title: 'PageC'),
+      backgroundColor: Colors.brown,
+    );
+  }
 }
