@@ -4,6 +4,7 @@ import 'package:weiChatDemo/Animation/animation_scale_test.dart';
 import 'package:weiChatDemo/base/base_view.dart';
 
 import '../common/common_button.dart';
+import 'animation_avatar_water.dart';
 import 'animation_custom_decorateBox.dart';
 import 'animation_hero.dart';
 import 'animation_stagger.dart';
@@ -45,15 +46,11 @@ class AnimationPageTest extends BaseView {
         children: [
           PushButton.button1(context, ScaleAnimationRoute(), 'Scale Animation'),
           TextButton(
-              style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
-                      EdgeInsets.symmetric(vertical: 16))),
+              style: ButtonStyle(padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 16))),
               onPressed: () {
-                Navigator.push(context, PageRouteBuilder(
-                    pageBuilder: (context, animation, secondAnimation) {
+                Navigator.push(context, PageRouteBuilder(pageBuilder: (context, animation, secondAnimation) {
                   /// 可自定义带animation 的widget。
-                  return FadeTransition(
-                      opacity: animation, child: ScaleAnimationRoute());
+                  return FadeTransition(opacity: animation, child: ScaleAnimationRoute());
                 }));
               },
               child: Text(
@@ -61,16 +58,12 @@ class AnimationPageTest extends BaseView {
                 textScaleFactor: 1.5,
               )),
           PushButton.button1(context, HeroAnimationRouteA(), 'Hero Animation'),
-          PushButton.button1(
-              context, StaggerAnimationTest(), 'Stagger Animation'),
-          PushButton.button1(
-              context, AnimationSwitcherTest(), 'AnimatedSwitcher'),
-          PushButton.button1(
-              context, AnimationCustomExample(), 'Custom Animation Decorate'),
-          PushButton.button1(
-              context, AnimationWidgetTest(), 'AnimationWidgetTest'),
-          PushButton.button1(
-              context, AnimatedWidgetsTest1(), 'AnimationWidgetTest1'),
+          PushButton.button1(context, StaggerAnimationTest(), 'Stagger Animation'),
+          PushButton.button1(context, AnimationSwitcherTest(), 'AnimatedSwitcher'),
+          PushButton.button1(context, AnimationCustomExample(), 'Custom Animation Decorate'),
+          PushButton.button1(context, AnimationWidgetTest(), 'AnimationWidgetTest'),
+          PushButton.button1(context, AnimatedWidgetsTest1(), 'AnimationWidgetTest1'),
+          PushButton.button1(context, AnimatedAvatarWater(), 'AnimatedAvatarWater'),
         ],
       ),
     );
