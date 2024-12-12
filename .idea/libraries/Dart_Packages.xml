@@ -926,6 +926,13 @@
             </list>
           </value>
         </entry>
+        <entry key="system_info_plus">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/system_info_plus-0.0.5/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="term_glyph">
           <value>
             <list>
@@ -1168,6 +1175,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/synchronized-3.1.0+1/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/system_info_plus-0.0.5/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/test_api-0.7.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/timing-1.0.1/lib" />
