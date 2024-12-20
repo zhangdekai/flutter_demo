@@ -6,7 +6,7 @@
 
 3: protocol : 协议，规范 protocol， 外交礼节；草案；
 
-4: mustache ： 小胡子 this mustache helps me to see clearly. mustache
+4: mustache ：/ˈmʌstæʃ/ 小胡子 this mustache helps me to see clearly. mustache
 
 5: genius : 天才；天资；天赋
 
@@ -28,12 +28,32 @@
 
 14: microfilm : 微缩胶卷 microfilm， microfilm， microfilm
 
+17: microcosm : 微观世界，缩影；The lollipop(棒棒糖) seems to be a microcosm of the universe.
+
 15: couch : 长沙发， 长椅； couch potato 电视迷, couch ， couch
 
 16: heir : 继承者； 后继者； the baby is the heir of this family
 
-17: microcosm : 微观世界，缩影；The lollipop(棒棒糖) seems to be a microcosm of the universe.
-
 18: plunder ： 抢劫； 掠夺 The castle was plundered of its valuables.
 
 19: commend : 称赞；推荐；委托保管
+
+传播 propagate
+漏斗 funnel
+导弹 missile
+协议 protocol
+小胡子 mustache
+天才 genius
+激怒 irritate
+住宅 residence
+聪颖的 brilliant
+可行的 viable
+便利于 facilitate
+哈欠 yawn
+折磨 torture
+微缩胶卷 microfilm
+微观世界 microcosm
+继承者 heir
+抢劫 plunder
+长沙发 couch
+称赞，推荐 commend
