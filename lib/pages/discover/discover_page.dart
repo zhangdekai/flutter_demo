@@ -10,6 +10,8 @@ import 'package:weiChatDemo/key_test/various_key_test.dart';
 import 'package:weiChatDemo/pages/discover/discover_cell.dart';
 import 'package:weiChatDemo/provider_test/provider_demo/view.dart';
 import 'package:weiChatDemo/sqlite/sqlite_page_test.dart';
+import 'package:weiChatDemo/widgets_test/widget_api_test.dart';
+import 'package:weiChatDemo/widgets_test/widgets_test/view.dart';
 import '../../async_Test/test_dart_async.dart';
 
 class DiscoverPage extends StatefulWidget {
@@ -73,11 +75,11 @@ class _DiscoverPageState extends State<DiscoverPage> {
             ),
             DiscoverCell(
               imageName: 'images/小程序.png',
-              title: 'Widget api test',
+              title: '+ - 小游戏',
               callBack: () {
-                Get.toNamed(RouteName.pageWidgetsTest);
+                // Get.toNamed(RouteName.pageWidgetsTest);
 
-                // NavigatorTool.pushFrom(context, WidgetsApiTest(testType: 0,));
+                NavigatorTool.push(context, WidgetsTestPage());
               },
             ),
             SizedBox(height: 10),

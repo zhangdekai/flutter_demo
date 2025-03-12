@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weiChatDemo/base/base_view.dart';
+import 'package:weiChatDemo/common/navigator_tool.dart';
 import 'package:weiChatDemo/widgets_test/widget_api_test.dart';
 import 'package:weiChatDemo/widgets_test/widget_dialog.dart';
 import 'package:weiChatDemo/widgets_test/widget_valueListenBuilder.dart';
@@ -25,7 +26,7 @@ class WidgetsTestPage extends BaseView {
                 return WidgetsApiTest(testType: 0);
               }));
             },
-            child: Text('GridViewTest')),
+            child: Text('GridViewTest 加减游戏')),
         SizedBox(height: 10),
         TextButton(
             onPressed: () {
@@ -66,7 +67,6 @@ class WidgetsTestPage extends BaseView {
               }));
             },
             child: Text('AfterLayoutTest')),
-
         SizedBox(height: 10),
         TextButton(
             onPressed: () {
@@ -75,7 +75,6 @@ class WidgetsTestPage extends BaseView {
               }));
             },
             child: Text('ValueListenBuildTest')),
-
         SizedBox(height: 10),
         TextButton(
             onPressed: () {
@@ -84,11 +83,12 @@ class WidgetsTestPage extends BaseView {
               }));
             },
             child: Text('DialogWidgetTest')),
-
-
-
-
-
+        TextButton(
+            onPressed: () {
+              NavigatorTool.push(context, WidgetsApiTest(testType: 6));
+            },
+            child: Text('Slider ')),
+        SizedBox(height: 10),
       ],
     );
   }

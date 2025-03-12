@@ -13,7 +13,6 @@ import 'package:flutter/rendering.dart';
 4：Flexible
 5：GridView
 
-
  */
 
 class WidgetsApiTest extends StatefulWidget {
@@ -47,7 +46,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
     WidgetsBinding.instance.endOfFrame.then((value) {
       if (mounted) {
         print('WidgetsBinding.instance.endOfFrame');
-      }else {
+      } else {
         print('no mounted');
       }
     });
@@ -55,7 +54,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       if (mounted) {
         print('WidgetsBinding.instance.addPostFrameCallback');
-      }else {
+      } else {
         print('no mounted');
       }
     });
@@ -63,9 +62,9 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
 
   @override
   void dispose() {
-    super.dispose();
     // 不加这行，_controller 报警告。
     _controller.close();
+    super.dispose();
   }
 
   @override
@@ -76,7 +75,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
         backgroundColor: Colors.cyan,
       ),
       body: Container(
-        color: Colors.green[200]?.withOpacity(0.8),
+        color: Colors.black.withOpacity(0.2),
         child: contentWidget(),
       ),
     );
@@ -96,8 +95,54 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
         return _futureBuilderTest();
       case 5:
         return _futureBuilderTest();
+      case 6:
+        return _sliderView();
     }
     return _gridViewTest();
+  }
+
+  double _volume = 0.1;
+
+  Widget _sliderView() {
+    return Center(
+      child: Container(
+        height: 16,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: SliderTheme(
+            data: SliderThemeData(
+              thumbShape: IndicatorSliderRoundBorderThumbShape(),
+              //RoundSliderThumbShape(enabledThumbRadius: 8),
+              trackHeight: 4,
+              //滑块颜色
+              thumbColor: Colors.white,
+              //已选中颜色
+              activeTrackColor: Colors.purple,
+              //未选中颜色
+              inactiveTrackColor: Color(0xFFEDE7F6),
+              //指示器点颜色
+              activeTickMarkColor: Colors.transparent,
+              //指示器点颜色
+              inactiveTickMarkColor: Colors.transparent,
+              //气泡颜色
+              valueIndicatorColor: Colors.white,
+              overlayColor: Colors.transparent,
+              showValueIndicator: ShowValueIndicator.never,
+            ),
+            child: Slider(
+              value: _volume,
+              min: 0,
+              max: 1,
+              onChanged: (newValue) {
+                setState(() {
+                  _volume = newValue;
+                });
+              },
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// 键盘输入 Stream 检测
@@ -130,10 +175,9 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
               children: List.generate(9, (index) {
                 return TextButton(
                     style: ButtonStyle(
-                        shape: MaterialStateProperty.all(
-                            BeveledRectangleBorder()), //BeveledRectangleBorder, CircleBorder
-                        backgroundColor: MaterialStateProperty.all(
-                            Colors.primaries[index][200])),
+                        shape:
+                            MaterialStateProperty.all(BeveledRectangleBorder()), //BeveledRectangleBorder, CircleBorder
+                        backgroundColor: MaterialStateProperty.all(Colors.primaries[index][200])),
                     onPressed: () {
                       // _controller.sink.add(index + 1);
                       _controller.add(index + 1);
@@ -201,8 +245,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
                       );
                     }
                     if (snapshot.hasData) {
-                      return Text(
-                          'ConnectionState.active date = ${snapshot.data}');
+                      return Text('ConnectionState.active date = ${snapshot.data}');
                     }
                     return Text('ConnectionState.active');
                   case ConnectionState.done:
@@ -222,8 +265,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
         style: TextStyle(fontSize: 20, color: Colors.red),
         child: FutureBuilder(
             // initialData: 32,
-            future: Future.delayed(
-                Duration(seconds: 2), () => 200), //100  throw('error 1')
+            future: Future.delayed(Duration(seconds: 2), () => 200), //100  throw('error 1')
             builder: (con, snp) {
               if (snp.hasError) {
                 return Icon(Icons.error, size: 50);
@@ -270,8 +312,7 @@ class _WidgetsApiTestState extends State<WidgetsApiTest> with AfterLayoutMixin {
       child: Padding(
         padding: EdgeInsets.all(20),
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-              minWidth: 100, minHeight: 100, maxWidth: 150, maxHeight: 148),
+          constraints: BoxConstraints(minWidth: 100, minHeight: 100, maxWidth: 150, maxHeight: 148),
           child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
               print('LayoutBuilder constraints = $constraints');
@@ -337,8 +378,7 @@ class PuzzleView extends StatefulWidget {
   _PuzzleViewState createState() => _PuzzleViewState();
 }
 
-class _PuzzleViewState extends State<PuzzleView>
-    with SingleTickerProviderStateMixin {
+class _PuzzleViewState extends State<PuzzleView> with SingleTickerProviderStateMixin {
   int a = 0;
   int b = 0;
   double x = 0;
@@ -354,9 +394,7 @@ class _PuzzleViewState extends State<PuzzleView>
   void initState() {
     super.initState();
 
-    _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 5))
-          ..forward();
+    _controller = AnimationController(vsync: this, duration: Duration(seconds: 5))..forward();
 
     reset();
 
@@ -392,10 +430,9 @@ class _PuzzleViewState extends State<PuzzleView>
             child: Container(
               child: TextButton(
                   style: ButtonStyle(
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.pink[300])),
+                      shape:
+                          MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0))),
+                      backgroundColor: MaterialStateProperty.all(Colors.pink[300])),
                   onPressed: () {},
                   child: Text(
                     '$a + $b',
@@ -469,10 +506,7 @@ class _BaseDialogState extends State<BaseDialog> {
             padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
             child: Text(
               widget.title == "" ? "标题" : widget.title,
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w300),
+              style: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w300),
             ),
           ),
           // 内容
@@ -559,5 +593,38 @@ class _BaseDialogState extends State<BaseDialog> {
   void _clickConfirm() {
     widget.confirmCallback?.call();
     _dismissDialog();
+  }
+}
+
+class IndicatorSliderRoundBorderThumbShape extends SliderComponentShape {
+  IndicatorSliderRoundBorderThumbShape();
+
+  @override
+  Size getPreferredSize(bool isEnabled, bool isDiscrete) {
+    return const Size(16, 16);
+  }
+
+  @override
+  void paint(
+    PaintingContext context,
+    Offset center, {
+    required Animation<double> activationAnimation,
+    required Animation<double> enableAnimation,
+    required bool isDiscrete,
+    required TextPainter labelPainter,
+    required RenderBox parentBox,
+    required SliderThemeData sliderTheme,
+    required TextDirection textDirection,
+    required double value,
+    required double textScaleFactor,
+    required Size sizeWithOverflow,
+  }) {
+    final Canvas canvas = context.canvas;
+    final Paint paint = Paint()..color = Colors.deepPurpleAccent;
+    paint.isAntiAlias = true;
+    //绘制圆点滑块
+    canvas.drawCircle(center, 8, paint);
+    paint.color = Colors.deepPurpleAccent;
+    canvas.drawCircle(center, 7, paint);
   }
 }
