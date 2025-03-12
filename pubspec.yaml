@@ -69,6 +69,8 @@ dependencies:
   #  go_router: 12.1.3
   go_router: 14.3.0
   system_info_plus: ^0.0.5 #获取设备内存信息
+  animated_toggle_switch: ^0.8.4
+  url_launcher: ^6.3.1
 
 
 

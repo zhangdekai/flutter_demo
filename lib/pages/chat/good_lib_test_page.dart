@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:weiChatDemo/base/base_provider_view/provider.dart';
 import 'package:weiChatDemo/base/base_provider_view/view.dart';
 import 'package:weiChatDemo/common/navigator_tool.dart';
+import 'package:weiChatDemo/good_libs/animated_toggle_switch/animated_toggle_switch_page.dart';
 import 'package:weiChatDemo/good_libs/card_swiper/card_swiper_page.dart';
 import 'package:weiChatDemo/good_libs/flutter_bloc/flutter_bloc_page.dart';
 import 'package:weiChatDemo/good_libs/flutter_staggered_grid_view/flutter_staggered_grid_view_page.dart';
@@ -27,7 +28,8 @@ class GoodLibTestPage extends BaseProviderViewPage {
     'Card Swiper',
     'Flutter StaggeredGridView',
     'Screen_protect',
-    'Screen_shot'
+    'Screen_shot',
+    'Animated Toggle Switch',
   ];
 
   @override
@@ -72,6 +74,13 @@ class GoodLibTestPage extends BaseProviderViewPage {
         NavigatorTool.push(context, ScreenProtectPage());
       case 7:
         NavigatorTool.push(context, ScreenShotPage());
+        break;
+      case 8:
+        NavigatorTool.push(
+            context,
+            AnimatedToggleSwitchPage(
+              title: "Animated Toggle Switch",
+            ));
         break;
     }
   }
