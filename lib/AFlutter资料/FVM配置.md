@@ -11,10 +11,14 @@
 * fvm install 3.19.6
 * dart pub global activate fvm (zsh: command not found: fvm(确认fvm 安装过了) )
 
+fvm as globally activated doesn't support Dart 3.4.4.
+|
+| try:
+| `dart pub global activate fvm` to reactivate.
+
 macbook M2 系列电脑
 
 命令默认是 zsh
-
 source .zshrc
 
 .zshrc 中 修改path

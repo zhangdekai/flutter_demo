@@ -18,6 +18,7 @@ class _AnimatedWidgetsTestState extends State<AnimatedWidgetsTest1> {
   TextStyle _style = const TextStyle(color: Colors.black);
   Color _decorationColor = Colors.blue;
   double _opacity = 1;
+  bool _isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -76,6 +77,113 @@ class _AnimatedWidgetsTestState extends State<AnimatedWidgetsTest1> {
                 ),
               ),
             ),
+            AnimatedSize(
+              duration: Duration(milliseconds: 500),
+              curve: Curves.easeInOut,
+              alignment: Alignment.topCenter,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    GestureDetector(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          '1 Tap to ${_isExpanded ? 'collapse' : 'expand'}!',
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                      onTap: () {
+                        setState(() {
+                          _isExpanded = !_isExpanded;
+                        });
+                      },
+                    ),
+                    if (_isExpanded) ...[
+                      SizedBox(height: 10),
+                      Text(
+                        'Dynamic content will appear here when expanded.',
+                        style: TextStyle(color: Colors.white, fontSize: 14),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+            ColoredBox(
+              color: Colors.yellow,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  AnimatedSize(
+                    duration: Duration(milliseconds: 500),
+                    child: _isExpanded
+                        ? Column(
+                            children: [
+                              SizedBox(height: 10),
+                              Text(
+                                'Dynamic content will appear here when expanded.',
+                                style: TextStyle(color: Colors.white, fontSize: 14),
+                              )
+                            ],
+                          )
+                        : Offstage(),
+                  ),
+                  GestureDetector(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        '1 Tap to ${_isExpanded ? 'collapse' : 'expand'}!',
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        _isExpanded = !_isExpanded;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            ),
+            AnimatedContainer(
+              duration: Duration(milliseconds: 500),
+              curve: Curves.easeInOut,
+              padding: EdgeInsets.all(16),
+              width: 300,
+              // height: _isExpanded ? 200 : 60,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  GestureDetector(
+                    child: Text(
+                      'Tap to ${_isExpanded ? 'collapse' : 'expand'}!',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        _isExpanded = !_isExpanded;
+                      });
+                    },
+                  ),
+                  if (_isExpanded) ...[
+                    SizedBox(height: 10),
+                    Text(
+                      'Dynamic content will appear here when expanded.',
+                      style: TextStyle(color: Colors.white, fontSize: 14),
+                    ),
+                  ],
+                ],
+              ),
+            ),
             AnimatedContainer(
               duration: duration,
               height: _height,
@@ -113,8 +221,7 @@ class _AnimatedWidgetsTestState extends State<AnimatedWidgetsTest1> {
               opacity: _opacity,
               duration: duration,
               child: TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blue)),
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blue)),
                 onPressed: () {
                   setState(() {
                     _opacity = 0.2;
@@ -127,16 +234,13 @@ class _AnimatedWidgetsTestState extends State<AnimatedWidgetsTest1> {
               ),
             ),
             AnimatedDecoratedBox(
-              duration: Duration(
-                  milliseconds: _decorationColor == Colors.red ? 400 : 2000),
+              duration: Duration(milliseconds: _decorationColor == Colors.red ? 400 : 2000),
               decoration: BoxDecoration(color: _decorationColor),
               child: Builder(builder: (context) {
                 return TextButton(
                   onPressed: () {
                     setState(() {
-                      _decorationColor = _decorationColor == Colors.blue
-                          ? Colors.red
-                          : Colors.blue;
+                      _decorationColor = _decorationColor == Colors.blue ? Colors.red : Colors.blue;
                     });
                   },
                   child: const Text(
