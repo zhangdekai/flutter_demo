@@ -61,7 +61,7 @@ class TestDartSync extends StatelessWidget {
 
     port.listen((message) {
       a = message;
-      print(a);
+      print('获取到 message a === $a');
 
       // 需要关闭 close  和  kill
       port.close();
@@ -73,7 +73,7 @@ class TestDartSync extends StatelessWidget {
   }
 
   void _performIsolateOperation(SendPort sendPort) async {
-    print('Start of isolate operation');
+    print('Start of isolate operation \n 模拟耗时计算');
 
     // // 模拟耗时计算
     int result = 0;
@@ -84,6 +84,7 @@ class TestDartSync extends StatelessWidget {
       result = result ^ i;
     }
 
+    print('Future.delayed 2 秒');
     await Future.delayed(Duration(seconds: 2));
 
     // 将结果发送回主线程

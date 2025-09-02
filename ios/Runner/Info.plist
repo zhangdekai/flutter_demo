@@ -57,7 +57,29 @@
 			<string>UIInterfaceOrientationLandscapeLeft</string>
 			<string>UIInterfaceOrientationLandscapeRight</string>
 		</array>
+		<key>CFBundleLocalizations</key>
+        <array>
+        	<string>en</string>
+        	<string>de</string>
+        </array>
 		<key>UIViewControllerBasedStatusBarAppearance</key>
 		<false/>
+		<!-- 网络权限 -->
+        <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <true/>
+        </dict>
+        <!-- 文档访问描述 -->
+        <key>NSDocumentsFolderUsageDescription</key>
+        <string>需要访问文档目录以保存下载的文件</string>
+        <!-- 允许添加图片到相册 -->
+        <key>NSPhotoLibraryAddUsageDescription</key>
+        <string>需要权限将图片保存到您的相册</string>
+        <!-- 允许文件在“文件”App 中显示（可选） -->
+        <key>LSSupportsOpeningDocumentsInPlace</key>
+        <true/>
+        <key>UIFileSharingEnabled</key>
+        <true/>
 	</dict>
 </plist>

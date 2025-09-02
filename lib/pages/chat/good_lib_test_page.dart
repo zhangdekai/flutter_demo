@@ -13,6 +13,7 @@ import 'package:weiChatDemo/good_libs/screen_shot_page/screen_shot_page.dart';
 import 'package:weiChatDemo/good_libs/scrollable_positioned_list/scrollable_positioned_list_page.dart';
 import 'package:weiChatDemo/good_libs/slider_up_panel_page/slider_up_panel_page.dart';
 
+import '../../flutter_quill_demo/flutter_quill_edit_demo.dart';
 import '../../good_libs/screen_protect/screen_protct_page.dart';
 
 // ignore: must_be_immutable
@@ -30,6 +31,7 @@ class GoodLibTestPage extends BaseProviderViewPage {
     'Screen_protect',
     'Screen_shot',
     'Animated Toggle Switch',
+    'QuillDemoPage',
   ];
 
   @override
@@ -53,22 +55,28 @@ class GoodLibTestPage extends BaseProviderViewPage {
   void _onTap(int index, BuildContext context) {
     switch (index) {
       case 0:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => ScrollablePositionedListPage()));
+        Navigator.of(context).push(
+            CupertinoPageRoute(builder: (c) => ScrollablePositionedListPage()));
         break;
       case 1:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => SliderUpPanelPage()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => SliderUpPanelPage()));
         break;
       case 2:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterBlocTestPage()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => FlutterBlocTestPage()));
         break;
       case 3:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => PullToRefreshPage()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => PullToRefreshPage()));
         break;
       case 4:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => CardSwiperPage()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => CardSwiperPage()));
         break;
       case 5:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterStaggeredGridViewPage()));
+        Navigator.of(context).push(
+            CupertinoPageRoute(builder: (c) => FlutterStaggeredGridViewPage()));
         break;
       case 6:
         NavigatorTool.push(context, ScreenProtectPage());
@@ -81,6 +89,10 @@ class GoodLibTestPage extends BaseProviderViewPage {
             AnimatedToggleSwitchPage(
               title: "Animated Toggle Switch",
             ));
+        break;
+
+      case 9:
+        NavigatorTool.push(context, QuillEditorDemo());
         break;
     }
   }

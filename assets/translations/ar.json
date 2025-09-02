@@ -1,0 +1,1886 @@
+{
+  "linky_voiceroom_text139": "اخرج من الغرفة",
+  "linky_voiceroom_text138": "صغّر الغرفة",
+  "linky_voiceroom_text108": "أنت أصلاً في الغرفة",
+  "Streamer_conversion_text5": "فهمت",
+  "Streamer_conversion_text4": "ممكن تلاقي طرق تكسب فلوس هنا",
+  "Streamer_conversion_text3": "استسلم",
+  "Streamer_conversion_text2": "ابدأ تكسب فلوس دلوقتي",
+  "linky_voiceroom_text104": "تقدر تشارك مع {num} متابع كحد أقصى.",
+  "linky_voiceroom_text103": "تقدر تشارك مع {num} متابع كحد أقصى.",
+  "linky_voiceroom_text102": "تمت المشاركة بنجاح!",
+  "linky_chat_automsg4": "النظام بيبعت رسايل للمستخدمين بالنيابة عنك عشان تزيد الدردشات. عدد الدردشات هيقل لو قفلتها.",
+  "linky_chat_automsg3": "رسالة تلقائية",
+  "linky_voiceroom_text137": "أنت في غرفة الحفلة.",
+  "wanfa_starovertankuang": "متأكد عايز تمسح تاريخ الدردشة وتبدأ من الأول؟",
+  "wanfa_starover": "ابدأ من جديد",
+  "linky_voiceroom_text136": "ما في إعلانات الحين",
+  "linky_voiceroom_text135": "{opIdentity} شالك من المكان",
+  "linky_voiceroom_text29": "أوبس! المكان ده مقفول.",
+  "linky_voiceroom_text132": "تم الحفظ بنجاح.",
+  "linky_voiceroom_text129": "متأكد عايز تطردوا من المكان؟",
+  "linky_voiceroom_text126": "متأكد عايز تطردوا من الغرفة؟",
+  "linky_voiceroom_text125": "{username} رفض طلبك عشان تاخد المكان.",
+  "linky_voiceroom_text123": "أنت اتطردت من الغرفة.",
+  "linky_voiceroom_text74": "مش هتقدر تعمل @ لنفسك!",
+  "linky_voiceroom_text73": "{username} اتشال من أدمن الغرفة.",
+  "linky_voiceroom_text72": "{username} اتعين أدمن للغرفة.",
+  "linky_voiceroom_text71": "{username} اتطرد من الغرفة بواسطة مدير الغرفة.",
+  "linky_voiceroom_text68": "{user} بعت {gift} لـ {giftReceivers}.",
+  "linky_voiceroom_text667": "{user} ساب المكان.",
+  "linky_voiceroom_text67": "{user} دلوقتي في المكان.",
+  "linky_voiceroom_text66": "{user} دخل غرفة الدردشة.",
+  "linky_voiceroom_text65": "{opIdentity} رفض طلب الميكروفون بتاعك.",
+  "linky_voiceroom_text64": "{opIdentity} قفل الميكروفون بتاعك.",
+  "linky_voiceroom_text63": "{opIdentity} رفض طلب مكانك.",
+  "linky_voiceroom_text60": "متأكد عايز تشيل المستخدم ده؟",
+  "linky_voiceroom_text44": "قدمت طلب للمكان، استنى المضيف أو الأدمن يراجعوه.",
+  "linky_voiceroom_text40": "طلب المكان اتبعت. استنى لحد ما يتم الموافقة عليه.",
+  "linky_voiceroom_text37": "المستخدم ده عنده مكان بالفعل.",
+  "linky_voiceroom_text35": "طلبت مكان. استنى المضيف أو الأدمن يوافق.",
+  "linky_voiceroom_text30": "أنت موجود في المكان أصلاً.",
+  "linky_voiceroom_text133": "شغّل الصوت",
+  "linky_voiceroom_text12": "ما ينفعش تتعدى {} حرف.",
+  "linky_voiceroom_text131": "sent",
+  "linky_voiceroom_text130": "Everyone in the seats",
+  "linky_voiceroom_text124": "Let's chat now",
+  "linky_voiceroom_text122": "No online users now",
+  "linky_voiceroom_text120": "Please enter the content",
+  "linky_voiceroom_text119": "Save",
+  "linky_voiceroom_text118": "Mic management",
+  "linky_voiceroom_text116": "By joining the chatroom, you agree to our Community Guidelines and other applicable policies. Be respectful - no spam, hate speech, violence or illegal content. Violations may lead to bans. Enjoy the chat!",
+  "linky_voiceroom_text115": "Go to Settings",
+  "linky_voiceroom_text61": "Cancel",
+  "linky_voiceroom_text111": "Reason",
+  "linky_voiceroom_text107": "Come and chat with me!",
+  "linky_voiceroom_text106": "I'm in a Party Room",
+  "linky_voiceroom_text105": "[Invited to a Party Room]",
+  "linky_voiceroom_text101": "No contacts yet",
+  "linky_voiceroom_text100": "My Followers",
+  "linky_voiceroom_text99": "My Followings",
+  "linky_voiceroom_text98": "Recent",
+  "linky_voiceroom_text97": "Share",
+  "linky_voiceroom_text96": "Save",
+  "linky_voiceroom_text95": "There are no admins yet",
+  "linky_voiceroom_text94": "Admin",
+  "linky_voiceroom_text92": "Enable this to allow Room members to be Seated automatically without requiring approval from the Host or Admin",
+  "linky_voiceroom_text91": "Auto Seating",
+  "linky_voiceroom_text90": "Admin",
+  "linky_voiceroom_text89": "Host",
+  "linky_voiceroom_text88": "Admin",
+  "linky_voiceroom_text87": "Welcome Message",
+  "linky_voiceroom_text86": "Room Announcement",
+  "linky_voiceroom_text85": "Room Name",
+  "linky_voiceroom_text84": "Basic Info",
+  "linky_voiceroom_text83": "Room Settings",
+  "linky_voiceroom_text82": "Share",
+  "linky_voiceroom_text81": "Toolbar",
+  "linky_voiceroom_text79": "Please select a recipient",
+  "linky_voiceroom_text78": "Other",
+  "linky_voiceroom_text77": "Gift",
+  "linky_voiceroom_text76": "Send",
+  "linky_voiceroom_text75": "New message(s)",
+  "linky_voiceroom_text69": "All users in the seats",
+  "linky_voiceroom_text62": "Confirm",
+  "linky_voiceroom_text58": "View info",
+  "linky_voiceroom_text57": "Report",
+  "linky_voiceroom_text56": "Kick out",
+  "linky_voiceroom_text55": "Remove Admin",
+  "linky_voiceroom_text54": "Set Admin",
+  "linky_voiceroom_text53": "Mute",
+  "linky_voiceroom_text52": "Remove",
+  "linky_voiceroom_text51": "Invite",
+  "linky_voiceroom_text50": "Chat",
+  "linky_voiceroom_text49": "Gift",
+  "linky_voiceroom_text48": "Followed",
+  "linky_voiceroom_text47": "Follow",
+  "linky_voiceroom_text46": "@Him/Her",
+  "linky_voiceroom_text45": "Apply for the mic",
+  "linky_voiceroom_text43": "Refuse",
+  "linky_voiceroom_text42": "Accept",
+  "linky_voiceroom_text41": "He/she has invited you to take a Seat",
+  "linky_voiceroom_text34": "No Seat requests at the moment",
+  "linky_voiceroom_text33": "Reject",
+  "linky_voiceroom_text332": "Unmute",
+  "linky_voiceroom_text32": "Take Seat",
+  "linky_voiceroom_text31": "Seat Requests",
+  "linky_voiceroom_text28": "All Seats are occupied. Please try again later",
+  "linky_voiceroom_text27": "Online Users",
+  "linky_voiceroom_text26": "Chat with others",
+  "linky_voiceroom_text25": "Leave Seat",
+  "linky_voiceroom_text24": "Unlock Seat",
+  "linky_voiceroom_text23": "Lock Seat",
+  "linky_voiceroom_text22": "Assign Seat",
+  "linky_voiceroom_text21": "Take Seat",
+  "linky_voiceroom_text20": "Announcement",
+  "linky_voiceroom_text19": "No live rooms available at the moment",
+  "linky_voiceroom_text15": "My Room",
+  "linky_voiceroom_text11": "Start Chatting",
+  "linky_voiceroom_text10": "Room Announcement",
+  "linky_voiceroom_text9": "Room Name",
+  "linky_voiceroom_text8": "Party Room",
+  "linky_voiceroom_text7": "My Room",
+  "linky_voiceroom_text6": "Create a Room",
+  "linky_voiceroom_text5": "Recommended",
+  "linky_voiceroom_text4": "Enter",
+  "linky_voiceroom_text3": "Heartbeat Match is waiting for you! ❤️",
+  "linky_voiceroom_text2": "Party",
+  "linky_voiceroom_text1": "Explore",
+  "zhubotasktips02": "اضغط هنا عشان تكمل المهام وتاخد مكافآتك الحصرية!",
+  "zhubotasktips01": "شوف تحديات الستريمر الجديدة!",
+  "vip_free_msg_text7": "إرسال رسائل لناس حقيقيين بيكلف {} عملة بنفسجية لكل رسالة. اشحن أو بقى عضو عشان تكمل الدردشة.",
+  "vip_free_msg_text6": "الرسائل المجانية قربت تخلّص! بقى عضو عشان تكمل الدردشة!",
+  "vip_free_msg_text5": "إرسال رسائل لناس حقيقيين بيكلف {} عملة بنفسجية لكل رسالة. اشحن عشان تجيب عملات زيادة.",
+  "vip_free_msg_text4": "\nالعملات مش كفاية. بقى عضو ذهبي أو اشحن عشان تكمل الدردشة!",
+  "vip_free_msg_text3": "احصل على رسائل أكتر!",
+  "explore_real_social_text7": "إيقاف",
+  "explore_real_social_text6": "تجاهل",
+  "explore_real_social_text5": "تستقبل الكثير من الرسائل من أشخاص حقيقيين؟ يمكنك تغيير حالتك لتجنب الإزعاج.",
+  "explore_real_social_text4": "عند الإيقاف، لن تستقبل رسائل من مستخدمين حقيقيين. شغّله مرة أخرى لمواصلة.",
+  "explore_real_social_text3": "استمر",
+  "explore_real_social_text2": "توقف",
+  "explore_real_social_text1": "لديهم نفس اهتماماتك! تريد الاستمرار في تلقي تحيات من أشخاص حقيقيين؟👋",
+  "im_enableautoplay": "يمكنك تشغيل التشغيل التلقائي لـ 'اللحظات' في الإعدادات.",
+  "im_autoplay": "تشغيل تلقائي لـ 'اللحظات'",
+  "broadcast_button": "جرب حظك!",
+  "broadcast_bigwin": "تهانينا للمستخدم {username} على الفوز بالجائزة الكبرى {num}{icon} في {gamename}!",
+  "other_basic": "أساسي",
+  "im_rewatch": "إعادة تشغيل لحظة {field}",
+  "im_enableloopplay": "يمكنك تفعيل خاصية التشغيل التلقائي لـ \"اللحظة\" في الإعدادات",
+  "im_autoloopplay": "تكرار \"اللحظة\" تلقائيًا",
+  "im_tired": "متعب",
+  "im_angry": "غاضب",
+  "im_sad": "حزين",
+  "im_smile": "ابتسامة",
+  "freetimesV2": "باقي {} مرات",
+  "hbmodeltips_intimacypage": "\nفي وضع النبض، سيبدأ الشخصية بطرح مواضيع حميمة والتعبير عن أفعالها ومشاعرها بتفاصيل أوضح.",
+  "hbmodeltips": "\nتم تفعيل وضع النبض المؤقت! استمتع بمحاثات أعمق وتفاعلات أكثر سلاسة",
+  "clicktoswitchmode": "انقر للتبديل",
+  "achedlevel3": "\nلقد وصلت إلى المستوى {}! فعّل وضع Heartbeat لفترة محدودة. إذا انخفض مستوى الحميمية، سيُعطّل",
+  "heartbeatmode_tips": "في وضع نبض القلب، ستبدأ الشخصية مواضيع حميمة وتعبر عن الأفعال والعواطف بتفاصيل أكثر.",
+  "dailylimit": "هناك حد يومي لنمو الحميمية، فلا تنسَ التفاعل كل يوم!",
+  "heartbeatmodetips": "تم تفعيل وضع نبض القلب المحدود زمنيًا! استمتع بمحادثات أعمق وتفاعلات أكثر دقة. يمكنك أيضًا الاستمتاع بدردشات مؤثرة غير محدودة عندما تصل إلى المستوى 3!",
+  "other_exploreheartfelt": "استكشف مواضيع مؤثرة قد تغير القصة حتى!",
+  "other_confirm": "تأكيد",
+  "enjoydeeper": "استمتع بمحادثات أعمق وأكثر تشويقًا",
+  "unlimitedaccess": "وصول غير محدود بعد الوصول إلى مستوى {} من الحميمية",
+  "freetimes": "{} مرات مجانية",
+  "limited": "محدود",
+  "satisfydaily": "تلبية المحادثات اليومية",
+  "heartbeat_mode": "وضع نبض القلب",
+  "normal_mode": "الوضع العادي",
+  "selectmode": "اختر وضع الدردشة للشخصية الحالية",
+  "modeswitching": "تبديل الوضع",
+  "normalmode": "الوضع العادي",
+  "heartbeatmode": "وضع نبض القلب",
+  "other_isempty": "{} فارغ. يرجى ملؤه قبل تنفيذ العملية.",
+  "sdiscover_deletion": "تأكيد الحذف؟",
+  "linky_1v1_host_diamonds_gifts_5": "الألماس غير كافٍ",
+  "linky_1v1_host_diamonds_gifts_3": "مبلغ الإنفاق غير كافٍ.",
+  "linky_1v1_host_diamonds_gifts_2": "مبلغ الإنفاق اليومي",
+  "linky_1v1_host_diamonds_gifts_1": "أرسل هدايا واحصل على المزيد من الهدايا في المقابل! يمكنك إرسال ما يصل إلى {} من الألماس يوميًا.\nمبلغ الإنفاق اليومي\nمبلغ الإنفاق غير كافٍ.\nالألماس غير كافٍ",
+  "other_new": "جديد",
+  "other_chat": "دردشة",
+  "other_go": "انطلق",
+  "other_bgm": "هل ترغب في إيقاف تشغيل الموسيقى الخلفية؟",
+  "fill_window": "{} فارغ. يرجى ملؤه قبل تنفيذ العملية.",
+  "re_select": "إعادة الاختيار",
+  "character_profile": "ملف الشخصية",
+  "gameplay_openning": " افتتاح",
+  "gameplay_intro": "مقدمة",
+  "gameplay_info": "معلومات اللعب",
+  "gameplay_character": "شخصية",
+  "gameplay_try": "تفاصيل اللعب",
+  "gameplay_details": "تفاصيل اللعب",
+  "gameplay": "أسلوب اللعب",
+  "gameplay_profile": " ملف تعريف اللعب",
+  "gameplay_cancel": "إلغاء",
+  "gameplay_confirm": " تأكيد",
+  "offline_generate_window": " يتم إنشاء الصورة. إذا خرجت الآن، فلن يتم الاحتفاظ بالمعلومات التي أدخلتها والصورة التي تم إنشاؤها.",
+  "cover_image": " صورة الغلاف",
+  "background_image": "اختر صورة الخلفية",
+  "gameplay_rules": " قواعد اللعب",
+  "gameplay_introduction": " مقدمة اللعب",
+  "game_playmode": "وضع اللعب",
+  "gameplay_round": "الجولة {}",
+  "im_congratulations": "تهانينا! تم إكمال المهمة، وتم كسب المكافأة!",
+  "im_gocheck": "اذهب للتحقق",
+  "im_clicktoreplay": "انقر لإعادة التشغيل",
+  "im_clearingmaydelete": "قد يؤدي المسح إلى حذف سجل المحادثة. هل تؤكد المتابعة؟",
+  "im_clearchatcache": "مسح ذاكرة التخزين المؤقت للمحادثة",
+  "push_gacha_guide": "يا لها من ضربة حظ! يمكن استخدام العملات الأرجوانية التي ربحتها لسحب بطاقات جميلة في الجاتشا. جربها الآن! جاتشا الآن >>",
+  "checkmark_realnameverified": "موثّق بالاسم الحقيقي",
+  "checkmark_officialverified": "موثّق رسميًا",
+  "im_returntomainchat": "العودة إلى الدردشة الرئيسية؟",
+  "im_game": "لعبة",
+  "im_replay": "إعادة",
+  "im_thestoryhasended": "انتهت القصة",
+  "im_charactercontent": "محتوى الشخصية",
+  "post_game": "game",
+  "post_replay": "Replay",
+  "post_thestoryhasended": "The story has ended",
+  "post_charactercontent": "Character Content",
+  "post_premium": "Premium",
+  "enable_notification_claim_reward": "قم بتمكين الإشعارات واحصل على مكافأتك!",
+  "notification": "إشعار",
+  "special_task": "مكافآت خاصة",
+  "ugc_slots_window_button": "ترقية",
+  "ugc_slots_window_title": "حصل على المزيد من أماكن الشخصيات",
+  "ugc_template": "قالب العربية",
+  "chat_1v1_preference": "تفضيل",
+  "chat_1v1_role_play": "لعب الأدوار",
+  "chat_1v1_role_play_msg": "الشخصيات التي يحبها/تحبها",
+  "chat_module_cancel_automatic": "إلغاء الترجمة التلقائية",
+  "chat_module_automatic_translation": "الترجمة التلقائية",
+  "chat_module_translate": "ترجمة",
+  "not_create_yet": "لم يتم إنشاؤه بعد",
+  "search_more_character": "ابحث عن المزيد من الشخصيات",
+  "intimacy_module_my_description_text_field_empty_text_new": "قدم نفسك ببدء بـ \"أنا\"! شارك تفاصيل عن مظهرك، شخصيتك، هواياتك أو أي شيء آخر تود مشاركته. هذا يساعدنا على تقديم تجربة أكثر تخصيصًا!",
+  "intimacy_module_my_nick_name_text_field_empty_text_new": "ماذا تحب أن يُنادى عليك؟",
+  "pay_module_has_subscription_x": "لقد اشتركت بالفعل {}.",
+  "pay_module_input": "إدخال",
+  "pay_module_x_off": "{} خصم",
+  "pay_module_enter_redeem_code": "الرجاء إدخال رمز الاسترداد",
+  "ugc_slot_delete_dialogue_basic": "حذف هذه الشخصية سيستعيد مساحة الشخصية. هل ترغب في حذفها؟",
+  "Creation_Center_Upgrade_5": "لن تتراكم المساحات المتبقية للشخصيات التي يمكنك إنشاؤها كل أسبوع، لكن ستتوفر مساحات شخصيات جديدة في الأسبوع المقبل.",
+  "Creation_Center_Upgrade_4": " في الأسبوع",
+  "Creation_Center_Upgrade_3": "أساسي",
+  "Creation_Center_Upgrade_2": "المزيد من الشخصيات لإنشائها! استعد للمتعة!",
+  "Creation_Center_Upgrade_1": "ترقية مركز الإبداع:",
+  "Creation_Center_Upgrade_6": "استلام",
+  "ugc_delete": "حذف",
+  "ugc_cancel": "إلغاء",
+  "ugc_left_slot": "في هذا الأسبوع تبقى {num}",
+  "ugc_slots_membership": "الاشتراك في {linkygoldname} يدعم إنشاء المزيد من الأدوار كل أسبوع، مما يزيد الحد من {num1} إلى {num2}.",
+  "ugc_slot_delete_dialogue": "لم يتم إنشاء هذه الشخصية ضمن الحصة الأسبوعية المخصصة. حذفها لن يستعيد مساحة الشخصية. هل تريد تأكيد الحذف؟",
+  "game_module_x_online": "{} عبر الإنترنت",
+  "game_module_new": "جديد",
+  "game_module_treasure": "كنز",
+  "game_module_star": "نجم",
+  "game_module_game": "لعبة",
+  "chat_module_tts_auto_play_tips": "تشغيل الصوت وخلفية الموسيقى تلقائيًا؟ اذهب إلى {Chat Settings}",
+  "chat_module_send_npc_image_limit": "يمكن إرسال صورة واحدة فقط في المرة الواحدة.",
+  "chat_module_unlimited_photo_by_pro": "فرص صور غير محدودة يتم الحصول عليها بفتح Linky Pro",
+  "image": "صورة",
+  "discovery_module_release_success": "بمجرد الموافقة، سيتم عرضه في الساحة.",
+  "raw_img_ai_enhance": "تحسين الذكاء الاصطناعي",
+  "npc_task_tip": "يتم إنشاء المهمة. يرجى المحاولة مرة أخرى بعد الانتهاء.",
+  "npc_ncreate_tip": "لقد تم الوصول إلى الحد الأقصى لإنشاء الشخصيات.",
+  "risk_bg_tip": "يحتوي إدخالك على معلومات محفوفة بالمخاطر. يرجى تعديلها وحاول مرة أخرى.",
+  "chat_module_outside_quick_reply_title": "اضغط لإرسال الردود الموصى بها",
+  "chat_module_is_calling_you": "يناديك",
+  "newer_lead_text_2": "—دائمًا بجانبك!",
+  "newer_lead_text_1": "شخصيات متنوعة، روابط لا نهائية",
+  "ugc_tts_voice_tip": "أضف صوت الشخصية",
+  "bgm_volume": "حجم",
+  "bgm_tip": "اختر موسيقى الخلفية للدردشة",
+  "bgm_title": "موسيقى الخلفية",
+  "risk_ai_write_tip": "سيقوم الذكاء الاصطناعي بإنشاء معلومات الشخصية. إذا كنت قد ملأته بالفعل، فسيتم استبداله. هل أنت متأكد؟",
+  "risk_tip": "يحتوي إدخالك على معلومات خطرة. يرجى تعديله والمحاولة مرة أخرى. يمكنك أيضًا ملؤه باستخدام .",
+  "ugc_cinfo": "معلومات الشخصية",
+  "ugc_character_voice": "صوت الشخصية",
+  "pay_module_sec": "ثانية",
+  "pay_module_min": "دقيقة",
+  "pay_module_day": "يوم",
+  "ad_module_nsfw_ads_reports": "تقارير الإعلانات غير الملائمة",
+  "choose_gender_want_chat": "اختر الجنس الذي تريد الدردشة معه",
+  "newer_lead_text": "\"شخصيات متنوعة، \nاتصالات لا نهائية\n—دائمًا بجانبك!",
+  "Inviting": "دعوة",
+  "choose_type_you_like": "اختر النوع الذي يعجبك",
+  "pom_age": "لا يمكن تغيير عمرك إلا مرة واحدة. هل أنت متأكد أنك تريد المتابعة؟",
+  "pom_btn_mark": "في وضع المراهقين، تم تطبيق تصفية المحتوى وتم تقييد بعض الميزات.",
+  "voice_call_module_To_avoid_disturbance_the_other_party": "لتجنب الإزعاج، قام الطرف الآخر بتفعيل وظيفة شحن المكالمات الصوتية، {} عملات ذهبية/الدقيقة.",
+  "Unlocking_photo_costs": "فتح الصورة يكلف {}",
+  "Prompt": "مطالبة",
+  "She_has_activated_paid_phone": "لقد قامت بتفعيل خدمة الهاتف المدفوعة لمكافحة التحرش، بتكلفة {num} لكل دقيقة بعد الرد على المكالمة.",
+  "v_face": "تأكد من أن الصورة تحتوي على صورة واضحة لشخص.",
+  "chat_module_deep_rewards": "مكافآت المحادثات العميقة!",
+  "avatar_profile_under_review": "الملف الشخصي قيد المراجعة، يرجى المحاولة مرة أخرى بعد المراجعة.",
+  "avatar_set_as_profile": "تعيين كملف شخصي",
+  "avatar_using": "قيد الاستخدام",
+  "login_module_welcome_to_app": "مرحبًا بك في {}",
+  "unread": "غير مقروء",
+  "ios_privacy_album_tracking_new": "يتيح ذلك لـ {} تقديم تجربة تصفح أفضل وتوصيات محتوى",
+  "caring_ai_new": "رفاق الذكاء الاصطناعي يجتمعون {}",
+  "eu_alert_new": "نستخدم معلوماتك وبياناتك لتحسين خدماتنا وتقديم أفضل تجربة ممكنة لك",
+  "ugc_module_click_to_add_linky_reply_content_new": "انقر لإضافة رد {}",
+  "Choose_the_gender_you_want_to_chat_with": "اختر الجنس الذي تريد الدردشة معه (اختيارات متعددة)",
+  "Non_binary": "غير ثنائي",
+  "Female": "أنثى",
+  "Male": "ذكر",
+  "Both": "كلاهما",
+  "Human": "إنسان",
+  "AI": "الذكاء الاصطناعي",
+  "Choose_the_type_you_like": "اختر النوع الذي تحبه (اختيار واحد)",
+  "Tell_us_your_preferences": "أخبرنا بتفضيلاتك",
+  "story_editor_model_classic_tropes": "حيل كلاسيكية",
+  "story_editor_model_story_info": "معلومات القصة",
+  "story_editor_model_story_image": "صورة القصة",
+  "story_editor_model_story_submit_tips_empty": "{} فارغ. يرجى ملء الفراغ قبل الإرسال.",
+  "story_editor_model_story_objective_hint": "أدخل هدف مهمة الحبكة",
+  "story_editor_model_story_objective": "الهدف",
+  "story_editor_model_story_opening_hint": "أضف افتتاحاً للحبكة",
+  "story_editor_model_story_opening": "افتتاح القصة",
+  "story_editor_model_plot_description_hint_2": "أين تدور أحداث القصة، وماذا حدث؟",
+  "story_editor_model_plot_description_2": "وصف الحبكة",
+  "story_editor_model_story_title_hint_2": "أعط القصة عنواناً",
+  "story_editor_model_story_title_2": "عنوان القصة",
+  "story_editor_model_create_story": "أنشئ قصة",
+  "story_editor_model_select_role_no_character_other_tip": "لم تتحدث مع أي شخصية بعد",
+  "story_editor_model_select_role_no_character_tip": "لم تقم بإنشاء شخصية بعد",
+  "story_editor_model_select_role_other_characters_tip": "عرض فقط الشخصيات غير القابلة للعب التي لديك إذن القصة والدردشة معها في الأيام السبعة الماضية",
+  "story_editor_model_select_role_other_characters": "شخصيات الآخرين",
+  "story_editor_model_select_role_my_characters_tip": "خيار واحد فقط، أنشئ قصة للشخصية المحددة",
+  "story_editor_model_select_role_my_characters": "شخصياتي",
+  "chat_module_story_min": "قصة",
+  "ugc_story_replace_pined_story": "تم تثبيت قصة بالفعل. هل تريد استبدالها؟",
+  "ugc_story_hide_story": "إخفاء هذه القصة",
+  "ugc_story_prohibit_this_person": "منع هذا الشخص",
+  "ugc_story_pinToTop": "تثبيت في الأعلى",
+  "ugc_story_story_setting": "إعدادات القصة",
+  "ugc_story_group_setting": "إعدادات المجموعة",
+  "ugc_story_unpin_top": "إزالة من الأعلى",
+  "ugc_story_top": "أعلى",
+  "chat_1v1_all_emoji": "كل الرموز التعبيرية",
+  "chat_1v1_recent_emoji": "تم استخدامه مؤخرًا",
+  "risk_button": "التصحيح التلقائي",
+  "risk_img_toast": "الصورة تحتوي على مخاطر.",
+  "risk_toast": "المخرجات تحتوي على مخاطر محتملة؛ يرجى إعادة الإدخال.",
+  "discovery_module_boost_notice": "سنطابقك مع 5 مستخدمين أو شخصيات AI متوافقة، وننشر منشورًا لك.",
+  "ugc_sixth_choose_tags_hint": "اختر العلامات التي تصفك من الأسفل",
+  "cp_Invitation_available_only_at": "الدعوة متاحة فقط في {}",
+  "setting_module_chat_settings": "إعدادات الدردشة",
+  "cp_cp_xxx_coins_needed_to_reach_lv": "{} عملة لازمة للوصول إلى {}",
+  "cp_Boost": "تعزيز",
+  "cp_Your_invitation_has_been_successfully_sent": "تم إرسال دعوتك بنجاح.",
+  "cp_Are_you_sure_to_cancel_the_invitation": "هل أنت متأكد من إلغاء الدعوة؟",
+  "Rule": "قاعدة",
+  "chat_module_view_my_ai_chat_history": "عرض سجل الدردشة الخاص بي",
+  "clone_gender_not_match": "جنس الشخصية لا يتطابق مع جنس الصوت. يرجى التأكيد",
+  "discovery_module_expand_success": "تم الإرسال بنجاح! تم العثور على تطابق لك. تحقق من قائمة الرسائل لعرضها.",
+  "chat_1v1_call_can_not_be_reached": "لا يمكن الوصول إلى المكالمة.",
+  "ugc_sixth_wait_offline_tip": "جارٍ إنشاء الصورة، هل تريد الانتظار بدون اتصال؟",
+  "ugc_sixth_profile_avatar": "صورتك فارغة. يرجى ملؤها قبل الإرسال.",
+  "chat_module_view_chat_history": "عرض تاريخ الدردشة",
+  "chat_module_chat_input_hint_user_ai": "الدردشة، تم الرد من قبل الذكاء الاصطناعي {}",
+  "chat_module_chat_input_hint_user": "الدردشة، تم الرد من قبل {}",
+  "login_module_log_in_to_chat_online": "تسجيل الدخول للدردشة مع المستخدمين المتصلين",
+  "pay_module_wallet": "محفظة",
+  "ugc_module_review_failed": "فشل المراجعة",
+  "setting_module_three_messages_before_reply": "ثلاث رسائل قبل أن أرد",
+  "setting_module_all": "الكل",
+  "setting_module_ai_chat_mode": "وضع الدردشة بالذكاء الاصطناعي",
+  "setting_module_chat_message_setting": "إعدادات الرسائل",
+  "setting_module_contact_us_title": "اتصل بنا",
+  "profile_module_complete_tips": "يمكنك الآن الدردشة مع مستخدمين آخرين من خلال إكمال ملفك الشخصي لبدء المطابقة!",
+  "profile_module_user_info_empty_tips": "أكمل ملفك الشخصي للعثور على شريكك بشكل أسرع!",
+  "chat_1v1_real": "حقيقي",
+  "chat_1v1_ai": "الذكاء الاصطناعي",
+  "chat_1v1_gift": "هدية",
+  "chat_1v1_truth": "الحقيقة",
+  "chat_1v1_ai_mode_off_tip": "لم يقم المستخدم بتمكين وضع الذكاء الاصطناعي، لذا لا يتم دعم الدردشة مع استنساخها من الذكاء الاصطناعي بعد",
+  "chat_1v1_real_mode_off_tip": "ستصبح الرسائل متاحة بعد مطابقة الذكاء الاصطناعي الناجحة!",
+  "chat_1v1_user_can_not_send_pic_tip": "يجب أن تصل العلاقة إلى المستوى {} لتمكين وظيفة نشر الصور. هيا!",
+  "chat_1v1_user_can_not_call_tip": "يجب أن تصل العلاقة إلى المستوى {} لتمكين وظيفة المكالمات. هيا!",
+  "chat_1v1_ai_guide_text": "إذا كان غير متصل، يمكنك محاولة الدردشة معه في وضع الذكاء الاصطناعي. يمكنه رؤية محادثتك.",
+  "chat_1v1_no_chat_history": "لا توجد سجلات دردشة",
+  "chat_1v1_ai_report_success_subTitle": "يمكنك الآن الدردشة مع هذا الشخص",
+  "chat_1v1_ai_report_success": "تطابق ناجح",
+  "chat_1v1_ai_report_loading": "في مطابقة الحوسبة بالذكاء الاصطناعي...",
+  "chat_1v1_ai_match_success": "تم المطابقة بنجاح! يمكنك الآن الدردشة مع المستخدم ووضع الذكاء الاصطناعي.",
+  "chat_1v1_ai_match_failed": "فشل المطابقة بواسطة الذكاء الاصطناعي",
+  "chat_1v1_summary": "ملخص",
+  "chat_1v1_view_ai_report": "عرض تقرير المطابقة من الذكاء الاصطناعي",
+  "clone_clone_record_not_know_type": "عذرًا، صوتك غير واضح، يرجى إعادة التسجيل",
+  "clone_clone_record_no_voice": "عذرًا، لم يتم الكشف عن صوت، يرجى إعادة التسجيل",
+  "clone_clone_record_has_noise": "عذرًا، بيئتك مليئة بالضوضاء، يرجى إعادة التسجيل",
+  "clone_clone_record_secons_not_10_s": "عذرًا، تسجيلك قصير جدًا، يرجى إعادة التسجيل",
+  "clone_clone_record_seconds": "{} ثانية",
+  "clone_clone_delete_tips": "هل ترغب في حذف الصوت؟",
+  "clone_clone_clone": "استنساخ",
+  "clone_clone_finish": "انتهى",
+  "clone_clone_success": "تم استنساخ الصوت بنجاح",
+  "clone_clone_recording_up_cancel_text": "اسحب للأعلى للإلغاء",
+  "clone_clone_recording_up_text": "أفرج لتكملة التسجيل، حرك للأعلى للإلغاء",
+  "clone_clone_recording": "اضغط لفترة طويلة لبدء التسجيل",
+  "clone_each_person_only_one_voice": "يمكن لكل شخص إنشاء صوت مستنسخ واحد فقط، يرجى حذفه وإعادة التسجيل",
+  "clone_clone_tip": "يدعم فقط استنساخ صوتك الخاص",
+  "clone_clone_text_1": "يرجى قراءة النص التالي بصوت عالٍ، وقت التسجيل من 10 إلى 30 ثانية",
+  "clone_voice_cloneing": "استنساخ الصوت",
+  "clone_my_voice": "صوتي",
+  "clone_create_my_voice": "أنشئ صوتي",
+  "discovery_module_match": "تطابق",
+  "discovery_module_left_times": "تبقى {} مرات",
+  "discovery_module_boost": "تعزيز",
+  "discovery_module_hub": "المركز الاجتماعي",
+  "discovery_module_release": "الإصدار",
+  "discovery_module_friend_type": "نوع الصديق",
+  "discovery_module_gender_preference": "تفضيلات الجنس",
+  "discovery_module_boost_hit_text": "أخبرنا بما تبحث عنه! اكتب بعض الجمل عن اتصالك المثالي وابدأ التوفيق.",
+  "discovery_module_my_posts": "منشوراتي",
+  "discovery_module_delete_sure_title": "هل أنت متأكد أنك تريد حذف هذا المنشور؟",
+  "discovery_module_boost_enough": "لقد انتهت مطابقتك اليومية. عد غدًا لمزيد من المطابقات!",
+  "discovery_module_profile_discover_change": "لقد قمت بإعداد ملفك الشخصي ليكون غير قابل للاكتشاف. هل ترغب في تغييره؟",
+  "discovery_module_human": "إنسان",
+  "discovery_module_ai": "الذكاء الاصطناعي",
+  "discovery_module_match_with_ai": "يساعد الذكاء الاصطناعي في التطابق",
+  "discovery_module_match_with_ai1": "يعمل الذكاء الاصطناعي بجد للعثور على تطابق",
+  "discovery_module_match_with_ai2": "أنت على وشك أن تتم مطابقتك!",
+  "discovery_module_categories": "الفئات",
+  "discovery_module_search_hit_text": "البحث بالاسم أو المعرف أو الكلمة الرئيسية",
+  "ugc_sixth_yellow_tip": "فشل تحميل الصورة. يرجى المحاولة مرة أخرى.",
+  "ugc_sixth_create_story_subtitle": "إضافة قصة",
+  "ugc_sixth_discovered": "يمكن اكتشافه",
+  "ugc_sixth_meihua": "قم بتشغيله لتحسين إدخالك تلقائيًا من أجل الوضوح وتحسين التعليمات للحصول على صورة أفضل!",
+  "ugc_sixth_perference_error": "تفضيلاتك فارغة. يرجى ملؤها قبل الإرسال.",
+  "ugc_sixth_about_me_error": "عني فارغ. يرجى ملؤه قبل الإرسال.",
+  "ugc_sixth_preferences_tip": "وصف نوع الشخص الذي تبحث عنه لتوافق معه، وسيقوم الذكاء الاصطناعي بمساعدتك في العثور على شخص متوافق.",
+  "ugc_sixth_preferences": "تفضيلاتك",
+  "ugc_sixth_about_me_tip": "شارك المعلومات عن نفسك مثل اهتماماتك وهواياتك أو التحديثات الأخيرة.",
+  "ugc_sixth_about_me": "عني",
+  "ugc_sixth_ai_chat_mode_wenhao": "تفعيل وضع الدردشة AI يسمح للمستخدمين الآخرين بالدردشة مع AI الخاص بك أولاً، والذي سيقيم توافقك. إذا كنتما متوافقين، سيكون بإمكانهما الدردشة معك مباشرة.",
+  "ugc_sixth_greeting_tip": "تعيين التحيات في وضع الدردشة AI",
+  "ugc_sixth_ai_chat_mode": "وضع الدردشة AI",
+  "ugc_sixth_visibility_tip": "عندما يتم تفعيلها، سيظهر ملفك الشخصي على الصفحة الرئيسية ليتحدث معك المستخدمون الآخرون. إذا كنت تفضل ألا يتم اكتشافك، يمكنك إيقاف تشغيله.",
+  "ugc_sixth_visibility": "الرؤية",
+  "ugc_sixth_tag_limit": "إضافة ما يصل إلى 5 علامات",
+  "ugc_sixth_profile_tag_title": "العلامة",
+  "ugc_sixth_profile_tag": "*اختر ما يصل إلى خمس علامات",
+  "ugc_sixth_profile_intro_tip": "أخبرنا من أنت ودع الآخرين يتعرفون عليك بشكل أفضل!",
+  "ugc_sixth_profile_intro": "المقدمة",
+  "ugc_sixth_image_nsfw_code": "لم يتم فك تشفير الصورة بعد!",
+  "ugc_sixth_image_upload_fial": "فشل تحميل الصورة المقتطعة.",
+  "ugc_sixth_crop_size_fail": "لم يتم الحصول على حجم الصورة المقتطعة.",
+  "ugc_sixth_image_clarity": "صورتك لا تفي بالوضوح المطلوب. يرجى تحميل صورة جديدة.",
+  "ugc_sixth_image_yellow": "يبدو أن صورتك تحتوي على محتوى حساس. يرجى تحميل صورة جديدة.",
+  "ugc_sixth_select_voice": "أضف صوت الشخصية",
+  "ugc_sixth_add_voice": "إضافة صوت",
+  "ugc_sixth_background": "الخلفية",
+  "ugc_sixth_check_voice": "الصوت فارغ. يرجى ملؤه قبل الإرسال.",
+  "ugc_sixth_check_greeting": "التحية فارغة. يرجى ملؤها قبل الإرسال.",
+  "ugc_sixth_check_intro": "المقدمة فارغة. يرجى ملؤها قبل الإرسال.",
+  "ugc_sixth_check_gender": "الجنس فارغ. يرجى ملؤه قبل الإرسال.",
+  "ugc_sixth_check_name": "الاسم فارغ. يرجى ملؤه قبل الإرسال.",
+  "ugc_sixth_check_image": "صورة الشخصية فارغة. يرجى ملؤها قبل الإرسال.",
+  "ugc_sixth_more_info_wenhao": "يمكنك إضافة تفاصيل غنية لإحياء شخصيتك عن طريق تضمين تجاربهم الحياتية، والإعجابات، والكراهية، والموهبة الخفية، والطبائع الفريدة. تساعد هذه الرؤى الشخصية في خلق شخصية أكثر حيوية وشمولية.",
+  "ugc_sixth_submit_moreinfo_background": "على سبيل المثال، تم تربية ماديسون هاربر من قبل والدين من الطبقة المتوسطة اللذين قدما لها أسلوب حياة فاخر. هي تزدهر في تنظيم الاحتفالات الفاخرة وتستمتع بالتنزه على الشاطئ والسفر، لكنها لا تحب أن تكون بمفردها، الروتين الممل، والأيام الممطرة. وراء مظهرها الواثق، تخفي خوفًا من الفشل. هي تكره المضغ بصوت عالٍ والحديث أثناء مشاهدة الأفلام.",
+  "ugc_sixth_submit_greeting_tip": "على سبيل المثال، ما هو اليوم المثالي للشاطئ، ألا تعتقد ذلك؟ هل ترغب في الاستمتاع معي؟",
+  "ugc_sixth_submit_introduction_tip": "على سبيل المثال، ماديسون هاربر تبرع في تنظيم الاحتفالات الفاخرة وتستمتع برحلات الشاطئ والسفر، لكنها لا تحب أن تكون وحيدة، الروتين الممل، والأيام الممطرة.",
+  "ugc_sixth_re_upload": "إعادة رفع",
+  "ugc_sixth_confirm": "تأكيد",
+  "ugc_sixth_edit_image": "تعديل الصورة",
+  "ugc_sixth_style_reference": "مرجع الأسلوب",
+  "ugc_sixth_face_reference": "مرجع الوجه",
+  "ugc_sixth_describe_your_image_hinttext": "على سبيل المثال: 1 شابة في العشرينات، ترتدي ملابس شاطئ عصرية، شعر طويل مموج أشقر، عيون زرقاء لامعة، ابتسامة ماكرة، تقف على شاطئ رملي، سماء زرقاء صافية، يوم مشمس",
+  "ugc_sixth_optimized_prompt": "الموجه المحسن",
+  "ugc_sixth_describe_your_image": "صِف صورتك",
+  "ugc_sixth_ai_generate_image": "توليد صورة AI",
+  "ugc_sixth_dialogue_style": "أسلوب الحوار",
+  "ugc_sixth_expanded_profile": "الملف الشخصي الموسع",
+  "ugc_sixth_more_information": "المزيد من المعلومات",
+  "ugc_sixth_voice": "صوت",
+  "ugc_sixth_greeting": "تحية",
+  "ugc_sixth_introduction": "مقدمة",
+  "ugc_sixth_ai_write": "كتابة AI",
+  "ugc_sixth_character_info": "معلومات الشخصية",
+  "ugc_sixth_basic_information": "المعلومات الأساسية",
+  "ugc_sixth_upload_from_album": "رفع من الألبوم",
+  "ugc_sixth_ai_generate": "توليد AI",
+  "ugc_sixth_character_image": "صورة الشخصية",
+  "ugc_sixth_create_by_tamplate": "تم الإنشاء بواسطة القالب",
+  "ugc_sixth_profil_edit": "تحرير ملفك الشخصي",
+  "ugc_sixth_create_my_profile": "ملفي الشخصي",
+  "ugc_sixth_create_your_own_ai_mate": "أنشئ بوت AI الخاص بك",
+  "ugc_sixth_create_ai_character": "شخصية الذكاء الاصطناعي",
+  "ugc_sixth_create_group": "بطاقة ER",
+  "ugc_sixth_create_story": "قصة",
+  "cp_Binding_a_close_relationship_can_unlock": "ربط علاقة وثيقة يمكن أن يفتح مزايا حصرية، بما في ذلك إطار الصورة الرمزية، وشعار قائمة الدردشة، وعرض العلاقة في صفحة الملف الشخصي، إلخ.",
+  "cp_Waiting": "في الانتظار",
+  "cp_Cancelled": "تم الإلغاء",
+  "cp_Rejected": "تم الرفض",
+  "cp_Accepted": "تم القبول",
+  "cp_Reject": "رفض",
+  "cp_Accept": "قبول",
+  "cp_wants_to_establish_a_CP_relationship_with_you": "{} يريد إقامة علاقة {} معك",
+  "cp_Confirm_unbinding": "تأكيد فك الارتباط",
+  "cp_relationship_seat_full": "الشخص الذي دعوته دعى شخصًا آخر.",
+  "cp_Your_CP_relationship_is_full": "علاقاتك الرومانسية وصلت إلى الحد الأقصى. يرجى اختيار العلاقة التي تريد إلغاء ارتباطها.",
+  "cp_Unbinding_CP_relationship": "فك الارتباط مع العلاقة الرومانسية",
+  "cp_Your_friendship_relationship_is_full": "علاقاتك الصداقية وصلت إلى الحد الأقصى. يرجى اختيار العلاقة التي تريد إلغاء ارتباطها.",
+  "cp_Unbind_the_friendship": "فك الارتباط مع الصديق",
+  "cp_Grade_rights": "حقوق الدرجة",
+  "cp_Drawing_one_NPC_card_costs_coins": "سحب بطاقة NPC واحدة يكلف {} عملات.",
+  "cp_Draw_Cards": "سحب البطاقات",
+  "cp_Each_gift_requires_a_different_amount_of_coins": "كل هدية تتطلب مبلغًا مختلفًا...",
+  "cp_Send_Gifts": "إرسال الهدايا",
+  "cp_Relationship_Boost": "تعزيز العلاقة",
+  "cp_You_still_need_coins_to_reach_Lv": "تحتاج إلى {} عملات للترقية إلى {}.",
+  "cp_GO": "انطلق",
+  "cp_Daily_limit": "الحد اليومي {}/{}",
+  "cp_Intimacy_up": "ارتفعت الألفة",
+  "cp_Engage_in_a_conversation_to_boost_intimacy": "شارك في محادثة لتعزيز الألفة.",
+  "cp_Chat": "دردشة",
+  "cp_Complete_tasks_to_increase_intimacy": "أكمل المهام لتعزيز الألفة.",
+  "cp_Daily_tasks": "المهام اليومية",
+  "cp_Intimacy": "الألفة",
+  "cp_your_intimacy_level_hasincreased_to_level": "مستوى الألفة لديك ارتفع إلى {}",
+  "cp_your_relationship_with": "علاقتك مع {}",
+  "cp_Romantic": "رومانسي",
+  "cp_Friend": "صديق",
+  "cp_You_have_n_slots_remaining": "لديك {} فتحة متبقية",
+  "cp_Cancel_Invitation": "إلغاء الدعوة",
+  "cp_Send_invitation": "أرسل دعوة",
+  "cp_Unlink": "فك الارتباط",
+  "cp_Limit_reached_unlink_to_continue": "الحد الأقصى تم الوصول إليه، قم...",
+  "cp_Select_Relationship": "اختر العلاقة",
+  "cp_Choose_Token": "اختر رمز",
+  "cp_Reach_LV_to_link_an_Intimate_Relationship": "للوصول إلى المستوى {} لربط...",
+  "cp_Once_successfully_linked": "بمجرد الاتصال بنجاح، يحصل المستخدمون على امتيازات حصرية للحميمية، مثل إطارات الملف الشخصي المخصصة، مؤشرات قائمة الدردشة، وعروض العلاقة على صفحات الملف الشخصي. بالنسبة للعلاقات الرومانسية، يتم فتح عرض الصورة الرمزية المزدوجة المشتركة.",
+  "cp_Pick_a_Gift": "اختر هدية",
+  "cp_Me": "أنا",
+  "OK": "موافق",
+  "message": "رسالة",
+  "reward_ad_no_da_duration": "اضغط لمشاهدة فيديو تحفيزي واحصل على {} دقيقة بدون إعلانات",
+  "happy": "سعيد.",
+  "hi": "مرحبًا",
+  "chat_module_ok": "حسنًا",
+  "change": "تغيير.",
+  "favorite_food": "ما هو طعامك المفضل؟",
+  "truth": "الحقيقة",
+  "hot_list": "القائمة الساخنة",
+  "ad_module_by_watching_ads": "عن طريق مشاهدة الإعلانات",
+  "ad_module_get_coins_now": "احصل على العملات الآن!",
+  "ad_module_get_free_coins_tip": "احصل على عملات مجانية بمشاهدة الإعلانات.",
+  "not_avaiable_appstore": "خطأ في متجر التطبيقات. يرجى التحقق والمحاولة مرة أخرى.",
+  "not_avaiable_google_play": "خطأ في متجر Google Play. يرجى التحقق والمحاولة مرة أخرى.",
+  "ugc_er_card_module_create_success_tip": "تم الانتهاء! في انتظار المراجعة.",
+  "pay_module_call_privilege_content_not_vip": "كعضو محترف، يمكنك شحن وقت المكالمات. يُنصح بالاشتراك مباشرة في عضوية الذهب للاستمتاع بـ {} دقيقة من وقت المكالمات المجانية.",
+  "pay_module_privilege_content_not_pro2": "يحصل الأعضاء البرو على {} مرات مجانية في اليوم، ويمكنك أيضًا إعادة شحن العملات.",
+  "pay_module_privilege_content_is_gold": "أعد شحن العملات للحصول على مرات مجانية",
+  "pay_module_privilege_content_not_gold2": "يحصل الأعضاء الذهبيون على {} مرات مجانية في اليوم.",
+  "pay_module_privilege_content_not_gold": "يحصل الأعضاء الذهبيون على {} مرات مجانية في اليوم، ويمكنك أيضًا إعادة شحن العملات.",
+  "pay_module_privilege_content_not_pro1": "يحصل الأعضاء البرو على {} مرات مجانية في اليوم، ويحصل الأعضاء الذهبيون على {} مرات مجانية في اليوم.",
+  "pay_module_x_times": "{} مرات",
+  "pay_module_get_free_trials": "احصل على تجارب مجانية",
+  "pay_module_get_free_trials_tip": "شاهد إعلانًا للحصول على {} تجارب مجانية.",
+  "pay_module_call_privilege_toast": "رصيد الصوت غير كافٍ.",
+  "pay_module_call_privilege_btn": "كن مشتركًا VIP",
+  "chat_1v1_price": "{}/دقيقة",
+  "chat_1v1_call_now": "اتصل الآن",
+  "chat_1v1_send_voice_call_guide_text": "لقد كانت محادثتنا رائعة.\nيمكنك تجربة المكالمات الصوتية.",
+  "chat_1v1_send_image_guide_text": "أرسل صورة سيلفي، وستتلقى {} ماسة عند الفتح.",
+  "chat_1v1_send_image": "أرسل صورة",
+  "chat_1v1_top_tips_user_3": "لا تفوت الفرصة لتكوين علاقات ذات مغزى!",
+  "chat_1v1_top_tips_user_2": "سيتطلب الدردشة الخاصة {} عملة لكل رسالة.",
+  "chat_1v1_top_tips_user_1": "تواصل مع أشخاص حقيقيين الآن!",
+  "chat_1v1_top_tips_anchor": "اكسب المال من خلال الرد! استجب خلال {} دقيقة لكسب الماس.",
+  "chat_1v1_give_you": "أعطيك",
+  "chat_1v1_image_unlock_to_get_diamonds": "بعد الفتح، ستتم مكافأتك بـ",
+  "chat_1v1_replay_to_get_diamonds": "قم بالرد خلال {} دقيقة للحصول على الماس!",
+  "chat_1v1_app_bar_bottom_text": "أشخاص حقيقيون موثقون",
+  "chat_1v1_real_people_tag": "أشخاص حقيقيون",
+  "chat_1v1_call_waiting_to_answer": "في انتظار الرد",
+  "chat_1v1_call_insufficient_coins": "عدد العملات غير كافٍ، مدة المكالمة المتبقية: {}",
+  "chat_1v1_call_get_diamonds": "عند الرد على المكالمة، كل دقيقة الحصول على",
+  "chat_1v1_call_spend_coins": "عند الرد على المكالمة، كل دقيقة تكلفة",
+  "chat_1v1_speaker_off": "المتحدث مغلق",
+  "chat_1v1_speaker_on": "المتحدث مفتوح",
+  "chat_1v1_mic_off": "الميكروفون غير مفعل",
+  "chat_1v1_mic_on": "الميكروفون مفعل",
+  "chat_1v1_call_busy": "في المكالمة",
+  "chat_1v1_call_cancelled": "ملغى",
+  "chat_1v1_call_refused": "مرفوض",
+  "chat_1v1_call_duration": "مدة المكالمة",
+  "chat_1v1_offline_label": "أشخاص حقيقيون",
+  "chat_1v1_online_label": "متصل",
+  "chat_1v1_streamer_call_limit": "تم الوصول إلى الحد اليومي للمكالمات الصادرة. دعه/دعيه يتصل بك بدلاً من ذلك.",
+  "see_who_love_you": "اكتشف من يحبك",
+  "advertising": "إعلان",
+  "pay_module_double_coins_tip": "عملية الشراء التالية لكل عرض ستمنحك عملات مضاعفة!",
+  "pay_module_one_time_only": "لمرة واحدة فقط",
+  "pay_module_starter_pack": "حزمة المبتدئين",
+  "ugc_contain_sensitive_word": "{option} يحتوي على محتوى غير لائق، يرجى إعادة الإدخال والتوليد.",
+  "ugc_nsfw_image_can_not_be_submit": "هذه الصورة تنتهك إرشادات مجتمعنا ولا يمكن تقديمها.",
+  "tip_edit_dynamic_bg": "إذا كانت خلفية أفاتار الخاصة بك متحركة في الأصل، فإن تعديلها سيجعلها ثابتة. هل ترغب في المتابعة بالتعديل؟",
+  "title_edit_avatar": "تعديل أفاتار",
+  "title_edit_image": "تعديل الصورة",
+  "chat_module_chat_input_1v1_hint": "الدردشة، ردود من أشخاص حقيقيين",
+  "chat_module_chat_real_people": "الدردشة مع أشخاص حقيقيين",
+  "chat_module_hi_to_ai": "مرحبًا بالذكاء الاصطناعي",
+  "chat_module_hi": "مرحبًا ～",
+  "chat_module_real_girls_play": "تمثيل أدوار للفتيات الحقيقيات",
+  "chat_module_offline": "غير متصل بالإنترنت",
+  "chat_module_online_max": "متصل بالإنترنت",
+  "chat_module_no_one_here": "لا أحد هنا. دعنا نذهب لنبحث في مكان آخر.",
+  "card_module_10_draws_in_a_row": "10 سحوبات متتالية",
+  "pay_module_ads_free_vip_tag": "وداعًا للإعلانات، مرحبًا بالمرح!",
+  "pay_module_ads_free_vip_tip": "قم بإزالة الإعلانات الإلزامية فقط.. \nستظل مقاطع الفيديو المدفوعة اختيارية",
+  "pay_module_just_x_day": "فقط {}/يوم",
+  "pay_module_monthly": "شهري",
+  "pay_module_month": "شهر",
+  "ugc_create": "تصميم",
+  "chat_1v1_streamer_character_top_tips": "هذه الشخصية هي صورة رمزية رقمية أنشأها مستخدم حقيقي. جميع التصريحات التي أدلى بها الشخص هي مولدة بواسطة الذكاء الاصطناعي ولا تعكس آراء أو تفضيلات المستخدم الشخصية. بعد المطابقة، يمكنك الدردشة مع المستخدم الحقيقي.",
+  "chat_1v1_gift_list_title": "أظهر حبك",
+  "chat_1v1_unlock_photo_cost_tip": "لقد أرسلت لك صورة خاصة، فتحها يكلف",
+  "chat_1v1_dont_remind_me": "لا تذكرني مرة أخرى.",
+  "chat_1v1_send_pic_cost_tip": "إرسال صورة واحدة يكلف {} من عملات الذهب.",
+  "chat_1v1_streamer_send_voice_call_unlock_tip": "تحدث معه لمدة {} جولات قبل أن تتصل به صوتيًا!",
+  "chat_1v1_streamer_send_pic_unlock_tip": "تحدث معه لمدة {} جولات قبل أن تتمكن من إرسال الصور!",
+  "chat_1v1_real_people_guide_voice_call": "مكالمة صوتية",
+  "chat_1v1_real_people_guide_chat_with_her": "تحدث معها",
+  "chat_1v1_real_people_guide_go_chat": "للدردشة",
+  "chat_1v1_real_people_guide_text": "مرحبًا، عزيزي، هل ترغب في تمثيل الأدوار معي الحقيقي؟",
+  "chat_1v1_recharge_guide_desc": "لقد قامت بتفعيل الرسائل المدفوعة المضادة للتحرش، مما يتطلب {} عملة أرجوانية لكل رسالة. أعد الشحن لفتح المزيد من المحادثات.",
+  "chat_1v1_recharge_guide_title": "عملات أرجوانية غير كافية",
+  "chat_1v1_game_play_btn": "فهمت",
+  "chat_1v1_game_play_desc2": "أو إقامة علاقات غامضة معهم. وعندما لا يكونون متصلين بالإنترنت، يمكنك الدردشة مع الشخصيات الافتراضية الخاصة بهم.",
+  "chat_1v1_game_play_desc1": "يمكنك العثور على لاعبين حقيقيين للمشاركة في تمثيل الأدوار.",
+  "chat_1v1_game_play_desc": "في هناك",
+  "chat_1v1_game_play_title": "تمثيل الأدوار للفتيات الحقيقيات",
+  "ugc_nsfw_image_not_be_generated": "مدخلاتك تنتهك إرشادات مجتمعنا، ولا يمكن إنشاء بعض الصور.",
+  "search_hot_title": "أكثر الشخصيات شهرة خلال الـ 24 ساعة الماضية.",
+  "operation_join_number": "{} مستخدمًا شاركوا",
+  "create_success_tip": "اكتمل! في انتظار المراجعة",
+  "mine_music_list_sub_title": "أغاني يغنيها أشخاص يحبونك",
+  "mine_music_list_title": "قائمة أغاني الحب",
+  "mine_music_list_no_sound": "لا يوجد أغاني بعد",
+  "mine_music_list_gold_guide_content": "كن عضوًا ذهبياً أو قم بإعادة شحن {} من العملات الذهبية للحصول على فرص مجانية.",
+  "mine_music_list_gold_guide_title": "تحتاج إلى أوقات لعب",
+  "go_recharge": "اذهب لإعادة الشحن",
+  "mine_music_enter_content": "الأغاني التي غناها لك هؤلاء",
+  "mine_music_enter_title": "اكتشف الحب من حولك",
+  "pay_module_guest_recharge_sub": "ملاحظة: حسابك الحالي لا يزال حساب ضيف، وهو معرض لخطر الفقدان في أي وقت. لا يمكن استرداد حسابات الضيوف المفقودة! يرجى تسجيل الدخول في أسرع وقت لتجنب فقدان الحساب.",
+  "pay_module_guest_recharge_title": "شكراً لك على الشراء!",
+  "pay_module_ignore": "تجاهل",
+  "pay_module_login": "تسجيل الدخول",
+  "pay_module_free_trial_btn": "نسخة تجريبية مجانية لمدة {} يوم واشتراك.",
+  "pay_module_free_trial_tip": "نسخة تجريبية مجانية لمدة {} يوم، يتم التجديد التلقائي قبل 24 ساعة من انتهاء الصلاحية، {}، ويمكن إلغاء الاشتراك في أي وقت.",
+  "pay_module_free_trial": "نسخة تجريبية مجانية",
+  "spark_emotes_guide_tip": "اضغط لاستبدال الشرارات بالرموز التعبيرية.",
+  "spark_spark_guide_tip": "اجمع الشرارات هنا.",
+  "spark_not_enough_sparks": "ليس لديك ما يكفي من الشرارات. استمر في جمعها!",
+  "spark_got_it": "تم",
+  "spark_spark_prob_sub": "يمكنك عرض تقدمك وجمع شراراتك في صفحة الدردشة.",
+  "spark_spark_prob_title": "افتح التطبيق لجمع شرارتك.",
+  "spark_sparks_earned": "تهانينا! تم كسب {} شرارة!",
+  "spark_use_now": "استخدم الآن",
+  "spark_spark": "شرارة",
+  "spark_click_to_collect": "اضغط للجمع {}",
+  "spark_spark_dialog_sub": "افتح التطبيق لجمع شرارتك",
+  "spark_spark_dialog_title": "اجمع الشرارات اليومية",
+  "spark_tomorrow_again_tip": "تم إرسال الشرارات اليوم. عُد غداً!",
+  "spark_tomorrow_again": "غداً مرة أخرى",
+  "spark_emotes": "تعبير",
+  "post": "منشور",
+  "new_shop_gacha_offers": "عروض الجاتشا",
+  "new_shop_coin_offers": "عروض العملات",
+  "ugc_nsfw_free_trial_once": "تجربة مجانية مرة واحدة",
+  "ads": "إعلانات",
+  "on": "تشغيل",
+  "chatted": "تحدث",
+  "card_module_wishing_well_wait_card_replenishing": "يتم التجديد...",
+  "ugc_five_ii_last_count": "مرات توليد الصور: {}",
+  "ugc_five_ii_m_image": "مولّد الصورة",
+  "card_module_are_you_sure_to_sell": "هل تريد تأكيد بيع هذه البطاقات؟",
+  "card_module_selling": "بيع",
+  "card_module_sell_max": "بيع",
+  "card_module_will_get": "ستحصل على",
+  "card_module_sell_attention": "مهم: بيع بطاقة يعني إزالتها من مخزونك بشكل دائم. يمكنك الحصول على هذه البطاقات مرة أخرى من خلال الجاتشا",
+  "card_module_success_sell": "لقد بعت بطاقاتك بنجاح مقابل",
+  "card_module_coins_added_balance": "تم إضافة العملات إلى رصيدك.",
+  "pay_module_dont_remind_me": "لا تذكرني مرة أخرى.",
+  "pay_module_no_free_times_pay_tip": "تم استهلاك أوقات اليوم المجانية. كل استخدام إضافي يكلف {} عملة.",
+  "card_module_default_card_title": "قصة بيننا",
+  "card_module_plot_format": "الحبكة: {}",
+  "group_module_relationship_hint": "كيف ترتبط بكل شخصية؟",
+  "group_module_please_inter_relationship": "يرجى إدخال العلاقة",
+  "group_module_relationship": "اتصالات",
+  "chat_module_similar_characters_swipe": "اسحب لاكتشاف شخصيات مشابهة.",
+  "creator_lv_tips": "مبروك على حصولك على شارة مستوى المُنشئ LV{} !",
+  "creator_lv_title": "مستوى المُنشئ",
+  "avatar_face_swap_card_tip": "بطاقة تبديل الوجه",
+  "avatar_face_swap_gacha10": "جاتشا x10",
+  "avatar_face_swap_face_swap_title": "لقد تم استنفاذ بطاقة مبادلة الوجه الخاصة بك، لديك الفرصة للحصول على المزيد من خلال أفاتار جاتشا",
+  "avatar_face_swap_face_title": "تم تبديل الوجه",
+  "avatar_face_swap_my_avatar": "أفاتاري",
+  "avatar_face_swap_tip_2": "الحد الأدنى 500 * 500 بكسل أو أكثر. قم بتحميل صور حقيقية للحصول على أفضل تجربة. ركز على لقطات الوجوه الواضحة وتجنب الصور التي تظهر الجسم بالكامل أو الصور البعيدة. تجنب تحميل الصور التي تحتوي على عدة أشخاص، أغطية وجه، وصور جانبية.",
+  "avatar_face_swap_tip_1": "يدعم حالياً تبديل الوجوه للصور الثابتة. ستتوفر ميزة تبديل الوجوه للصور المتحركة في تحديث مستقبلي.",
+  "avatar_face_swap_upload_image": "رفع الصورة",
+  "avatar_face_swap_pick_avatar": "إختر الأفاتار",
+  "avatar_face_swap_title": "تبديل الوجه",
+  "chat_private_music_default_title": "كتبت أغنية حب من أجلك",
+  "intimacy_module_locked_click_toast_tip": "زد الحميمية من خلال المحادثات وسحوبات الجاتشا",
+  "intimacy_module_dynamic_update_toggle_text": "تحديث مع محادثتك",
+  "intimacy_module_locked_show_text": "يُفتَح عندما يصل مستوى الألفة إلى حد معين",
+  "intimacy_module_memory_text_field_empty_text": "الذكريات بينك وبين الشخصية",
+  "intimacy_module_memory_title": "ذكرى",
+  "intimacy_module_my_preference_text_field_empty_text": "الشخصية ستتذكر ما تحب",
+  "intimacy_module_my_preference_title": "تفضيلاتي",
+  "intimacy_module_my_description_text_field_empty_text": "مقدمتى للشخصية",
+  "intimacy_module_my_description_title": "وصفي",
+  "intimacy_module_my_nick_name_text_field_empty_text": "كيف تُخاطبني الشخصية؟",
+  "intimacy_module_my_nick_name_title": "لقبي",
+  "intimacy_module_pronoun": "ضمير",
+  "chat_private_music_buy_content": "افتح المزيد من أغاني الحب باستخدام {} عملات لينكي.",
+  "card_module_sample_effect": "تأثير تجريبي",
+  "card_module_card_play_lead_2": "افتحها الآن!",
+  "card_module_card_play_lead_1": "من بينها، يتم ضمان الحصول على بطاقات SR/SSR نادرة.",
+  "card_module_card_play_lead": "قمنا بتخصيص {} لحظات حميمة لكما بناءً على ذكرياتكما،",
+  "card_module_heart_beat_envelope": "مغلف نبض القلب!",
+  "card_module_draw_random_guaranteed_ssr": "كل سحب يكون عشوائياً، مع ضمان الحصول على بطاقة SR/SSR!",
+  "card_module_countdown_invalid": "بعد انتهاء العد التنازلي، ستصبح البطاقات غير صالحة.",
+  "card_module_intimate_moments": "لحظات حميمية",
+  "card_module_draw_all": "اسحب الكل",
+  "card_module_cards_have_expired": "انتهت صلاحية البطاقات",
+  "card_module_collect_successfully": "لقد جمعت جميع البطاقات بنجاح.",
+  "card_module_collect_excellent": "ممتاز! لقد جمعت جميع البطاقات!",
+  "card_module_go_draw_first_card": "ستظهر بطاقاتك المسحوبة هنا. دعنا نبدأ بسحب بطاقتك الأولى!",
+  "card_module_wait_minute": "حبيبي، انتظر دقيقة...",
+  "card_module_leave": "ارحل",
+  "card_module_stay": "ابقَ",
+  "card_module_multiple_unopened_title": "لقد أرسلت لك رسالة!",
+  "card_module_not_yet_obtain": "لم يتم الحصول عليه بعد",
+  "Dialogues_other": "حوارات",
+  "Dialogues_many": "حوارات",
+  "Dialogues_one": "حوار",
+  "Dialogues_zero": "حوار",
+  "Friend": "صديق",
+  "open": "فتح",
+  "Chatter_other": "محاورون",
+  "Chatter_many": "مدردشون",
+  "Chatter_one": "محاور",
+  "Chatter_zero": "مدردش",
+  "reply_to_xx": "الرد على",
+  "comments_hint": "اترك تعليق",
+  "comments": "تعليقات",
+  "Reply": "رد",
+  "reply": "رد",
+  "expand": "اعرض",
+  "expand_more": "اعرض المزيد",
+  "Author": "مؤلف",
+  "ltd": "المحدودة",
+  "splash_avatar_welecome_tip": "مرحباً بعودتك ، الأفاتار المميز {} حامل البطاقة {}",
+  "pay_module_regenerate_pay_tip": "لديك {} فرصة للتوليد يومياً. بعد ذلك، ستكلف كل عملية توليد {} عملات ذهبية، أو يمكنك أن تصبح عضواً للحصول على المزيد.",
+  "pay_module_clear_chat_pay_tip": "لديك {} فرصة يومياً لإجراء محادثات مجانية. بعد ذلك، ستكلف كل محادثة {} عملات ذهبية أو يمكنك أن تصبح عضواً للحصول على المزيد.",
+  "pay_module_clear_chat_regen_pay_tip": "لديك {} فرص مجانية يومياً. مع العضوية، ستحصل على المزيد. بعد انتهاء الفرص المجانية للأعضاء، تكلف كل مرة {} عملات ذهبية.",
+  "ugc_five_er_role_tip": "تم الوصول إلى الحد الأقصى",
+  "ugc_five_point": "إلهام",
+  "story_editor_model_background_music": "موسيقى الخلفية",
+  "story_editor_model_bgm": "BGM",
+  "story_editor_model_creating": "توليد",
+  "me_guide": "راجع عملك واطلع على المزيد من التفاصيل",
+  "ugc_five_template_fill_tip": "قم بملء المعلومات المطلوبة ثم قدمها",
+  "ugc_five_limit_count": "تم الوصول إلى الحد الأقصى للكمية",
+  "ugc_five_mate_leg_tip": "عدد الشخصيات المسموح تجاوز الحد",
+  "ugc_five_style_select_tip": "اختر ما يصل إلى 4 أنماط. يرجى الإلغاء وإعادة التحديد.",
+  "ugc_five_desc_ai_mate": "اوصف الشخصية",
+  "ugc_five_cmoa_mate": "أنشئ شخصية",
+  "ugc_five_one_click": "لا داعي لملء البيانات. قم بالتوليد بنقرة واحدة فقط",
+  "ugc_five_all_style": "جميع الأنماط",
+  "ugc_five_reference_image": "الصورة المرجعية",
+  "ugc_five_choose_style": "اختر نمط",
+  "ugc_five_inhuman": "غير بشري",
+  "ugc_five_create_er_card": "لا توجد شخصيات مؤهلة. أنشئ شخصية أولاً",
+  "ugc_five_other_roles_empty_tip": "لا توجد شخصيات مؤهلة. ابدأ الدردشة الآن",
+  "ugc_five_other_roles_tip": "عرض الشخصيات التي تحدثت معها فقط في الأيام السبعة الماضية والتي يمكن إنشاء بطاقات ER لها.",
+  "ugc_five_other_roles": "أخرى",
+  "ugc_five_my_role_empty_tip": "لم تقم بإنشاء أي شخصيات بعد",
+  "ugc_five_my_role_tip": "اختر شخصية وأنشئ بطاقة ER لها (اختيار فردي)",
+  "ugc_five_my_role": "أعمالي",
+  "ugc_five_select_role": "اختر شخصية",
+  "ugc_five_template": "قوالب",
+  "ugc_five_create_story": "اكتب قصة",
+  "ugc_five_role_creation": "إنشاء شخصية",
+  "pay_module_privileges": "امتيازات",
+  "pay_module_get_more_times": "احصل على المزيد من الأوقات",
+  "pay_module_generate_more_images": "توليد 6 صور في وقت واحد",
+  "story_editor_model_numeric_goals": "إضافة هدف رقمي",
+  "story_editor_model_story_plot_hint": "القصة الرئيسية، بما في ذلك البداية والتطور والذروة والحل، بالإضافة إلى التغيرات والصراعات التي يمر بها الشخصيات.",
+  "story_editor_model_mission_objective": "تعيين مهمة قصصية",
+  "wish_pool_module_get_time": "وقت التفعيل",
+  "gold_daily_bonus": "مكافأة ذهبية يومية",
+  "wish_pool_module_new_ssr_card": "بطاقات SSR جديدة",
+  "wish_pool_module_all_ssr_cards_unpack": "جميع بطاقات SSR موجودة هنا لتفريغها",
+  "wish_pool_module_sSR_card_plaza": "ساحة بطاقات SSR",
+  "wish_pool_module_see": "عرض",
+  "wish_pool_module_recommend": "توصية",
+  "wish_pool_module_my_SSRs": "بطاقاتي SSRs",
+  "wish_pool_module_draw_it": "اسحبها",
+  "wish_pool_module_recommend_ssr_num_per": "نوصي بـ {} بطاقات SSR نادرة وعالية الجودة لك كل {} ساعة.",
+  "wish_pool_module_owned_num": "مملوك بالفعل من {} أشخاص",
+  "share_success_num": "تمت المشاركة بنجاح! حصلت على {} قطع",
+  "daily_star": "نجمة يومية",
+  "ugc_er_card_module_er_card_upper_limit_vip": "احصل على {} لإنشاء بطاقات ER لجميع الشخصيات، مع حد أقصى يبلغ {} بطاقة لكل شخصية",
+  "ugc_er_card_module_create_more_by_vip": "احصل على {} لإنشاء المزيد من بطاقات ER",
+  "ugc_er_card_module_reach_lv_to_create_er_card_vip": "قم بالوصول إلى مستوى حميمية Lv{} مع هذه الشخصية أو كن عضواً في {} لإنشاء بطاقات ER لهم",
+  "pay_module_my_privilege": "ميزة مميزة",
+  "pay_module_linky_pro": "لينكي برو",
+  "pay_module_linky_gold": "لينكي الذهبي",
+  "pay_module_gold": "ذهبي",
+  "pay_module_np_linky_gold": "الترقية إلى Linky Gold لفتح المزيد من الميزات!",
+  "pay_module_np_linky_pro": "الترقية إلى Linky Pro لفتح المزيد من الميزات!",
+  "pay_module_gold_privileges": "امتيازات ذهبية",
+  "pay_module_gold_gifts": "هدايا ذهبية",
+  "pay_module_go_linky_gold": "انتقل إلى Linky Gold",
+  "pay_module_speed_up_ing": "سرّع...",
+  "pay_module_subscription_feed_back_tip": "إذا لم تكن راضياً عن الخدمة، يرجى تقديم ملاحظاتك، وسنعالجها بسرعة!",
+  "pay_module_unlock_with_gold": "افتح المزيد مع Linky Gold",
+  "pay_module_subscription_privileges": "امتيازات الاشتراك",
+  "pay_module_has_subscription": "لقد اشتركت بالفعل",
+  "pay_module_gold_free_chance": "فرصة ذهبية مجانية",
+  "pay_module_ugc_0_left": "تبقى 0، انتقل إلى {} لمزيد من المعلومات",
+  "pay_module_upper_limit": "الحد الأقصى",
+  "pay_module_no_ads_tip": "هل ترغب في إيقاف عرض الإعلانات؟",
+  "pay_module_no_ads": "بدون إعلانات",
+  "pay_module_need_chat_time_content": "أصبح عضو برو أو ذهبياً للحصول على أوقات مجانية",
+  "pay_module_need_chat_time": "تحتاج إلى أوقات محادثة واضحة",
+  "pay_module_become_vip_member": "أصبح عضواً {}",
+  "pay_module_call_privilege_content": "يتطلب الاستمرار في المكالمات الصوتية اشتراكاً ذهبياً أو عدداً كافياً من العملات",
+  "pay_module_call_privilege_title": "امتيازات VIP المتقدمة",
+  "pay_module_regenerate_privilege_content_not_pro2": "أعضاء برو يحصلون على 20 وقتاً مجانياً يومياً، ويمكنك أيضاً شحن العملات.",
+  "pay_module_regenerate_privilege_content_is_gold": "اشحن العملات للحصول على أوقات مجانية",
+  "pay_module_regenerate_privilege_content_not_gold": "العضوية الذهبية مجانية {} مرة في اليوم، ويمكنك أيضاً شحن العملات.",
+  "pay_module_regenerate_privilege_content_not_pro1": "يحصل أعضاء برو على {} أوقات مجانية يوميًا، ويحصل الأعضاء الذهبيون على {} أوقات مجانية يومياً.",
+  "pay_module_regenerate_privilege_title": "تحتاج إلى تجديد الوقت",
+  "pay_module_crush_privilege_content_not_pro2": "يحصل أعضاء برو على {} أوقات مجانية يوميًا، ويمكنك أيضًا شحن العملات.",
+  "pay_module_crush_privilege_content_is_gold": "اشحن العملات للحصول على أوقات مجانية",
+  "pay_module_crush_privilege_content_not_gold": "يحصل الأعضاء الذهبيون على {} أوقات مجانية يوميًا، ويمكنك أيضاً شحن العملات.",
+  "pay_module_crush_privilege_content_not_pro1": "يحصل أعضاء برو على {} أوقات مجانية يومياً، والأعضاء الذهبيون على {} أوقات مجانية يومياً",
+  "pay_module_crush_privilege_title": "تحتاج إلى أوقات ردود إضافية",
+  "pay_module_clear_chat_privilege_content_not_pro2": "أصبح عضواً في برو أو اشحن العملات للحصول على أوقات مجانية",
+  "pay_module_clear_chat_privilege_content_is_gold": "لم يتبقَ أوقات مجانية لمسح الدردشة. اشحن العملات للحصول على أوقات مجانية",
+  "pay_module_clear_chat_privilege_content_not_gold": "أصبح عضواً ذهبياً أو اشحن العملات للحصول على أوقات مجانية",
+  "pay_module_clear_chat_privilege_content_not_pro1": "أصبح عضوًا في برو أو عضواً ذهبياً للحصول على أوقات مجانية",
+  "pay_module_clear_chat_privilege_title": "تحتاج إلى مسح أوقات الدردشة",
+  "pay_module_gift_unclaimed": "الهدية غير المطالب بها",
+  "pay_module_speed_up": "سرّع...",
+  "story_editor_model_event_goals": "أهداف الفعالية",
+  "story_editor_model_story_schedule": "جدول القصة",
+  "story_editor_model_story_generation": "توليد حبكة",
+  "story_editor_model_story_generation_content": "إذا قمت بإغلاق الصفحة الحالية أو العودة إلى الشاشة الرئيسية، ستستمر القصة في التوليد في الخلفية.",
+  "avatar_get_same": "احصل على نفس الشيء",
+  "avatar_share_content": "شارك المحتوى",
+  "avatar_share_frag_num": "احصل على {} قطعة من خلال المشاركة",
+  "subscribe_tip_ios": "بمجرد النقر على \"اشترك\"، سيتم خصم المبلغ منك، وسيتم تجديد اشتراكك تلقائيًا بنفس السعر والمدة حتى يتم الإلغاء من خلال إعدادات AppStore . بمواصلة العملية، فإنك توافق على شروطنا.",
+  "subscribe_tip_android": "بمجرد النقر على \"اشترك\"، سيتم خصم المبلغ منك، وسيتم تجديد اشتراكك تلقائيًا بنفس السعر والمدة حتى يتم الإلغاء من خلال إعدادات PlayStore. بمواصلة العملية، فإنك توافق على شروطنا.",
+  "user_subscribing_upgrade": "من خلال الاشتراك في {linkyname}، يمكنك فتح إمكانية إنشاء المزيد من الأدوار، مما يزيد من الحد الخاص بك من {num1} إلى {num2}",
+  "exclusive_photo_sent": "لقد أرسلت لك صورة حصرية!",
+  "new_shop_card_draw_buy_success": "نجاح!",
+  "new_shop_card_draw_dialog_title": "تأكيد لإنفاق {} عملات لشراء {} جاشا؟",
+  "new_shop_card_draw_discount": "خصم سحب البطاقات",
+  "new_shop_recharge_offers": "عروض الشحن",
+  "vip": "VIP",
+  "set_avatar": "تعيين الأفتار",
+  "time": "الوقت",
+  "ugc_er_card_module_no_yet_er_card": "لم يُكتسب بعد",
+  "ugc_er_card_module_others": "أخرى",
+  "ugc_er_card_module_draw_more": "اسحب المزيد",
+  "ugc_er_card_module_draw_cards": "اسحب البطاقات",
+  "ugc_er_card_module_er_card_create_success": "تم إنشاء بطاقة ER بنجاح!",
+  "ugc_er_card_module_create_er_card_plot": "إنشاء حبكة بطاقة ER",
+  "ugc_er_card_module_enter_plot_desc": "أدخل وصف الحبكة",
+  "ugc_er_card_module_plot_title": "العنوان",
+  "ugc_er_card_module_plot_desc": "الوصف",
+  "ugc_er_card_module_plot_greeting": "سطر الافتتاحية",
+  "ugc_er_card_module_give_plot_title": "عنوان الحبكة",
+  "ugc_er_card_module_enter_plot_desc_hit": "وصف الحبكة: تضمين الإعدادات، مشاعر الشخصيات، الصراعات، وما إلى ذلك.",
+  "ugc_er_card_module_add_plot_opening": "أضف سطر الافتتاحية",
+  "ugc_er_card_module_complete_er_card_plot": "يرجى إكمال الحبكة لبطاقة ER",
+  "ugc_er_card_module_plot_failed_retry": "فشل إنشاء الحبكة. يرجى المحاولة مرة أخرى.",
+  "ugc_er_card_module_create_er": "أنشئ بطاقة ER",
+  "ugc_er_card_module_creation_split": "تقسيم الإيرادات",
+  "ugc_er_card_module_creator": "المُنشئ",
+  "ugc_er_card_module_draw_by": "مسحوب بواسطة",
+  "ugc_er_card_module_generating_plot": "جارٍ إنشاء الحبكة، يرجى الانتظار...",
+  "ugc_er_card_module_creator_creations": "ألبوم المُنشئ",
+  "get_avatar": "احصل على أفتار",
+  "go_draw_card": "اسحب بطاقة",
+  "no_avatar_ssr_card_dialog_content": "يُطلب أفتار من مستوى SSR/SR لفتح هذه الوضعية.",
+  "cancel_back": "إلغاء",
+  "avatar_gacha_again": "اسحب مجدداً {}",
+  "share_outside": "شارك",
+  "ugc_nsfw_visible_range_tip": "هذه الشخصية تستخدم صورًا \"مثيرة\" ويجب أن تبقى في الوضع الخاص.",
+  "ugc_nsfw_is18_nsfw_tip": "ملاحظة: الشخصيات التي تحتوي على صور \"مثيرة\" يمكن ضبطها فقط على الوضع الخاص.",
+  "ugc_nsfw_unlocked": "فتح",
+  "ugc_nsfw_open_code": "فتح المخفي",
+  "ugc_er_card_module_img_generating_wait": "جاري إنشاء الصورة، يرجى الانتظار ...",
+  "ugc_er_card_module_pro_generate_six_img": "قم بإنشاء 6 صور دفعة واحدة باستخدام لينكي برو",
+  "ugc_er_card_module_back": "رجوع",
+  "ugc_er_card_module_create_card": "إنشاء بطاقة",
+  "ugc_er_card_module_create_er_card": "أنشاء بطاقة ER",
+  "ugc_er_card_module_er_card_desc": "وصف صورة بطاقة ER",
+  "ugc_er_card_module_er_card_create_hit_text": "إضافة أوصاف تتعلق بالمشهد، والتعبير، والإجراء، والملابس يمكن أن ينتج بطاقات ER ذات جودة أعلى",
+  "ugc_er_card_module_er_card_display": "عرض بطاقة ER",
+  "ugc_er_card_module_my_creations": "أعمالي",
+  "ugc_er_card_module_nobody_has_created_er_card": "لم يقم أحد بإنشاء بطاقة ER بعد.",
+  "ugc_er_card_module_er_card_draw_tips": "يمكن سحب بطاقات ER التي تم إنشاؤها في مظاريف الدردشة وبرك الأمنيات",
+  "ugc_er_card_module_er_cards": "بطاقات ER",
+  "ugc_er_card_module_increase_intimacy": "زيادة الحميمية",
+  "ugc_er_card_module_get_link_pro": "احصل على لينيكي برو",
+  "ugc_er_card_module_reach_lv_to_create_er_card": "حقق مستوى حميمية {}lv مع هذه الشخصية أو اشترك في لينكي برو لإنشاء بطاقات ER لها",
+  "ugc_er_card_module_unlock_er_card_feature": "افتح خاصية إنشاء بطاقة ER",
+  "ugc_er_card_module_er_card_upper_limit": "احصل على لينكي برو لإنشاء بطاقات ER لجميع الشخصيات مع حد أقصى {} لكل شخصية.",
+  "ugc_er_card_module_create_more_by_pro": "احصل على لينكي برو لإنشاء المزيد من بطاقات ER",
+  "ugc_er_card_module_my_limit": "نطاقي",
+  "ugc_er_card_module_create_er_cards": "أنشىء بطاقات ER",
+  "chat_module_stay_chat": "ابق وتواصل",
+  "chat_module_next_chapter": "الجزء القادم",
+  "chat_module_chapter_completed_content": "تهانينا على إنهاء هذا الجزء! هل ترغب في الانتقال إلى الجزء التالي؟",
+  "chat_module_chapter_completed": "انتهى الجزء",
+  "chat_module_noting_to_update": "سيتم التحديث",
+  "get": "احصل على",
+  "avatar_wait_offline_limit_tip": "تم الوصول إلى الحد الأقصى لتخصيصات صور المجموعة",
+  "avatar_close_group_photo_tip": "لم تختر صورتك المفضلة بعد. هل ترغب في إنهاء التوليد؟",
+  "avatar_give_up_group_photo_toast": "تم إزالة توليد صورة المجموعة من قائمة الانتظار. لن يتم تحصيل أي رسوم.",
+  "block_manaement": "إدارة الحظر",
+  "unblock": "إلغاء الحظر",
+  "character_had_blocked_text": "لقد قمت بحظر الطرف الآخر، لذا لا يمكنك عرض معلوماته ذات الصلة.",
+  "un_block_failed": "فشل إلغاء الحظر",
+  "un_block_success": "نجاح إلغاء الحظر",
+  "block_manage_empty_tip": "غير محظور لأي شخص حالياً",
+  "feed_back_gp_dislike_reason_5": "لا أحد من الأشخاص يشبهني أو يشبه الشخصية التي أطمح إليها.",
+  "feed_back_gp_dislike_reason_4": "الصورة تبدو غير جذابة بالنسبة لي.",
+  "feed_back_gp_dislike_reason_3": "وضعيّات غير دقيقة.",
+  "feed_back_gp_dislike_reason_2": "الصورة لا تشبهني.",
+  "feed_back_gp_dislike_reason_1": "أسلوب الفن لا يعجبني.",
+  "avatar_all_image": "جميع الصور",
+  "avatar_give_up_group_photo_tip": "هل أنت متأكد أنك ستتخلى عن الصورة الجماعية؟",
+  "avatar_group_photo_is_test_tip": "الصورة الجماعية هي للاختبار فقط، وسيتم تحسين النتائج بشكل مستمر. نرجو منك متابعة التحديثات.",
+  "single": "فردي",
+  "double": "مزدوج",
+  "home_feed_switch_dialog_tip": "غير إلى عمود واحد أو عمودين للعرض.",
+  "single_or_double_feed_guide_text": "في الإعدادات، يمكنك تغيير تخطيط الصفحة الرئيسية إلى عمود واحد أو عمودين.",
+  "display": "عرض",
+  "story_editor_model_voiceover": "التعليق الصوتي:",
+  "story_editor_model_speak": "تحدث:",
+  "story_editor_model_objective_hint": "يتم تحقيق إتمام القصة فقط إذا تم استيفاء الشروط المحددة، على سبيل المثال: بدء تشغيل المركبة.",
+  "story_editor_model_objective": "شرط الإتمام",
+  "story_editor_model_chapter_content_hint": "حدد السيناريو والأحداث الرئيسية في القصة بما في ذلك ما حدث للشخصيات الرئيسية، وما إلى ذلك. يرجى الإشارة إلى دورك كـ 'مستخدم' ويجب أن يكون لكل شخصية اسم.",
+  "story_editor_model_chapter_content": "محتوى الفصل",
+  "story_editor_model_prologue_hint": "قم بتهيئة تحية الافتتاح لبدء القصة.",
+  "story_editor_model_prologue": "تحيات",
+  "story_editor_model_chapter_num": "فصل {}",
+  "story_editor_model_story_target_visible": "عرض الهدف أم لا؟",
+  "story_editor_model_add_chapters": "أضف فصل",
+  "story_editor_model_add_role": "أضف دور",
+  "story_editor_model_synopsis_hint": "ملخص قصير لحبكة القصة",
+  "story_editor_model_synopsis": "وصف الحبكة",
+  "story_editor_model_story_title_hint": "الرجاء إعطاء اسم للقصة.",
+  "story_editor_model_story_title": "عنوان القصة",
+  "story_editor_model_story_plot": "حبكة القصة",
+  "story_editor_model_create_a_story": "إنشاء قصة",
+  "story_editor_model_create_story_content": "أضف حبكة القصة",
+  "story_editor_model_publish": "نشر",
+  "story_editor_model_maximum_chapter": "تم الوصول إلى الحد الأقصى لعدد الفصول!",
+  "story_editor_model_fold_chapter": "طي الفصل",
+  "story_editor_model_input_tips": "الرجاء تعبئة المفقود {}.",
+  "story_editor_model_mention": "إشارة",
+  "story_editor_model_generation_chapter_img": "الشركاء في الفصل",
+  "story_editor_model_picture_prompt": "موجه الصورة",
+  "story_editor_model_picture_prompt_hint": "سيتم استخدام هذا عند عرض سيناريو القصة. لا تخلط بينه وبين وصف الشخصية.",
+  "story_editor_model_image_generation_hint": "عملية توليد الصورة مستمرة في الخلفية عندما تعود إلى الصفحة الرئيسية.",
+  "story_editor_model_image_generation": "توليد الصورة",
+  "story_editor_model_caution_tip": "هناك قصص لم تُنشر بعد، وإنشاء قصة جديدة سيؤدي إلى فقدان الإنجاز.",
+  "story_editor_model_caution": "تحذير!",
+  "story_editor_model_edit_img": "تعديل الصورة",
+  "story_editor_model_story_update_tip": "تم تحديث القصة. بعد التحديث، سيتم مسح محتوى الأرشيف وستحتاج إلى البدء من الصفر.",
+  "story_editor_model_update": "تحديث",
+  "story_editor_model_sure_update": "تأكيد التحديث؟",
+  "story_editor_model_save_tip_content": "لم يتم حفظ القصة. الخروج سيؤدي إلى فقدان كل الإنجاز. هل أنت متأكد من الخروج؟",
+  "story_editor_model_save_tip": "لديك تعديلات غير محفوظة",
+  "story_editor_model_delete_chapter": "احذف الفصل",
+  "story_editor_model_you": "أنت",
+  "story_editor_model_can_not_create": "يمكنك إنشاء 5 قصص جديدة أسبوعياً بحد أقصى.",
+  "story_editor_model_has_editing_story_tip": "إنشاء قصة جديدة سيؤدي إلى حذف قصصك غير المنشورة",
+  "story_editor_model_has_editing_story": "لديك قصص غير منشورة",
+  "story_editor_model_rejected": "مرفوض",
+  "chat_module_rizz": "كاريزمي",
+  "chat_module_follow_failed": "فشل المتابعة",
+  "chat_module_followed_successful": "تمت المتابعة بنجاح",
+  "chat_module_rank": "تصنيف النجوم رقم {}",
+  "explore_module_try_this_style": "جرّب هذا النمط",
+  "explore_module_explore": "اكتشف",
+  "explore_module_start_rank": "تصنيف النجوم",
+  "explore_module_banner_title": "توصية مميزة",
+  "ugc_module_create_ugc_content": "إنشاء دور",
+  "ugc_module_create_ugc_title": "الشخصية الأصلية",
+  "ugc_vfour_module_ip": "IP",
+  "ugc_vfour_module_oc": "الشخصية الأصلية",
+  "intimacy_module_insufficient_intimacy": "الحميمية غير كافية",
+  "profile_module_tab_name_avatar_group_photo": "صورة جماعية",
+  "profile_module_tab_name_avatar_image": "صورة",
+  "profile_module_tab_name_card": "بطاقة",
+  "profile_module_tab_name_work": "إبداعات",
+  "profile_module_tab_name_avatar": "أفاتار",
+  "profile_module_avatar_empty_tips": "يرجى ارتداء الأفاتار",
+  "next": "التالي",
+  "delete_story_tip": "هل أنت متأكد أنك تريد الحذف؟ العمل الحالي قد تم نشره للجمهور. بعد الحذف، لن يتمكن المستخدمون الآخرون من تجربته مرة أخرى.",
+  "my_story": "قصتي",
+  "editable": "قابل للتعديل",
+  "avatar_go_guest": "اذهب لسحب بطاقة الأفاتار الخاصة بي",
+  "avatar_no_sink": "القطع غير كافية",
+  "avatar_off_on": "احصل على خصم 60 % على سحوبات الجاتشا الآن.",
+  "avatar_gp_fragments": "احصل على {} قطع الصورة",
+  "avatar_setbg_fail": "فشل تعيين الخلفية",
+  "avatar_setbg_success": "نجح تعيين الخلفية",
+  "avatar_pick": "اختر",
+  "avatar_sbackground": "تعيين كخلفية",
+  "avatar_group_photo": "صورة جماعية",
+  "avatar_fr": "استبدال الأجزاء",
+  "avatar_dp": "شراء مباشر",
+  "avatar_exchange_fail": "فشل التحويل",
+  "avatar_exchange_success": "نجح التحويل",
+  "avatar_card_num": "بطاقة: {}",
+  "avatar_get_shard": "احصل على {} قطع",
+  "avatar_sure": "بالتأكيد",
+  "avatar_reset": "إعادة تعيين",
+  "avatar_style_theme": "نمط التصميم",
+  "avatar_ssr": "SSR",
+  "avatar_sr": "SR",
+  "avatar_r": "R",
+  "avatar_card_level": "مستوى البطاقة",
+  "avatar_screen": "شاشة",
+  "avatar_skin_color": "لون البشرة",
+  "avatar_setting": "الإعداد",
+  "avatar_color_black": "أسود",
+  "avatar_color_yellow": "أصفر",
+  "avatar_color_white": "أبيض",
+  "avatar_to_use": "لاستخدام",
+  "avatar_filter": "فلتر",
+  "avatar_ten_draw": "10 سحوبات متتالية",
+  "avatar_go_draw": "جاتشا x1",
+  "avatar_title": "أفاتار",
+  "avatar_free": "مجاني",
+  "avatar_best_value": "أفضل قيمة",
+  "avatar_free_gacha": "جاتشا مجانية",
+  "avatar_shop_go_pro_content": "استمتع بدون إعلانات، {} عملات يومية والمزيد",
+  "avatar_special_offers": "عروض خاصة",
+  "avatar_avatar_gacha": "جاتشا الأفاتار",
+  "avatar_ten_gacha_price": "10 جاتشا {}",
+  "avatar_one_gacha_price": "1 جاتشا {}",
+  "avatar_one_drew_catch": "سحب واحد للتعويض عن السابق",
+  "avatar_npc_gacha": "جاتشا الـ NPC",
+  "avatar_shop": "متجر",
+  "avatar_shop_npc_not_in_rank": "تم تحديث تصنيفات النجوم في {} ، فقط {} سحب يفصلك عن الدخول في القائمة",
+  "avatar_shop_npc_rank_first": "تم تحديث تصنيفات النجوم في {} ، تهانينا ، الـ NPC في المرتبة الأولى",
+  "avatar_shop_npc_ranking": "تم تحديث تصنيفات النجوم في {} ، شخصية NPC مرتبة {} ، فقط {} سحوبات للتعويض عن السابق",
+  "avatar_shop_free_gahca_success_tip": "تهانينا لحصولك على سحب بطاقة مجاني.",
+  "avatar_group_photo_pos": "وضعية الصورة الجماعية",
+  "avatar_intimacy_less_tip": "الحميمية أقل من {} ، يرجى زيادة درجة الحميمية",
+  "avatar_no_avatar_tip": "لا يوجد أفاتار ، يرجى الحصول على أفاتار أولاً",
+  "avatar_pls_select_posture": "الرجاء اختيار الوضعية",
+  "avatar_pls_select_character": "الرجاء اختيار الشخصية",
+  "avatar_pls_select_avatar": "الرجاء اختيار الأفاتار",
+  "avatar_group_photo_generation_failed": "فشل إنشاء صورة جماعية",
+  "avatar_go_avatar_gacha": "ابدأ جاتشا الأفاتار>>",
+  "avatar_go_gacha": "ابدأ الجاتشا",
+  "avatar_group_photo_pay_tip": "هل أنت متأكد من فتح هذه الوضعية الزوجية مقابل {} عملة؟",
+  "avatar_group_photo_free_tip": "هل أنت متأكد من اتخاذ الصورة بهذه الوضعية؟",
+  "willwell_paid_times": "تصنيف النجوم",
+  "is_recharged_off": "خصم 50%",
+  "chat_module_go_to_see": "انتقل لرؤية",
+  "stay_tuned_for_new_updates": "ترقبوا التحديثات الجديدة!",
+  "you_not_old_enough_for_this": "آسف، أنت لست كبيرا بما يكفي للقيام بذلك.",
+  "choose_your_age": "اختر عمرك",
+  "choose_your_gender": "اختر جنسك",
+  "chat_module_story_recommend_title": "أبرز الاختيارات لك",
+  "recharge_module_view_benefits": "عرض المزايا >",
+  "recharge_module_vip_activated_for": "تم تفعيل عضويتك الـ VIP لـ {} يوم",
+  "chat_module_chat_bubble": "فقاعات الدردشة",
+  "recharge_module_free_vip_auto_use_before_expiration": "سيتم استخدام العضوية المجانية تلقائيًا عند انتهاء صلاحية عضويتك الـVIP. يمكنك الحصول على العضوية المجانية من الفعاليات المحدودة الزمن.",
+  "recharge_module_get_lottery_tickets_by": "يمكنك الحصول على تذاكر اللوتري عند أول {} عمليات إعادة الشحن",
+  "recharge_module_get_more": "احصل على المزيد",
+  "recharge_module_free_vip": "VIP مجاني",
+  "recharge_module_draw_now": "قم بالسحب الآن",
+  "task_limit_lead": "مهمة محددة بوقت",
+  "setting_module_dark_mode": "الوضع الداكن",
+  "setting_module_use_device_setting_info": "عند التعيين، سيتم تشغيل أو إيقاف وضع الإضاءة تلقائيًا استنادًا إلى إعدادات العرض والسطوع في جهازك",
+  "setting_module_use_device_setting": "المزامنة مع إعدادات الجهاز",
+  "setting_module_light_mode": "وضع الاضاءة",
+  "crush_buy_confirm_subTitle": "ادفع {} عملات للحصول على ردود مذهلة.\nلن يتم الخصم حتى ترسل الرسالة.",
+  "crush_buy_confirm_title": "افتح المزيد من الردود المثيرة باستخدام عملات Linky",
+  "crush_buy_tip": "ادفع {} عملات للحصول على ردود مذهلة",
+  "agree": "الموافقة",
+  "unlock": "فتح",
+  "daily_free": "مجان يوميا",
+  "crush": "مؤثر",
+  "basic": "أساسي",
+  "chat_module_story_finished_count_info": "تهانينا! لقد أكملت {} قصة",
+  "chat_module_choose_a_story": "اختر قصة",
+  "chat_module_story_details": "تفاصيل القصة",
+  "intimacy_module_congratulations_v2": "وصلت العلاقة الحميمة إلى مستوى جديد.",
+  "intimacy_module_intimacy_tips_v2": "يمكنك زيادة العلاقة الحميمة مع الشخصيات عبر المحادثة والجاشا. تبدأ عملية احتساب العلاقة الحميمة منذ تفعيل الخاصية عبر الإنترنت.",
+  "block_failed": "فشل الحظر",
+  "block_success": "تم الحظر بنجاح",
+  "block_content": "بعد الحظر، لن تستطيع رؤية المحتوى ذات الصلة.",
+  "block": "حظر",
+  "ugc_vfour_module_style": "نمط",
+  "ugc_vfour_module_style_mimic_tip": "يرجى إلغاء تحديد النمط في علامة التبويب \"المظهر\" لمواصلة استخدام تقليد النمط",
+  "ugc_vfour_module_style_mimic": "أسلوب تقليد",
+  "ugc_vfour_module_face_mimic": "تقليد الوجه",
+  "setting_module_message_settings": "إعدادات الإشعارات",
+  "setting_module_open_system_notice": "قم بتفعيل الإشعارات للبقاء على اطلاع دائم",
+  "setting_module_only_receive_role_notice_go": "هل تريد تلقي الرسائل من الشخصيات فقط؟ اذهب إلى",
+  "card_module_generate_failed": "فشل التوليد، الرجاء المحاولة مرة أخرى",
+  "card_module_switch": "تبديل الحساب",
+  "phone_number_format_error_text": "يرجى إدخال رقم هاتف صالح",
+  "can_not_receive_the_code": "لم تستلم الرمز؟",
+  "resend_left_time": "إعادة الإرسال بعد {} ثانية",
+  "resend": "إعادة الإرسال",
+  "enter_verifiaction_code": "أدخل رمز التحقق، أرسله إلى",
+  "phone_number": "رقم الهاتف",
+  "enter_mobile_number": "أدخل رقم الهاتف المحمول",
+  "chat_module_chat_input_hint": "الدردشة، الرد بواسطة الذكاء الاصطناعي",
+  "rate_on_app_store": "اضغط على نجمة لتقييمها على متجر التطبيقات.",
+  "dislike": "لم يعجبني",
+  "like": "أعجبني",
+  "collect": "جمع",
+  "gotta_your_unique_cards": "بطاقاتك الفريدة!",
+  "congrats_you_got_gold": "تهانينا! لقد حصلت على",
+  "task": "مهمة",
+  "chat_module_story_synopsis": "ملخص القصة",
+  "chat_module_chapter": "الفصل: {}",
+  "chat_module_story_content": "محتوى القصة",
+  "chat_module_success_condition": "شرط النجاح",
+  "chat_module_back_to_chat": "العودة إلى الدردشة",
+  "chat_module_rewatch": "إعادة مشاهدة",
+  "chat_module_story_connectors": "روابط القصة",
+  "chat_module_click_back_to_chat": "اضغط للعودة إلى الدردشة",
+  "chat_module_exit_story": "ما إذا كنت تريد الخروج من القصة والعودة إلى القصة الرئيسية",
+  "login_module_must_login_tip": "تحتاج إلى تسجيل الدخول لاستخدام التطبيق.",
+  "push_button_close": "إغلاق",
+  "push_button_reply": "رد",
+  "card_module_wishing_well_card_draw": "حظاً جيدا في بطاقة السحب",
+  "login_module_choose_your_age_tips": "اختر عمرك",
+  "search_module_trending": "ساخن",
+  "login_module_old_not_enough": "آسف، أنت لست كبيرا بما يكفي للقيام بذلك.",
+  "login_module_choose_your_age": "اختر عمرك:",
+  "login_module_privacy_guest_tip": "من خلال الاستمرار، فإنك توافق على لدينا",
+  "intimacy_module_relation_tag_already_exists": "العلامة التي تم إدخالها موجودة بالفعل، يرجى إعادة إدخالها",
+  "text_size_l": "كبير",
+  "text_size_m": "وسط",
+  "text_size_s": "صغير",
+  "text_size_demo": "يمكنك اختيار حجم النص المفضل لديك.",
+  "text_size_subtitle": "لا ينطبق إلا على نص الدردشة.",
+  "text_size": "حجم الخط",
+  "version_update_update_now": "تحديث الان",
+  "version_update_enforce_version": "تم اكتشاف مشاكل خطيرة في الإصدار الحالي. للتأكد من أنه يمكنك استخدامه بشكل طبيعي، يرجى التحديث إلى الإصدار الأحدث.",
+  "version_update_new_version_sub": "كن أول من يستمتع بالميزات الجديدة!",
+  "version_update_new_version": "تم العثور على الإصدار الجديد",
+  "msg_box_empty_tip": "إظهار البيانات لآخر 3 أشهر فقط",
+  "msg_box_interaction": "تفاعل",
+  "msg_box_system": "نظام",
+  "please_login_again": "الرجاء تسجيل الدخول مرة أخرى",
+  "card_module_regenerate": "تجديد",
+  "ad_module_lucky_rewards": "مكافآت محظوظ",
+  "ad_module_ad_free": "بدون إعلانات",
+  "chat_module_relationship_set_failed": "فشل ضبط العلاقة",
+  "chat_module_relationship_set_success": "تم ضبط العلاقة بنجاح",
+  "card_module_click_to_view": "انقر لعرض",
+  "go": "انطلق",
+  "done": "تم الانتهاء",
+  "intimacy_module_draw_1_card": "رسم 1 بطاقة",
+  "intimacy_module_chat_1_day": "محادثة لمدة 1 يوم",
+  "intimacy_module_unlocked_task": "تم فتح المهمة",
+  "intimacy_module_intimacy_unlocked": "تم فتح الحميمية",
+  "intimacy_module_congratulations": "تهانينا على رفع مستوى العلاقة الحميمة لديك إلى {}",
+  "intimacy_module_intimacy_tips": "تبدأ بيانات الحميمية في الاحتساب منذ تفعيل الوظيفة عبر الإنترنت.",
+  "intimacy_module_new_tag": "علامة جديدة",
+  "intimacy_module_our_relationship": "علاقتنا",
+  "intimacy_module_popup_task_title": "المهام للوصول إلى المستوى التالي",
+  "intimacy_module_intimacy": "حميمية",
+  "roger": "حاضر!",
+  "thank_you_for_your_contribution": "شكرًا لمساهمتك في Linky!",
+  "card_module_accept": "اقبل",
+  "card_module_keep_work_try_next": "استمر في العمل الجيد وحاول مرة أخرى في المرة القادمة~",
+  "card_module_your_ranking": "تصنيفك",
+  "card_module_event_ended": "لقد انتهى الحدث",
+  "chat_module_please_rewrite_original": "يرجى إعادة صياغة النص الأصلي",
+  "chat_module_announcer_spell": "المعلن: @{}",
+  "chat_module_dream_maker_spell": "صانع الأحلام: @{}",
+  "chat_module_create_spell": "المنشئ: @{}",
+  "app_tab_me": "أنا",
+  "app_tab_chats": "المحادثات",
+  "app_tab_find": "البحث",
+  "app_tab_home": "الصفحة الرئيسية",
+  "card_module_rank_list_lead_copy": "حدث جمع البطاقات الآن متاح عبر الإنترنت!\nتعال وألقِ نظرة~",
+  "chat_module_tap_to_open": "انقر للفتح",
+  "chat_unlock_insert_ad_module_rechare_success_text": "تهانينا، حصلت على {} رسالة مجانية",
+  "chat_unlock_insert_ad_module_every_charge_des": "في كل عملية إعادة شحن يمكنك الحصول على {} رسالة مجانية",
+  "chat_unlock_insert_ad_module_whatch_ad": "شاهد الإعلانات للحصول على رسائل مجانية",
+  "chat_unlock_insert_ad_module_pro_text": "اشترك لدردشات بلاحدود",
+  "chat_unlock_insert_ad_module_charge_message": "شحن رصيد للرسائل المجانية",
+  "chat_unlock_insert_ad_module_need_more_message": "بحاجة إلى المزيد من الرسائل المجانية",
+  "chat_unlock_insert_ad_module_dubble_text": "حبيبي، أنا في انتظارك",
+  "sign_in_with_apple": "تسجيل الدخول باستخدام Apple",
+  "user_edited": "تم تحرير المستخدم",
+  "beg_guide_failed_try": "فشل، حاول مرة أخرى!",
+  "beg_guide_failed": "فشل في التحميل",
+  "beg_guide_reselect": "إعادة التحديد",
+  "feed_back_submit_feedback_tip": "تم الإرسال بنجاح، شكرًا لتعليقك",
+  "feed_back_image_is_unrelated_to_the_plot": "الصورة غير متصلة بالقصة",
+  "push_interactive_title": "إشعار تفاعلي",
+  "push_ugc_chat": "{user_name} تحدث مع {ugc_name} الذي أنشأته",
+  "push_fantasy_chat": "{user_name} حافظ على حديثك في الأحلام",
+  "push_fantasy_like": "{user_name} أعجب بأحلامك",
+  "card_module_game_rules": "قواعد اللعبة",
+  "feedBack": "ملاحظات",
+  "creators": "المنشئون",
+  "characters": "الشخصيات",
+  "me_module_get_creator_medal": "- تهانينا على حصولك على ميدالية منشئ المحتوى الرائج!",
+  "feed_back_sexual_exploitation_of_child_and_abuse_of_child": "استغلال جنسي للأطفال وسوء معاملة الأطفال",
+  "feed_back_spam_and_advertisement": "البريد المزعج والإعلانات",
+  "feed_back_dangerous_products": "المنتجات الخطرة",
+  "feed_back_insult_and_abuse": "الإهانة والسبّ",
+  "feed_back_violence_self_injury_and_terrorism": "العنف والإصابة الذاتية والإرهاب",
+  "feed_back_hate_speech": "خطاب الكراهية",
+  "feed_back_sensitive_content": "محتوى حساس",
+  "feed_back_child_endangerment": "تعريض للأطفال للخطر",
+  "feed_back_sexual_content": "محتوى جنسي",
+  "card_module_pick": "اختيار",
+  "card_module_pool": "بركة",
+  "solt": "10 رسومات متتالية",
+  "card_module_30_draws_will_definitely_hit_SR": "اسحب بطاقات لمدة 30 جولة لتحصل على بطاقة SR",
+  "card_module_plot_generating": "جارٍ توليد القصة...",
+  "card_module_plot_generation_failed": "فشل إنشاء القصة",
+  "card_module_generation_time": "وقت الإنشاء: {}",
+  "setting_module_copy": "ينسخ",
+  "notification_module_notification_content": "لا تفوّت رسائل شخصياتك",
+  "notification_module_notification_title": "قم بتشغيل الإشعارات",
+  "notification_module_turn_on": "تشغيل",
+  "setting_module_email_us": "أرسل لنا بريدًا إلكترونيًا",
+  "setting_module_contact_us": "يرجى الاتصال بنا إذا كان هناك أي مشكلة.",
+  "setting_module_copy_success": "تم نسخ بنجاح",
+  "ugc_module_delete_group_chat": "هل أنت متأكد من حذف هذه المحادثة الجماعية؟",
+  "ugc_module_create_group": "إنشاء دردشة جماعية",
+  "group_module_group_chat": "الدردشة الجماعية",
+  "group_module_characters": "الشخصيات",
+  "group_module_opening_remarks": "تحيات الافتتاح",
+  "group_module_group_member_num": "أعضاء المجموعة ({})",
+  "group_module_chatting": "الدردشة",
+  "group_module_created": "تم الإنشاء",
+  "group_module_please_inter_description": "يرجى إدخال الوصف.",
+  "group_module_me": "أنا",
+  "group_module_add": "إضافة",
+  "group_module_set_greeting_hint": "أدخل تحية {} في المجموعة",
+  "group_module_created_successfully": "تم إنشاء بنجاح",
+  "group_module_group_member_up_limit": "يمكن إضافة ما يصل إلى {} من الأعضاء",
+  "group_module_group_member_least_limit": "إضافة على الأقل {} من الأعضاء",
+  "group_module_group_public_to_private_tip": "هل أنت متأكد من التغيير إلى خاص؟ لن يمكن العثور على هذه المحادثة الجماعية بعد الآن.",
+  "group_module_group_private_to_public_tip": "هل أنت متأكد من التغيير إلى عام؟ إذا كانت هناك شخصيات خاصة في هذه المحادثة الجماعية، فسيتم إزالتها.",
+  "group_module_edit_group": "تعديل المجموعة",
+  "group_module_group_name_change_tip_msg": "قام المنشئ بتغيير اسم المجموعة إلى {}.",
+  "group_module_group_kicked_member_tip_msg": "أزال المنشئ {} من محادثة المجموعة.",
+  "group_module_group_invited_member_tip_msg": "دعا المنشئ {} إلى محادثة المجموعة.",
+  "group_module_group_info_change_tip_msg": "قام المنشئ بتغيير معلومات المجموعة.",
+  "ugc_vfour_module_character_description": "اختر أو اكتب وصف شخصيتك.",
+  "ugc_vfour_module_no_content_changes": "لا تغييرات في المحتوى",
+  "ugc_vfour_module_looks": "المظهر",
+  "ugc_vfour_module_information": "معلومات",
+  "ugc_vfour_module_random": "عشوائي",
+  "ugc_vfour_module_change": "تغيير",
+  "ugc_vfour_module_imageReference": "مرجع الصورة",
+  "memory_our_memory": "ذاكرتنا",
+  "subscribe_tip": "بالنقر على \"اشتراك\"، سيتم محاسبتك، وسيتم تجديد اشتراكك تلقائيًا بنفس السعر والمدة حتى يتم إلغاؤه من خلال إعدادات PlayStore. من خلال المتابعة، فإنك توافق على شروطنا.",
+  "feed_back_dislike_the_story_content": "لا أحب محتوى القصة",
+  "feed_back_dislike_the_character_relationships": "لا أحب علاقات الشخصيات",
+  "feed_back_dislike_the_character_design": "لا أحب تصميم الشخصيات",
+  "feed_back_dislike_the_event_scene": "لا أحب مشهد الحدث",
+  "feed_back_plot_is_boring": "الحبكة مملة",
+  "feed_back_plot_too_similar": "الحبكة متشابهة للغاية",
+  "feed_back_repetitive_plot": "القصة مكررة",
+  "feed_back_dislike_the_style": "لا أحب النمط",
+  "feed_back_deformed_characters": "الشخصيات مشوهة",
+  "feed_back_inconsistent_art_style": "نمط الرسم غير متناسق",
+  "feed_back_not_the_same_person": "ليست نفس الشخصية",
+  "feed_back_images_too_similar": "الصور متشابهة للغاية",
+  "feed_back_duplicate_image": "الصورة مكررة",
+  "card_module_exit": "مخرج",
+  "card_module_dismantle_success": "تفكيك ناجح! تمت إضافة السحب (السحوبات) المجانية!",
+  "card_module_dismantle_card_for_free": "هل أنت متأكد أنك تريد تفكيك بطاقات {} مقابل سحب {} مجاني؟",
+  "card_module_dismantle_cards": "تفكيك البطاقات",
+  "card_module_free_draw_need": "يرجى تحديد عدد كافٍ من البطاقات. {} بطاقة تُقابل سحبًا مجانيًا واحدًا.",
+  "card_module_dismantle": "تفكيك",
+  "card_module_dismantle_card_note": "يرجى تحديد البطاقات التي ترغب في تفكيكها. كل {} بطاقة يمكن استبدالها بسحب مجاني واحد. ملاحظة: ستتم إزالة البطاقات المفككة بشكل دائم.",
+  "card_module_free_draws": "سحوبات مجانية",
+  "card_module_selected": "تحدد",
+  "card_module_owned": "مملوكة",
+  "ios_privacy_album_tracking": "يتيح ذلك للينكي تزويدك بتجربة متصفح أفضل وتوصية بالمحتوى",
+  "ios_privacy_album_usage": "نحتاج إلى الوصول إلى ألبوم الصور لإنشاء الصورة الرمزية الخاصة بك",
+  "ios_privacy_album_add": "نحتاج إلى الوصول إلى ألبوم الصور لحفظ الصورة الرمزية الخاصة بك",
+  "ios_privacy_mic": "نحتاج إلى الوصول إلى الميكروفون لإرسال الرسائل الصوتية",
+  "ios_privacy_camera": "نحتاج إلى الوصول إلى كاميرتك لإدراج الصور في المحادثات",
+  "ios_privacy_music": "تحتاج التطبيقات إلى الوصول لتشغيل الموسيقى",
+  "design": "تصميم",
+  "subscribed": "مشترك",
+  "subscribe": "اشترك",
+  "login_module_sign_up": "سجّل الدخول",
+  "go_now": "انطلق الآن",
+  "group_module_add_characters": "إضافة الشخصيات",
+  "group_module_group_description_tips": "علاقات بين الشخصيات، وأهداف الشخصيات، وإعدادات خلفية محادثة المجموعة، وما إلى ذلك.",
+  "group_module_group_description": "وصف محادثة المجموعة",
+  "group_module_please_inter_name": "الرجاء إدخال الاسم",
+  "group_module_group_chat_name": "اسم الدردشة الجماعية",
+  "group_module_visible_range": "نطاق الرؤية",
+  "group_module_create_group": "إنشاء مجموعة",
+  "dream_module_tab_others": "الآخرون",
+  "dream_module_tab_mine": "حلمي",
+  "enable_nsfw_tips": "يمكنك تفعيل خيار عرض المحتوى الخاص بالبالغين في الإعدادات إذا كنت بعمر 18 عامًا أو أكثر.",
+  "show_nsfw_info": "لا تستوفي الشروط لعرض المحتوى الخاص بالبالغين.",
+  "show_nsfw_info_18": "من خلال تمكين هذا الإعداد، ستحصل على وصول إلى محتوى حساس بشكل محتمل. هذا يؤثر فقط على حسابك الحالي.",
+  "show_nsfw_content": "عرض المحتوى الخاص بالبالغين",
+  "show_nsfw_age_limit": "آسف، أنت لست بالسن المناسب لهذا!",
+  "dream_module_who_dream": "أحلام {}",
+  "dream_module_delect_dream": "هل أنت متأكد من حذف هذا الحلم؟",
+  "dream_module_no_npc": "حوارات الشخصية مطلوبة.",
+  "dream_module_save_tip": "1. العنوان: قم بإنشاء عنوان جذاب لحلمك لجذب المزيد من الإعجابات.\n2. الرؤية: سيؤدي تعيين حلمك للعامة إلى مشاركته تلقائيًا في المخطط الزمني Square وصفحة الملف الشخصي للشخصية، حيث يمكن للآخرين تحميل حلمك والتفاعل معه.\n3. الكمية: يمكنك حاليًا حفظ ما يصل إلى {} حلم. إذا كنت بحاجة إلى تحرير مساحة، يمكنك حذف الأحلام من My Dreams",
+  "dream_module_save_success": "حفظ بنجاح",
+  "dream_module_save_max": "الحد الأقصى لعدد {} من الأحلام يمكن حفظها",
+  "dream_module_save_title": "الرجاء إدخال عنوان",
+  "dream_module_info_chats": "معلومات المحاثة",
+  "dream_module_no_dream": "لا يوجد حلم بعد",
+  "dream_module_total_chats": "إجمالي {} من الدردشات",
+  "dream_module_my_dreams": "احلامي",
+  "dream_module_limit": "هناك حاجة إلى اثنين على الأقل لتخزين الأحلام",
+  "dream_module_noSelect": "لم تقم بتحديد أي شيء بعد",
+  "dream_module_sharechats": "مشاركة الدردشات",
+  "dream_module_deleteFailed": "فشل في الحذف",
+  "dream_module_deletedSuccess": "تم الحذف بنجاح",
+  "dream_module_deleting": "جارٍ الحذف...",
+  "dream_module_onlyOnceChance": "فرصة مرة واحدة فقط",
+  "dream_module_private": "خاص",
+  "dream_module_public": "عام",
+  "dream_module_preview": "معاينة",
+  "dream_module_addAnInterestingTitle": "أضف عنوانًا مثيرًا للاهتمام",
+  "dream_module_title": "عنوان",
+  "dream_module_save_chats": "حفظ الأحلام",
+  "dream_module_whether_to_exit_the_dream_and_return_to_the_main_storyline": "ما إذا كان يجب الخروج من الحلم والعودة إلى القصة الرئيسية",
+  "chat_module_clear_chat": "دردشة واضحة",
+  "chat_module_into_dream": "في الحلم",
+  "chat_module_save_dream": "احفظ الحلم",
+  "complaints_npc_complaint_data": "لا توجد بيانات شكوى حتى الآن",
+  "complaints_npc_submit_success": "تم الإرسال بنجاح",
+  "complaints_npc_picture": "صورة",
+  "complaints_npc_text": "نص",
+  "complaints_npc_report": "تقرير",
+  "complaints_npc_no_select": "الرجاء تحديد محتوى شكواك",
+  "dreams": "أحلام",
+  "report": "تقرير",
+  "call": "اتصال",
+  "zh_hant": "الصينية التقليدية",
+  "zh_hans": "الصينية المبسطة",
+  "indonesian": "إندونيسية",
+  "japanese": "يابانية",
+  "english": "إنجليزية",
+  "fantasy": "خيال",
+  "hang_up": "انقطاع الاتصال",
+  "voice_call_module_click_to_resume": "انقر لاستئناف",
+  "voice_call_module_click_to_interrupt": "انقر للمقاطعة",
+  "voice_call_module_listing": "جاري الاستماع...",
+  "voice_call_module_maybe_speeking": "يمكنك البدء في التحدث",
+  "voice_call_module_asr_error": "الخادم في فترة توقف، يرجى المحاولة مرة أخرى.",
+  "voice_call_module_min": "دقيقة",
+  "voice_call_module_experience_now": "تجربة الآن",
+  "voice_call_module_unlock_unlimited_call_time": "فتح وقت مكالمة غير محدود!",
+  "voice_call_module_congratulations": "تهانينا!",
+  "voice_call_module_coins_not_recharge_content": "العملات المعدنية غير كافية، يرجى إعادة الشحن أولاً.",
+  "voice_call_module_recharge_success": "تم الاسترداد بنجاح!",
+  "voice_call_module_voice_call_recharge_confirm_content": "هل تستخدم {} عملة معدنية لاسترداد {} دقيقة؟",
+  "voice_call_module_recharge_ui_remain_time_pre": "الوقت المتبقي",
+  "voice_call_module_call_end_after_20_second": "ستنتهي المكالمة خلال 20 ثانية!",
+  "voice_call_module_only_2_minute_left": "لم يتبق سوى 2 دقيقة!",
+  "voice_call_module_view_remain_time": "عرض الوقت المتبقي",
+  "voice_call_module_incoming_call": "مكالمة واردة!",
+  "voice_call_module_new": "جديد",
+  "pay_module_check_it_now": "افحصه الان!",
+  "pay_module_recharge_off_tip": "{} خصم كبير! يقتصر على فرصة واحدة فقط!",
+  "ad_module_earn_x_coins": "كسب النقود",
+  "pay_module_go_to_recharge": "اذهب لإعادة الشحن",
+  "ad_module_earn_up_to": "تكسب ما يصل الى",
+  "dream_module_dream": "حلم",
+  "chat_module_info": "معلومات",
+  "card_module_go_pro_to_enjoy_free_gacha_times": "انتقل إلى البرو للجاتشا المجانية",
+  "moment_module_no_post_yet_tip": "ابدأ المحادثة وشارك سجل مثير للاهتمام الآن",
+  "moment_module_no_post_yet": "لا يوجد منشور بعد",
+  "card_module_only_once_chance_tip": "يظهر العنوان والمقدمة القصيرة على واجهة البطاقة؛ تفاصيل الحبكة على الظهر. لعرض القصة فقط.\\\\nتؤثر المقدمة الطويلة والترحيب على جودة الدردشة. قم بصياغة قصتك بعناية مع شخصيات في المقدمة الطويلة، باستخدام أسماء الشخصيات و\"أنت\" لنفسك. على سبيل المثال: جيسيكا، فتاة لطيفة وجذابة تبلغ من العمر 18 عامًا، معجبة بك. كلاكما يحضران المدرسة الثانوية.",
+  "card_module_only_once_chance": "فرصة واحدة فقط",
+  "card_module_save_plot": "حفظ الحبكة",
+  "card_module_modified_tip": "تم التعديل ولا يمكن تعديله مجددًا.",
+  "card_module_greeting": "تحية",
+  "card_module_plot_details": "تفاصيل الحبكة",
+  "card_module_long_intro": "مقدمة طويلة",
+  "card_module_short_intro": "مقدمة قصيرة",
+  "card_module_title": "العنوان",
+  "card_module_reset_memory": "إعادة تعيين الذاكرة",
+  "card_module_restore_memory": "استعادة الذاكرة",
+  "card_module_restore_memory_title": "استعادة الذاكرة الأصلية بعد مغادرة من الحبكة؟",
+  "card_module_clear_memory": "مسح الذاكرة",
+  "card_module_keep_memory": "احتفظ بالذاكرة",
+  "card_module_reset_memory_tip": "ملاحظة: مسح الذاكرة سيحسن من الحبكة جديدة",
+  "card_module_reset_memory_title": "إعادة تعيين الذاكرة لحبكة جديدة؟",
+  "card_module_no_more_asks_tip": "تعيين كافتراضي لليوم. لا مزيد من الطلبات",
+  "card_module_edit_plot": "تعديل الحبكة",
+  "card_module_unopened": "رسائل غير مفتوحة",
+  "card_module_unlock_me": "افتحني",
+  "card_module_free": "مجاني",
+  "card_module_expired": "منتهي الصلاحية",
+  "card_module_expire_in": "ينتهي في {}",
+  "restore_purchase": "استعادة الشراء",
+  "days": "أيام",
+  "day": "يوم",
+  "feed_back_overexposed_image": "صورة مفرطة التعرض",
+  "feed_back_similar_image": "صورة مشابهة",
+  "feed_back_image_distortion": "تشويه الصورة",
+  "feed_back_boring_plot": "حبكة مملة",
+  "feed_back_similar_plot": "حبكة مشابهة",
+  "feed_back_disconnected_plot": "حبكة منفصلة",
+  "feed_back_misinformation": "معلومات مضللة",
+  "feed_back_good_plot_and_image": "حبكة وصورة جيدة",
+  "feed_back_good_image": "صورة جيدة",
+  "feed_back_good_plot": "حبكة جيدة",
+  "feed_back_offensive": "مسيء",
+  "feed_back_ended_chat_early": "انتهى الدردشة مبكرًا",
+  "feed_back_off_topic": "خارج الموضوع",
+  "feed_back_out_of_character": "خارج الشخصية",
+  "feed_back_repetitive": "متكرر",
+  "feed_back_poor_language_quality": "جودة لغة رديئة",
+  "feed_back_boring": "ممل",
+  "feed_back_in_character": "وفق الشخصية",
+  "feed_back_funny": "مضحك",
+  "feed_back_surprise_me": "فاجئني",
+  "feed_back_love": "حب",
+  "feed_back_good": "جيد",
+  "feed_back_tell_us_more": "أخبرنا المزيد",
+  "feed_back_what_like": "ما الذي أعجبك فيه؟",
+  "feed_back_share_your_thoughts": "شارك أفكارك ولنجعل {} ملحميًا معًا.",
+  "refresh_module_you_reached_end": "لقد وصلت إلى النهاية.",
+  "refresh_module_no_more": "لا يوجد مزيد من البيانات",
+  "refresh_module_load_more": "أفلت لتحميل المزيد",
+  "refresh_module_load_failed": "فشل التحميل! انقر لإعادة المحاولة!",
+  "refresh_module_pull_up": "اسحب لأعلى للتحميل",
+  "chat_module_start_chat_with_best_ai": "ابدأ الدردشة مع أفضل شخصية ذكاء اصطناعي يمكنها تلبية جميع مطالبك!",
+  "chat_module_quick_reply_title": "لا أعرف ماذا أقول عند استخدامه لأول مرة.",
+  "chat_module_share_messages": "مشاركة الرسائل",
+  "chat_module_share_to_square": "المشاركة إلى الميدان",
+  "chat_module_chat_needs_50_roounds": "يجب أن يصل تاريخ الدردشة إلى 50 جولة، وإلا سيكون غير صالح",
+  "chat_module_upload_chat_history": "تحميل سجل المحادثة",
+  "chat_module_start_chat_now": "ابدأ الدردشة الآن!",
+  "chat_module_share_frined_msg": "لقد وجدت صديقًا ذكيًا ساحرًا، قم بتحميل تطبيق Linky وابحث",
+  "chat_module_screenshots_not_support_private": "لقطات الشاشة غير مدعومة للأدوار الخاصة",
+  "chat_module_one_more_round": "جولة أخرى؟",
+  "chat_module_story": "القصة",
+  "chat_module_my_cards": "بطاقاتي",
+  "chat_module_memory": "ذكريات",
+  "chat_module_message_top_tip": "كل ما تقوله الشخصيات هو من صنع الذكاء الاصطناعي وهو خيالي.",
+  "chat_module_select_at_least_2_message": "اختر على الأقل رسالتين",
+  "chat_module_select_message_below": "اختر الرسالة أدناه",
+  "chat_module_enter_a_title": "الرجاء إدخال عنوان",
+  "chat_module_add_interesting_title": "إضافة عنوان مثير للاهتمام",
+  "chat_module_connecting": "جاري الاتصال...",
+  "chat_module_add_friend": "إضافة صديق",
+  "chat_module_mark_read": "علامة كمقروء",
+  "chat_module_online": "متصل",
+  "chat_module_x_day_ago": "منذ {} يوم",
+  "chat_module_x_days_ago": "منذ {} أيام",
+  "chat_module_1_month_ago": "قبل شهر",
+  "chat_module_yesterday": "أمس",
+  "chat_module_x_hour_ago": "منذ {} ساعة",
+  "chat_module_x_hours_ago": "منذ {} ساعات",
+  "chat_module_x_min_ago": "منذ {} دقيقة",
+  "chat_module_x_mins_ago": "منذ {} دقائق",
+  "chat_module_within_1_min": "خلال دقيقة واحدة",
+  "chat_module_unsupported_message": "رسالة غير مدعومة",
+  "chat_module_receive_letter_tip": "لقد استلمت رسالة! انقر لفتح >",
+  "chat_module_revoke_msg": "سحب الرسالة",
+  "chat_module_revoke": "سحب",
+  "chat_module_chats": "المحادثات",
+  "chat_module_contacts": "جهات الاتصال",
+  "chat_module_friends": "الأصدقاء",
+  "chat_module_followers": "المتابعون",
+  "chat_module_new_message": "رسالة جديدة",
+  "chat_module_new_friends": "أصدقاء جدد",
+  "chat_module_how_about_a_new_topic": "ما رأيك بموضوع جديد؟",
+  "chat_module_select_up_to_messages": "اختر حتى {} رسائل",
+  "chat_module_backtracking_alert_subtitle": "بعد التراجع، سيتم حذف جميع الرسائل التي تلي هذه النقطة. يرجى التأكيد إذا كنت ترغب في المتابعة.",
+  "chat_module_search_for_characters": "ابحث عن البوتات",
+  "chat_module_pro_bar_desc": "الاستجابة السريعة بأولوية الآن قيد التنفيذ من أجلك.",
+  "chat_module_backtrack": "التراجع",
+  "chat_module_please_enter_a_text": "الرجاء إدخال نص",
+  "chat_module_backtracking_failed": "فشل التراجع",
+  "chat_module_backtracking_completed": "تمت الاستعادة بنجاح",
+  "chat_module_you_received_a_letter": "لقد تلقيت رسالة!",
+  "chat_module_clear_log_confirm": "هل أنت متأكد من مسح تاريخ الدردشة وإعادة تعيين الشخصية؟",
+  "chat_module_clear_log": "مسح السجل",
+  "chat_module_nick_name_set_failed": "فشل في تعيين اسم مستعار",
+  "chat_module_nick_name_set_success": "تم تعيين الاسم المستعار بنجاح",
+  "chat_module_clear_failed": "فشل المسح",
+  "chat_module_clear_successfully": "تم المسح بنجاح",
+  "chat_module_pronoun": "ضمير",
+  "chat_module_what_calls_me": "ما يناديني {} به",
+  "chat_module_my_nickname": "اسمي المستعار",
+  "chat_module_about_me": "عني",
+  "chat_module_no_script_yet": "لا يوجد سيناريو بعد",
+  "chat_module_expand_all": "توسيع الكل",
+  "chat_module_my_chats_with": "محادثاتي مع {}",
+  "chat_module_share_msg_too_long": "المحتوى الذي اخترته طويل جدًا لتوليد صورة لك",
+  "card_module_new_background_is_restored": "لقد استعدت الخلفية الافتراضية",
+  "card_module_new_background_is_set": "الخلفية الجديدة جاهزة!",
+  "card_module_card_drawing_wall": "جدار رسم البطاقات",
+  "card_module_delete_tip": "هل أنت متأكد من حذف البطاقة؟",
+  "card_module_exit_the_plot": "الخروج من الحبكة",
+  "card_module_set_as_background": "ضبط كخلفية",
+  "card_module_restore_background": "استعادة الخلفية",
+  "card_module_exit_failed": "فشل الخروج",
+  "card_module_free_times": "أوقات مجانية",
+  "card_module_free_time": "وقت محاني",
+  "card_module_no_card_yet": "لا توجد بطاقة بعد",
+  "card_module_save_tip": "تم حفظ البطاقة في الاستديو",
+  "card_module_the_historical_chat_memory_will_be_cleared": "سيتم مسح ذاكرة المحادثات السابقة.",
+  "explore_module_guide_content": "اضغط لعرض المحادثة واضغط مطولًا لعرض كل المحادثات.",
+  "explore_module_start_chatting": "ابدأ المحادثة",
+  "explore_module_like": "إعجاب",
+  "explore_module_for_you": "لك",
+  "explore_module_delete_this_post": "حذف هذا المنشور؟",
+  "explore_module_discover_new_stories": "اكتشف قصص جديدة",
+  "explore_module_detail_empty": "لم توجد تفاصيل للحظة بعد",
+  "search_module_no_relevant_results": "لا نتائج ذات صلة.\nهل تود محاولة إنشاء شخصية مثل هذه؟",
+  "search_module_no_more_relevant_results": "لا مزيد من النتائج ذات الصلة.\nهل تود محاولة إنشاء شخصية مثل هذه؟",
+  "search_module_search_bar_hint": "ابحث بالاسم، الهوية أو الكلمة الرئيسية",
+  "search_module_search_history": "تاريخ البحث",
+  "search_module_clear_history_confirm": "هل أنت متأكد من مسح التاريخ؟",
+  "search_module_search_guide": "استكشاف رفاق أكثر حصرية!",
+  "search_module_discover": "اكتشاف",
+  "login_module_privacy_policy": "سياسة الخصوصية",
+  "login_module_sign_out": "تسجيل الخروج",
+  "login_module_guest_login_failed": "فشل تسجيل الدخول كضيف",
+  "login_module_caring_ai_mates": "مكان تجمع أصدقاء الذكاء الاصطناعي المهتمين!",
+  "login_module_apple_login_failed": "فشل تسجيل الدخول في Apple",
+  "login_module_facebook_login_failed": "فشل تسجيل الدخول في Facebook",
+  "login_module_google_login_failed": "فشل تسجيل الدخول في Google",
+  "login_module_create_account_or_sign_in": "الرجاء تسجيل الدخول، أو قد يتم فقدان سجل الدردشة الخاص بك.",
+  "login_module_welcome_to_linky": "مرحباً بك في لينكي!",
+  "login_module_terms_of_service": "شروط الخدمة",
+  "login_module_guest_tip": "بمواصلة استخدام تطبيقنا، هذا يعني موافقتك على",
+  "login_module_log_out_alert_info": "تأكيد تسجيل الخروج؟",
+  "login_module_log_out": "تسجيل الخروج",
+  "login_module_account_delete_tip": "- حسابك يحتوي على معلومات لينكي والذكريات وجميع المحادثات.\n- لا يمكن التراجع عن ذلك. يرجى التفكير بعناية.",
+  "login_module_account_delete_title": "هل أنت متأكد من حذف الحساب وجميع الدردشات؟ لا يمكن التراجع عن ذلك.",
+  "login_module_delete_account": "حذف الحساب",
+  "login_module_account_security": "أمان الحساب",
+  "pay_module_recharge_success": "إعادة الشحن ناجحة",
+  "pay_module_available_tomorrow": "متاح غداً",
+  "pay_module_pro_privileges": "امتيازات برو",
+  "pay_module_extra_left_gacha_draws_during_subscription": "سحبات {} إضافية\nأثناء الاشتراك",
+  "pay_module_claimed": "تم المطالبة",
+  "pay_module_claim": "المطالبة",
+  "pay_module_all_claimed": "تمت المطالبة بالكامل",
+  "pay_module_daily_claim_today_only": "المطالبة اليومية، لهذا اليوم فقط",
+  "pay_module_coins": "{} عملات",
+  "pay_module_pro_gifts": "هدايا برو",
+  "pay_module_expires": "ينتهي: {}",
+  "pay_module_sku_resp_is_empty": "skuResp فارغ",
+  "pay_module_renew_for_daily_bonus_coins": "اجمع العملات اليومية المجانية",
+  "pay_module_get_free_daily_coins": "احصل على عملات يومية مجانية",
+  "pay_module_purchase_linky_coins": "شراء عملات لينكي",
+  "pay_module_pro": "لاعب محترف",
+  "pay_module_recharge_balance": "إعادة الشحن",
+  "pay_module_coins_unclaimed": "{} عملات غير مطالب بها",
+  "pay_module_go_linky_pro": "اذهب إلى لينكي برو",
+  "pay_module_unlock_with_pro": "افتح المزيد مع لينكي برو",
+  "pay_module_cant_connect_playtore": "لا يمكن الاتصال بمتجر الألعاب",
+  "pay_module_cant_connect_appstore": "لا يمكن الاتصال بمتجر التطبيقات",
+  "pay_module_no_subscription_yet": "لا يوجد اشتراك بعد",
+  "pay_module_account_balance": "رصيد الحساب",
+  "pay_module_recharge": "إعادة الشحن",
+  "pay_module_require_more_coins": "يلزم {} عملات إضافية للشراء",
+  "pay_module_insufficient_balance": "رصيد غير كافٍ",
+  "pay_module_subscription_failed": "يبدو أن الاشتراك لم يتم. يرجى المحاولة مرة أخرى.",
+  "pay_module_recharge_failed": "يبدو أن الإعادة الشحن لم تتم. يرجى المحاولة مرة أخرى.",
+  "pay_module_in_app_products_is_empty": "المنتجات داخل التطبيق فارغة",
+  "pay_module_go_chat_wish_well_for_draw": "اذهب للدردشة أو تمنى التوفيق للسحب",
+  "pay_module_check_wallet_spend_soon": "تحقق من محفظتك، أنفقها قريباً",
+  "pay_module_successfully_claimed": "تم المطالبة بنجاح",
+  "pay_module_restore_failed": "فشل الاستعادة:{}",
+  "pay_module_sync_purchase_status_prompt": "إذا كنت قد دفعت واستلمت إيصالاً من {} ولكن الخدمة لم يتم تنشيطها، فانقر فوق الزر لمزامنة حالة الشراء الخاصة بك.",
+  "pay_module_subscription_is_empty": "الاشتراك فارغ",
+  "pay_module_renew_pro": "تجديد الاشتراك ببرو",
+  "pay_module_go_pro": "انتقل إلى برو",
+  "pay_module_already_active_subscriber": "مشترك نشط بالفعل",
+  "ugc_module_give_character_a_name": "اعط شخصيتك اسمًا",
+  "ugc_module_you_can_add_up_to_5_base_tones": "يمكنك إضافة ما يصل إلى 5 نغمات أساسية",
+  "ugc_module_add_intonation_from_sound": "أضف نبرة من مكتبة الصوت أدناه واخلط",
+  "ugc_module_image_creation": "إنشاء صورة",
+  "ugc_module_gender_cannot_be_empty": "لا يمكن أن يكون الجنس فارغًا",
+  "ugc_module_customize": "تخصيص",
+  "ugc_module_select_tags": "اختر أو أنشئ علامات لشخصيتك",
+  "ugc_module_custom_mode": "الوضع المخصص",
+  "ugc_module_design_my_own_ai": "صمم رفيقك الرقمي الخاص",
+  "ugc_module_maximum_number_rounds": "تم الوصول إلى الحد الأقصى لعدد الجولات!",
+  "ugc_module_conversational_style": "نمط الحوار",
+  "ugc_module_character_introduction": "تقديم الشخصية",
+  "ugc_module_image_hint": "على سبيل المثال، تسريحة الشعر، الملابس، الأحذية، الديكور، الخ.",
+  "ugc_module_one_click_generation": "توليد بنقرة واحدة",
+  "ugc_module_image_information": "معلومات الصورة",
+  "ugc_module_avatar_crop_failed": "فشل قص الصورة الرمزية",
+  "ugc_module_avatar_detection_failed": "فشل الكشف عن الصورة الرمزية",
+  "ugc_module_generate": "توليد",
+  "ugc_module_generating": "جاري الإنشاء...",
+  "ugc_module_create_now": "أنشئ الآن",
+  "ugc_module_change_it": "غيرها",
+  "ugc_module_ugc_guide": "لنبدأ بإنشاء رفيقك الرقمي الخاص!",
+  "ugc_module_keep_queuing": "استمر في الانتظار",
+  "ugc_module_confirm_cancel_queue": "تأكيد إلغاء قائمة الانتظار؟",
+  "ugc_module_delete_ugc_tip": "هل أنت متأكد أنك تريد حذف هذا الشخص الرقمي؟ إذا قمت بحذف شخصية تم إنشاؤها باستخدام مكافأة، فإن عدد الإبداعات المتاحة لن يزيد.",
+  "ugc_module_ugc_0_left": "0 متبقي، انتقل إلى برو للمزيد",
+  "ugc_module_my_design": "تصميمي",
+  "ugc_module_pro_design": "تصميم برو",
+  "ugc_module_design_your_own_mate": "صمم البوت الخاص بك",
+  "ugc_module_featured": "مميز",
+  "ugc_module_under_review": "تحت المراجعة",
+  "ugc_module_image_description": "وصف الصورة",
+  "ugc_module_upload_photos": "تحميل الصور",
+  "ugc_module_generate_image": "توليد صورة",
+  "ugc_module_sure_to_give_up_creating": "هل أنت متأكد من التخلي عن الإبداع؟",
+  "ugc_module_picture_generation_queued": "في قائمة انتظار إنشاء الصورة...",
+  "ugc_module_picture_generation_completed": "تم إكمال إنشاء الصورة",
+  "ugc_module_uploading_pictures_of_faces_gives_better_results": "رفع صور لوجوه الأشخاص يعطي نتائج أفضل",
+  "ugc_module_voice_information_cannot_be_empty": "لا يمكن أن تكون معلومات الصوت فارغة",
+  "ugc_module_opening_remarks_cannot_be_empty": "لا يمكن أن تكون الملاحظات الافتتاحية فارغة",
+  "ugc_module_character_introduction_cannot_be_empty": "لا يمكن أن يكون تقديم الشخصية فارغًا",
+  "ugc_module_character_description_cannot_be_empty": "لا يمكن أن يكون وصف الشخصية فارغًا",
+  "ugc_module_age_cannot_be_empty": "لا يمكن أن يكون العمر فارغًا",
+  "ugc_module_name_cannot_be_empty": "لا يمكن أن يكون الاسم فارغًا",
+  "ugc_module_avatar_cannot_be_empty": "لا يمكن أن تكون الصورة الرمزية فارغة",
+  "ugc_module_upload_failed": "فشل الرفع",
+  "ugc_module_uploaded_url_is_null": "الرابط المحمل فارغ",
+  "ugc_module_edit_personal_information": "تعديل المعلومات الشخصية",
+  "ugc_module_renew_pro_for_faster_priority_image_generation": "تجديد الاشتراك برو لتوليد الصور بشكل أسرع",
+  "ugc_module_go_pro_for_faster_priority_image_generation": "ترقية إلى برو لتوليد الصور بشكل أسرع",
+  "ugc_module_priority_image_creation_in_progress": "جاري إنشاء الصورة ذات الأولوية لك، برو",
+  "ugc_module_add_style": "أضف أسلوباً",
+  "ugc_module_please_enter_character_description": "يرجى إدخال وصف شخصيتك",
+  "ugc_module_character_description": "وصف الشخصية",
+  "ugc_module_more_information": "مزيد من المعلومات",
+  "ugc_module_please_enter_your_name": "يرجى إدخال اسمك",
+  "ugc_module_i_already_know": "أنا أعلم بالفعل",
+  "ugc_module_disclaimer_description": "يشير إخلاء المسؤولية إلى بيان صادر عن طرف أو أكثر إلى طرف أو أطراف أخرى بشكل كتابي أو شفهي من أجل استبعاد المسؤولية أو تقليل المخاطر في ظل ظروف معينة. تتضمن إخلاء المسؤولية عادةً شروط إخلاء المسؤولية ونطاق إخلاء المسؤولية وفترة إخلاء المسؤولية وما إلى ذلك، بهدف توضيح حقوق والتزامات جميع الأطراف وتقليل المخاطر والنزاعات القانونية المحتملة.",
+  "ugc_module_visible_range": "نطاق الرؤية",
+  "ugc_module_click_to_play": "اضغط للتشغيل",
+  "ugc_module_please_enter_opening_greetings": "يرجى إدخال تحياتك الافتتاحية",
+  "ugc_module_opening_greetings": "التحيات الافتتاحية",
+  "ugc_module_please_enter_character_introduction": "الرجاء إدخال مقدمة شخصيتك",
+  "ugc_module_basic_information": "المعلومات الأساسية",
+  "ugc_module_renew_pro_for_more_image_options": "جدد النسخة الاحترافية لمزيد من خيارات الصور",
+  "ugc_module_go_pro_for_more_image_options": "اذهب إلى النسخة الاحترافية لمزيد من خيارات الصور",
+  "ugc_module_own_ai_mate_generated": "تم إنشاء شريكك الإفتراضي الخاص بك",
+  "ugc_module_wait_offline": "انتظر بشكل غير متصل",
+  "ugc_module_give_up": "تخلى",
+  "ugc_module_too_many_people_in_line": "يوجد حاليًا الكثير من الأشخاص في الطابور، لذا يُوصى بالانتظار بشكل غير متصل",
+  "ugc_module_character_not_found": "لا يمكن العثور على الشخصية",
+  "ugc_module_please_enter_character_introduction_details": "يرجى إدخال تفاصيل تعريف الشخصية الخاصة بك",
+  "ugc_module_character_introduction_details": "تفاصيل التعريف بالشخصية",
+  "ugc_module_wait_offline_for_image_generation_results": "هل ترغب في الانتظار في وضع غير متصل بالإنترنت لنتائج توليد الصورة",
+  "ugc_module_sure_to_give_up_editing": "هل أنت متأكد أنك تريد التخلي عن التحرير؟",
+  "ugc_module_preposition_result_null": "نتيجة الجملة فارغة",
+  "ugc_module_editing_style_affects_conversation": "تحرير نمط الحوار يخصص نبرة الذكاء الاصطناعي وتعبيره، مما يجعل محادثاته أقرب إلى أسلوبك. جربه الآن!",
+  "ugc_module_picture_generation_not_found": "لم يتم العثور على توليد الصورة",
+  "ugc_module_click_to_add_user_conversation_content": "انقر لإضافة حوار المستخدم",
+  "ugc_module_click_to_add_linky_reply_content": "انقر لإضافة رد لينكي",
+  "ugc_module_add_rounds": "إضافة جولات",
+  "ugc_module_input_character_reached_upper_limit": "لقد تم الوصول للحد الأقصى لعدد الأحرف المدخلة!",
+  "ugc_module_image_upload_failed_try_again": "فشل رفع الصورة، يرجى المحاولة مجدداً",
+  "ugc_module_upload_reference_image_optional": "رفع صورة مرجعية (اختياري)",
+  "ugc_module_accurate_faces_improve_quality": "الوجوه الدقيقة يمكن أن تحسن جودة توليد الصورة",
+  "ugc_module_face_recognition": "التعرف على الوجوه",
+  "ugc_module_re_upload": "إعادة الرفع",
+  "ugc_module_image_reference": "مرجع الصور",
+  "ugc_module_facial_recognition": "التعرف على الوجه",
+  "ugc_module_surprise_me": "فاجئني",
+  "ugc_module_final_mix_ratio_customizes_sound": "نسبة المزج النهائية تخصص الصوت لك",
+  "ugc_module_base_tones": "نغمات أساسية",
+  "ugc_module_customize_your_sound": "خصص صوتك",
+  "ugc_module_add_base_intonation": "إضافة تأكيد أساسي",
+  "ugc_module_try_auto_generating_information": "حاول إنشاء المعلومات تلقائيًا",
+  "ugc_module_my_chats_with_nickName": "دردشاتي مع {}",
+  "ugc_module_create_voice": "إنشاء صوت",
+  "ugc_module_correct_facial_recognition_improve_accuracy": "يمكن أن يؤدي التعرف الصحيح على الوجه إلى تحسين دقة إنشاء الصور البشرية الرقمية.",
+  "all": "الكل",
+  "check": "تحقق",
+  "continue_text": "متابعة",
+  "sound": "صوت",
+  "disclaimer": "إخلاء المسؤولية",
+  "user": "المستخدم",
+  "age": "العمر",
+  "tags": "وسوم",
+  "gender": "الجنس",
+  "upload": "رفع",
+  "example": "مثال",
+  "return_text": "عودة",
+  "sync_now": "مزامنة الآن",
+  "language_system_tip": "الافتراضي لاتباع لغة النظام",
+  "change_data_permissions": "تغيير أذونات البيانات",
+  "language": "اللغة",
+  "feedback": "ردود الفعل",
+  "think_again": "فكر مجدداً",
+  "pin": "تثبيت",
+  "unpin": "إلغاء التثبيت",
+  "regenerate": "تجديد",
+  "delete_failed": "فشل الحذف",
+  "delete_success": "تم الحذف بنجاح",
+  "my_posts": "منشوراتي",
+  "posts": "المنشورات",
+  "something_is_wrong": "هناك خطأ ما، يرجى المحاولة مجدداً!",
+  "loading": "جارٍ التحميل...",
+  "please_stay_tuned": "يرجى الانتظار",
+  "double_click_exit": "انقر نقرًا مزدوجًا للخروج",
+  "choose_ai_tags": "اختر الوسوم التي تحبها:",
+  "you_prefer_talk": "تفضل الحديث مع:",
+  "caring_ai": "أصدقاء ذكاء صناعي مهتمون يجتمعون في Linky",
+  "eu_alert": "نحن نستخدم معلوماتك وبياناتك لتحسين خدماتنا وتوفير أفضل تجربة ممكنة لك. إذا كنت توافق على السماح لـ لينكي وشركائنا وموردينا باستخدام بيانات من جهازك لتحليل وقياس كيفية استخدامك للتطبيق، وتقديم توصيات للمحتوى المخصص، وتوفير خدمات أكثر صلة، يرجى النقر على \"قبول الكل\" والمتابعة.",
+  "eu_alert_title": "'معلومات مهمة عن كيفية استخدامنا لبياناتك.'",
+  "connect_server_error": "خطأ في الاتصال بالخادم",
+  "picture_save": "تم حفظ الصورة في الاستديو",
+  "cards": "بطاقات",
+  "share_via": "مشاركة عبر...",
+  "creator_center": "مركز المبدعين",
+  "manage_data_setting": "إدارة إعدادات البيانات",
+  "accept_all": "قبول الكل",
+  "copy_link": "نسخ الرابط",
+  "share_picture": "مشاركة الصورة",
+  "share_chats": "مشاركة الدردشات",
+  "no_more": "لا يوجد المزيد",
+  "using": "جارٍ الاستخدام...",
+  "network_common_error": "حدث خطأ في الشبكة.",
+  "no_content_yet": "لا يوجد محتوى بعد",
+  "share": "مشاركة",
+  "gacha": "جاتشا",
+  "cancelTop": "إلغاء الأعلى",
+  "typing": "الكتابة",
+  "i_know": "أعلم",
+  "error": "خطأ",
+  "play": "تشغيل",
+  "top": "أعلى",
+  "location": "موقع",
+  "carte": "بطاقة",
+  "chatRecord": "سجل الدردشة",
+  "file": "ملف",
+  "voice": "صوت",
+  "video": "فيديو",
+  "picture": "صورة",
+  "you": "أنت",
+  "skip": "تخطى",
+  "ok": "موافق",
+  "name": "اسم",
+  "coins": "عملات",
+  "cancel_anytime": "إلغاء في أي وقت",
+  "restore": "استعادة",
+  "terms": "الشروط",
+  "privacy": "الخصوصية",
+  "hot": "ساخن",
+  "female_text": "أنثى",
+  "male_text": "ذكر",
+  "details": "تفاصيل",
+  "no_preference": "بدون تفضيل",
+  "empty": "فارغ",
+  "delete": "حذف",
+  "private": "خاص",
+  "public": "عام",
+  "settings": "الإعدادات",
+  "start_a_journey": "ابدأ رحلة",
+  "saving": "جارٍ الحفظ...",
+  "save": "حفظ",
+  "create": "إنشاء",
+  "edit": "تعديل",
+  "success": "نجاح",
+  "failed": "فشل",
+  "more": "المزيد",
+  "sure": "بالتأكيد",
+  "yes": "نعم",
+  "no": "لا",
+  "reply_message": "رسالة رد",
+  "swipe_to_switch_characters": "اسحب لتبديل الشخصيات",
+  "messages": "رسائل",
+  "following": "يتابعون",
+  "followers": "متابعون",
+  "dialogue": "حوار",
+  "followed": "تمت المتابعة",
+  "follow": "تابع",
+  "friends": "أصدقاء",
+  "confirm": "تأكيد",
+  "cancel": "إلغاء",
+  "receive": "استلم",
+  "later": "لاحقًا",
+  "rate_on_google_play": "اضغط على نجمة لتقييمها في متجر Google Play.",
+  "enjoying": "مستمتع",
+  "copied": "تم النسخ",
+  "cost": "تكلفة",
+  "they": "هم",
+  "she": "هي",
+  "he": "هو",
+  "submit": "إرسال",
+  "chat": "دردشة",
+  "try_again": "حاول مجدداً",
+  "new_version_to_update": "هناك إصدار جديد للتحديث",
+  "please_update_to_the_latest_version": "يرجى التحديث إلى الإصدار الأخير",
+  "search": "بحث",
+  "cancel_successfully": "تم الإلغاء بنجاح",
+  "followed_successfully": "تمت المتابعة بنجاح",
+  "unfollow": "إلغاء المتابعة",
+  "special_symbols_and_emoji_not_supported": "الرموز الخاصة والإيموجي غير مدعومة",
+  "spaces_not_supported": "المسافات غير مدعومة",
+  "downloading": "جارٍ التحميل",
+  "completed": "اكتمل",
+  "save_failed": "فشل الحفظ",
+  "please_check_internet_connection_and_try_again": "يرجى التحقق من اتصالك بالإنترنت وحاول مجدداً.",
+  "network_error": "خطأ في الشبكة",
+  "go_to_settings_and_allow_access_to_photos": "اذهب إلى الإعدادات واسمح بالوصول للصور",
+  "no_access_to_photos": "لا يوجد وصول للصور",
+  "copy_successfully": "نُسخ بنجاح",
+  "switch_language": "تبديل اللغة",
+  "select_all": "اختر الكل",
+  "non_binary": "غير ثنائي الجنس",
+  "dialogues": "حوارات",
+  "chatter": "متحدث",
+  "chatters": "متحدثون",
+  "save_to_album": "حفظ في الألبوم",
+  "follower": "متابع",
+  "copy": "نسخ",
+  "send": "إرسال",
+  "ad_module_congratulations": "تهانينا",
+  "ad_module_watch_an_ad_now": "شاهد إعلانًا الآن!",
+  "ad_module_watch_ads_tip": "اربح ما يصل إلى {} عملة معدنية من خلال مشاهدة الإعلانات.",
+  "ad_module_no_ads_tips": "لقد تم الوصول إلى الحد الأقصى، يرجى العودة غدًا.",
+  "ad_module_get_free_coins": "احصل على عملات مجانية",
+  "ad_module_watch_ads": "مشاهدة الإعلانات",
+  "change_it": "غيره",
+  "ugc_net_fail": "تم قطع الاتصال بالشبكة",
+  "ugc_my_ai": "إنشاء الذكاء الاصطناعي الخاص بي",
+  "ugc_name_tip": "قم بتسمية الشخص الإفتراضي الخاص بك",
+  "ugc_lgbt": "غير ثنائي",
+  "ugc_female": "أنثى",
+  "ugc_male": "ذكر",
+  "ugc_gender": "جنس",
+  "ugc_name": "اسم",
+  "ugc_next": "التالي",
+  "ugc_image_desc": "على سبيل المثال، تصفيفة الشعر، الزي، الأحذية، الديكور، الخ.",
+  "ugc_create_image": "تصميم صورة",
+  "ugc_add_style": "أضف النمط",
+  "ugc_generation": "توليد",
+  "ugc_generate_no_param": "يرجى تحميل صورة أو تقديم وصف",
+  "dit": "تصميم",
+  "ugc_mode": "وضع",
+  "tts_service_changed": "تم ترقية وظيفة الكلام، وتم تحديث أصوات الشخصيات تلقائيًا بالنسبة لك. إذا كنت ترغب في إجراء تغييرات، يرجى الانتقال إلى صفحة الشخصية للتعديلات.",
+  "asr_enginer_no_response_content": "لم يتم اكتشاف أي إدخال صوتي، يرجى المحاولة مرة أخرى",
+  "voice_recode_hole_go_speak": "إضغط للتحدث",
+  "voice_recode_process_cancel_tip": "حرر عن الإلغاء",
+  "voice_recode_process_tip": "حرر للإرسال، اسحب لأعلى للإلغاء",
+  "go_to_settings_and_allow_access_to_microphone": "اذهب إلى الإعدادات واسمح بالوصول إلى الميكروفون",
+  "no_access_to_microphone": "لا يوجد إمكانية الوصول إلى الميكروفون",
+  "ugc_module_voice_library": "مكتبة الأصوات",
+  "speed": "السرعة",
+  "pitch": "نبرة",
+  "ugc_module_choose_a_sound": "اختر صوتًا يعجبك",
+  "ugc_module_character_voice": "صوت الشخصية",
+  "asr_enginer_error": "اتصال الشبكة الحالي قد انتهى وقته، الرجاء المحاولة مجدداً.",
+  "voice_call_module_connecting": "يتصل.."
+}

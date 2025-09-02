@@ -109,22 +109,27 @@ class _ChatPageState extends State<ChatPage> {
         NavigatorTool.push(context, SliverWidgetTestPage());
         break;
       case 2:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => PageRouteTest()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => PageRouteTest()));
         break;
       case 3:
         Get.toNamed(RouteName.pageEventTest);
         break;
       case 4:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => CustomWidgetTest()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => CustomWidgetTest()));
         break;
       case 5:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FileAndNetworkTest()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => FileAndNetworkTest()));
         break;
       case 6:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => FlutterErrorPage()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => FlutterErrorPage()));
         break;
       case 7:
-        Navigator.of(context).push(CupertinoPageRoute(builder: (c) => GoodLibTestPage()));
+        Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (c) => GoodLibTestPage()));
         break;
     }
   }
@@ -138,10 +143,14 @@ class _ChatPageState extends State<ChatPage> {
           offset: Offset(0, 60),
           itemBuilder: (BuildContext content) {
             return [
-              PopupMenuItem(child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
-              PopupMenuItem(child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
-              PopupMenuItem(child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
-              PopupMenuItem(child: _buildPopupMenuItem('images/收付款.png', '收付款')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/发起群聊.png', '发起群聊')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/添加朋友.png', '添加朋友')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/扫一扫1.png', '扫一扫')),
+              PopupMenuItem(
+                  child: _buildPopupMenuItem('images/收付款.png', '收付款')),
             ];
           },
           child: Icon(Icons.add),

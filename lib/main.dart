@@ -1,7 +1,10 @@
 import 'dart:async';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart' hide Page, Action;
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_quill/flutter_quill.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:weiChatDemo/common/common_func.dart';
@@ -14,8 +17,11 @@ import 'common/const.dart';
 import 'event/event_handle_test/view.dart';
 import 'good_libs/flutter_bloc/cubit_test/cubit.dart';
 
-void main() {
-  _debugModel();
+Future<void> main() async {
+  // _debugModel();
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await EasyLocalization.ensureInitialized();
 
   _catchError();
   runZonedGuarded(() => runApp(MyApp()), (error, stack) {
@@ -45,9 +51,18 @@ void _debugModel() {
 class MyApp extends StatelessWidget with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
-    return _buildMaterialApp();
+    Widget _widget = _buildMaterialApp();
 
-    return _buildGetMaterialApp();
+    // _widget = _buildGetMaterialApp();
+
+    // return _widget;
+
+    return EasyLocalization(
+        supportedLocales: [Locale('en', 'US'), Locale('de', 'DE')],
+        path: 'assets/translations',
+        // <-- change the path of the translation files
+        // fallbackLocale: Locale('en', 'US'),
+        child: _widget);
   }
 
   Widget _buildMaterialApp() {
@@ -57,7 +72,34 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
       routes: {
         RouteName.homepage: (c) => RootPage(),
       },
-      localizationsDelegates: [S.delegate],
+      localizationsDelegates: [
+        S.delegate,
+        // 本地化的代理类
+        GlobalMaterialLocalizations.delegate,
+        //PS: 基于WidgetsApp类为入口的应用程序进行国际化时, 不需要这个
+        GlobalWidgetsLocalizations.delegate,
+        // 定义组件默认的文本方向，从左到右或从右到左.
+        GlobalCupertinoLocalizations.delegate,
+        FlutterQuillLocalizations.delegate,
+      ],
+      // supportedLocales: [
+      //   // 当前应用支持的locale列表
+      //   const Locale('en', 'US'), // 美国英语
+      //   const Locale('zh', 'CN'), // 中文简体
+      //   //其它Locales
+      // ],
+      // localeListResolutionCallback:
+      //     (List<Locale>? locales, Iterable<Locale> supportedLocales) {
+      //   //local: 当前的当前的locales 列表
+      //   //supportedLocales: 为当前应用支持的locale列表，是开发者在MaterialApp中通过supportedLocales属性注册的
+      //   return locales?.firstOrNull;
+      // },
+      // localeResolutionCallback:
+      //     (Locale? locale, Iterable<Locale> supportedLocales) {
+      //   //local: 当前的当前的系统语言设置
+      //   //supportedLocales: 为当前应用支持的locale列表，是开发者在MaterialApp中通过supportedLocales属性注册的
+      //   return locale;
+      // },
       navigatorObservers: [
         _MyNavigatorObserver(),
       ],
@@ -83,7 +125,8 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
       getPages: [
         GetPage(name: RouteName.homepage, page: () => RootPage()),
         GetPage(name: RouteName.pageRouteTest3, page: () => PageRouteTest3()),
-        GetPage(name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
+        GetPage(
+            name: RouteName.pageEventTest, page: () => EventHandleTestPage()),
         GetPage(name: RouteName.pageWidgetsTest, page: () => WidgetsTestPage()),
       ],
       navigatorObservers: [

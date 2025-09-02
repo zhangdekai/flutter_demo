@@ -44,6 +44,7 @@ dependencies:
   event_bus: ^2.0.0
 
   intl: ^0.19.0 #^0.18.1
+  easy_localization: ^3.0.8
   #  intl_translation: ^0.17.2
   after_layout: ^1.2.0
   #  flukit: ^3.0.1
@@ -71,8 +72,13 @@ dependencies:
   system_info_plus: ^0.0.5 #获取设备内存信息
   animated_toggle_switch: ^0.8.4
   url_launcher: ^6.3.1
-
-
+  flutter_quill: 11.0.0 #10.8.5 #11.0.0 #11.4.2
+  flutter_quill_extensions: 11.0.0 # 10.8.5 #11.0.0
+  vsc_quill_delta_to_html: ^1.0.5  # 用于Delta转HTML
+  pdf: ^3.10.0          # PDF生成核心库
+  printing: ^5.11.0     # 用于PDF预览和打印
+  flutter_file_dialog: ^3.0.2 # file save or open
+  permission_handler: ^11.3.0 # 权限
 
 
 
@@ -106,6 +112,7 @@ flutter:
     - images/
     - assets/
     - assets/app_icon/
+    - assets/translations/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -133,7 +140,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
-#flutter_intl:
+#flutter_intl: 不维护了，不要用了。
 #  enabled: true
 
 flutter_launcher_icons: # create new AppIcon =>  $ dart run flutter_launcher_icons

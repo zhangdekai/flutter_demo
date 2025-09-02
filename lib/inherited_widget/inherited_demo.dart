@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-///  InheritedWidget: Base class for widgets that efficiently propagate information down the tree.
+
+///  InheritedWidget: Base class for widgets that
+///  efficiently propagate information down the tree.
 ///  widget 基类，可以有效在树向下传播信息。（共享数据）
 ///  Flutter SDK 通过InheritedWidget 来共享 Theme 和 Local
 ///  InheritedWidget的在 widget 树中数据传递方向是从上到下的，这和通知Notification的传递方向正好相反
@@ -36,6 +38,7 @@ class InheritedWidgetDemo extends StatefulWidget {
 
 class _InheritedWidgetDemoState extends State<InheritedWidgetDemo> {
   int count = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
