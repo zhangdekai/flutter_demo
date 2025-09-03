@@ -7,13 +7,15 @@ import 'controller.dart';
 // ignore: must_be
 // _immutable
 
-abstract class BaseViewPage<T extends BaseViewController> extends StatelessWidget {
+abstract class BaseViewPage<T extends BaseViewController>
+    extends StatelessWidget {
   BaseViewPage({Key? key}) : super(key: key);
 
- final  String title = '';
- final  bool willPop = true;
+  final String title = '';
+  final bool willPop = true;
 
   T get controller => Get.put(initController());
+
   // final state = Get.find<BaseViewController>().state;
 
   T initController();
@@ -23,10 +25,10 @@ abstract class BaseViewPage<T extends BaseViewController> extends StatelessWidge
     return GetBuilder(
         init: controller,
         builder: (controller) {
-          return WillPopScope(
-            onWillPop: () async {
+          return PopScope(
+            canPop: false,
+            onPopInvoked: (pop) async {
               onWillPop(context);
-              return willPop;
             },
             child: Scaffold(
               appBar: buildAppBar(),

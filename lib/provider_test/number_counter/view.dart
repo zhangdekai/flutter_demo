@@ -10,7 +10,35 @@ class NumberCounterPage extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => NumberCounterProvider()),
-        ChangeNotifierProvider(create: (_) => NumberCounter1Provider()),
+        ChangeNotifierProvider(
+            create: (_) => NumberCounter1Provider(),
+            child: Column(
+              children: [
+                Text('NumberCounter1Provider'),
+                Text(
+                    'NumberCounter1Provider data == ${Provider.of<NumberCounter1Provider>(context, listen: false).count1}'),
+                // 消费Provider中的数据
+                Consumer<NumberCounter1Provider>(
+                  builder: (context, counter1, child) {
+                    return Text(
+                      '${counter1.count1}',
+                      style: const TextStyle(
+                          fontSize: 40, fontWeight: FontWeight.bold),
+                    );
+                  },
+                ),
+                const SizedBox(height: 20),
+                // 另一种获取Provider数据的方式
+                ElevatedButton(
+                  onPressed: () {
+                    // 使用Provider.of获取数据并调用方法
+                    Provider.of<NumberCounter1Provider>(context, listen: false)
+                        .add();
+                  },
+                  child: const Text('Add'),
+                ),
+              ],
+            )),
         StreamProvider<int>(
           create: (c) {
             return Stream<int>.periodic(Duration(seconds: 1), (v) {
@@ -79,7 +107,6 @@ class NumberCounterPage extends StatelessWidget {
                 return Text('FutureProvider v == $provider');
               },
             ),
-            
           ],
         ),
       ),
@@ -98,7 +125,6 @@ class NumberCounterPage extends StatelessWidget {
   Selector2<NumberCounterProvider, NumberCounter1Provider, int> _selector2() {
     return Selector2<NumberCounterProvider, NumberCounter1Provider, int>(
         builder: (context, value, child) {
-
       return Text(
         'Selector2 - value == $value ',
         // key: const Key('counterState'),

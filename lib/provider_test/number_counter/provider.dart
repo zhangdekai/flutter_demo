@@ -22,14 +22,21 @@ class NumberCounterProvider extends ChangeNotifier {
 
 class NumberCounter1Provider extends ChangeNotifier {
   int count1 = 10;
+
   void add() {
     count1++;
+    notifyListeners();
+  }
+
+  void reduce() {
+    count1--;
     notifyListeners();
   }
 }
 
 class NumberCounter2Provider extends ChangeNotifier {
   int count1 = 0;
+
   void add() {
     count1++;
     notifyListeners();

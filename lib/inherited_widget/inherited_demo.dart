@@ -7,10 +7,10 @@ import 'package:flutter/material.dart';
 ///  InheritedWidget的在 widget 树中数据传递方向是从上到下的，这和通知Notification的传递方向正好相反
 
 class MyInheritedWidget extends InheritedWidget {
-  final int data; //需要在子Widget中共享的数据
+  final int sharedData; //需要在子Widget中共享的数据
 
   const MyInheritedWidget(
-    this.data, {
+    this.sharedData, {
     Key? key,
     required Widget child,
   })  : assert(child != null),
@@ -27,7 +27,7 @@ class MyInheritedWidget extends InheritedWidget {
 
   @override
   bool updateShouldNotify(MyInheritedWidget old) {
-    return old.data != data;
+    return old.sharedData != sharedData;
   }
 }
 
@@ -95,7 +95,7 @@ class Test3 extends StatefulWidget {
 class _Test3State extends State<Test3> {
   @override
   Widget build(BuildContext context) {
-    return Text(MyInheritedWidget.of(context).data.toString());
+    return Text(MyInheritedWidget.of(context).sharedData.toString());
 //    return Text(MyData.of(context).data.toString());
   }
 

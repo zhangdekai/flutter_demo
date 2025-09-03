@@ -77,7 +77,7 @@ dependencies:
   vsc_quill_delta_to_html: ^1.0.5  # 用于Delta转HTML
   pdf: ^3.10.0          # PDF生成核心库
   printing: ^5.11.0     # 用于PDF预览和打印
-  flutter_file_dialog: ^3.0.2 # file save or open
+  flutter_file_dialog: 3.0.0 # file save or open
   permission_handler: ^11.3.0 # 权限
 
 
