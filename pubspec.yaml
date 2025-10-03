@@ -43,7 +43,7 @@ dependencies:
   get: ^4.6.6
   event_bus: ^2.0.0
 
-  intl: ^0.19.0 #^0.18.1
+  intl: ^0.20.2 #^0.18.1
   easy_localization: ^3.0.8
   #  intl_translation: ^0.17.2
   after_layout: ^1.2.0
@@ -77,7 +77,7 @@ dependencies:
   vsc_quill_delta_to_html: ^1.0.5  # 用于Delta转HTML
   pdf: ^3.10.0          # PDF生成核心库
   printing: ^5.11.0     # 用于PDF预览和打印
-  flutter_file_dialog: 3.0.0 # file save or open
+#  flutter_file_dialog: ^3.0.0 # file save or open
   permission_handler: ^11.3.0 # 权限
 
 
